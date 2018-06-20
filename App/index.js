@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import {Provider} from 'react-redux'
-import {Login } from './components/index'
+import {Login, SignUp1, SignUp2 } from './components/index'
 import store from './store';
 import {createStackNavigator} from 'react-navigation'
-import LLogin from './components/login'
 
 
 const styles = StyleSheet.create({
@@ -17,7 +16,8 @@ const styles = StyleSheet.create({
 });
     const AppNavigator = createStackNavigator({
       Login: {screen: Login},
-      LLogin: {screen: LLogin}
+      SignUp: {screen: SignUp1 },
+      SignUp2: {screen: SignUp2}
       });
 export default class App extends React.Component {
 

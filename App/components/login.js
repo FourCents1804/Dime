@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {auth} from '../store'
 import {connect} from 'react-redux'
-
 import {
+  Text,
   Button,
   FormInput,
   FormLabel,
@@ -19,23 +19,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
-class LLogin extends React.Component {
+class Login extends React.Component {
+  state = {
+    email: '',
+    password: ''
+
+  }
 
   handleSubmit = event => {
     event.preventDefault();
     const formName = 'login'
-    const email = event.target.email.value
-    const password = event.target.password.value
-    this.props.sendInfo(formName, email, password)
+    this.props.auth(this.state, formName )
   };
   render() {
+    const {navigate} = this.props.navigation
+    console.log(this.state)
+
     return (
       <View style={styles.container}>
         <FormLabel> Email </FormLabel>
-        <FormInput ref={ref => this.formInput = ref} />
+        <FormInput  onChangeText={email => this.setState({email})} />
         <FormValidationMessage>Error</FormValidationMessage>
         <FormLabel> Password </FormLabel>
-        <FormInput />
+        <FormInput onChangeText={password => this.setState({password})} />
         <FormValidationMessage>Error</FormValidationMessage>
         <Button
           onPress={this.handleSubmit}
@@ -44,13 +50,15 @@ class LLogin extends React.Component {
           rounded={true}
           backgroundColor="green"
         />
+        <Text> or </Text>
+        <Button onPress={() => navigate('SignUp')} title="Sign Up" />
       </View>
     );
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  sendInfo:  (formName, email, password) => dispatch(auth(formName, email, password))
+  auth:  (userData, formName) => dispatch(auth(userData, formName))
 })
 
-export default connect(null, mapDispatchToProps)(LLogin)
+export default connect(null, mapDispatchToProps)(Login)
