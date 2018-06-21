@@ -1,26 +1,26 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import {Provider} from 'react-redux'
-import {Login } from './components/index'
-import store from './store';
-import {createStackNavigator} from 'react-navigation'
-import LLogin from './components/login'
-
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Provider } from "react-redux";
+import { Login } from "./components/index";
+import store from "./store";
+import { createStackNavigator } from "react-navigation";
+import LLogin from "./components/login";
+import Camera from "./components/Camera";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
-    const AppNavigator = createStackNavigator({
-      Login: {screen: Login},
-      LLogin: {screen: LLogin}
-      });
+const AppNavigator = createStackNavigator({
+  Login: { screen: Login },
+  // LLogin: { screen: LLogin },
+  Camera: { screen: Camera }
+});
 export default class App extends React.Component {
-
   render() {
     return (
       <Provider store={store}>
@@ -29,4 +29,3 @@ export default class App extends React.Component {
     );
   }
 }
-
