@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import {Provider} from 'react-redux'
 import {Login, SignUp1, SignUp2 } from './components/index'
-import store from './store';
+import store from './store'
+
 import {createStackNavigator} from 'react-navigation'
 
 
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
       });
 export default class App extends React.Component {
 
+
   render() {
     return (
       <Provider store={store}>
@@ -30,4 +32,3 @@ export default class App extends React.Component {
     );
   }
 }
-

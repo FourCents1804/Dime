@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { auth } from '../store';
+import { auth } from '../store/Thunks/User';
+import {Home } from './index'
 import { connect } from 'react-redux';
+import {me} from '../store';
 import {
   Text,
   Button,
@@ -24,24 +26,34 @@ class Login extends React.Component {
     password: ''
   };
 
+
   handleSubmit = event => {
     event.preventDefault();
     const formName = 'login';
     this.props.auth(this.state, formName);
+
   };
   render() {
     const { navigate } = this.props.navigation;
-
-    return (
+    let { user } = this.props
+    console.log(user)
+    if (user === undefined) user = {}
+    return user.id ? (
+      <View>
+        <Home />
+      </View>
+    ) : (
       <View style={styles.container}>
         <FormLabel> Email </FormLabel>
         <FormInput
+          autoCapitalize="none"
           textAlign="center"
           onChangeText={email => this.setState({ email })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
         <FormLabel> Password </FormLabel>
         <FormInput
+          autoCapitalize="none"
           textAlign="center"
           secureTextEntry={true}
           onChangeText={password => this.setState({ password })}
@@ -56,17 +68,21 @@ class Login extends React.Component {
         />
         <Text> or </Text>
         <Button onPress={() => navigate('SignUp')} title="Sign Up" />
-
       </View>
     );
   }
 }
 
+const mapStateToProps = state => (console.log(state), {
+  user: state.User
+});
+
 const mapDispatchToProps = dispatch => ({
+  isLoggedIn: () => dispatch(me()),
   auth: (userData, formName) => dispatch(auth(userData, formName))
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login);
