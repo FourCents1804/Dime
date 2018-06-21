@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     const AppNavigator = createStackNavigator({
       Login: {screen: Login},
       SignUp: {screen: SignUp1 },
-      SignUp2: {screen: SignUp2}
+      SignUp2: {screen: SignUp2},
+
       });
 export default class App extends React.Component {
 
