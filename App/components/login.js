@@ -1,44 +1,41 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { auth } from '../store/Thunks/User';
-import { Home } from './index'
-import { connect } from 'react-redux';
-import {me} from '../store';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { auth } from "../store/Thunks/User";
+import { Home } from "./index";
+import { connect } from "react-redux";
+import { me } from "../store";
 import {
   Text,
   Button,
   FormInput,
   FormLabel,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
 class Login extends React.Component {
   state = {
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   };
-
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login';
+    const formName = "login";
     this.props.auth(this.state, formName);
-
   };
 
   render() {
     const { navigate } = this.props.navigation;
-    let { user } = this.props
-    console.log(user)
-    if (user === undefined) user = {}
+    const { user } = this.props;
+    if (user === undefined) user = {};
     return user.id ? (
       <View>
         <Home style={styles.container} navigate={navigate} />
@@ -68,13 +65,13 @@ class Login extends React.Component {
           backgroundColor="green"
         />
         <Text> or </Text>
-        <Button onPress={() => navigate('SignUp')} title="Sign Up" />
+        <Button onPress={() => navigate("SignUp")} title="Sign Up" />
       </View>
     );
   }
 }
 
-const mapStateToProps = state => (console.log(state), {
+const mapStateToProps = state => ({
   user: state.User
 });
 
@@ -87,4 +84,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Login);
-console.log('Test')

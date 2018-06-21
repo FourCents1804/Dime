@@ -1,33 +1,34 @@
-import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
-import { auth } from '../store';
-import { connect } from 'react-redux';
+import React from "react";
+import { StyleSheet, TextInput, View } from "react-native";
+import { auth } from "../store";
+import { connect } from "react-redux";
 import {
   Button,
   FormInput,
   FormLabel,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
+
 class SignUp extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    rePassword: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    rePassword: ""
   };
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'signup';
+    const formName = "signup";
     this.props.sendInfo(this.state, formName);
   };
   render() {
@@ -65,7 +66,7 @@ class SignUp extends React.Component {
         />
         <FormValidationMessage>Error</FormValidationMessage>
         <Button
-          onPress={() => navigate('SignUp2')}
+          onPress={() => navigate("SignUp2")}
           title="Next"
           raised={true}
           rounded={true}
@@ -75,12 +76,13 @@ class SignUp extends React.Component {
     );
   }
 }
+
 class SignUpV2 extends React.Component {
   state = {
-    occupation: '',
-    gender: '',
-    monthlyIncome: '',
-    age: ''
+    occupation: "",
+    gender: "",
+    monthlyIncome: "",
+    age: ""
   };
   handleSubmit = event => {
     event.preventDefault();
@@ -123,6 +125,7 @@ export const SignUp1 = connect(
   null,
   mapDispatchToProps
 )(SignUp);
+
 export const SignUp2 = connect(
   null,
   mapDispatchToProps
