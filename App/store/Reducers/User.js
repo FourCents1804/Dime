@@ -1,4 +1,5 @@
 import { defaultUser } from "../ActionCreators/User";
+import { GET_USER, REMOVE_USER } from "../ActionTypes/User";
 
 export default function(state = defaultUser, action) {
   switch (action.type) {
