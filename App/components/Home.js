@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { connect } from 'react-redux';
 
 const styles = StyleSheet.create({
@@ -13,10 +13,12 @@ const styles = StyleSheet.create({
 
   class Home extends Component {
       render() {
-        const {user} = this.props
+
+        const {user, navigate} = this.props
           return (
-              <View>
-                  <Text>{user.firstName}</Text>
+              <View >
+
+                  <Button onPress={() => navigate('Webcam')} title="To Camera" />
               </View>
           )
       }
