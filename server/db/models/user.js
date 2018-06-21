@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
-const crypto = require("crypto");
-const Sequelize = require("sequelize");
-const db = require("../index");
+const crypto = require('crypto');
+const Sequelize = require('sequelize');
+const db = require('../index');
 
-const User = db.define("user", {
+const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
     unique: true,
@@ -19,7 +19,7 @@ const User = db.define("user", {
     // Making `.password` act like a func hides it when serializing to JSON.
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
-      return () => this.getDataValue("password");
+      return () => this.getDataValue('password');
     }
   },
   salt: {
@@ -27,7 +27,7 @@ const User = db.define("user", {
     // Making `.salt` act like a function hides it when serializing to JSON.
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
-      return () => this.getDataValue("salt");
+      return () => this.getDataValue('salt');
     }
   },
   firstName: {
@@ -76,22 +76,22 @@ User.prototype.correctPassword = function(candidatePwd) {
 //  * classMethods
 //  */
 User.generateSalt = function() {
-  return crypto.randomBytes(16).toString("base64");
+  return crypto.randomBytes(16).toString('base64');
 };
 
 User.encryptPassword = function(plainText, salt) {
   return crypto
-    .createHash("RSA-SHA256")
+    .createHash('RSA-SHA256')
     .update(plainText)
     .update(salt)
-    .digest("hex");
+    .digest('hex');
 };
 
 // /**
 //  * hooks
 //  */
 const setSaltAndPassword = user => {
-  if (user.changed("password")) {
+  if (user.changed('password')) {
     user.salt = User.generateSalt();
     user.password = User.encryptPassword(user.password(), user.salt());
   }
