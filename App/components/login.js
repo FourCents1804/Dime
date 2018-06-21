@@ -87,3 +87,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Login);
+console.log('Test')
