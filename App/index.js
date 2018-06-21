@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {Provider} from 'react-redux'
-import {Login, SignUp1, SignUp2 } from './components/index'
-import store from './store'
+import { Provider } from 'react-redux';
+import { Login, SignUp1, SignUp2 } from './components/index';
+import store from './store';
 
-import {createStackNavigator} from 'react-navigation'
-
+import { createStackNavigator } from 'react-navigation';
+import Camera from './components/Camera';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,15 +15,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
-    const AppNavigator = createStackNavigator({
-      Login: {screen: Login},
-      SignUp: {screen: SignUp1 },
-      SignUp2: {screen: SignUp2},
+const AppNavigator = createStackNavigator({
+  Login: { screen: Login },
+  SignUp: { screen: SignUp1 },
+  SignUp2: { screen: SignUp2 },
+  Camera: { screen: Camera }
+});
 
-      });
 export default class App extends React.Component {
-
-
   render() {
     return (
       <Provider store={store}>

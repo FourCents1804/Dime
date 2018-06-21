@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { auth } from '../store/Thunks/User';
-import {Home } from './index'
+import { Home } from './index'
 import { connect } from 'react-redux';
 import {me} from '../store';
 import {
@@ -33,6 +33,7 @@ class Login extends React.Component {
     this.props.auth(this.state, formName);
 
   };
+
   render() {
     const { navigate } = this.props.navigation;
     let { user } = this.props
@@ -40,7 +41,7 @@ class Login extends React.Component {
     if (user === undefined) user = {}
     return user.id ? (
       <View>
-        <Home />
+        <Home style={styles.container} navigate={navigate} />
       </View>
     ) : (
       <View style={styles.container}>
