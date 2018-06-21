@@ -17,7 +17,7 @@ const app = express();
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/api", require("./api")); // include our routes!
+app.use("/api", require("./api")); // include our routes!
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../public/index.html"));
