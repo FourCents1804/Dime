@@ -1,51 +1,49 @@
-import React from 'react';
-import { StyleSheet, TextInput,  View } from 'react-native';
-import {auth} from '../store'
+import React from "react";
+import { StyleSheet, TextInput, View } from "react-native";
+import { auth } from "../store";
 
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
 import {
   Button,
   FormInput,
   FormLabel,
   FormValidationMessage
-} from 'react-native-elements';
-import {StackNavigator} from 'react-navigation'
-
+} from "react-native-elements";
+import { StackNavigator } from "react-navigation";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
 class Login extends React.Component {
   state = {
-    email: '',
-    password: ''
-
-  }
+    email: "",
+    password: ""
+  };
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login'
-    const {email, password} = this.state
-    this.props.auth(email, password, formName )
+    const formName = "login";
+    const { email, password } = this.state;
+    this.props.auth(email, password, formName);
   };
+
   render() {
-    const {navigate} = this.props.navigation
-    console.log(this.state)
+    const { navigate } = this.props.navigation;
 
     return (
       <View style={styles.container}>
         <FormLabel> Email </FormLabel>
-        <FormInput  onChangeText={email => this.setState({email})} />
+        <FormInput onChangeText={email => this.setState({ email })} />
         <FormValidationMessage>Error</FormValidationMessage>
         <FormLabel> Password </FormLabel>
-        <FormInput onChangeText={password => this.setState({password})} />
+        <FormInput onChangeText={password => this.setState({ password })} />
         <FormValidationMessage>Error</FormValidationMessage>
-        <Button onPress={() => navigate('LLogin')} title="To Login" />
+        <Button onPress={() => navigate("Camera")} title="To Login" />
         <Button
           onPress={this.handleSubmit}
           title="Login"
@@ -58,8 +56,11 @@ class Login extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  auth:  (email, password, formName) => dispatch(auth(email, password, formName))
-})
+const mapDispatchToProps = dispatch => ({
+  auth: (email, password, formName) => dispatch(auth(email, password, formName))
+});
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(
+  null,
+  mapDispatchToProps
+)(Login);
