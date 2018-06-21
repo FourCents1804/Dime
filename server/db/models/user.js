@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 // const crypto = require("crypto");
-const Sequelize = require("sequelize");
-const db = require("../index");
+const Sequelize = require('sequelize');
+const db = require('../index');
 
-const User = db.define("user", {
+const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
     unique: true,
@@ -57,9 +57,6 @@ const User = db.define("user", {
   savingsGoal: {
     type: Sequelize.INTEGER,
     allowNull: false
-  },
-  googleId: {
-    type: Sequelize.STRING
   }
 });
 
