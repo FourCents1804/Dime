@@ -54,7 +54,6 @@ class Login extends React.Component {
     let { fadeAnim, fadeAnim2 } = this.state;
     const { navigate } = this.props;
     return (
-
       <View>
         <ImageBackground source={require('../../public/city.jpg')} style={styles.backgroundImg}
         resizeMode="cover">
@@ -94,7 +93,6 @@ class Login extends React.Component {
           </Animated.View>
           </View>
         </ImageBackground>
-
       </View>
     );
   }

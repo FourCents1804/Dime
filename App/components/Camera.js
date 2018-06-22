@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TouchableOpacity, Button } from "react-native";
+import { Text, View, TouchableOpacity, Image } from "react-native";
 import { Camera, Permissions } from "expo";
 
 export default class Webcam extends React.Component {
@@ -16,7 +16,6 @@ export default class Webcam extends React.Component {
   async takePicture() {
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
-      console.log(photo);
     }
   }
 
@@ -29,42 +28,28 @@ export default class Webcam extends React.Component {
     } else {
       return (
         <View style={{ flex: 1 }}>
-          <Camera
-            ref={ref => (this.camera = ref)}
-            style={{ flex: 1 }}
-            type={this.state.type}
-          >
+          <Camera style={{ flex: 1 }} type={this.state.type}>
             <View
               style={{
                 flex: 1,
                 backgroundColor: "transparent",
+                justifyContent: "space-evenly",
                 flexDirection: "row"
               }}
             >
               <TouchableOpacity
                 style={{
-                  flex: 0.1,
                   alignSelf: "flex-end",
                   alignItems: "center"
                 }}
                 onPress={() => {
-                  this.setState({
-                    type:
-                      this.state.type === Camera.Constants.Type.back
-                        ? Camera.Constants.Type.front
-                        : Camera.Constants.Type.back
-                  });
+                  this.takePicture();
                 }}
               >
-                <Text
-                  style={{ fontSize: 18, marginBottom: 10, color: "white" }}
-                >
-                  {" "}
-                  Flip{" "}
-                </Text>
-                <Button title="Capture" onPress={() => this.takePicture()}>
-                  Capture
-                </Button>
+                <Image
+                  style={{ height: 70, width: 70, marginBottom: 25 }}
+                  source={require("../../public/capture.png")}
+                />
               </TouchableOpacity>
             </View>
           </Camera>
