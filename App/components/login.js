@@ -9,7 +9,7 @@ import {
   Button,
   FormInput,
   Divider,
-  FormValidationMessage
+  FormValidationMessage,
 } from 'react-native-elements';
 
 class Login extends React.Component {
@@ -49,6 +49,7 @@ class Login extends React.Component {
     const { navigate } = this.props;
     return (
       <View style={styles.container}>
+
         <Animated.View style={{ opacity: fadeAnim }}>
           <FormInput
             placeholder="Email"
