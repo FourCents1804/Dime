@@ -12,6 +12,7 @@ import {
   FormValidationMessage
 } from "react-native-elements";
 
+
 class Login extends React.Component {
   state = {
     email: "",
@@ -49,6 +50,7 @@ class Login extends React.Component {
     const { navigate } = this.props;
     return (
       <View style={styles.container}>
+
         <Animated.View style={{ opacity: fadeAnim }}>
           <FormInput
             placeholder="Email"
