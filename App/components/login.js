@@ -20,8 +20,8 @@ import {
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     fadeAnim: new Animated.Value(0),
     fadeAnim2: new Animated.Value(0)
   };
@@ -46,7 +46,7 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login';
+    const formName = "login";
     this.props.auth(this.state, formName);
   };
 
