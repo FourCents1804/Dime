@@ -18,8 +18,16 @@ export const me = () => async dispatch => {
 
 
     export const auth = (userData, method) => async dispatch => {
-          const {data} =  await axios.post(`http://localhost:19004/auth/${method}`, userData)
-          dispatch(getUser(data))
+          if (method === 'signup') {
+            const {data } = await axios.post(`http://localhost:19004/auth/${method}`, { ...userData[0], ...userData[1], ...userData[2]})
+            console.log(data)
+            dispatch(getUser(data))
+          }
+          else {
+            const {data} =  await axios.post(`http://localhost:19004/auth/${method}`, userData)
+            dispatch(getUser(data))
+          }
+
     }
       // fetch(`http://localhost:19004/auth/${method}`, {method: 'POST', body: JSON.stringify(
       //  userData
