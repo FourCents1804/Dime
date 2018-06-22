@@ -20,8 +20,8 @@ import {
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     fadeAnim: new Animated.Value(0),
     fadeAnim2: new Animated.Value(0)
   };
@@ -46,7 +46,7 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login';
+    const formName = "login";
     this.props.auth(this.state, formName);
   };
 
@@ -54,6 +54,7 @@ class Login extends React.Component {
     let { fadeAnim, fadeAnim2 } = this.state;
     const { navigate } = this.props;
     return (
+
       <View>
         <ImageBackground source={require('../../public/city.jpg')} style={styles.backgroundImg}
         resizeMode="cover">
@@ -93,6 +94,7 @@ class Login extends React.Component {
           </Animated.View>
           </View>
         </ImageBackground>
+
       </View>
     );
   }
