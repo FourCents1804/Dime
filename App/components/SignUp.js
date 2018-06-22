@@ -23,9 +23,7 @@ class SignUp extends React.Component {
     rePassword: ''
   };
 
-  createFormInput = () => {
-
-  }
+  createFormInput = () => {};
 
   render() {
     const { navigate } = this.props.navigation;
@@ -81,13 +79,14 @@ class SignUp extends React.Component {
     );
   }
 }
+
 class SignUpV2 extends React.Component {
   state = {
     occupation: '',
     gender: '',
     monthlyIncome: 0,
     age: 0,
-    savingsGoal: 0,
+    savingsGoal: 0
   };
 
   render() {
@@ -156,8 +155,7 @@ class SignUpV3 extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     newUserData.push(this.state);
-    this.props.sendInfo(newUserData, 'signup')
-
+    this.props.sendInfo(newUserData, 'signup');
   };
 
   createCheckBox = () => {
@@ -168,7 +166,7 @@ class SignUpV3 extends React.Component {
         <View>
           <CheckBox
             title={keys}
-            checked={(this.state[keys] > 0)}
+            checked={this.state[keys] > 0}
             onPress={() =>
               this.setState(this.state[el] ? { [el]: 0 } : { [el]: 1 })
             }
@@ -217,6 +215,7 @@ export const SignUp1 = connect(
   null,
   mapDispatchToProps
 )(SignUp);
+
 export const SignUp2 = connect(
   null,
   mapDispatchToProps

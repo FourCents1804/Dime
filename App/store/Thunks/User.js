@@ -20,23 +20,22 @@ export const getUser = user => (
     { type: GET_USER, user })
 export const removeUser = () => ({ type: REMOVE_USER });
 
-
 export const me = () => async dispatch => {
    const {data} = await axios.get(`http://${ip}/auth/me`)
     dispatch(getUser(data || defaultUser))}
 
 
-    export const auth = (userData, method) => async dispatch => {
-          if (method === 'signup') {
-            const {data } = await axios.post(`http://${ip}/auth/${method}`, { ...userData[0], ...userData[1], ...userData[2]})
-            dispatch(getUser(data))
-          }
-          else {
-            const {data} =  await axios.post(`http://${ip}/auth/${method}`, userData)
-            dispatch(getUser(data))
-          }
+export const auth = (userData, method) => async dispatch => {
+      if (method === 'signup') {
+        const {data } = await axios.post(`http://${ip}/auth/${method}`, { ...userData[0], ...userData[1], ...userData[2]})
+        dispatch(getUser(data))
+      }
+      else {
+        const {data} =  await axios.post(`http://${ip}/auth/${method}`, userData)
+        dispatch(getUser(data))
+      }
 
-    }
+}
       // fetch(`http://localhost:19004/auth/${method}`, {method: 'POST', body: JSON.stringify(
       //  userData
       // )})
@@ -60,15 +59,13 @@ export const logout = () => dispatch =>
     })
     .catch(err => console.error(err));
 
-
 export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
-    return action.user
+      return action.user;
     case REMOVE_USER:
-    return defaultUser;
+      return defaultUser;
     default:
-    return state;
+      return state;
   }
 }
-
