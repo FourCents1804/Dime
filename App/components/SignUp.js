@@ -1,8 +1,8 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { auth } from '../store';
-import { connect } from 'react-redux';
-import styles from '../../public';
+import React from "react";
+import { Text, View } from "react-native";
+import { auth } from "../store";
+import { connect } from "react-redux";
+import styles from "../../public";
 import {
   Slider,
   CheckBox,
@@ -10,19 +10,18 @@ import {
   Button,
   FormInput,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 let newUserData = [];
 
 class SignUp extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    rePassword: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    rePassword: ""
   };
-
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -65,7 +64,7 @@ class SignUp extends React.Component {
         <Button
           onPress={() => {
             newUserData.push(this.state);
-            navigate('SignUp2');
+            navigate("SignUp2");
           }}
           width={400}
           title="Next 1 of 3"
@@ -77,10 +76,11 @@ class SignUp extends React.Component {
     );
   }
 }
+
 class SignUpV2 extends React.Component {
   state = {
-    occupation: '',
-    gender: '',
+    occupation: "",
+    gender: "",
     monthlyIncome: 0,
     age: 0
   };
@@ -120,7 +120,7 @@ class SignUpV2 extends React.Component {
         <Button
           onPress={() => {
             newUserData.push(this.state);
-            navigate('SignUpV3');
+            navigate("SignUpV3");
           }}
           title="Next 2 of 3"
           raised={true}
@@ -144,7 +144,7 @@ class SignUpV3 extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     newUserData.push(this.state);
-    this.props.sendInfo(newUserData, 'signup');
+    this.props.sendInfo(newUserData, "signup");
   };
 
   createCheckBox = () => {
@@ -204,6 +204,7 @@ export const SignUp1 = connect(
   null,
   mapDispatchToProps
 )(SignUp);
+
 export const SignUp2 = connect(
   null,
   mapDispatchToProps

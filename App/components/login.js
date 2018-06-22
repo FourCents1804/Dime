@@ -1,21 +1,22 @@
-import React from 'react';
-import { View, Animated } from 'react-native';
-import { auth } from '../store/Thunks/User';
-import styles from '../../public';
-import { connect } from 'react-redux';
-import { me } from '../store';
+import React from "react";
+import { View, Animated } from "react-native";
+import { auth } from "../store/Thunks/User";
+import styles from "../../public";
+import { connect } from "react-redux";
+import { me } from "../store";
 import {
   Text,
   Button,
   FormInput,
   Divider,
-  FormValidationMessage,
-} from 'react-native-elements';
+  FormValidationMessage
+} from "react-native-elements";
+
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     fadeAnim: new Animated.Value(0),
     fadeAnim2: new Animated.Value(0)
   };
@@ -40,7 +41,7 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login';
+    const formName = "login";
     this.props.auth(this.state, formName);
   };
 
@@ -83,7 +84,7 @@ class Login extends React.Component {
           <Divider style={styles.dividerVS} />
           <Button
             buttonStyle={styles.signUp}
-            onPress={() => navigate('SignUp')}
+            onPress={() => navigate("SignUp")}
             rounded={true}
             title="Sign Up"
           />
