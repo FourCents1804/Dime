@@ -58,9 +58,6 @@ const User = db.define('user', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  googleId: {
-    type: Sequelize.STRING
-  }
 });
 
 module.exports = User;
