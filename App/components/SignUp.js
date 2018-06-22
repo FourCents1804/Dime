@@ -23,6 +23,10 @@ class SignUp extends React.Component {
     rePassword: ''
   };
 
+  createFormInput = () => {
+
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -82,7 +86,8 @@ class SignUpV2 extends React.Component {
     occupation: '',
     gender: '',
     monthlyIncome: 0,
-    age: 0
+    age: 0,
+    savingsGoal: 0,
   };
 
   render() {
@@ -116,6 +121,13 @@ class SignUpV2 extends React.Component {
           onChangeText={age => this.setState({ age })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerS} />
+        <FormInput
+          containerStyle={styles.inputLine}
+          placeholder="How Much Do You Want to Save"
+          onChangeText={savingsGoal => this.setState({ savingsGoal })}
+        />
+        <FormValidationMessage>Error</FormValidationMessage>
         <Divider style={styles.dividerVS} />
         <Button
           onPress={() => {
@@ -144,7 +156,8 @@ class SignUpV3 extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     newUserData.push(this.state);
-    this.props.sendInfo(newUserData, 'signup');
+    this.props.sendInfo(newUserData, 'signup')
+
   };
 
   createCheckBox = () => {
@@ -155,7 +168,7 @@ class SignUpV3 extends React.Component {
         <View>
           <CheckBox
             title={keys}
-            checked={this.state[keys]}
+            checked={(this.state[keys] > 0)}
             onPress={() =>
               this.setState(this.state[el] ? { [el]: 0 } : { [el]: 1 })
             }

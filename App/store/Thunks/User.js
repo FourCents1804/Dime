@@ -1,4 +1,14 @@
+
 import axios from 'axios';
+import Expo from 'expo';
+const { manifest } = Expo.Constants;
+const ip = manifest.packagerOpts.dev
+  ? manifest.debuggerHost.split(`:`).shift().concat(`:19004`)
+  : `localhost:19004`;
+
+  //...
+
+
 export const GET_USER = 'GET_USER';
 export const REMOVE_USER = 'REMOVE_USER';
 
@@ -12,19 +22,17 @@ export const removeUser = () => ({ type: REMOVE_USER });
 
 
 export const me = () => async dispatch => {
-   const {data} = await axios.get('http://localhost:19004/auth/me')
-   console.log(data)
+   const {data} = await axios.get(`http://${ip}/auth/me`)
     dispatch(getUser(data || defaultUser))}
 
 
     export const auth = (userData, method) => async dispatch => {
           if (method === 'signup') {
-            const {data } = await axios.post(`http://localhost:19004/auth/${method}`, { ...userData[0], ...userData[1], ...userData[2]})
-            console.log(data)
+            const {data } = await axios.post(`http://${ip}/auth/${method}`, { ...userData[0], ...userData[1], ...userData[2]})
             dispatch(getUser(data))
           }
           else {
-            const {data} =  await axios.post(`http://localhost:19004/auth/${method}`, userData)
+            const {data} =  await axios.post(`http://${ip}/auth/${method}`, userData)
             dispatch(getUser(data))
           }
 
