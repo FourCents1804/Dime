@@ -1,14 +1,20 @@
 import React from 'react';
-import { View, Animated } from 'react-native';
+import {
+  Text,
+  View,
+  Animated,
+  Button as ButtonAlt,
+  ImageBackground,
+  Image
+
+} from 'react-native';
 import { auth } from '../store/Thunks/User';
 import styles from '../../public';
 import { connect } from 'react-redux';
 import { me } from '../store';
 import {
-  Text,
   Button,
   FormInput,
-  Divider,
   FormValidationMessage,
 } from 'react-native-elements';
 
@@ -48,46 +54,45 @@ class Login extends React.Component {
     let { fadeAnim, fadeAnim2 } = this.state;
     const { navigate } = this.props;
     return (
-      <View style={styles.container}>
-
-        <Animated.View style={{ opacity: fadeAnim }}>
-          <FormInput
-            placeholder="Email"
-            containerStyle={styles.inputLine}
-            autoCapitalize="none"
-            onChangeText={email => this.setState({ email })}
-          />
-          <Divider style={styles.dividerM} />
-        </Animated.View>
-        <Animated.View style={{ opacity: fadeAnim2 }}>
-          <FormInput
-            containerStyle={styles.inputLine}
-            autoCapitalize="none"
-            placeholder="Password"
-            secureTextEntry={true}
-            onChangeText={password => this.setState({ password })}
-          />
-          <FormValidationMessage>Error</FormValidationMessage>
-        </Animated.View>
-        <Divider style={styles.dividerS} />
-        <Animated.View style={{ opacity: fadeAnim2 }}>
-          <Button
-            onPress={this.handleSubmit}
-            title="Login"
-            raised={true}
-            rounded={true}
-            backgroundColor="#388e3c"
-          />
-          <Divider style={styles.dividerVS} />
-          <Text style={styles.fontM}> or </Text>
-          <Divider style={styles.dividerVS} />
-          <Button
-            buttonStyle={styles.signUp}
-            onPress={() => navigate('SignUp')}
-            rounded={true}
-            title="Sign Up"
-          />
-        </Animated.View>
+      <View>
+        <ImageBackground source={require('../../public/city.jpg')} style={styles.backgroundImg}
+        resizeMode="cover">
+        <Image source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}} style={styles.logo} />
+          <View style={styles.loginContainer}>
+          <Animated.View style={{ opacity: fadeAnim }}>
+            <FormInput
+              placeholder="Email"
+              containerStyle={styles.inputLine}
+              autoCapitalize="none"
+              onChangeText={email => this.setState({ email })}
+            />
+          </Animated.View>
+          <Animated.View style={{ opacity: fadeAnim2 }}>
+            <FormInput
+              containerStyle={styles.inputLine}
+              autoCapitalize="none"
+              placeholder="Password"
+              secureTextEntry={true}
+              onChangeText={password => this.setState({ password })}
+            />
+            <FormValidationMessage>Error</FormValidationMessage>
+          </Animated.View>
+          <Animated.View style={{ opacity: fadeAnim2, width: 300 }}>
+            <Button
+              onPress={this.handleSubmit}
+              title="Login"
+              raised={true}
+              backgroundColor="#0080ff"
+              style={styles.loginButton}
+            />
+            <ButtonAlt
+              buttonStyle={styles.signUp}
+              onPress={() => navigate('SignUp')}
+              title="Sign Up"><Text style={styles.signUpFont}>Sign Up</Text>
+            </ButtonAlt>
+          </Animated.View>
+          </View>
+        </ImageBackground>
       </View>
     );
   }
