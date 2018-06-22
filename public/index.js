@@ -9,22 +9,36 @@ export default styles = StyleSheet.create({
     },
     containerL: {
         flex: 1,
-        backgroundColor: '#fff',
-
         justifyContent: 'center'
       },
+    backgroundImg: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 500
+    },
     loginButton: {
-        width: 200,
+        margin: 10
     },
     signUp: {
-        width: 200,
-        borderColor: 'lightblue',
-        borderWidth: 4,
-        backgroundColor: 'royalblue'
+        textAlign: 'center',
+    },
+    signUpFont: {
+        fontSize: 5,
+        textAlign: 'center',
+    },
+    loginContainer: {
+        backgroundColor: '#fff',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: 'grey',
+        display: 'flex',
+        alignItems: 'center',
+        width: 300
     },
     inputLine:  {
-        width: 240,
-
+        width: 250,
+        margin: 10,
     },
     row: {
         flexDirection: 'row'
@@ -35,14 +49,20 @@ export default styles = StyleSheet.create({
     },
     dividerM: {
         height: 80,
-        backgroundColor: '#fff'
+        backgroundColor: 'transparent'
     },
     dividerS: {
         height: 50,
-        backgroundColor: '#fff'
+        backgroundColor: 'transparent'
     },
     dividerVS: {
         height: 15,
-        backgroundColor: '#fff'
-    }
+        backgroundColor: 'transparent'
+    },
+    logo: {
+        height: 50,
+        width: 50,
+        zIndex: 1,
+        top: -60
+    },
   });
