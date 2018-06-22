@@ -171,7 +171,7 @@ class SignUpV3 extends React.Component {
               <Text> {Math.floor(this.state[el])}</Text>
             </View>
           ) : (
-            <View />
+            <Divider style={styles.dividerVS} />
           )}
         </View>
       );
