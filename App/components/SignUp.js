@@ -1,22 +1,18 @@
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { Text, View } from "react-native";
 import { auth } from "../store";
 import { connect } from "react-redux";
+import styles from "../../public";
 import {
+  Slider,
+  CheckBox,
+  Divider,
   Button,
   FormInput,
-  FormLabel,
   FormValidationMessage
 } from "react-native-elements";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+let newUserData = [];
 
 class SignUp extends React.Component {
   state = {
@@ -26,51 +22,55 @@ class SignUp extends React.Component {
     password: "",
     rePassword: ""
   };
-  handleSubmit = event => {
-    event.preventDefault();
-    const formName = "signup";
-    this.props.sendInfo(this.state, formName);
-  };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <FormLabel> First Name </FormLabel>
         <FormInput
-          textAlign="center"
+          containerStyle={styles.inputLine}
+          placeholder="First Name"
           onChangeText={firstName => this.setState({ firstName })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Last Name </FormLabel>
+        <Divider style={styles.dividerS} />
         <FormInput
-          textAlign="center"
+          containerStyle={styles.inputLine}
+          placeholder="Last Name"
           onChangeText={lastName => this.setState({ lastName })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Email </FormLabel>
+        <Divider style={styles.dividerS} />
         <FormInput
-          textAlign="center"
+          containerStyle={styles.inputLine}
+          placeholder="Email"
           onChangeText={email => this.setState({ email })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Password </FormLabel>
+        <Divider style={styles.dividerS} />
         <FormInput
-          textAlign="center"
+          containerStyle={styles.inputLine}
+          placeholder="Password"
           onChangeText={password => this.setState({ password })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Re-Enter Password </FormLabel>
+        <Divider style={styles.dividerS} />
         <FormInput
-          textAlign="center"
+          containerStyle={styles.inputLine}
+          placeholder="Re-Type Password"
           onChangeText={rePassword => this.setState({ rePassword })}
         />
         <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerVS} />
         <Button
-          onPress={() => navigate("SignUp2")}
-          title="Next"
+          onPress={() => {
+            newUserData.push(this.state);
+            navigate("SignUp2");
+          }}
+          width={400}
+          title="Next 1 of 3"
           raised={true}
           rounded={true}
-          backgroundColor="green"
+          backgroundColor="#388e3c"
         />
       </View>
     );
@@ -81,36 +81,115 @@ class SignUpV2 extends React.Component {
   state = {
     occupation: "",
     gender: "",
-    monthlyIncome: "",
-    age: ""
+    monthlyIncome: 0,
+    age: 0
+  };
+
+  render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <View style={styles.container}>
+        <FormInput
+          containerStyle={styles.inputLine}
+          placeholder="Monthly Income"
+          onChangeText={monthlyIncome => this.setState({ monthlyIncome })}
+        />
+        <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerS} />
+        <FormInput
+          containerStyle={styles.inputLine}
+          placeholder="Occupation"
+          onChangeText={occupation => this.setState({ occupation })}
+        />
+        <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerS} />
+        <FormInput
+          containerStyle={styles.inputLine}
+          placeholder="Gender"
+          onChangeText={gender => this.setState({ gender })}
+        />
+        <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerS} />
+        <FormInput
+          containerStyle={styles.inputLine}
+          placeholder="Age"
+          onChangeText={age => this.setState({ age })}
+        />
+        <FormValidationMessage>Error</FormValidationMessage>
+        <Divider style={styles.dividerVS} />
+        <Button
+          onPress={() => {
+            newUserData.push(this.state);
+            navigate("SignUpV3");
+          }}
+          title="Next 2 of 3"
+          raised={true}
+          rounded={true}
+          backgroundColor="green"
+        />
+      </View>
+    );
+  }
+}
+
+class SignUpV3 extends React.Component {
+  state = {
+    rent: 0,
+    electricity: 0,
+    gas: 0,
+    phone: 0,
+    transportation: 0,
+    entertainment: 0
   };
   handleSubmit = event => {
     event.preventDefault();
-    this.props.sendInfo(this.state, formName);
+    newUserData.push(this.state);
+    this.props.sendInfo(newUserData, "signup");
+  };
+
+  createCheckBox = () => {
+    let checkBArr = [];
+    for (keys in this.state) {
+      let el = keys;
+      checkBArr.push(
+        <View>
+          <CheckBox
+            title={keys}
+            checked={this.state[keys]}
+            onPress={() =>
+              this.setState(this.state[el] ? { [el]: 0 } : { [el]: 1 })
+            }
+          />
+          {this.state[keys] ? (
+            <View>
+              <Slider
+                minimumValue={0}
+                maximumValue={4000}
+                value={this.state[el]}
+                onValueChange={value => this.setState({ [el]: value })}
+              />
+              <Text> {Math.floor(this.state[el])}</Text>
+            </View>
+          ) : (
+            <Divider style={styles.dividerVS} />
+          )}
+        </View>
+      );
+    }
+    return checkBArr;
   };
   render() {
     return (
       <View style={styles.container}>
-        <FormLabel> Monthly Income </FormLabel>
-        <FormInput
-          onChangeText={monthlyIncome => this.setState({ monthlyIncome })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Occupation </FormLabel>
-        <FormInput onChangeText={occupation => this.setState({ occupation })} />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Gender </FormLabel>
-        <FormInput onChangeText={gender => this.setState({ gender })} />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <FormLabel> Age </FormLabel>
-        <FormInput onChangeText={age => this.setState({ age })} />
-        <FormValidationMessage>Error</FormValidationMessage>
+        <Text>What Are Your Monthly Expenses</Text>
+        <Divider style={styles.dividerS} />
+        {this.createCheckBox()}
+        <Divider style={styles.dividerVS} />
         <Button
-          onPress={this.handleSubmit}
-          title="Next"
-          raised={true}
           rounded={true}
           backgroundColor="green"
+          onPress={this.handleSubmit}
+          title="Create Your Account"
         />
       </View>
     );
@@ -130,3 +209,7 @@ export const SignUp2 = connect(
   null,
   mapDispatchToProps
 )(SignUpV2);
+export const SignUp3 = connect(
+  null,
+  mapDispatchToProps
+)(SignUpV3);

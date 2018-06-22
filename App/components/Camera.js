@@ -1,7 +1,6 @@
 import React from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, Button } from "react-native";
 import { Camera, Permissions } from "expo";
-import { Button } from "react-native-elements";
 
 export default class Webcam extends React.Component {
   state = {
@@ -63,14 +62,9 @@ export default class Webcam extends React.Component {
                   {" "}
                   Flip{" "}
                 </Text>
-                <TouchableOpacity
-                  style={{
-                    flex: 0.1,
-                    alignSelf: "flex-end",
-                    alignItems: "center"
-                  }}
-                />
-                <Button onPress={() => this.takePicture()}>Capture</Button>
+                <Button title="Capture" onPress={() => this.takePicture()}>
+                  Capture
+                </Button>
               </TouchableOpacity>
             </View>
           </Camera>
