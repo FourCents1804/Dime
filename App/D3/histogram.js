@@ -1,4 +1,68 @@
 import * as d3 from 'd3'
+import React from 'react'
+import { ART } from 'react-native';
+const {
+  Group,
+  Shape,
+} = ART
+import {
+  Svg, Rect
+} from 'react-native-svg'
+
+
+		//Width and height
+var w = 200;
+var h = 200;
+var padding = 10;
+
+
+//Create scale functions
+
+//Define X axis
+
+
+
+const Histogram = props => {
+
+  const dataset = [1, 2, 3, 4, 5]
+
+  const x = d3.scaleLinear()
+  .domain([0, dataset.length])
+  .range([0, props.width]);
+
+  const y = d3.scaleLinear()
+  .domain([0, d3.max(dataset)])
+  .range([0, props.height]);
+
+  var xAxis = d3.axisBottom()
+  .scale(x)
+  .ticks(5)
+
+  const yAxis = d3.axisLeft()
+    .scale(y)
+    .ticks(5)
+  return (
+    <Svg width={props.width} height={props.height}>
+    {
+      dataset.map((data, i) => (
+        <Rect
+          key={data}
+          x={x(i)}
+          y={props.height - y(data)}
+          width={props.width / dataset.length}
+          height={y(data)}
+          fill="rgb(0,0,255)"
+          strokeWidth="1"
+          stroke="rgb(0,0,0)"
+        />
+        ))
+    }
+    </Svg>
+  )
+}
+
+export default Histogram
+
 const userPurchases = [
   {
     itemName: 'Mountain Dew',
@@ -120,93 +184,3 @@ const userPurchases = [
     createdAt: '2017-06-04'
   },
 ]
-
-		//Width and height
-		var w = 500;
-		var h = 300;
-		var padding = 30;
-
-		var dataset = [];
-		const numDataPoints = 50
-		const xRange = Math.random() * 1000
-		const yRange = Math.random() * 1000
-		for (let i = 0; i < numDataPoints; i++) {
-			const newNum1 = Math.floor(Math.random() * xRange)
-			const newNum2 = Math.floor(Math.random() * yRange)
-			dataset.push([newNum1, newNum2])
-		}
-
-		//Create scale functions
-		var xScale = d3.scaleLinear()
-			.domain([0, d3.max(dataset, function (d) { return d[0]; })])
-			.range([padding, w - padding * 2]);
-
-		var yScale = d3.scaleLinear()
-			.domain([0, d3.max(dataset, function (d) { return d[1]; })])
-			.range([h - padding, padding]);
-
-		var aScale = d3.scaleSqrt()
-			.domain([0, d3.max(dataset, function (d) { return d[1]; })])
-			.range([0, 10]);
-
-		//Define X axis
-		var xAxis = d3.axisBottom()
-			.scale(xScale)
-			.ticks(5)
-
-		const yAxis = d3.axisLeft()
-			.scale(yScale)
-			.ticks(5)
-
-		//Create SVG element
-		var svg = d3.select("body")
-			.append("svg")
-			.attr("width", w)
-			.attr("height", h);
-
-		//Create circles
-		svg.selectAll("circle")
-			.data(dataset)
-			.enter()
-			.append("circle")
-			.attr("cx", function (d) {
-				return xScale(d[0]);
-			})
-			.attr("cy", function (d) {
-				return yScale(d[1]);
-			})
-			.attr("r", function (d) {
-				return aScale(d[1]);
-			});
-
-		//Create labels
-		// svg.selectAll("text")
-		// 	.data(dataset)
-		// 	.enter()
-		// 	.append("text")
-		// 	.text(function (d) {
-		// 		return d[0] + "," + d[1];
-		// 	})
-		// 	.attr("x", function (d) {
-		// 		return xScale(d[0]);
-		// 	})
-		// 	.attr("y", function (d) {
-		// 		return yScale(d[1]);
-		// 	})
-		// 	.attr("font-family", "sans-serif")
-		// 	.attr("font-size", "11px")
-		// 	.attr("fill", "red");
-
-
-		//Create X axis
-		svg.append("g")
-			.attr('class', 'axis')
-			.attr('transform', `translate(0, ${h - padding})`)
-			.call(xAxis);
-
-		svg.append('g')
-			.attr('class', 'axis')
-			.attr('transform', `translate(${padding},0)`)
-      .call(yAxis)
-
-export default svg
