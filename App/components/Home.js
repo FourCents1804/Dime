@@ -5,30 +5,25 @@ const {
     Group,
     Shape,
   } = ART
-  import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+import Pie, {userPurchases} from '../D3/doughnut'
 
-  class Home extends Component {
-      render() {
-        const {user, navigate} = this.props
-          return (
-              <View >
-                <Surface width={200} height={200}>
-                <Group>
-                <Shape
-                    d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
-                    stroke="#000"
-                    strokeWidth={1}
-                />
-                </Group>
+const Home = props => {
+    const chartWidth = 250
+    const chartHeight = 250
+    const {user, navigate} = props
+        return (
+            <View >
+                <Surface width={chartWidth} height={chartHeight}>
+                    <Pie userPurchases={userPurchases} chartX={chartWidth / 2} chartY={chartHeight / 2} />
                 </Surface>
-                   <Button onPress={() => navigate('Webcam')} title="To Camera" />
-              </View>
-          )
-      }
-  }
+                <Button onPress={() => navigate('Webcam')} title="To Camera" />
+            </View>
+        )
+}
 
 const mapStateToProps = state => ({
     user: state.User
 })
 
-export default connect(mapStateToProps, null)(Home)
+export default connect(null, null)(Home)
