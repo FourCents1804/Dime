@@ -2,12 +2,37 @@ import * as d3 from 'd3'
 import React from 'react'
 import { ART } from 'react-native';
 const {
-    Surface,
     Group,
     Shape,
   } = ART
 
-const userPurchases = [
+const Pie = props => {
+
+  const pieData = d3.pie().value(d => d.price)(props.userPurchases)
+
+  const piePath = d3.arc()
+  .outerRadius(100)
+  .padAngle(.05)
+  .innerRadius(60)
+
+  return (
+    <Group x={props.chartX} y={props.chartY}>
+    {
+        pieData.map(section => (
+        <Shape
+            key={section.index}
+            d={piePath(section)}
+            stroke="#000"
+            fill={`rgb(${255 - section.index * 40 - 10 || 0},${255 - section.index * 30},255)`}
+            strokeWidth={1}
+        />
+        ))
+    }
+    </Group>
+  )
+}
+
+export const userPurchases = [
   {
     itemName: 'Mountain Dew',
     category: 'Food and Drink',
@@ -58,31 +83,5 @@ const userPurchases = [
     createdAt: '2017-07-25'
   },
 ]
-
-export const pieData = d3.pie().value(d => d.price)(userPurchases)
-
-export const piePath = d3.arc()
-  .outerRadius(100)
-  .padAngle(.05)
-  .innerRadius(60)
-
-const Pie = props => {
-  return (
-    <Group x={125} y={125}>
-    {
-        pieData.map(section => (
-        <Shape
-            key={section.index}
-            d={piePath(section)}
-            stroke="#000"
-            fill={`rgb(${255 - section.index * 40 - 10 || 0},${255 - section.index * 30},255)`}
-            strokeWidth={1}
-        />
-        )
-      )
-    }
-    </Group>
-  )
-}
 
 export default Pie

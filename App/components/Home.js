@@ -6,14 +6,16 @@ const {
     Shape,
   } = ART
 import { connect } from 'react-redux';
-import Pie from '../D3/doughnut'
+import Pie, {userPurchases} from '../D3/doughnut'
 
 const Home = props => {
+    const chartWidth = 250
+    const chartHeight = 250
     const {user, navigate} = props
         return (
             <View >
-                <Surface width={250} height={250}>
-                    <Pie />
+                <Surface width={chartWidth} height={chartHeight}>
+                    <Pie userPurchases={userPurchases} chartX={chartWidth / 2} chartY={chartHeight / 2} />
                 </Surface>
                 <Button onPress={() => navigate('Webcam')} title="To Camera" />
             </View>
