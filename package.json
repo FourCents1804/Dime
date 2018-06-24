@@ -20,6 +20,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@google-cloud/vision": "^0.20.0",
     "art": "^0.10.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
