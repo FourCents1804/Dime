@@ -1,11 +1,11 @@
 import * as d3 from 'd3'
 import React from 'react'
-import { ART } from 'react-native';
+import { View, ART } from 'react-native';
 const {
   Group,
   Shape,
 } = ART
-import { AreaChart, Grid } from 'react-native-svg-charts'
+import { YAxis, XAxis, AreaChart, Grid } from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
 
 const Histogram = props => {
@@ -13,15 +13,27 @@ const Histogram = props => {
   const dataset = props.userPurchases.map(purchase => purchase.price)
 
   return (
-    <AreaChart
-      style={{ height: props.height }}
-      data={ dataset }
-      contentInset={{ top: 30, bottom: 30 }}
-      curve={ shape.curveNatural }
-      svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
-    >
-    <Grid />
-    </AreaChart>
+    <View style={{ height: props.height, flexDirection: 'row' }}>
+      <YAxis
+          data={ dataset }
+          contentInset={{ top: 30, bottom: 30 }}
+          svg={{
+              fill: 'grey',
+              fontSize: 8,
+          }}
+          numberOfTicks={ 10 }
+          formatLabel={ value => `$${value}` }
+      />
+      <AreaChart
+        style={{ flex: 1 }}
+        data={ dataset }
+        contentInset={{ top: 30, bottom: 30 }}
+        curve={ shape.curveNatural }
+        svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+      >
+      <Grid />
+      </AreaChart>
+    </View>
   )
 }
 
