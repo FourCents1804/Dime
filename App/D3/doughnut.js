@@ -4,6 +4,7 @@ import { ART } from 'react-native';
 const {
     Group,
     Shape,
+    Text
   } = ART
 
 const Pie = props => {
@@ -14,6 +15,10 @@ const Pie = props => {
   .outerRadius(100)
   .padAngle(.05)
   .innerRadius(60)
+
+// const label = d3.arc()
+//   .outerRadius(80)
+//   .innerRadius(60)
 
   return (
     <Group x={props.chartX} y={props.chartY}>
