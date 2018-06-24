@@ -5,38 +5,59 @@ const {
   Group,
   Shape,
 } = ART
-import { YAxis, XAxis, AreaChart, Grid } from 'react-native-svg-charts'
+import { YAxis, XAxis, AreaChart, BarChart, Grid } from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
+import * as scale from 'd3-scale'
+import dateFns from 'date-fns'
 
 const Histogram = props => {
-
-  const dataset = props.userPurchases.map(purchase => purchase.price)
 
   return (
     <View style={{ height: props.height, flexDirection: 'row' }}>
       <YAxis
-          data={ dataset }
-          contentInset={{ top: 30, bottom: 30 }}
-          svg={{
-              fill: 'grey',
-              fontSize: 8,
-          }}
-          numberOfTicks={ 10 }
-          formatLabel={ value => `$${value}` }
-      />
-      <AreaChart
-        style={{ flex: 1 }}
-        data={ dataset }
+        data={ props.userPurchases }
         contentInset={{ top: 30, bottom: 30 }}
-        curve={ shape.curveNatural }
+        svg={{
+            fill: 'grey',
+            fontSize: 8,
+        }}
+        numberOfTicks={ 10 }
+        formatLabel={ value => `$${value}` }
+        yAccessor={ ({ item }) => item.price }
+      />
+      <BarChart
+        style={{ flex: 1 }}
+        data={ props.userPurchases }
+        contentInset={{ top: 30, bottom: 30 }}
         svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+        yAccessor={ ({ item }) => item.price }
+        xAccessor={ ({ item }) => new Date(item.createdAt) }
+        xScale={ scale.scaleTime }
+
       >
       <Grid />
-      </AreaChart>
+      </BarChart>
+      {/* <XAxis
+        data={ props.userPurchases }
+        style={{ marginTop: 10, marginHorizontal: -10 }}
+        // contentInset={{ left: 10, right: 10 }}
+        svg={{
+          fill: 'grey',
+          fontSize: 8,
+          fontWeight: 'bold',
+          rotation: 20,
+          originY: 30,
+          y: 0,
+      }}
+        numberOfTicks={ 6 }
+        xAccessor={ ({ item }) => new Date(item.createdAt) }
+        scale={ scale.scaleTime }
+        formatLabel={ (value) => dateFns.format(value, 'MMM')}
+        /> */}
     </View>
   )
 }
-
+//Need to map/reduce data to get it into the correct form.
 export default Histogram
 
 export const userPurchasesYear = [
