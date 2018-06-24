@@ -10,7 +10,7 @@ import * as shape from 'd3-shape'
 import * as scale from 'd3-scale'
 import dateFns from 'date-fns'
 
-const Histogram = props => {
+const RNSCHistogram = props => {
   const margin = 10
   return (
     <View style={{ height: props.height}}>
@@ -30,10 +30,10 @@ const Histogram = props => {
             style={{ flex: 1 }}
             data={ props.userPurchases }
             contentInset={{ top: 20, bottom: 20 }}
-            svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+            svg={{ fill: 'rgba(54, 125, 224, 0.8)' }}
             yAccessor={ ({ item }) => item.price }
             xAccessor={ ({ item }) => new Date(item.createdAt) }
-            xScale={ scale.scaleTime }
+            // xScale={ scale.scaleTime }
           >
           <Grid />
           </BarChart>
@@ -45,15 +45,17 @@ const Histogram = props => {
             fill: 'grey',
             fontSize: 10,
           }}
+          contentInset={{ left: 20 }}
+          margin
           xAccessor={ ({ item }) => new Date(item.createdAt) }
-          scale={ scale.scaleTime }
+          // scale={ scale.scaleTime }
           formatLabel={ (value) => dateFns.format(value, 'MMM YY')}
           />
     </View>
   )
 }
 //Need to map/reduce data to get it into the correct form.
-export default Histogram
+export default RNSCHistogram
 
 export const userPurchasesYear = [
   {
@@ -145,34 +147,34 @@ export const userPurchasesYear = [
     category: 'Food and Drink',
     price: 30,
     transactionId: 10,
-    createdAt: '2017-02-10'
+    createdAt: '2018-02-10'
   },
   {
     itemName: 'Mountain Dew',
     category: 'Food and Drink',
     price: 20,
     transactionId: 11,
-    createdAt: '2017-03-16'
+    createdAt: '2018-03-16'
   },
   {
     itemName: 'Concert',
     category: 'Entertainment',
     price: 45,
     transactionId: 12,
-    createdAt: '2017-04-20'
+    createdAt: '2018-04-20'
   },
   {
     itemName: 'Scarf',
     category: 'Shopping',
     price: 10,
     transactionId: 13,
-    createdAt: '2017-05-16'
+    createdAt: '2018-05-16'
   },
   {
     itemName: 'Taxi',
     category: 'Transportation',
     price: 10,
     transactionId: 14,
-    createdAt: '2017-06-04'
+    createdAt: '2018-06-04'
   },
 ]
