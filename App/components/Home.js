@@ -5,8 +5,11 @@ const {
     Group,
     Shape,
   } = ART
+const ARTText = ART.Text
 import { connect } from 'react-redux';
-import Pie, {userPurchases} from '../D3/doughnut'
+import Pie, {userPurchases} from '../D3/Doughnut'
+import RNSCHistogram, {userPurchasesYear} from '../D3/RNSCHistogram'
+import styles from '../../public'
 
 const Home = props => {
     const chartWidth = 250
@@ -14,10 +17,18 @@ const Home = props => {
     const {user, navigate} = props
         return (
             <View >
+                <Button onPress={() => navigate('Webcam')} title="To Camera" />
                 <Surface width={chartWidth} height={chartHeight}>
                     <Pie userPurchases={userPurchases} chartX={chartWidth / 2} chartY={chartHeight / 2} />
+                    <ARTText
+                        font="bold 15px Arial"
+                        fill="#000"
+                        x={chartWidth / 2 - 40} //Find some way to center
+                        y={chartHeight / 2 - 10}>
+                        Chart Label
+                    </ARTText>
                 </Surface>
-                <Button onPress={() => navigate('Webcam')} title="To Camera" />
+                <RNSCHistogram userPurchases={userPurchasesYear} width={chartWidth} height={chartHeight} />
             </View>
         )
 }

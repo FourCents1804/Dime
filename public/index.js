@@ -7,6 +7,11 @@ export default styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center'
     },
+    containerChart: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     containerL: {
         flex: 1,
         justifyContent: 'center'
