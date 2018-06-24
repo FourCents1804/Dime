@@ -2,17 +2,21 @@ const Sequelize = require('sequelize');
 const db = require('../index');
 
 const Purchase = db.define('purchase', {
-  itemName: {
+  name: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  price: {
+  amount: {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  category: {
+  categoryBroad: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  categoryDetailed: {
+    type: Sequelize.STRING,
+    allowNull: true
   }
 });
 
