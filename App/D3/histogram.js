@@ -11,49 +11,44 @@ import * as scale from 'd3-scale'
 import dateFns from 'date-fns'
 
 const Histogram = props => {
-
+  const margin = 10
   return (
-    <View style={{ height: props.height, flexDirection: 'row' }}>
-      <YAxis
-        data={ props.userPurchases }
-        contentInset={{ top: 30, bottom: 30 }}
-        svg={{
+    <View style={{ height: props.height}}>
+        <View style={{ height: props.height - margin}} flexDirection="row">
+          <YAxis
+            data={ props.userPurchases }
+            contentInset={{ top: 20, bottom: 20 }}
+            svg={{
+                fill: 'grey',
+                fontSize: 10,
+            }}
+            numberOfTicks={ 10 }
+            formatLabel={ value => `$${value}` }
+            yAccessor={ ({ item }) => item.price }
+          />
+          <BarChart
+            style={{ flex: 1 }}
+            data={ props.userPurchases }
+            contentInset={{ top: 20, bottom: 20 }}
+            svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+            yAccessor={ ({ item }) => item.price }
+            xAccessor={ ({ item }) => new Date(item.createdAt) }
+            xScale={ scale.scaleTime }
+          >
+          <Grid />
+          </BarChart>
+        </View>
+        <XAxis
+          data={ props.userPurchases }
+          numberOfTicks={ 6 }
+          svg={{
             fill: 'grey',
-            fontSize: 8,
-        }}
-        numberOfTicks={ 10 }
-        formatLabel={ value => `$${value}` }
-        yAccessor={ ({ item }) => item.price }
-      />
-      <BarChart
-        style={{ flex: 1 }}
-        data={ props.userPurchases }
-        contentInset={{ top: 30, bottom: 30 }}
-        svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
-        yAccessor={ ({ item }) => item.price }
-        xAccessor={ ({ item }) => new Date(item.createdAt) }
-        xScale={ scale.scaleTime }
-
-      >
-      <Grid />
-      </BarChart>
-      {/* <XAxis
-        data={ props.userPurchases }
-        style={{ marginTop: 10, marginHorizontal: -10 }}
-        // contentInset={{ left: 10, right: 10 }}
-        svg={{
-          fill: 'grey',
-          fontSize: 8,
-          fontWeight: 'bold',
-          rotation: 20,
-          originY: 30,
-          y: 0,
-      }}
-        numberOfTicks={ 6 }
-        xAccessor={ ({ item }) => new Date(item.createdAt) }
-        scale={ scale.scaleTime }
-        formatLabel={ (value) => dateFns.format(value, 'MMM')}
-        /> */}
+            fontSize: 10,
+          }}
+          xAccessor={ ({ item }) => new Date(item.createdAt) }
+          scale={ scale.scaleTime }
+          formatLabel={ (value) => dateFns.format(value, 'MMM YY')}
+          />
     </View>
   )
 }
