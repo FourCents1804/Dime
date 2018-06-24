@@ -7,7 +7,7 @@ const {
   } = ART
 import { connect } from 'react-redux';
 import Pie, {userPurchases} from '../D3/doughnut'
-import Histogram from '../D3/histogram'
+import Histogram, {userPurchasesYear} from '../D3/histogram'
 
 const Home = props => {
     const chartWidth = 250
@@ -18,7 +18,7 @@ const Home = props => {
                 <Surface width={chartWidth} height={chartHeight}>
                     <Pie userPurchases={userPurchases} chartX={chartWidth / 2} chartY={chartHeight / 2} />
                 </Surface>
-                <Histogram width={chartWidth} height={chartHeight} />
+                <Histogram userPurchases={userPurchasesYear} width={chartWidth} height={chartHeight} />
                 <Button onPress={() => navigate('Webcam')} title="To Camera" />
             </View>
         )

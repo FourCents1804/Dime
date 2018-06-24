@@ -5,65 +5,29 @@ const {
   Group,
   Shape,
 } = ART
-import {
-  Svg, Rect
-} from 'react-native-svg'
-
-
-		//Width and height
-var w = 200;
-var h = 200;
-var padding = 10;
-
-
-//Create scale functions
-
-//Define X axis
-
-
+import { AreaChart, Grid } from 'react-native-svg-charts'
+import * as shape from 'd3-shape'
 
 const Histogram = props => {
 
-  const dataset = [1, 2, 3, 4, 5]
+  const dataset = props.userPurchases.map(purchase => purchase.price)
 
-  const x = d3.scaleLinear()
-  .domain([0, dataset.length])
-  .range([0, props.width]);
-
-  const y = d3.scaleLinear()
-  .domain([0, d3.max(dataset)])
-  .range([0, props.height]);
-
-  var xAxis = d3.axisBottom()
-  .scale(x)
-  .ticks(5)
-
-  const yAxis = d3.axisLeft()
-    .scale(y)
-    .ticks(5)
   return (
-    <Svg width={props.width} height={props.height}>
-    {
-      dataset.map((data, i) => (
-        <Rect
-          key={data}
-          x={x(i)}
-          y={props.height - y(data)}
-          width={props.width / dataset.length}
-          height={y(data)}
-          fill="rgb(0,0,255)"
-          strokeWidth="1"
-          stroke="rgb(0,0,0)"
-        />
-        ))
-    }
-    </Svg>
+    <AreaChart
+      style={{ height: props.height }}
+      data={ dataset }
+      contentInset={{ top: 30, bottom: 30 }}
+      curve={ shape.curveNatural }
+      svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+    >
+    <Grid />
+    </AreaChart>
   )
 }
 
 export default Histogram
 
-const userPurchases = [
+export const userPurchasesYear = [
   {
     itemName: 'Mountain Dew',
     category: 'Food and Drink',
