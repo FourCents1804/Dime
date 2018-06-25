@@ -4,6 +4,9 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const db = require('./db')
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sessionStore = new SequelizeStore({ db });
+
 
 // const path = require("path");
 // const volleyball = require("volleyball");
@@ -16,10 +19,17 @@ app.use(bodyParser.json())
 passport.serializeUser((user, done) => done(null, user.id));
 passport.deserializeUser((id, done) =>
   db.models.user
-    .scope('populated')
     .findById(id)
     .then(user => done(null, user))
     .catch(done));
+app.use(
+      session({
+        secret: process.env.SESSION_SECRET || 'my best friend is Cody',
+        store: sessionStore,
+        resave: false,
+        saveUninitialized: false,
+      })
+    );
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -33,8 +43,9 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/api", require("./api")); // include our routes!
+// app.use("/api", require("./api"));
 app.use('/auth', require('./auth'))
+
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../public/index.html"));

@@ -9,11 +9,12 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "node main.js & react-native-scripts start",
+    "begin": "nodemon main.js",
+    "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./App/**/*.spec.js\" \"./seed/**/*.spec.js\"",
+    "test": "NODE_ENV='test' mocha --exit \"./server/**/*.spec.js\" \"./App/**/*.spec.js\" \"./seed/**/*.spec.js\"",
     "seed": "node seed"
   },
   "jest": {
@@ -24,6 +25,8 @@
     "art": "^0.10.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "connect-session-sequelize": "^5.2.1",
     "crypto": "^1.0.1",
     "d3": "^5.5.0",
     "d3-scale": "^2.1.0",
@@ -41,6 +44,7 @@
     "react-native-elements": "^0.19.1",
     "react-native-svg": "^6.3.1",
     "react-native-svg-charts": "^5.2.0",
+    "react-native-vector-icons": "^4.6.0",
     "react-native-video": "^2.2.0",
     "react-navigation": "^2.3.1",
     "react-redux": "^5.0.7",
@@ -48,6 +52,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^4.37.10"
+    "sequelize": "^4.37.10",
+    "shorthash": "0.0.2"
   }
 }
