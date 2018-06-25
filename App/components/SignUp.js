@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Easing, ScrollView, Animated } from 'react-native';
 import { auth } from '../store';
 import { connect } from 'react-redux';
 import styles from '../../public';
@@ -16,118 +16,163 @@ let newUserData = [];
 
 class SignUp extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    rePassword: ''
+    form: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      rePassword: ''
+    },
+    submitTokins: 0,
+    slide: [
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500)
+    ],
+
+  };
+  componentDidMount() {
+    let iteration = 0;
+    this.state.slide.forEach(animation => {
+      iteration++;
+      Animated.timing(animation, {
+        toValue: 0,
+        duration: (350 * (iteration + 0.6)),
+        easing: Easing.in(Easing.ease)
+      }).start();
+    });
+  }
+
+  handleNextButton = () => {
+    const { navigate } = this.props.navigation;
+    this.setState({ submitTokins: 1 });
+    if (this.handleError() === '') navigate('SignUp2')
   };
 
-  createFormInput = () => {};
+  handleError = () => {
+    const { form, submitTokins } = this.state;
+   for (let keys in form) {
+     if (form[keys] === '') return `${keys} is a required field!`
+   }
+    if (form.password !== form.rePassword) return 'Passwords Do not Match';
+    if (form.password.length < 8) return 'Password must be longer than 8 characters'
+    else return '';
+    }
+
+
+  createFormInput = () => {
+    let formInputArr = [];
+
+    let iteration = 0
+    for (let keys in this.state.form) {
+      let stateFields = keys;
+      formInputArr.push(
+        <Animated.View
+        style={{ transform: [{ translateY: this.state.slide[iteration]}] }}
+        >
+          <FormInput
+            errorMessage
+            autoCapitalize="none"
+            containerStyle={styles.inputLine}
+            placeholder={stateFields}
+            onChangeText={value => {
+              stateFields = { ...this.state.form };
+              stateFields[keys] = value;
+              this.setState({ form: stateFields });
+            }}
+            />
+          <Divider style={styles.dividerS} />
+        </Animated.View>
+      );
+
+      iteration++;
+    }
+    return formInputArr;
+  };
 
   render() {
-    const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="First Name"
-          onChangeText={firstName => this.setState({ firstName })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Last Name"
-          onChangeText={lastName => this.setState({ lastName })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Email"
-          onChangeText={email => this.setState({ email })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Password"
-          onChangeText={password => this.setState({ password })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Re-Type Password"
-          onChangeText={rePassword => this.setState({ rePassword })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerVS} />
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        {this.createFormInput()}
+        <FormValidationMessage>{this.handleError()}</FormValidationMessage>
+        <Animated.View style={{transform: [{translateY: this.state.slide[4]}]}}>
         <Button
-          onPress={() => {
-            newUserData.push(this.state);
-            navigate('SignUp2');
-          }}
+          onPress={() => this.handleNextButton()}
           width={400}
           title="Next 1 of 3"
           raised={true}
           rounded={true}
           backgroundColor="#388e3c"
         />
-      </View>
+        </Animated.View>
+      </ScrollView>
     );
   }
 }
 
 class SignUpV2 extends React.Component {
   state = {
-    occupation: '',
-    gender: '',
-    monthlyIncome: 0,
-    age: 0,
-    savingsGoal: 0
+    form: {
+      occupation: '',
+      gender: '',
+      monthlyIncome: 0,
+      age: 0,
+      savingsGoal: 0
+    },
+    slide: [
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500)
+    ],
   };
 
+  componentDidMount() {
+    let iteration = 0;
+    this.state.slide.forEach(animation => {
+      iteration++;
+      Animated.timing(animation, {
+        toValue: 0,
+        duration: (350 * (iteration + 0.6)),
+        easing: Easing.in(Easing.ease)
+      }).start();
+    });
+  }
+
+  createFormInput = () => {
+    let formInputArr = [];
+    let iteration = 0
+    for (let keys in this.state.form) {
+      let stateFields = keys;
+      formInputArr.push(
+        <Animated.View  style={{ transform: [{ translateY: this.state.slide[iteration]}] }}>
+          <FormInput
+            containerStyle={styles.inputLine}
+            placeholder={stateFields}
+            onChangeText={value => {
+              stateFields = { ...this.state.form };
+              stateFields[keys] = value;
+              this.setState({ form: stateFields });
+            }}
+          />
+          <Divider style={styles.dividerS} />
+        </Animated.View>
+      )
+      iteration++
+    }
+    return formInputArr;
+  };
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Monthly Income"
-          onChangeText={monthlyIncome => this.setState({ monthlyIncome })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Occupation"
-          onChangeText={occupation => this.setState({ occupation })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Gender"
-          onChangeText={gender => this.setState({ gender })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="Age"
-          onChangeText={age => this.setState({ age })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerS} />
-        <FormInput
-          containerStyle={styles.inputLine}
-          placeholder="How Much Do You Want to Save"
-          onChangeText={savingsGoal => this.setState({ savingsGoal })}
-        />
-        <FormValidationMessage>Error</FormValidationMessage>
-        <Divider style={styles.dividerVS} />
+      <ScrollView
+        showsHorizontalScrollIndicator={true}
+        contentContainerStyle={styles.scrollContainer}
+      >
+        {this.createFormInput()}
         <Button
           onPress={() => {
             newUserData.push(this.state);
@@ -138,7 +183,7 @@ class SignUpV2 extends React.Component {
           rounded={true}
           backgroundColor="green"
         />
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -174,6 +219,7 @@ class SignUpV3 extends React.Component {
           {this.state[keys] ? (
             <View>
               <Slider
+              style={{width: 100}}
                 minimumValue={0}
                 maximumValue={4000}
                 value={this.state[el]}
@@ -191,7 +237,11 @@ class SignUpV3 extends React.Component {
   };
   render() {
     return (
+      <ScrollView
+showsHorizontalScrollIndicator={true}
+      contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
+
         <Text>What Are Your Monthly Expenses</Text>
         <Divider style={styles.dividerS} />
         {this.createCheckBox()}
@@ -203,6 +253,7 @@ class SignUpV3 extends React.Component {
           title="Create Your Account"
         />
       </View>
+      </ScrollView>
     );
   }
 }

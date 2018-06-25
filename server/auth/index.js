@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../db/models/user');
+
 module.exports = router;
 
 router.post('/login', (req, res, next) => {
@@ -33,9 +34,11 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.post('/logout', (req, res) => {
+  console.log('Logout')
   req.logout();
+  console.log('Logout2')
   req.session.destroy();
-  res.redirect('/');
+  console.log('Logout3')
 });
 
 router.get('/me', (req, res) => {

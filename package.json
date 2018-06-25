@@ -9,7 +9,8 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "node main.js & react-native-scripts start",
+    "begin": "nodemon main.js",
+    "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -22,6 +23,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "connect-session-sequelize": "^5.2.1",
     "crypto": "^1.0.1",
     "expo": "^27.0.1",
     "express": "^4.16.3",
