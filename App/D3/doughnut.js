@@ -16,6 +16,9 @@ const Pie = props => {
   .padAngle(.05)
   .innerRadius(60)
 
+  const colors = d3.scaleLinear()
+    .domain([0, props.userPurchases.length]).range([0, 255])
+
 // const label = d3.arc()
 //   .outerRadius(80)
 //   .innerRadius(60)
@@ -23,12 +26,12 @@ const Pie = props => {
   return (
     <Group x={props.chartX} y={props.chartY}>
     {
-        pieData.map(section => (
+        pieData.map((section, index) => (
         <Shape
             key={section.index}
             d={piePath(section)}
             stroke="#000"
-            fill={`rgb(${255 - section.index * 40 - 10 || 0},${255 - section.index * 30},255)`}
+            fill={`rgb(${50},${colors(index) / 1.5},${colors(index)})`}
             strokeWidth={1}
         />
         ))
