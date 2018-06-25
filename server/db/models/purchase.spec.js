@@ -49,12 +49,14 @@ describe("▒▒▒ Purchase Model Tests ▒▒▒", () => {
           where: {
             amount: 9.8,
             categoryBroad: "Food and Drink",
-            categoryDetailed: "",
+            categoryDetailed: null,
             name: "KING OF FALAFEL"
           }
         });
         const allPurchasesWithoutError = await Purchase.findAll();
         expect(allPurchasesWithoutError.length).to.equal(2);
+        expect(allPurchasesWithoutError[0].name).to.equal("Halal Guys");
+        expect(allPurchasesWithoutError[1].name).to.equal("KING OF FALAFEL");
       });
     });
   });

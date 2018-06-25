@@ -1,6 +1,6 @@
-import React from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import React from "react";
+import { Text, View, TouchableOpacity, Image } from "react-native";
+import { Camera, Permissions } from "expo";
 
 export default class Webcam extends React.Component {
   state = {
@@ -10,14 +10,14 @@ export default class Webcam extends React.Component {
 
   async componentWillMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === 'granted' });
+    this.setState({ hasCameraPermission: status === "granted" });
   }
 
   async takePicture() {
-    const {navigate} = this.props.navigation
+    const { navigate } = this.props.navigation;
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
-      navigate('TakenImage', {uri: photo.uri})
+      navigate("TakenImage", { uri: photo.uri });
     }
   }
 
@@ -38,15 +38,15 @@ export default class Webcam extends React.Component {
             <View
               style={{
                 flex: 1,
-                backgroundColor: 'transparent',
-                justifyContent: 'space-evenly',
-                flexDirection: 'row'
+                backgroundColor: "transparent",
+                justifyContent: "space-evenly",
+                flexDirection: "row"
               }}
             >
               <TouchableOpacity
                 style={{
-                  alignSelf: 'flex-end',
-                  alignItems: 'center'
+                  alignSelf: "flex-end",
+                  alignItems: "center"
                 }}
                 onPress={() => {
                   this.takePicture();
@@ -54,7 +54,7 @@ export default class Webcam extends React.Component {
               >
                 <Image
                   style={{ height: 70, width: 70, marginBottom: 25 }}
-                  source={require('../../public/capture.png')}
+                  source={require("../../public/capture.png")}
                 />
               </TouchableOpacity>
             </View>
