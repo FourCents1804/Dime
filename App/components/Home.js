@@ -1,10 +1,10 @@
 
-import { ScrollView, TouchableOpacity, ART, Image, View } from 'react-native';
+import { ScrollView, TouchableOpacity, ART, Image, View, Text } from 'react-native';
 import { Header, Divider } from 'react-native-elements';
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
 import { connect } from 'react-redux';
-import Pie, { userPurchases } from '../D3/doughnut';
+import Pie, { userPurchases } from '../D3/Doughnut';
 import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
 import { logout } from '../store';
 import styles from '../../public';
@@ -17,6 +17,8 @@ const Home = props => {
   const chartHeight = 250;
   const { user, navigate } = props;
   return (
+
+   <View style={styles.container}>
     <ScrollView>
       <Header
         placement="left"
@@ -27,7 +29,7 @@ const Home = props => {
         }}
         rightComponent={{ icon: 'person', color: '#fff', size: 35 }}
       />
-      <View style={styles.container}>
+      <Text>Welcome, {user.firstName} </Text>
         <Surface width={chartWidth} height={chartHeight}>
           <Pie
             userPurchases={userPurchases}
@@ -61,8 +63,8 @@ const Home = props => {
             source={require('../../public/plus.png')}
           />
         </TouchableOpacity>
-      </View>
     </ScrollView>
+   </View>
   );
 };
 
