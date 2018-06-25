@@ -4,7 +4,7 @@ const { expect } = require("chai");
 const db = require("../index");
 const User = require("./user");
 
-describe("▒▒▒ Model tests ▒▒▒", () => {
+describe("▒▒▒ User Model Tests ▒▒▒", () => {
   beforeEach("Synchronize and clear database", () => db.sync({ force: true }));
 
   after("Synchronize and clear database", () => db.sync({ force: true }));
