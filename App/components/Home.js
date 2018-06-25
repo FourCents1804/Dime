@@ -1,33 +1,19 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, ART } from "react-native";
-import { Button } from "react-native-elements";
+import { StyleSheet, View, Text, Button, ART, ScrollView } from "react-native";
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
 import { connect } from "react-redux";
 import Pie, { userPurchases } from "../D3/Doughnut";
 import RNSCHistogram, { userPurchasesYear } from "../D3/RNSCHistogram";
-import { logout } from "../store";
+import Histogram from "../D3/Histogram";
 import styles from "../../public";
 
 const Home = props => {
-  const handleSubmit = () => {
-    props.logout();
-  };
-
   const chartWidth = 250;
   const chartHeight = 250;
   const { user, navigate } = props;
   return (
-    <View>
-      <Button
-        onPress={handleSubmit}
-        icon={{
-          name: "logout",
-          type: "simple-line-icon",
-          size: 15,
-          color: "red"
-        }}
-      />
+    <ScrollView>
       <Button onPress={() => navigate("Webcam")} title="To Camera" />
       <Surface width={chartWidth} height={chartHeight}>
         <Pie
@@ -49,7 +35,8 @@ const Home = props => {
         width={chartWidth}
         height={chartHeight}
       />
-    </View>
+      <Histogram />
+    </ScrollView>
   );
 };
 
