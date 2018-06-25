@@ -14,9 +14,10 @@ export default class Webcam extends React.Component {
   }
 
   async takePicture() {
+    const { navigate } = this.props.navigation;
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
-      console.log(photo);
+      navigate("TakenImage", { uri: photo.uri });
     }
   }
 
