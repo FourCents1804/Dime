@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react'
 import { StyleSheet, View, Text, Button, ART, ScrollView } from 'react-native';
 const {
@@ -36,7 +37,14 @@ const Home = props => {
 }
 
 const mapStateToProps = state => ({
-    user: state.User
-})
+  user: state.User
+});
 
-export default connect(null, null)(Home)
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
