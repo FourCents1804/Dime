@@ -3,6 +3,7 @@ import React from 'react'
 const d3 = require('d3')
 import { ART, View } from 'react-native';
 import { YAxis, XAxis, BarChart, Grid } from 'react-native-svg-charts'
+import * as scale from 'd3-scale'
 
 const {
     Surface,
@@ -23,13 +24,12 @@ import Svg, {
 const Histogram = props => {
 
   console.log('rect', ClippingRectangle)
-  const width = 200
+  const width = 250
   const height = 200
+  const margin = 20
 
-  const padding = 20
-
-  const formatter = d3.timeFormat('%b %Y')
-  const parser = d3.timeParse('%b %Y')
+  const formatter = d3.timeFormat('%b %y')
+  const parser = d3.timeParse('%b %y')
 
   const data = d3.nest()
     .key(d => formatter(new Date(d.createdAt)))
@@ -37,42 +37,46 @@ const Histogram = props => {
     .rollup(d => d3.sum(d, g => g.amount))
     .entries(purchases)
 
-  const x = d3.scaleTime()
-    .domain(d3.extent(data, d => parser(d.key)))
-    .range([padding, width - padding])
-
-  const y = d3.scaleLinear()
-  .domain([0, d3.max(data, d => d.value)])
-    .range([height - padding, padding])
-
-  const xAxis = d3.axisBottom()
-    .scale(x)
-    .ticks(6)
-
-  const yAxis = d3.axisLeft()
-    .scale(y)
-    .ticks(5)
-
-  console.log('xAxis', xAxis)
-
   return (
-    <Svg
-    height={height}
-    width={width}
->
-    {data.map(purchase => (
-    <Rect
-      key={purchase.key}
-      x={x(parser(purchase.key))}
-      y={height - y(purchase.value)}
-      width={(width - 2 * padding) / data.length}
-      height={y(purchase.value)}
-      stroke="blue"
-      strokeWidth="1"
-      fill="rgba(0,0,255,.5)"
-    />
-    ))}
-    </Svg>
+    <View style={{ height: height}}>
+        <View style={{ height: height - margin}} flexDirection="row">
+          <YAxis
+            data={ data }
+            contentInset={{ top: 20, bottom: 20 }}
+            svg={{
+                fill: 'grey',
+                fontSize: 10,
+            }}
+            numberOfTicks={ 10 }
+            formatLabel={ value => `$${value}` }
+            yAccessor={ ({ item }) => item.value }
+          />
+          <BarChart
+            style={{ flex: 1 }}
+            data={ data }
+            contentInset={{ top: 20, bottom: 20 }}
+            svg={{ fill: 'rgba(54, 125, 224, 0.8)' }}
+            yAccessor={ ({ item }) => item.value }
+            xAccessor={ ({ item }) => parser(item.key) }
+            // xScale={ scale.scaleTime }
+          >
+          <Grid />
+          </BarChart>
+        </View>
+        <XAxis
+          data={ data }
+          numberOfTicks={ 3 }
+          svg={{
+            fill: 'grey',
+            fontSize: 8,
+          }}
+          contentInset={{ left: 20 }}
+          // margin
+          xAccessor={ ({ item }) => parser(item.key) }
+          formatLabel={ (value) => formatter(value) }
+          // scale={ scale.scaleTime }
+        />
+      </View>
   )
 }
 
