@@ -16,21 +16,38 @@ const Pie = props => {
   .padAngle(.05)
   .innerRadius(60)
 
-// const label = d3.arc()
-//   .outerRadius(80)
-//   .innerRadius(60)
+  // const colors = d3.scaleLinear()
+  //   .domain([0, props.userPurchases.length]).range([0, 255])
+
+  const colors = ['#E7BAA0', '#E5DACE', '#B2B2A2', '6D7973', '#F4E8C1', '#A0C1B8', '#709FB0', '#726A95', '#351F39','#E7BAA0', '#E5DACE', '#B2B2A2', '6D7973', '#F4E8C1', '#A0C1B8', '#709FB0', '#726A95', '#351F39']
+const label = d3.arc()
+  .outerRadius(130)
+  .innerRadius(110)
+
+console.log('label try 1', pieData[1])
 
   return (
     <Group x={props.chartX} y={props.chartY}>
     {
-        pieData.map(section => (
-        <Shape
+        pieData.map((section) => (
+          <Group
             key={section.index}
-            d={piePath(section)}
-            stroke="#000"
-            fill={`rgb(${255 - section.index * 40 - 10 || 0},${255 - section.index * 30},255)`}
-            strokeWidth={1}
-        />
+          >
+          <Shape
+              d={piePath(section)}
+              stroke="#000"
+              fill={colors[section.index]}
+              strokeWidth={1}
+          />
+          <Text
+            font="10px Arial"
+            fill="#000"
+            x={label.centroid(section)[0]}
+            y={label.centroid(section)[1]}
+          >
+            {`${section.data.category}`}
+          </Text>
+          </Group>
         ))
     }
     </Group>
