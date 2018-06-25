@@ -16,6 +16,7 @@ export default class Webcam extends React.Component {
   async takePicture() {
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
+      console.log(photo);
     }
   }
 
@@ -28,7 +29,11 @@ export default class Webcam extends React.Component {
     } else {
       return (
         <View style={{ flex: 1 }}>
-          <Camera style={{ flex: 1 }} type={this.state.type}>
+          <Camera
+            ref={ref => (this.camera = ref)}
+            style={{ flex: 1 }}
+            type={this.state.type}
+          >
             <View
               style={{
                 flex: 1,

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, ART } from 'react-native';
-import { Button } from 'react-native-elements';
+import React, { Component } from "react";
+import { StyleSheet, View, Text, ART } from "react-native";
+import { Button } from "react-native-elements";
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
-import { connect } from 'react-redux';
-import Pie, { userPurchases } from '../D3/doughnut';
-import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
-import {logout} from '../store'
-import styles from '../../public';
+import { connect } from "react-redux";
+import Pie, { userPurchases } from "../D3/Doughnut";
+import RNSCHistogram, { userPurchasesYear } from "../D3/RNSCHistogram";
+import { logout } from "../store";
+import styles from "../../public";
 
 const Home = props => {
   const handleSubmit = () => {
@@ -22,13 +22,13 @@ const Home = props => {
       <Button
         onPress={handleSubmit}
         icon={{
-          name: 'logout',
-          type: 'simple-line-icon',
+          name: "logout",
+          type: "simple-line-icon",
           size: 15,
-          color: 'red'
+          color: "red"
         }}
       />
-      <Button onPress={() => navigate('Webcam')} title="To Camera" />
+      <Button onPress={() => navigate("Webcam")} title="To Camera" />
       <Surface width={chartWidth} height={chartHeight}>
         <Pie
           userPurchases={userPurchases}
