@@ -6,7 +6,6 @@ import {
   Button as ButtonAlt,
   ImageBackground,
   Image
-
 } from 'react-native';
 import { auth } from '../store/Thunks/User';
 import styles from '../../public';
@@ -15,15 +14,16 @@ import { me } from '../store';
 import {
   Button,
   FormInput,
-  FormValidationMessage,
+  FormValidationMessage
 } from 'react-native-elements';
 
 class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     fadeAnim: new Animated.Value(0),
-    fadeAnim2: new Animated.Value(0)
+    fadeAnim2: new Animated.Value(0),
+
   };
 
   componentDidMount() {
@@ -44,54 +44,72 @@ class Login extends React.Component {
     ).start(); // Starts the animation
   }
 
+  errorValidation = () => {
+    const {user} = this.props
+    console.log(user)
+    if (user === 'Failed') return <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
+  }
+
   handleSubmit = event => {
     event.preventDefault();
-    const formName = "login";
+    const formName = 'login';
     this.props.auth(this.state, formName);
   };
 
   render() {
     let { fadeAnim, fadeAnim2 } = this.state;
-    const { navigate } = this.props;
+    const { navigate} = this.props;
     return (
       <View>
-        <ImageBackground source={require('../../public/city.jpg')} style={styles.backgroundImg}
-        resizeMode="cover">
-        <Image source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}} style={styles.logo} />
-          <View style={styles.loginContainer}>
+        <ImageBackground
+          source={require('../../public/city.jpg')}
+          style={styles.backgroundImg}
+          resizeMode="cover"
+        >
+        <Animated.View style={{ opacity: fadeAnim }}>
+            <Image
+              source={{
+                uri:
+                  'https://facebook.github.io/react-native/docs/assets/favicon.png'
+              }}
+              style={styles.logo}
+            />
+        </Animated.View>
           <Animated.View style={{ opacity: fadeAnim }}>
-            <FormInput
-              placeholder="Email"
-              containerStyle={styles.inputLine}
-              autoCapitalize="none"
-              onChangeText={email => this.setState({ email })}
-            />
+            <View style={styles.loginContainer}>
+              <FormInput
+                placeholder="Email"
+                containerStyle={styles.inputLine}
+                autoCapitalize="none"
+                onChangeText={email => this.setState({ email })}
+              />
+
+              <FormInput
+                containerStyle={styles.inputLine}
+                autoCapitalize="none"
+                placeholder="Password"
+                secureTextEntry={true}
+                onChangeText={password => this.setState({ password })}
+              />
+              {this.errorValidation()}
+
+
+              <Button
+                onPress={this.handleSubmit}
+                title="Login"
+                raised={true}
+                backgroundColor="#0080ff"
+                style={styles.loginButton}
+              />
+              <ButtonAlt
+                buttonStyle={styles.signUp}
+                onPress={() => navigate('SignUp')}
+                title="Sign Up"
+              >
+                <Text style={styles.signUpFont}>Sign Up</Text>
+              </ButtonAlt>
+            </View>
           </Animated.View>
-          <Animated.View style={{ opacity: fadeAnim2 }}>
-            <FormInput
-              containerStyle={styles.inputLine}
-              autoCapitalize="none"
-              placeholder="Password"
-              secureTextEntry={true}
-              onChangeText={password => this.setState({ password })}
-            />
-            <FormValidationMessage>Error</FormValidationMessage>
-          </Animated.View>
-          <Animated.View style={{ opacity: fadeAnim2, width: 300 }}>
-            <Button
-              onPress={this.handleSubmit}
-              title="Login"
-              raised={true}
-              backgroundColor="#0080ff"
-              style={styles.loginButton}
-            />
-            <ButtonAlt
-              buttonStyle={styles.signUp}
-              onPress={() => navigate('SignUp')}
-              title="Sign Up"><Text style={styles.signUpFont}>Sign Up</Text>
-            </ButtonAlt>
-          </Animated.View>
-          </View>
         </ImageBackground>
       </View>
     );

@@ -16,6 +16,9 @@ import {
 
 
 class Root extends React.Component {
+  componentDidMount() {
+    this.props.isLoggedIn()
+  }
   render() {
     const { navigate } = this.props.navigation;
     let { user } = this.props;
