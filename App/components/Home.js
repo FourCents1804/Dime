@@ -1,12 +1,16 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Text, Button, ART, ScrollView } from "react-native";
+
+import { ScrollView, TouchableOpacity, ART, Image, View } from 'react-native';
+import { Header, Divider } from 'react-native-elements';
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
-import { connect } from "react-redux";
-import Pie, { userPurchases } from "../D3/Doughnut";
-import RNSCHistogram, { userPurchasesYear } from "../D3/RNSCHistogram";
-import Histogram from "../D3/Histogram";
-import styles from "../../public";
+import { connect } from 'react-redux';
+import Pie, { userPurchases } from '../D3/doughnut';
+import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
+import { logout } from '../store';
+import styles from '../../public';
+import React, { Component } from 'react';
+import Histogram from '../D3/Histogram';
+
 
 const Home = props => {
   const chartWidth = 250;
@@ -14,28 +18,50 @@ const Home = props => {
   const { user, navigate } = props;
   return (
     <ScrollView>
-      <Button onPress={() => navigate("Webcam")} title="To Camera" />
-      <Surface width={chartWidth} height={chartHeight}>
-        <Pie
-          userPurchases={userPurchases}
-          chartX={chartWidth / 2}
-          chartY={chartHeight / 2}
-        />
-        <ARTText
-          font="bold 15px Arial"
-          fill="#000"
-          x={chartWidth / 2 - 40} //Find some way to center
-          y={chartHeight / 2 - 10}
-        >
-          Chart Label
-        </ARTText>
-      </Surface>
-      <RNSCHistogram
-        userPurchases={userPurchasesYear}
-        width={chartWidth}
-        height={chartHeight}
+      <Header
+        placement="left"
+        leftComponent={{ icon: 'menu', color: '#fff', size: 35 }}
+        centerComponent={{
+          text: user.firstName + ' ' + user.lastName,
+          style: { fontSize: 25, color: '#fff' }
+        }}
+        rightComponent={{ icon: 'person', color: '#fff', size: 35 }}
       />
-      <Histogram />
+      <View style={styles.container}>
+        <Surface width={chartWidth} height={chartHeight}>
+          <Pie
+            userPurchases={userPurchases}
+            chartX={chartWidth / 2}
+            chartY={chartHeight / 2}
+          />
+          <ARTText
+            font="bold 15px Arial"
+            fill="#000"
+            x={chartWidth / 2 - 40} //Find some way to center
+            y={chartHeight / 2 - 10}
+          >
+            Chart Label
+          </ARTText>
+        </Surface>
+        <RNSCHistogram
+          userPurchases={userPurchasesYear}
+          width={chartWidth}
+          height={chartHeight}
+        />
+        <Divider style={styles.dividerS} />
+        <TouchableOpacity
+          style={{
+            alignSelf: 'flex-end',
+            alignItems: 'center'
+          }}
+          onPress={() => navigate('Webcam')}
+        >
+          <Image
+            style={{ height: 70, width: 70, marginBottom: 25 }}
+            source={require('../../public/plus.png')}
+          />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };

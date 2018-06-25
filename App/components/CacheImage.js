@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Image, ScrollView, View } from "react-native";
-import shorthash from "shorthash";
-import { FileSystem } from "expo";
-import styles from "../../public/index";
+import React, { Component } from 'react';
+import { Image, ScrollView, View } from 'react-native';
+import shorthash from 'shorthash';
+import { FileSystem } from 'expo';
+import styles from '../../public/index';
 
 class CacheImage extends Component {
   state = {
@@ -35,7 +35,7 @@ class CacheImage extends Component {
     return uri ? (
       <View>
         <Image
-          style={{ flex: 1, height: 600, resizeMode: "contain" }}
+          style={{ flex: 1, height: 600, resizeMode: 'contain' }}
           source={this.state.source}
         />
       </View>

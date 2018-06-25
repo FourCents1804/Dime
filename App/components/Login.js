@@ -60,7 +60,7 @@ class Login extends React.Component {
     let { fadeAnim, fadeAnim2 } = this.state;
     const { navigate} = this.props;
     return (
-      <View>
+      <View style={styles.container}>
         <ImageBackground
           source={require('../../public/city.jpg')}
           style={styles.backgroundImg}
