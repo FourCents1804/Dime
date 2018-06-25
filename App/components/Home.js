@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+
 import { ScrollView, TouchableOpacity, ART, Image, View } from 'react-native';
 import { Header, Divider } from 'react-native-elements';
 const { Surface, Group, Shape } = ART;
@@ -8,12 +8,11 @@ import Pie, { userPurchases } from '../D3/doughnut';
 import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
 import { logout } from '../store';
 import styles from '../../public';
+import React, { Component } from 'react';
+import Histogram from '../D3/Histogram';
+
 
 const Home = props => {
-  const handleSubmit = () => {
-    props.logout();
-  };
-
   const chartWidth = 250;
   const chartHeight = 250;
   const { user, navigate } = props;

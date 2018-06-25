@@ -75,5 +75,11 @@ export default (styles = StyleSheet.create({
     width: 50,
     zIndex: 1,
     top: -60
+  },
+  imageContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 }));
