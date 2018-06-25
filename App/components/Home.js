@@ -4,8 +4,9 @@ import { Button } from 'react-native-elements';
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
 import { connect } from 'react-redux';
-import Pie, { userPurchases } from '../D3/Doughnut';
+import Pie, { userPurchases } from '../D3/doughnut';
 import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
+import {logout} from '../store'
 import styles from '../../public';
 
 const Home = props => {
