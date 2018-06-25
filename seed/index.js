@@ -2,7 +2,7 @@
 
 const db = require('../server/db');
 const { User, Expense, Purchase, Transaction } = require('../server/db/models');
-
+const purchaseData = require('./purchaseData.js');
 
 async function seed() {
   await db.sync({ force: true });
@@ -18,8 +18,8 @@ async function seed() {
       occupation: 'Dentist',
       age: 55,
       gender: 'Male',
-      savingsGoal: 500,
-    }),
+      savingsGoal: 500
+    })
   ]);
 
   const expenses = await Promise.all([
@@ -37,7 +37,7 @@ async function seed() {
       {
         category: 'transportation',
         value: 125,
-        userId: 1,
+        userId: 1
       },
       {
         category: 'entertainment',
@@ -49,78 +49,87 @@ async function seed() {
         value: 300,
         userId: 1
       }
-  ])
-  ])
+    ])
+  ]);
 
   const transactions = await Promise.all([
     Transaction.bulkCreate([
       {
-        userId: 1
+        userId: 1,
+        createdAt: '2017-07-02'
       },
       {
-        userId: 1
+        userId: 1,
+        createdAt: '2017-07-09'
       },
       {
-        userId: 1
+        userId: 1,
+        createdAt: '2017-08-01'
       },
       {
-        userId: 1
+        userId: 1,
+        createdAt: '2017-08-15'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-08-30'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-09-12'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-10-01'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-11-20'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-12-20'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-02-10'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-03-16'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-04-20'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-05-16'
+      },
+      {
+        userId: 1,
+        createdAt: '2017-06-04'
       }
     ])
-  ])
+  ]);
 
-  const purchases = await Promise.all([
-    Purchase.bulkCreate([
-      {
-        itemName: 'Mountain Dew',
-        category: 'Food and Drink',
-        price: 3,
-        transactionId: 1
-      },
-      {
-        itemName: 'Shoes',
-        category: 'Shopping',
-        price: 50,
-        transactionId: 1
-      },
-      {
-        itemName: 'Kit Kat',
-        category: 'Food and Drink',
-        price: 1,
-        transactionId: 1
-      },
-      {
-        itemName: 'Taxi',
-        category: 'Transportation',
-        price: 24,
-        transactionId: 2
-      },
-      {
-        itemName: 'Watch',
-        category: 'Shopping',
-        price: 100,
-        transactionId: 3
-      },
-      {
-        itemName: 'Headphones',
-        category: 'Shopping',
-        price: 15,
-        transactionId: 4
-      }
-    ])
-  ])
-//   const userPromises = []
-//   for (let i = 0; i < userData.length; i++) {
-//     let newUser = User.create(userData[i])
-//     await userPromises.push(newUser)
-//   }
-//   await Promise.all(userPromises)
+  const purchasesPromises = [];
+  for (let i = 0; i < purchaseData.length; i++) {
+    let newPurchase = Purchase.create(purchaseData[i]);
+    await purchasesPromises.push(newPurchase);
+  }
+  await Promise.all(purchasesPromises);
 
+  //   const userPromises = []
+  //   for (let i = 0; i < userData.length; i++) {
+  //     let newUser = User.create(userData[i])
+  //     await userPromises.push(newUser)
+  //   }
+  //   await Promise.all(userPromises)
 
   console.log(`seeded  users`);
   console.log(`seeded successfully`);
 }
-
 
 if (module === require.main) {
   seed()
