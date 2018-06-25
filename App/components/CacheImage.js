@@ -10,9 +10,9 @@ class CacheImage extends Component {
   };
   componentDidMount = async () => {
     const { uri } = this.props;
-    const name = shorthash.unique(uri);
-    const path = `${FileSystem.cacheDirectory}${name}`;
-    const image = await FileSystem.getInfoAsync(path);
+    // const name = shorthash.unique(uri);
+    // const path = `${FileSystem.cacheDirectory}${name}`;
+    const image = await FileSystem.getInfoAsync(uri);
     if (image.exists) {
       this.setState({
         source: {
@@ -33,9 +33,9 @@ class CacheImage extends Component {
     const { uri } = this.state.source;
     console.log(uri);
     return uri ? (
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Image style={{ height: 70, width: 70 }} uri={this.state.source.uri} />
-      </ScrollView>
+
+        <Image style={{ height: 1000,  resizeMode: 'contain' }} source={this.state.source} />
+
     ) : (
       <View />
     );

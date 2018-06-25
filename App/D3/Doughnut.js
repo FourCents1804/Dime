@@ -13,7 +13,7 @@ const Pie = props => {
 
   const piePath = d3.arc()
   .outerRadius(100)
-  .padAngle(.05)
+  .padAngle(0.05)
   .innerRadius(60)
 
   const colors = d3.scaleLinear()
