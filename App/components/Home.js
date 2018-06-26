@@ -25,42 +25,7 @@ const Home = props => {
   const chartHeight = 250;
   const { user, navigate } = props;
   return (
-    <ScrollView>
-      <Header
-        placement="left"
-        leftComponent={
-          <TouchableOpacity
-            style={{
-              alignSelf: "flex-end",
-              alignItems: "center"
-            }}
-            onPress={() => navigate("Webcam")}
-          >
-            <Image
-              style={{ top: 20, height: 80, width: 60 }}
-              source={require("../../public/menu.png")}
-            />
-          </TouchableOpacity>
-        }
-        centerComponent={{
-          text: user.firstName + " " + user.lastName,
-          style: { fontSize: 25, color: "#fff" }
-        }}
-        rightComponent={
-          <TouchableOpacity
-            style={{
-              alignSelf: "flex-end",
-              alignItems: "center"
-            }}
-            onPress={() => navigate("User")}
-          >
-            <Image
-              style={{ height: 40, width: 40 }}
-              source={require("../../public/user.png")}
-            />
-          </TouchableOpacity>
-        }
-      />
+    <ScrollView style={{marginTop: 70}}>
       <Text>Welcome, {user.firstName} </Text>
       <Pie userPurchases={userPurchases} />
       <RNSCHistogram
