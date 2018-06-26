@@ -31,6 +31,13 @@ class SignUp extends React.Component {
       new Animated.Value(-500),
       new Animated.Value(-500)
     ],
+    fade: [
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500),
+      new Animated.Value(-500)
+    ],
 
   };
   componentDidMount() {
@@ -38,11 +45,19 @@ class SignUp extends React.Component {
     this.state.slide.forEach(animation => {
       iteration++;
       Animated.timing(animation, {
-        toValue: 0,
+        toValue: 1,
         duration: (350 * (iteration + 0.6)),
         easing: Easing.in(Easing.ease)
       }).start();
-    });
+      Animated.timing(
+        this.state.fade[iteration - 1], // The animated value to drive
+        {
+          toValue: 1, // Animate to opacity: 1 (opaque)
+          duration: 250 * (iteration * 1.17) // Make it take a while
+        }
+      ).start(); // Starts the animation
+    })
+
   }
 
   handleNextButton = () => {
@@ -70,7 +85,7 @@ class SignUp extends React.Component {
       let stateFields = keys;
       formInputArr.push(
         <Animated.View
-        style={{ transform: [{ translateY: this.state.slide[iteration]}] }}
+        style={{opacity: this.state.fade[iteration], transform: [{ translateY: this.state.slide[iteration]}] }}
         >
           <FormInput
             errorMessage
