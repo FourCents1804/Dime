@@ -10,6 +10,7 @@ import { logout } from '../store';
 import styles from '../../public';
 import React, { Component } from 'react';
 import Histogram from '../D3/Histogram';
+import Line from '../D3/Line'
 
 
 const Home = props => {
@@ -30,26 +31,14 @@ const Home = props => {
         rightComponent={{ icon: 'person', color: '#fff', size: 35 }}
       />
       <Text>Welcome, {user.firstName} </Text>
-        <Surface width={chartWidth} height={chartHeight}>
-          <Pie
-            userPurchases={userPurchases}
-            chartX={chartWidth / 2}
-            chartY={chartHeight / 2}
-          />
-          <ARTText
-            font="bold 15px Arial"
-            fill="#000"
-            x={chartWidth / 2 - 40} //Find some way to center
-            y={chartHeight / 2 - 10}
-          >
-            Chart Label
-          </ARTText>
-        </Surface>
+        <Pie userPurchases={userPurchases}/>
         <RNSCHistogram
           userPurchases={userPurchasesYear}
           width={chartWidth}
           height={chartHeight}
         />
+        <Histogram width={250} height={200} margin={20} />
+        <Line />
         <Divider style={styles.dividerS} />
         <TouchableOpacity
           style={{
