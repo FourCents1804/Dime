@@ -5,14 +5,7 @@ import { Home, Login } from './components';
 import { connect } from 'react-redux';
 import { me } from './store';
 import styles from '../public';
-import {
-  Text,
-  Button,
-  FormInput,
-  FormLabel,
-  FormValidationMessage,
-  Header
-} from 'react-native-elements';
+
 
 class Root extends React.Component {
   componentDidMount() {
@@ -22,14 +15,12 @@ class Root extends React.Component {
     const { navigate } = this.props.navigation;
     let { user } = this.props;
     if (user === undefined) user = {};
-    // return user.id ? (
-    //   <Home navigate={navigate} />
-    // ) : (
-    //   <Login navigate={navigate} />
-    // );
-    return (
+    return user.id ? (
       <Home navigate={navigate} />
-    )
+    ) : (
+      <Login navigate={navigate} />
+    );
+
   }
 }
 
