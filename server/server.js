@@ -6,6 +6,14 @@ const passport = require("passport");
 const db = require("./db");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sessionStore = new SequelizeStore({ db });
+// const Expo = require("expo");
+// const { manifest } = Expo.Constants;
+// const ip = manifest.packagerOpts.dev
+//   ? manifest.debuggerHost
+//       .split(`:`)
+//       .shift()
+//       .concat(`:19004`)
+//   : `localhost:19004`;
 
 const app = express();
 
@@ -39,7 +47,7 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/api", require("./api"));
+app.use(`/api`, require("./api"));
 app.use("/auth", require("./auth"));
 
 // app.get("*", (req, res) => {

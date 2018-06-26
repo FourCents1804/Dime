@@ -10,7 +10,7 @@ import {
   Webcam,
   TakenImage,
   User,
-  Expense
+  Purchase
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
@@ -26,7 +26,7 @@ const AppNavigator = createStackNavigator({
   Webcam: { screen: Webcam },
   TakenImage: { screen: TakenImage },
   User: { screen: User },
-  Expense: { screen: Expense }
+  Purchase: { screen: Purchase }
 });
 
 export default class App extends React.Component {
