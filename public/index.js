@@ -3,16 +3,15 @@ import { StyleSheet } from 'react-native';
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
   },
   scrollContainer: {
     backgroundColor: '#fff',
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 20
   },
   containerChart: {
     flex: 1,
@@ -76,5 +75,11 @@ export default (styles = StyleSheet.create({
     width: 50,
     zIndex: 1,
     top: -60
+  },
+  imageContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 }));
