@@ -28,48 +28,72 @@ const Home = props => {
     <ScrollView>
       <Header
         placement="left"
-        leftComponent={{ icon: "menu", color: "#fff", size: 35 }}
+        leftComponent={
+          <TouchableOpacity
+            style={{
+              alignSelf: "flex-end",
+              alignItems: "center"
+            }}
+            onPress={() => navigate("Webcam")}
+          >
+            <Image
+              style={{ top: 20, height: 80, width: 60 }}
+              source={require("../../public/menu.png")}
+            />
+          </TouchableOpacity>
+        }
         centerComponent={{
           text: user.firstName + " " + user.lastName,
           style: { fontSize: 25, color: "#fff" }
         }}
-        rightComponent={{ icon: "person", color: "#fff", size: 35 }}
+        rightComponent={
+          <TouchableOpacity
+            style={{
+              alignSelf: "flex-end",
+              alignItems: "center"
+            }}
+            onPress={() => navigate("User")}
+          >
+            <Image
+              style={{ height: 40, width: 40 }}
+              source={require("../../public/user.png")}
+            />
+          </TouchableOpacity>
+        }
       />
-      <View style={{ backgroundColor: "#fff" }}>
-        <Text>Welcome, {user.firstName} </Text>
-        <Pie userPurchases={userPurchases} />
-        <RNSCHistogram
-          userPurchases={userPurchasesYear}
-          width={chartWidth}
-          height={chartHeight}
-        />
-        <Histogram width={250} height={200} margin={20} />
-        <Line />
-        <Divider style={styles.dividerS} />
-        <ActionButton buttonColor="rgba(231,76,60,1)">
-          <ActionButton.Item
-            buttonColor="#9b59b6"
-            title="New Task"
-            onPress={() => console.log("notes tapped!")}
-          >
-            <Icon name="md-create" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-          <ActionButton.Item
-            buttonColor="#3498db"
-            title="Notifications"
-            onPress={() => {}}
-          >
-            <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-          <ActionButton.Item
-            buttonColor="#1abc9c"
-            title="All Tasks"
-            onPress={() => {}}
-          >
-            <Icon name="md-done-all" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-        </ActionButton>
-      </View>
+      <Text>Welcome, {user.firstName} </Text>
+      <Pie userPurchases={userPurchases} />
+      <RNSCHistogram
+        userPurchases={userPurchasesYear}
+        width={chartWidth}
+        height={chartHeight}
+      />
+      <Histogram width={250} height={200} margin={20} />
+      <Line />
+      <Divider style={styles.dividerS} />
+      <ActionButton buttonColor="rgba(231,76,60,1)">
+        <ActionButton.Item
+          buttonColor="#9b59b6"
+          title="New Task"
+          onPress={() => console.log("notes tapped!")}
+        >
+          <Icon name="md-create" style={styles.actionButtonIcon} />
+        </ActionButton.Item>
+        <ActionButton.Item
+          buttonColor="#3498db"
+          title="Notifications"
+          onPress={() => {}}
+        >
+          <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
+        </ActionButton.Item>
+        <ActionButton.Item
+          buttonColor="#1abc9c"
+          title="All Tasks"
+          onPress={() => {}}
+        >
+          <Icon name="md-done-all" style={styles.actionButtonIcon} />
+        </ActionButton.Item>
+      </ActionButton>
     </ScrollView>
   );
 };
