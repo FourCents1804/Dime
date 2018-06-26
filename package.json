@@ -21,6 +21,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@google-cloud/language": "^1.2.0",
     "@google-cloud/vision": "^0.20.0",
     "art": "^0.10.2",
     "axios": "^0.18.0",
