@@ -10,7 +10,8 @@ import {
   Webcam,
   TakenImage,
   User,
-  Purchase
+  Purchase,
+  Navigation
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
