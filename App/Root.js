@@ -22,11 +22,14 @@ class Root extends React.Component {
     const { navigate } = this.props.navigation;
     let { user } = this.props;
     if (user === undefined) user = {};
-    return user.id ? (
+    // return user.id ? (
+    //   <Home navigate={navigate} />
+    // ) : (
+    //   <Login navigate={navigate} />
+    // );
+    return (
       <Home navigate={navigate} />
-    ) : (
-      <Login navigate={navigate} />
-    );
+    )
   }
 }
 
