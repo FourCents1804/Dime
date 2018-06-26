@@ -44,7 +44,7 @@ class Root extends React.Component {
       type="displace"
       content={<Menu navigate={navigate} />}
       tapToClose={true}
-      openDrawerOffset={0.2} // 20% gap on the right side of drawer
+      openDrawerOffset={0.3}
       panCloseMask={0.2}
       closedDrawerOffset={-3}
       styles={drawerStyles}

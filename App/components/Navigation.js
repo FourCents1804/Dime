@@ -25,7 +25,7 @@ const Navigation = props => {
       </TouchableOpacity>
     }
     centerComponent={{
-      text: 'hey',
+      text: 'LOGO',
       style: { fontSize: 25, color: "#fff" }
     }}
     rightComponent={

@@ -47,6 +47,9 @@ export default (styles = StyleSheet.create({
     alignItems: 'center',
     width: 300
   },
+  drawerStyles: {
+    shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3
+  },
   menu: {
     backgroundColor: '#2a2a2a',
     height: '100%'
