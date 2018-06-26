@@ -1,3 +1,18 @@
+
+'use strict';
+const bodyParser = require('body-parser');
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+const db = require('./db');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sessionStore = new SequelizeStore({ db });
+
+// const path = require("path");
+// const volleyball = require("volleyball");
+// const bodyParser = require("body-parser");
+
+
 "use strict";
 const bodyParser = require("body-parser");
 const express = require("express");
@@ -15,6 +30,7 @@ const sessionStore = new SequelizeStore({ db });
 //       .concat(`:19004`)
 //   : `localhost:19004`;
 
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -28,6 +44,7 @@ passport.deserializeUser((id, done) =>
 );
 app.use(
   session({
+
     secret: process.env.SESSION_SECRET || "my best friend is Cody",
     store: sessionStore,
     resave: false,
@@ -47,8 +64,8 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(`/api`, require("./api"));
-app.use("/auth", require("./auth"));
+app.use('/api', require('./api')); // include our routes!
+app.use('/auth', require('./auth'));
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../public/index.html"));
