@@ -12,7 +12,6 @@ const { Rectangle } = Shape;
 import Svg, { Rect, Circle } from "react-native-svg";
 
 const Histogram = props => {
-  console.log("rect", ClippingRectangle);
   const width = 250;
   const height = 200;
   const margin = 20;
