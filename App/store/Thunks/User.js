@@ -9,8 +9,6 @@ const ip = manifest.packagerOpts.dev
       .concat(`:19004`)
   : `localhost:19004`;
 
-//...
-
 export const GET_USER = 'GET_USER';
 export const REMOVE_USER = 'REMOVE_USER';
 

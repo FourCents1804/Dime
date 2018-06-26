@@ -47,6 +47,35 @@ export default (styles = StyleSheet.create({
     alignItems: 'center',
     width: 300
   },
+  drawerStyles: {
+    shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3
+  },
+  menu: {
+    backgroundColor: '#2a2a2a',
+    height: '100%'
+  },
+  menuLabel: {
+    backgroundColor: '#2a2a2a',
+    height: 40,
+    padding: 10,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  menuLabelText: {
+    color: '#D3D3D3'
+  },
+  menuLinks: {
+    backgroundColor: '#666666',
+    height: 60,
+    padding: 10,
+    display: 'flex',
+    justifyContent: 'center',
+    borderTopColor: 'white',
+    borderTopWidth: 0.5,
+  },
+  menuLinkText: {
+    color: 'white'
+  },
   inputLine: {
     width: 250,
     margin: 10

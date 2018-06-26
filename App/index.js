@@ -9,11 +9,15 @@ import {
   Home,
   Webcam,
   TakenImage,
-  User
-} from './components/index';
-import Root from './Root';
-import store from './store';
-import { createStackNavigator } from 'react-navigation';
+  User,
+  Purchase,
+  Navigation,
+  Menu
+} from "./components/index";
+import Root from "./Root";
+import store from "./store";
+import { createStackNavigator } from "react-navigation";
+
 
 
 const AppNavigator = createStackNavigator({
@@ -25,7 +29,11 @@ const AppNavigator = createStackNavigator({
   SignUpV3: { screen: SignUp3 },
   Webcam: { screen: Webcam },
   TakenImage: { screen: TakenImage },
-  User: { screen: User }
+  User: { screen: User },
+  Purchase: { screen: Purchase },
+  Navigation: { screen: Navigation },
+  Menu: {screen: Menu}
+
 });
 
 export default class App extends React.Component {

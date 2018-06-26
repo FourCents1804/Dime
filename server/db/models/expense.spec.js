@@ -29,7 +29,7 @@ describe("▒▒▒ Expense Model Tests ▒▒▒", () => {
         expect(expenses.length).to.equal(1);
       });
 
-      it("can have multiple purchases", async () => {
+      it("can have multiple expenses", async () => {
         await Expense.findOrCreate({
           where: {
             value: 90.46,
