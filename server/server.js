@@ -7,6 +7,10 @@ const db = require("./db");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sessionStore = new SequelizeStore({ db });
 
+// const path = require("path");
+// const volleyball = require("volleyball");
+// const bodyParser = require("body-parser");
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -39,7 +43,7 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/api", require("./api"));
+app.use("/api", require("./api")); // include our routes!
 app.use("/auth", require("./auth"));
 
 // app.get("*", (req, res) => {
