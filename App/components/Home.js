@@ -73,25 +73,22 @@ const Home = props => {
       <Divider style={styles.dividerS} />
       <ActionButton buttonColor="rgba(231,76,60,1)">
         <ActionButton.Item
-          buttonColor="#9b59b6"
-          title="New Task"
-          onPress={() => console.log("notes tapped!")}
+          buttonColor="#3498db"
+          title="Camera"
+          onPress={() => navigate("Webcam")}
         >
-          <Icon name="md-create" style={styles.actionButtonIcon} />
+          <Icon name="ios-camera" size={30} />
+          {/* <Image
+            style={{ height: 40, width: 40 }}
+            source={require("../../public/capture.png")}
+          /> */}
         </ActionButton.Item>
         <ActionButton.Item
           buttonColor="#3498db"
-          title="Notifications"
+          title="Keyboard"
           onPress={() => {}}
         >
-          <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
-        </ActionButton.Item>
-        <ActionButton.Item
-          buttonColor="#1abc9c"
-          title="All Tasks"
-          onPress={() => {}}
-        >
-          <Icon name="md-done-all" style={styles.actionButtonIcon} />
+          <Icon name="ios-keypad" size={30} />
         </ActionButton.Item>
       </ActionButton>
     </ScrollView>
