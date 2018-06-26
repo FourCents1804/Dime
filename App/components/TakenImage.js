@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { CacheImage } from "./index";
-import { View } from "react-native";
+import React, { Component } from 'react';
+import { CacheImage } from './index';
+import { View } from 'react-native';
 
 class TakenImage extends Component {
   render() {

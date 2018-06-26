@@ -16,6 +16,7 @@ class Root extends React.Component {
     let { user } = this.props;
     if (user === undefined) user = {};
     return user.id ? (
+
       <Home navigate={navigate} />
     ) : (
       <Login navigate={navigate} />

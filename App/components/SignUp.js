@@ -11,6 +11,7 @@ import {
   FormInput,
   FormValidationMessage
 } from 'react-native-elements';
+import Firebase from './Firebase/Firebase';
 
 let newUserData = [];
 
@@ -37,8 +38,7 @@ class SignUp extends React.Component {
       new Animated.Value(-500),
       new Animated.Value(-500),
       new Animated.Value(-500)
-    ],
-
+    ]
   };
   componentDidMount() {
     let iteration = 0;
@@ -46,7 +46,7 @@ class SignUp extends React.Component {
       iteration++;
       Animated.timing(animation, {
         toValue: 1,
-        duration: (350 * (iteration + 0.6)),
+        duration: 350 * (iteration + 0.6),
         easing: Easing.in(Easing.ease)
       }).start();
       Animated.timing(
@@ -56,36 +56,37 @@ class SignUp extends React.Component {
           duration: 250 * (iteration * 1.17) // Make it take a while
         }
       ).start(); // Starts the animation
-    })
-
+    });
   }
 
   handleNextButton = () => {
     const { navigate } = this.props.navigation;
     this.setState({ submitTokins: 1 });
-    if (this.handleError() === '') navigate('SignUp2')
+    if (this.handleError() === '') navigate('SignUp2');
   };
 
   handleError = () => {
     const { form, submitTokins } = this.state;
-   for (let keys in form) {
-     if (form[keys] === '') return `${keys} is a required field!`
-   }
-    if (form.password !== form.rePassword) return 'Passwords Do not Match';
-    if (form.password.length < 8) return 'Password must be longer than 8 characters'
-    else return '';
+    for (let keys in form) {
+      if (form[keys] === '') return `${keys} is a required field!`;
     }
-
+    if (form.password !== form.rePassword) return 'Passwords Do not Match';
+    if (form.password.length < 8) {return 'Password must be longer than 8 characters';}
+    else {return '';}
+  };
 
   createFormInput = () => {
     let formInputArr = [];
 
-    let iteration = 0
+    let iteration = 0;
     for (let keys in this.state.form) {
       let stateFields = keys;
       formInputArr.push(
         <Animated.View
-        style={{opacity: this.state.fade[iteration], transform: [{ translateY: this.state.slide[iteration]}] }}
+          style={{
+            opacity: this.state.fade[iteration],
+            transform: [{ translateY: this.state.slide[iteration] }]
+          }}
         >
           <FormInput
             errorMessage
@@ -97,7 +98,7 @@ class SignUp extends React.Component {
               stateFields[keys] = value;
               this.setState({ form: stateFields });
             }}
-            />
+          />
           <Divider style={styles.dividerS} />
         </Animated.View>
       );
@@ -112,15 +113,19 @@ class SignUp extends React.Component {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {this.createFormInput()}
         <FormValidationMessage>{this.handleError()}</FormValidationMessage>
-        <Animated.View style={{transform: [{translateY: this.state.slide[4]}]}}>
-        <Button
-          onPress={() => this.handleNextButton()}
-          width={400}
-          title="Next 1 of 3"
-          raised={true}
-          rounded={true}
-          backgroundColor="#388e3c"
-        />
+        <Animated.View
+          style={{ transform: [{ translateY: this.state.slide[4] }] }}
+        >
+          <Button
+            onPress={() => {
+              newUserData.push(this.state.form)
+              this.handleNextButton()}}
+            width={400}
+            title="Next 1 of 3"
+            raised={true}
+            rounded={true}
+            backgroundColor="#388e3c"
+          />
         </Animated.View>
       </ScrollView>
     );
@@ -142,7 +147,7 @@ class SignUpV2 extends React.Component {
       new Animated.Value(-500),
       new Animated.Value(-500),
       new Animated.Value(-500)
-    ],
+    ]
   };
 
   componentDidMount() {
@@ -151,7 +156,7 @@ class SignUpV2 extends React.Component {
       iteration++;
       Animated.timing(animation, {
         toValue: 0,
-        duration: (350 * (iteration + 0.6)),
+        duration: 350 * (iteration + 0.6),
         easing: Easing.in(Easing.ease)
       }).start();
     });
@@ -159,11 +164,13 @@ class SignUpV2 extends React.Component {
 
   createFormInput = () => {
     let formInputArr = [];
-    let iteration = 0
+    let iteration = 0;
     for (let keys in this.state.form) {
       let stateFields = keys;
       formInputArr.push(
-        <Animated.View  style={{ transform: [{ translateY: this.state.slide[iteration]}] }}>
+        <Animated.View
+          style={{ transform: [{ translateY: this.state.slide[iteration] }] }}
+        >
           <FormInput
             containerStyle={styles.inputLine}
             placeholder={stateFields}
@@ -175,8 +182,8 @@ class SignUpV2 extends React.Component {
           />
           <Divider style={styles.dividerS} />
         </Animated.View>
-      )
-      iteration++
+      );
+      iteration++;
     }
     return formInputArr;
   };
@@ -190,7 +197,7 @@ class SignUpV2 extends React.Component {
         {this.createFormInput()}
         <Button
           onPress={() => {
-            newUserData.push(this.state);
+            newUserData.push(this.state.form);
             navigate('SignUpV3');
           }}
           title="Next 2 of 3"
@@ -215,7 +222,12 @@ class SignUpV3 extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     newUserData.push(this.state);
-    this.props.sendInfo(newUserData, 'signup');
+    console.log(newUserData)
+    Firebase.auth.createUserWithEmailAndPassword(
+      newUserData[0].email,
+      newUserData[0].password
+    );
+    // this.props.sendInfo(newUserData, 'signup');
   };
 
   createCheckBox = () => {
@@ -234,7 +246,7 @@ class SignUpV3 extends React.Component {
           {this.state[keys] ? (
             <View>
               <Slider
-              style={{width: 100}}
+                style={{ width: 100 }}
                 minimumValue={0}
                 maximumValue={4000}
                 value={this.state[el]}
@@ -253,21 +265,21 @@ class SignUpV3 extends React.Component {
   render() {
     return (
       <ScrollView
-showsHorizontalScrollIndicator={true}
-      contentContainerStyle={styles.scrollContainer}>
-      <View style={styles.container}>
-
-        <Text>What Are Your Monthly Expenses</Text>
-        <Divider style={styles.dividerS} />
-        {this.createCheckBox()}
-        <Divider style={styles.dividerVS} />
-        <Button
-          rounded={true}
-          backgroundColor="green"
-          onPress={this.handleSubmit}
-          title="Create Your Account"
-        />
-      </View>
+        showsHorizontalScrollIndicator={true}
+        contentContainerStyle={styles.scrollContainer}
+      >
+        <View style={styles.container}>
+          <Text>What Are Your Monthly Expenses</Text>
+          <Divider style={styles.dividerS} />
+          {this.createCheckBox()}
+          <Divider style={styles.dividerVS} />
+          <Button
+            rounded={true}
+            backgroundColor="green"
+            onPress={this.handleSubmit}
+            title="Create Your Account"
+          />
+        </View>
       </ScrollView>
     );
   }
