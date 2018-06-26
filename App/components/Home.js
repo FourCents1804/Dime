@@ -43,15 +43,11 @@ const Home = props => {
           onPress={() => navigate("Webcam")}
         >
           <Icon name="ios-camera" size={30} />
-          {/* <Image
-            style={{ height: 40, width: 40 }}
-            source={require("../../public/capture.png")}
-          /> */}
         </ActionButton.Item>
         <ActionButton.Item
           buttonColor="#3498db"
           title="Keyboard"
-          onPress={() => {}}
+          onPress={() => navigate("Expense")}
         >
           <Icon name="ios-keypad" size={30} />
         </ActionButton.Item>
