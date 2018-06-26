@@ -1,7 +1,8 @@
 import * as d3 from "d3";
 import React from "react";
 import { ART } from "react-native";
-const { Group, Shape, Text } = ART;
+const { Group, Shape, Text, Surface } = ART;
+import styles from "../../public";
 
 const Pie = props => {
   const pieData = d3.pie().value(d => d.price)(props.userPurchases);
@@ -40,27 +41,35 @@ const Pie = props => {
     .outerRadius(130)
     .innerRadius(110);
 
+  const width = 200;
+  const height = 200;
+
   return (
-    <Group x={props.chartX} y={props.chartY}>
-      {pieData.map(section => (
-        <Group key={section.index}>
-          <Shape
-            d={piePath(section)}
-            stroke="#000"
-            fill={colors[section.index]}
-            strokeWidth={1}
-          />
-          <Text
-            font="10px Arial"
-            fill="#000"
-            x={label.centroid(section)[0]}
-            y={label.centroid(section)[1]}
-          >
-            {`${section.data.category}`}
-          </Text>
-        </Group>
-      ))}
-    </Group>
+    <Surface width={width} height={height} style={styles.container}>
+      <Group x={width / 2} y={height / 2} width={width} height={height}>
+        {pieData.map(section => (
+          <Group key={section.index}>
+            <Shape
+              d={piePath(section)}
+              stroke="#000"
+              fill={colors[section.index]}
+              strokeWidth={1}
+            />
+            <Text
+              font="10px Arial"
+              fill="#000"
+              x={label.centroid(section)[0]}
+              y={label.centroid(section)[1]}
+            >
+              {`${section.data.category}`}
+            </Text>
+          </Group>
+        ))}
+      </Group>
+      <Text font="15px Arial" fill="#000" x={width / 2} y={height / 2}>
+        Chart Label
+      </Text>
+    </Surface>
   );
 };
 
