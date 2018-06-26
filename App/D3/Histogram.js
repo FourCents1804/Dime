@@ -14,7 +14,7 @@ import Svg, { Rect, Circle } from "react-native-svg";
 const Histogram = props => {
   console.log("rect", ClippingRectangle);
 
-  const {width, height, margin} = props
+  const { width, height, margin } = props;
 
   const formatter = d3.timeFormat("%b %y");
   const parser = d3.timeParse("%b %y");
