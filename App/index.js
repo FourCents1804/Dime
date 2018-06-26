@@ -1,3 +1,4 @@
+
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Provider } from "react-redux";
@@ -11,11 +12,13 @@ import {
   TakenImage,
   User,
   Purchase,
-  Navigation
+  Navigation,
+  Menu
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
 import { createStackNavigator } from "react-navigation";
+
 
 const AppNavigator = createStackNavigator({
   Root: { screen: Root },
@@ -28,7 +31,9 @@ const AppNavigator = createStackNavigator({
   TakenImage: { screen: TakenImage },
   User: { screen: User },
   Purchase: { screen: Purchase },
-  Navigation: { screen: Navigation }
+  Navigation: { screen: Navigation },
+  Menu: {screen: Menu}
+
 });
 
 export default class App extends React.Component {
