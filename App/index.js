@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
-import { Login, SignUp1, SignUp2, SignUp3, Home, Webcam, TakenImage, User, Navigation} from './components/index';
+import { Login, SignUp1, SignUp2, SignUp3, Home, Webcam, TakenImage, User, Navigation, Menu} from './components/index';
 import Root from './Root';
 import store from './store';
 import { createStackNavigator } from 'react-navigation';
@@ -16,7 +16,8 @@ const AppNavigator = createStackNavigator({
   Webcam: { screen: Webcam },
   TakenImage: {screen:  TakenImage},
   User: {screen: User},
-  Navigation: {screen: Navigation}
+  Navigation: {screen: Navigation},
+  Menu: {screen: Menu}
 });
 
 export default class App extends React.Component {
