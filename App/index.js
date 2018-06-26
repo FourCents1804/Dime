@@ -34,7 +34,7 @@ export default class App extends React.Component {
     authStatusReported: false,
     isUserAuthenticated: false
   };
-  componentWillMount() {
+  componentDidMount() {
     Firebase.init();
     Firebase.auth.onAuthStateChanged(user => {
       this.setState({authStatusReported: true, isUserAuthenticated: user});

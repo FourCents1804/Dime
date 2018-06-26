@@ -222,12 +222,7 @@ class SignUpV3 extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     newUserData.push(this.state);
-    console.log(newUserData)
-    Firebase.auth.createUserWithEmailAndPassword(
-      newUserData[0].email,
-      newUserData[0].password
-    );
-    // this.props.sendInfo(newUserData, 'signup');
+    this.props.sendInfo(newUserData, 'signup');
   };
 
   createCheckBox = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Text,
   View,
@@ -6,21 +6,21 @@ import {
   Button as ButtonAlt,
   ImageBackground,
   Image
-} from "react-native";
-import { auth } from "../store/Thunks/User";
-import styles from "../../public";
-import { connect } from "react-redux";
-import { me } from "../store";
+} from 'react-native';
+import { auth } from '../store/Thunks/User';
+import styles from '../../public';
+import { connect } from 'react-redux';
+import { me } from '../store';
 import {
   Button,
   FormInput,
   FormValidationMessage
-} from "react-native-elements";
+} from 'react-native-elements';
 
 class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     fadeAnim: new Animated.Value(0),
     fadeAnim2: new Animated.Value(0)
   };
@@ -45,15 +45,14 @@ class Login extends React.Component {
 
   errorValidation = () => {
     const { user } = this.props;
-    if (user === "Failed")
-      return (
+    if (user === 'Failed') {return (
         <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
-      );
+      );}
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    const formName = "login";
+    const formName = 'login';
     this.props.auth(this.state, formName);
   };
 
@@ -63,7 +62,7 @@ class Login extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require("../../public/city.jpg")}
+          source={require('../../public/city.jpg')}
           style={styles.backgroundImg}
           resizeMode="cover"
         >
@@ -71,7 +70,7 @@ class Login extends React.Component {
             <Image
               source={{
                 uri:
-                  "https://facebook.github.io/react-native/docs/assets/favicon.png"
+                  'https://facebook.github.io/react-native/docs/assets/favicon.png'
               }}
               style={styles.logo}
             />
@@ -103,7 +102,7 @@ class Login extends React.Component {
               />
               <ButtonAlt
                 buttonStyle={styles.signUp}
-                onPress={() => navigate("SignUp")}
+                onPress={() => navigate('SignUp')}
                 title="Sign Up"
               >
                 <Text style={styles.signUpFont}>Sign Up</Text>
