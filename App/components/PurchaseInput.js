@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { Text, View, Easing, ScrollView, Animated } from "react-native";
-import { auth } from "../store";
+import { View, Easing, ScrollView, Animated } from "react-native";
 import { connect } from "react-redux";
 import styles from "../../public";
+import { addNewPurchase } from "../store/Thunks/Purchase";
 import {
-  Slider,
-  CheckBox,
   Divider,
   Button,
   FormInput,
   FormValidationMessage
 } from "react-native-elements";
 
-class Expense extends Component {
+class Purchase extends Component {
   state = {
     form: {
-      category: "",
-      value: 0
+      name: "",
+      amount: 0,
+      categoryBroad: "",
+      categoryDetailed: ""
     },
     slide: [
       new Animated.Value(-500),
@@ -66,11 +66,10 @@ class Expense extends Component {
     return formInputArr;
   };
 
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   newUserData.push(this.state);
-  //   this.props.sendInfo(newUserData, "signup");
-  // };
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.newPurchase(this.state.form);
+  };
 
   render() {
     return (
@@ -79,9 +78,6 @@ class Expense extends Component {
         contentContainerStyle={styles.scrollContainer}
       >
         <View style={styles.container}>
-          {/* <Text>Hello world</Text> */}
-          {/* <Divider style={styles.dividerS} />
-          <Divider style={styles.dividerVS} /> */}
           {this.createFormInput()}
           <Button
             rounded={true}
@@ -95,7 +91,13 @@ class Expense extends Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    newPurchase: purchase => dispatch(addNewPurchase(purchase))
+  };
+};
+
 export default connect(
   null,
-  null
-)(Expense);
+  mapDispatchToProps
+)(Purchase);

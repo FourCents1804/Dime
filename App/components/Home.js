@@ -47,7 +47,7 @@ const Home = props => {
         <ActionButton.Item
           buttonColor="#3498db"
           title="Keyboard"
-          onPress={() => navigate("Expense")}
+          onPress={() => navigate("Purchase")}
         >
           <Icon name="ios-keypad" size={30} />
         </ActionButton.Item>
