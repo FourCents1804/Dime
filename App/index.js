@@ -1,12 +1,10 @@
-
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
 import {
   Login,
-  SignUp1,
-  SignUp2,
-  SignUp3,
+  SignUpP1,
+  SignUpP2,
+  SignUpP3,
   Home,
   Webcam,
   TakenImage,
@@ -15,19 +13,19 @@ import {
   Navigation,
   Menu,
   PastSpend
-} from "./components/index";
-import Root from "./Root";
-import store from "./store";
-import { createStackNavigator } from "react-navigation";
+} from './components/index';
+import Root from './Root';
+import store from './store';
+import { createStackNavigator } from 'react-navigation';
 
 
 const AppNavigator = createStackNavigator({
   Root: { screen: Root },
   Login: { screen: Login },
-  SignUp: { screen: SignUp1 },
+  SignUpP1: { screen: SignUpP1 },
   Home: { screen: Home },
-  SignUp2: { screen: SignUp2 },
-  SignUpV3: { screen: SignUp3 },
+  SignUpP2: { screen: SignUpP2 },
+  SignUpP3: { screen: SignUpP3 },
   Webcam: { screen: Webcam },
   TakenImage: { screen: TakenImage },
   User: { screen: User },

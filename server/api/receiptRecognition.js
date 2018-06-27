@@ -6,14 +6,12 @@ const clientVision = new vision.ImageAnnotatorClient();
 const language = require('@google-cloud/language');
 const clientLanguage = new language.LanguageServiceClient();
 
-const fileName = '/home/yacinus/Desktop/Capstone/public/WholeFood.jpg';
-
 //Add Parsing Function Here
 
-router.get(
+router.post(
   '/',
   defaultHandler(async (req, res, next) => {
-    const textOnReceipt = await clientVision.textDetection(fileName);
+    const textOnReceipt = await clientVision.textDetection(req.body.fileName);
     const elements = textOnReceipt[0].textAnnotations[0].description.split(
       '\n'
     );
