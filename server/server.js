@@ -1,10 +1,11 @@
-"use strict";
-const bodyParser = require("body-parser");
-const express = require("express");
-const session = require("express-session");
-const passport = require("passport");
-const db = require("./db");
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
+'use strict';
+const bodyParser = require('body-parser');
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+const db = require('./db');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const sessionStore = new SequelizeStore({ db });
 
 // const path = require("path");
@@ -43,8 +44,9 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api", require("./api")); // include our routes!
-// app.use("/auth", require("./auth"));
+
+app.use('/api', require('./api')); // include our routes!
+
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../public/index.html"));

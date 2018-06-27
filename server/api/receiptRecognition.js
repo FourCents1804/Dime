@@ -6,12 +6,14 @@ const clientVision = new vision.ImageAnnotatorClient();
 const language = require('@google-cloud/language');
 const clientLanguage = new language.LanguageServiceClient();
 
-//Add Parsing Function Here
-
 router.post(
   '/',
   defaultHandler(async (req, res, next) => {
-    const textOnReceipt = await clientVision.textDetection(req.body.fileName);
+    console.log(req.body.fileName);
+    require('fs').writeFile();
+    const img = btoa(req.body.fileName);
+    const textOnReceipt = await clientVision.textDetection(img);
+
     const elements = textOnReceipt[0].textAnnotations[0].description.split(
       '\n'
     );
