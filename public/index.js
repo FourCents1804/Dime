@@ -1,107 +1,114 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "transparent",
+    alignItems: "center",
+    justifyContent: "center"
   },
   homeContainer: {
     marginTop: 70,
-    flex: 1
+    flex: 1,
+    backgroundColor: '#fff7f2'
   },
   scrollContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center"
   },
   containerChart: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center"
   },
   containerL: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center"
   },
   backgroundImg: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     width: 500
   },
   loginButton: {
     margin: 10
   },
   signUp: {
-    textAlign: 'center'
+    textAlign: "center"
   },
   signUpFont: {
     fontSize: 5,
-    textAlign: 'center'
+    textAlign: "center"
   },
   loginContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 4,
     borderWidth: 0.5,
-    borderColor: 'grey',
-    display: 'flex',
-    alignItems: 'center',
+    borderColor: "grey",
+    display: "flex",
+    alignItems: "center",
     width: 300
   },
   drawerStyles: {
-    shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 3
   },
   menu: {
-    backgroundColor: '#2a2a2a',
-    height: '100%'
+    backgroundColor: "#2a2a2a",
+    height: "100%"
   },
   menuLabel: {
-    backgroundColor: '#2a2a2a',
+    backgroundColor: "#2a2a2a",
     height: 40,
     padding: 10,
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center"
   },
   menuLabelText: {
-    color: '#D3D3D3'
+    color: "#D3D3D3"
   },
   menuLinks: {
-    backgroundColor: '#666666',
+    backgroundColor: "#666666",
     height: 60,
     padding: 10,
-    display: 'flex',
-    justifyContent: 'center',
-    borderTopColor: 'white',
-    borderTopWidth: 0.5,
+    display: "flex",
+    justifyContent: "center",
+    borderTopColor: "white",
+    borderTopWidth: 0.5
   },
   menuLinkText: {
-    color: 'white'
+    color: "white"
+  },
+  linkText: {
+    color: "white",
+    fontSize: 35
   },
   inputLine: {
     width: 250,
     margin: 10
   },
   row: {
-    flexDirection: 'row'
+    flexDirection: "row"
   },
   fontM: {
     fontSize: 20,
-    alignSelf: 'center'
+    alignSelf: "center"
   },
   dividerM: {
     height: 80,
-    backgroundColor: 'transparent'
+    backgroundColor: "transparent"
   },
   dividerS: {
     height: 50,
-    backgroundColor: 'transparent'
+    backgroundColor: "transparent"
   },
   dividerVS: {
     height: 15,
-    backgroundColor: 'transparent'
+    backgroundColor: "transparent"
   },
   logo: {
     height: 50,
@@ -111,34 +118,58 @@ export default (styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "transparent",
+    alignItems: "center",
+    justifyContent: "center"
   },
   h1Text: {
-      textAlign: 'center',
-      fontSize: 25
+    textAlign: "center",
+    fontSize: 25
   },
   actionButton: {
-    alignSelf: 'flex-end',
-    position: 'absolute',
+    alignSelf: "flex-end",
+    position: "absolute",
     bottom: 35
   },
   navBar: {
-    backgroundColor: 'pink'
+    backgroundColor: "pink"
   },
   donutContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  donutTextContainer: {
-    position: 'absolute',
-    top: 120,
-    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
   },
   donutText: {
-    textAlign: 'center'
+    textAlign: "center"
+  },
+  donutCarousel: {
+    position: 'absolute',
+    top: 80,
+  },
+  spendTableDate: {
+    backgroundColor: '#008ECC',
+    height: 25,
+    paddingHorizontal: 20,
+    justifyContent: 'center'
+  },
+  spendTableDateText: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 12
+  },
+  spendTableRow: {
+      backgroundColor: '#fff7f2',
+      display: 'flex',
+      flexDirection: 'row',
+      paddingHorizontal: 20,
+      height: 20,
+      justifyContent: 'space-between',
+      alignItems: 'center'
+  },
+  spendTableAmount: {
+      alignSelf: 'flex-end',
+  },
+  faqContent: {
+    textAlign: "center"
   }
-
 }));

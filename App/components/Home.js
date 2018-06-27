@@ -12,7 +12,7 @@ const ARTText = ART.Text;
 import { connect } from 'react-redux';
 import Pie, { userPurchases } from '../D3/Doughnut';
 import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
-
+import {SpendTable} from './'
 import styles from '../../public';
 import React, { Component } from 'react';
 import Histogram from '../D3/Histogram';
@@ -29,6 +29,7 @@ const Home = props => {
       <ScrollView>
         <Text style={styles.h1Text}>Welcome, {user.firstName}! </Text>
         <Pie userPurchases={userPurchases} />
+        <SpendTable/>
       </ScrollView>
         <ActionButton
             buttonColor="rgba(231,76,60,1)"
