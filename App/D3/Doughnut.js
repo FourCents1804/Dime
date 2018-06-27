@@ -1,50 +1,50 @@
 import * as d3 from "d3";
 import React from "react";
-import { ART } from "react-native";
+import { ART, View } from "react-native";
 const { Group, Shape, Text, Surface } = ART;
 import styles from "../../public";
 
 const Pie = props => {
+
+  const width = 260;
+  const height = 260;
+  const margin = 20;
   const pieData = d3.pie().value(d => d.price)(props.userPurchases);
 
   const piePath = d3
     .arc()
-    .outerRadius(100)
+    .outerRadius((width - margin) / 2)
     .padAngle(0.05)
-    .innerRadius(60);
+    .innerRadius(80);
 
   // const colors = d3.scaleLinear()
   //   .domain([0, props.userPurchases.length]).range([0, 255])
 
   const colors = [
-    "#E7BAA0",
-    "#E5DACE",
-    "#B2B2A2",
-    "6D7973",
-    "#F4E8C1",
-    "#A0C1B8",
-    "#709FB0",
-    "#726A95",
-    "#351F39",
-    "#E7BAA0",
-    "#E5DACE",
-    "#B2B2A2",
-    "6D7973",
-    "#F4E8C1",
-    "#A0C1B8",
-    "#709FB0",
-    "#726A95",
-    "#351F39"
+    "#cfebef",
+    "#95C8D8",
+    "#008ECC",
+    "#0E4D92",
+    "#1034A6",
+    "#000080",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
+    "#111E6C",
   ];
   const label = d3
     .arc()
     .outerRadius(130)
     .innerRadius(110);
 
-  const width = 200;
-  const height = 200;
 
   return (
+    <View style={styles.donutContainer}>
     <Surface width={width} height={height} style={styles.container}>
       <Group x={width / 2} y={height / 2} width={width} height={height}>
         {pieData.map(section => (
@@ -55,21 +55,25 @@ const Pie = props => {
               fill={colors[section.index]}
               strokeWidth={1}
             />
-            <Text
+            {/* <Text
               font="10px Arial"
               fill="#000"
               x={label.centroid(section)[0]}
               y={label.centroid(section)[1]}
             >
               {`${section.data.category}`}
-            </Text>
+            </Text> */}
           </Group>
         ))}
       </Group>
-      <Text font="15px Arial" fill="#000" x={width / 2} y={height / 2}>
+
+    </Surface>
+    <Surface width={width} height={height} style={styles.donutTextContainer}>
+      <Text font="15px Arial" fill="#000" style={styles.donutText}>
         Chart Label
       </Text>
     </Surface>
+    </View>
   );
 };
 

@@ -13,7 +13,8 @@ import {
   User,
   Purchase,
   Navigation,
-  Menu
+  Menu,
+  PastSpend
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
@@ -32,8 +33,8 @@ const AppNavigator = createStackNavigator({
   User: { screen: User },
   Purchase: { screen: Purchase },
   Navigation: { screen: Navigation },
-  Menu: {screen: Menu}
-
+  Menu: {screen: Menu},
+  PastSpend: {screen: PastSpend}
 });
 
 export default class App extends React.Component {
