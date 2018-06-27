@@ -3,13 +3,27 @@ import React from "react";
 import { ART, View } from "react-native";
 const { Group, Shape, Text, Surface } = ART;
 import styles from "../../public";
+import DonutCarousel from './DonutCarousel'
 
-const Pie = props => {
+class Pie extends React.Component {
+
+constructor () {
+  super()
+  this.state = {
+    selectedSection: 3
+  }
+}
+
+setSection = sectionId => {
+  this.setState({selectedSection: sectionId})
+}
+
+render () {
 
   const width = 260;
   const height = 260;
-  const margin = 20;
-  const pieData = d3.pie().value(d => d.price)(props.userPurchases);
+  const margin = 30;
+  const pieData = d3.pie().value(d => d.price)(this.props.userPurchases);
 
   const piePath = d3
     .arc()
@@ -17,8 +31,14 @@ const Pie = props => {
     .padAngle(0.05)
     .innerRadius(80);
 
+    const selectedPiePath = d3
+    .arc()
+    .outerRadius(((width - margin) / 2) + 10)
+    .padAngle(0.05)
+    .innerRadius(80 + 10);
+
   // const colors = d3.scaleLinear()
-  //   .domain([0, props.userPurchases.length]).range([0, 255])
+  //   .domain([0, this.props.userPurchases.length]).range([0, 255])
 
   const colors = [
     "#cfebef",
@@ -42,15 +62,15 @@ const Pie = props => {
     .outerRadius(130)
     .innerRadius(110);
 
-
   return (
     <View style={styles.donutContainer}>
     <Surface width={width} height={height} style={styles.container}>
       <Group x={width / 2} y={height / 2} width={width} height={height}>
-        {pieData.map(section => (
-          <Group key={section.index}>
+        {pieData.map(section => {
+          const currPath = (section.index === this.state.selectedSection) ? selectedPiePath : piePath
+          return (<Group key={section.index}>
             <Shape
-              d={piePath(section)}
+              d={currPath(section)}
               stroke="#000"
               fill={colors[section.index]}
               strokeWidth={1}
@@ -63,19 +83,18 @@ const Pie = props => {
             >
               {`${section.data.category}`}
             </Text> */}
-          </Group>
-        ))}
+          </Group>)
+        }
+        )}
       </Group>
-
     </Surface>
-    <Surface width={width} height={height} style={styles.donutTextContainer}>
-      <Text font="15px Arial" fill="#000" style={styles.donutText}>
-        Chart Label
-      </Text>
-    </Surface>
+    <View style={styles.donutCarousel}>
+    <DonutCarousel setSection={this.setSection} />
+    </View>
     </View>
   );
-};
+}
+}
 
 export const userPurchases = [
   {

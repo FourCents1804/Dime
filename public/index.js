@@ -138,12 +138,11 @@ export default (styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  donutTextContainer: {
-    position: "absolute",
-    top: 120,
-    flex: 1
-  },
   donutText: {
     textAlign: "center"
+  },
+  donutCarousel: {
+    position: "absolute",
+    top: 80
   }
 }));
