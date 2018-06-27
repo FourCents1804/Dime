@@ -137,7 +137,8 @@ export default (styles = StyleSheet.create({
   donutContainer: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    height: 270
   },
   donutText: {
     textAlign: "center"

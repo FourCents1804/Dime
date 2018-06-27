@@ -16,3 +16,4 @@ export {default as PastSpend} from './PastSpend'
 export {default as SpendTable} from './SpendTable'
 export { default as AboutUs } from "./AboutUs";
 export { default as FAQ } from "./FAQ";
+export {default as Search} from './Search'

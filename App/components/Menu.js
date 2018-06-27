@@ -16,7 +16,7 @@ const Menu = props => {
         <Text style={styles.menuLinkText}>Receipt Wallet</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => navigate("Webcam")}
+        onPress={() => navigate("Search")}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Find Transactions</Text>

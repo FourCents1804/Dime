@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Expo from 'expo';
-import google from './GoogleVision';
 
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
@@ -18,9 +17,9 @@ const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 
 export const addNewPurchase = pictureUri => async dispatch => {
   const fileName = pictureUri;
-  const data = await google(fileName);
-  console.log('DATA', data);
-  dispatch(addPurchase(data));
+  // const data = await google(fileName);
+  // console.log('DATA', data);
+  // dispatch(addPurchase(data));
 };
 
 export default function(state = defaultPurchase, action) {
