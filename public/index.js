@@ -9,7 +9,8 @@ export default (styles = StyleSheet.create({
   },
   homeContainer: {
     marginTop: 70,
-    flex: 1
+    flex: 1,
+    backgroundColor: '#fff7f2'
   },
   scrollContainer: {
     backgroundColor: "#fff",
@@ -142,6 +143,32 @@ export default (styles = StyleSheet.create({
     textAlign: "center"
   },
   donutCarousel: {
+    position: 'absolute',
+    top: 80,
+  },
+  spendTableDate: {
+    backgroundColor: '#008ECC',
+    height: 25,
+    paddingHorizontal: 20,
+    justifyContent: 'center'
+  },
+  spendTableDateText: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 12
+  },
+  spendTableRow: {
+      backgroundColor: '#fff7f2',
+      display: 'flex',
+      flexDirection: 'row',
+      paddingHorizontal: 20,
+      height: 20,
+      justifyContent: 'space-between',
+      alignItems: 'center'
+  },
+  spendTableAmount: {
+      alignSelf: 'flex-end',
+
     position: "absolute",
     top: 80
   },
