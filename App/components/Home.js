@@ -25,34 +25,31 @@ const Home = props => {
   const chartHeight = 250;
   const { user, navigate } = props;
   return (
-    <ScrollView style={{marginTop: 70}}>
-      <Text>Welcome, {user.firstName} </Text>
-      <Pie userPurchases={userPurchases} />
-      <RNSCHistogram
-        userPurchases={userPurchasesYear}
-        width={chartWidth}
-        height={chartHeight}
-      />
-      <Histogram width={250} height={200} margin={20} />
-      <Line />
-      <Divider style={styles.dividerS} />
-      <ActionButton buttonColor="rgba(231,76,60,1)">
-        <ActionButton.Item
-          buttonColor="#3498db"
-          title="Camera"
-          onPress={() => navigate('Webcam')}
-        >
-          <Icon name="ios-camera" size={30} />
-        </ActionButton.Item>
-        <ActionButton.Item
-          buttonColor="#3498db"
-          title="Keyboard"
-          onPress={() => navigate('Purchase')}
-        >
-          <Icon name="ios-keypad" size={30} />
-        </ActionButton.Item>
-      </ActionButton>
-    </ScrollView>
+    <View style={styles.homeContainer}>
+      <ScrollView>
+        <Text style={styles.h1Text}>Welcome, {user.firstName}! </Text>
+        <Pie userPurchases={userPurchases} />
+      </ScrollView>
+        <ActionButton
+            buttonColor="rgba(231,76,60,1)"
+            style={styles.actionButton}>
+            <ActionButton.Item
+            buttonColor="#3498db"
+            title="Camera"
+            onPress={() => navigate('Webcam')}
+            >
+            <Icon name="ios-camera" size={30} />
+            </ActionButton.Item>
+            <ActionButton.Item
+            buttonColor="#3498db"
+            title="Keyboard"
+            onPress={() => navigate('Purchase')}
+            >
+            <Icon name="ios-keypad" size={30} />
+            </ActionButton.Item>
+        </ActionButton>
+    </View>
+
   );
 };
 

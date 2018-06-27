@@ -3,6 +3,7 @@ import {Modal, Text, TouchableOpacity, TouchableHighlight, Image, View} from 're
 import {Header} from 'react-native-elements'
 import {connect} from 'react-redux'
 import { logout } from '../store';
+import styles from '../../public'
 
 const Navigation = props => {
 
@@ -11,17 +12,18 @@ const Navigation = props => {
     <View style={{position: 'absolute', top: 0, flex: 1, alignSelf: 'stretch', right: 0, left: 0}}>
     <Header
     placement="left"
+    outerContainerStyles={{ backgroundColor: '#008ECC',
+    height: 70}}
     leftComponent={
       <TouchableOpacity
         style={{
-          alignSelf: 'flex-end',
-          alignItems: 'center'
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
         onPress={() => {
           props.openMenu();
         }}>
         <Image
-          style={{ top: 20, height: 80, width: 60 }}
           source={require('../../public/menu.png')}
         />
       </TouchableOpacity>
@@ -33,14 +35,13 @@ const Navigation = props => {
     rightComponent={
       <TouchableOpacity
         style={{
-          alignSelf: 'flex-end',
           alignItems: 'center'
         }}
         onPress={() => props.logout()}
       >
         <Image
-          style={{ height: 40, width: 40 }}
-          source={require('../../public/user.png')}
+          source={require('../../public/user.png')
+          }
         />
       </TouchableOpacity>
     }
