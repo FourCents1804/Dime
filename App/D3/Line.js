@@ -2,7 +2,13 @@ const purchases = require("../../seed/purchaseData");
 import React from "react";
 const d3 = require("d3");
 import { ART, View } from "react-native";
-import { YAxis, XAxis, BarChart, Grid, LineChart } from "react-native-svg-charts";
+import {
+  YAxis,
+  XAxis,
+  BarChart,
+  Grid,
+  LineChart
+} from "react-native-svg-charts";
 import * as scale from "d3-scale";
 
 const { Surface, Group, Shape, ClippingRectangle } = ART;
@@ -12,7 +18,6 @@ const { Rectangle } = Shape;
 import Svg, { Rect, Circle } from "react-native-svg";
 
 const Line = props => {
-  console.log("rect", ClippingRectangle);
   const width = 250;
   const height = 200;
   const margin = 20;
@@ -45,7 +50,7 @@ const Line = props => {
           style={{ flex: 1 }}
           data={data}
           contentInset={{ top: 20, bottom: 20 }}
-          svg={{ stroke: 'rgb(65, 65, 244)'}}
+          svg={{ stroke: "rgb(65, 65, 244)" }}
           yAccessor={({ item }) => item.value}
           xAccessor={({ item }) => parser(item.key)}
           // xScale={ scale.scaleTime }
