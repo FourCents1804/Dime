@@ -18,7 +18,7 @@ const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 export const addNewPurchase = pictureUri => async dispatch => {
   const fileName = pictureUri
   console.log('ENTERTHUNK', fileName)
-  const { data } = await axios.post(`http://${ip}/api/receiptRecognition`, fileName);
+  const { data } = await axios.post(`http://${ip}/api/receiptRecognition`, {fileName});
   console.log('DATA', data)
   dispatch(addPurchase(data));
 };

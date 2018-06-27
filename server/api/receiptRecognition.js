@@ -5,7 +5,7 @@ const vision = require('@google-cloud/vision');
 const clientVision = new vision.ImageAnnotatorClient();
 const language = require('@google-cloud/language');
 const clientLanguage = new language.LanguageServiceClient();
-
+const GOOGLE_APPLICATION_CREDENTIALS = '../../json'
 //Add Parsing Function Here
 
 router.post(

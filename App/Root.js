@@ -60,7 +60,7 @@ class Root extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.User
+  user: state.User.user
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -6,7 +6,7 @@ import {
   View,
   Text
 } from 'react-native';
-import { Header, Divider } from 'react-native-elements';
+import { Header, Divider, Button } from 'react-native-elements';
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;
 import { connect } from 'react-redux';
@@ -19,11 +19,13 @@ import Histogram from '../D3/Histogram';
 import Line from '../D3/Line';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {getPurchases} from '../store/Thunks/User'
 
 const Home = props => {
   const chartWidth = 250;
   const chartHeight = 250;
-  const { user, navigate } = props;
+  const { user, navigate, purchases } = props;
+  console.log(purchases, user)
   return (
     <View style={styles.homeContainer}>
       <ScrollView>
@@ -48,17 +50,23 @@ const Home = props => {
             <Icon name="ios-keypad" size={30} />
             </ActionButton.Item>
         </ActionButton>
+        <Button onPress={() => props.getPurchases(user.uid)} title="getPurchasesTest" />
     </View>
 
   );
 };
 
 const mapStateToProps = state => ({
-  user: state.User
-});
+  purchases: state.User.purchases,
+  user: state.User.user
+})
+
+const mapDispatchToProps = dispatch => ({
+  getPurchases: (uid) => dispatch(getPurchases(uid))
+ })
 
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Home);
