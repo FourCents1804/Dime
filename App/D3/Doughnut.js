@@ -14,8 +14,11 @@ constructor () {
   }
 }
 
-render () {
+setSection = sectionId => {
+  this.setState({selectedSection: sectionId})
+}
 
+render () {
 
   const width = 260;
   const height = 260;
@@ -86,7 +89,7 @@ render () {
       </Group>
     </Surface>
     <View style={styles.donutCarousel}>
-    <DonutCarousel  />
+    <DonutCarousel setSection={this.setSection} />
     </View>
     </View>
   );
