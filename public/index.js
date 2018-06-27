@@ -168,9 +168,6 @@ export default (styles = StyleSheet.create({
   },
   spendTableAmount: {
       alignSelf: 'flex-end',
-
-    position: "absolute",
-    top: 80
   },
   faqContent: {
     textAlign: "center"
