@@ -26,7 +26,7 @@ const Menu = props => {
         ANALYSIS AND INSIGHTS
         </Text>
       </View>
-      <TouchableHighlight onPress={() => navigate('Webcam')} style={styles.menuLinks}>
+      <TouchableHighlight onPress={() => navigate('PastSpend')} style={styles.menuLinks}>
         <Text style={styles.menuLinkText}>
         Past Expense Analysis
         </Text>
