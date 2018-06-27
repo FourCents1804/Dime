@@ -85,11 +85,9 @@ render () {
         )}
       </Group>
     </Surface>
-    <Surface width={width} height={height} style={styles.donutTextContainer}>
-      <Text font="15px Arial" fill="#000" style={styles.donutText}>
-        Chart Label
-      </Text>
-    </Surface>
+    <View style={styles.donutCarousel}>
+    <DonutCarousel  />
+    </View>
     </View>
   );
 }
