@@ -3,9 +3,13 @@ import { StyleSheet } from 'react-native';
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+  },
+  homeContainer: {
+    marginTop: 70,
+    flex: 1
   },
   scrollContainer: {
     backgroundColor: '#fff',
@@ -47,6 +51,35 @@ export default (styles = StyleSheet.create({
     alignItems: 'center',
     width: 300
   },
+  drawerStyles: {
+    shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3
+  },
+  menu: {
+    backgroundColor: '#2a2a2a',
+    height: '100%'
+  },
+  menuLabel: {
+    backgroundColor: '#2a2a2a',
+    height: 40,
+    padding: 10,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  menuLabelText: {
+    color: '#D3D3D3'
+  },
+  menuLinks: {
+    backgroundColor: '#666666',
+    height: 60,
+    padding: 10,
+    display: 'flex',
+    justifyContent: 'center',
+    borderTopColor: 'white',
+    borderTopWidth: 0.5,
+  },
+  menuLinkText: {
+    color: 'white'
+  },
   inputLine: {
     width: 250,
     margin: 10
@@ -81,5 +114,31 @@ export default (styles = StyleSheet.create({
     backgroundColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  h1Text: {
+      textAlign: 'center',
+      fontSize: 25
+  },
+  actionButton: {
+    alignSelf: 'flex-end',
+    position: 'absolute',
+    bottom: 35
+  },
+  navBar: {
+    backgroundColor: 'pink'
+  },
+  donutContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  donutTextContainer: {
+    position: 'absolute',
+    top: 120,
+    flex: 1,
+  },
+  donutText: {
+    textAlign: 'center'
   }
+
 }));

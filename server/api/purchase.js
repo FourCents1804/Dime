@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const defaultHandler = require('./errorHandler');
-const { Purchase } = require('../db/models');
+const router = require("express").Router();
+const defaultHandler = require("./errorHandler");
+const { Purchase } = require("../db/models");
 
 router.get(
-  '/',
+  "/",
   defaultHandler(async (req, res, next) => {
     const purchases = await Purchase.findAll();
     res.json(purchases);
@@ -11,7 +11,7 @@ router.get(
 );
 
 router.get(
-  '/:id',
+  "/:id",
   defaultHandler(async (req, res, next) => {
     const purchaseId = req.params.id;
     const purchase = await Purchase.findById(purchaseId);
@@ -20,15 +20,15 @@ router.get(
 );
 
 router.post(
-  '/',
+  "/",
   defaultHandler(async (req, res, next) => {
-    const newPurchase = await Purchase.create(req.body.purchase);
+    const newPurchase = await Purchase.create(req.body);
     res.json({ newPurchase });
   })
 );
 
 router.delete(
-  '/:id',
+  "/:id",
   defaultHandler(async (req, res, next) => {
     await Purchase.destroy({
       where: {

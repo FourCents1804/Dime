@@ -11,8 +11,10 @@ import {
   Webcam,
   TakenImage,
   User,
-  Expense,
-  Navigation
+  Purchase,
+  Navigation,
+  Menu,
+  PastSpend
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
@@ -27,12 +29,12 @@ const AppNavigator = createStackNavigator({
   SignUp2: { screen: SignUp2 },
   SignUpV3: { screen: SignUp3 },
   Webcam: { screen: Webcam },
-
-  TakenImage: {screen:  TakenImage},
-  User: {screen: User},
-  Navigation: {screen: Navigation},
-  Expense: { screen: Expense }
-
+  TakenImage: { screen: TakenImage },
+  User: { screen: User },
+  Purchase: { screen: Purchase },
+  Navigation: { screen: Navigation },
+  Menu: {screen: Menu},
+  PastSpend: {screen: PastSpend}
 });
 
 export default class App extends React.Component {

@@ -1,3 +1,4 @@
+
 'use strict';
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -43,8 +44,9 @@ app.use(passport.session());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', require('./api')); // include our routes!
-app.use('/auth', require('./auth'));
+
+app.use("/api", require("./api")); // include our routes!
+app.use("/auth", require("./auth"));
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../public/index.html"));
