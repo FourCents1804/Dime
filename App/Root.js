@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
-import { auth, me } from './store/Thunks/User';
+import {  View } from 'react-native';
+import {  me } from './store/Thunks/User';
 import { Home, Login, Navigation, Menu } from './components';
 import { connect } from 'react-redux';
 import Firebase from './components/Firebase/Firebase';
@@ -14,7 +14,6 @@ class Root extends React.Component {
   componentDidMount() {
     Firebase.init();
     Firebase.auth.onAuthStateChanged(user => {
-      console.log(user);
       user
         ? this.setState({ isLoggedIn: true })
         : this.setState({ isLoggedIn: false });
@@ -35,7 +34,6 @@ class Root extends React.Component {
       main: { paddingLeft: 3 }
     };
     const { navigate } = this.props.navigation;
-    let { user } = this.props;
     return this.state.isLoggedIn ? (
       <Drawer
         ref={ref => (this._drawer = ref)}

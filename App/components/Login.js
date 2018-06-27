@@ -106,7 +106,7 @@ class Login extends React.Component {
               />
               <ButtonAlt
                 buttonStyle={styles.signUp}
-                onPress={() => navigate('SignUp')}
+                onPress={() => navigate('SignUpP1')}
                 title="Sign Up"
               >
                 <Text style={styles.signUpFont}>Sign Up</Text>

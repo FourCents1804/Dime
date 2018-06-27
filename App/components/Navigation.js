@@ -36,7 +36,7 @@ const Navigation = props => {
           alignSelf: 'flex-end',
           alignItems: 'center'
         }}
-        onPress={() => navigate('User')}
+        onPress={() => props.logout()}
       >
         <Image
           style={{ height: 40, width: 40 }}
