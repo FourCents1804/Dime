@@ -8,8 +8,8 @@ function formatMoney(number) {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 }
 
-const formatter = d3.timeFormat('%b %d %y');
-const parser = d3.timeParse('%b %d %y');
+const formatter = d3.timeFormat('%B %d, %Y');
+const parser = d3.timeParse('%B %d, %Y');
 const truncate = (str, length) => {
   return str.slice(0, length)
 }
@@ -18,7 +18,7 @@ const DaySpend = props => {
   return (
       <View style={styles.spendTableContainer}>
         <View style={styles.spendTableDate}>
-          <Text>{formatter(new Date(date))}</Text>
+          <Text style={styles.spendTableDateText}>{formatter(new Date(date))}</Text>
         </View>
         {purchases.map((purchase, index) => (
         <View key={purchase + index} style={styles.spendTableRow}>
@@ -36,7 +36,7 @@ const DaySpend = props => {
 
 const SpendTable = props => {
 
-  const last50Purchases = purchaseData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)).slice(0, 50)
+  const last50Purchases = purchaseData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 50)
 
   console.log('last50', last50Purchases)
 
