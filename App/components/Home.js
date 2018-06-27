@@ -12,7 +12,7 @@ const ARTText = ART.Text;
 import { connect } from 'react-redux';
 import Pie, { userPurchases } from '../D3/Doughnut';
 import RNSCHistogram, { userPurchasesYear } from '../D3/RNSCHistogram';
-import { logout } from '../store';
+
 import styles from '../../public';
 import React, { Component } from 'react';
 import Histogram from '../D3/Histogram';
@@ -60,11 +60,8 @@ const mapStateToProps = state => ({
   user: state.User
 });
 
-const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
-});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Home);

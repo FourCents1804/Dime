@@ -1,15 +1,24 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { auth } from './store/Thunks/User';
+import { auth, me } from './store/Thunks/User';
 import { Home, Login, Navigation, Menu } from './components';
 import { connect } from 'react-redux';
-import { me } from './store';
+import Firebase from './components/Firebase/Firebase';
 import styles from '../public';
 import Drawer from 'react-native-drawer';
 
 class Root extends React.Component {
+  state = {
+    isLoggedIn: false
+  };
   componentDidMount() {
-    this.props.isLoggedIn();
+    Firebase.init();
+    Firebase.auth.onAuthStateChanged(user => {
+      console.log(user);
+      user
+        ? this.setState({ isLoggedIn: true })
+        : this.setState({ isLoggedIn: false });
+    });
   }
 
   closeMenu = () => {
@@ -27,17 +36,7 @@ class Root extends React.Component {
     };
     const { navigate } = this.props.navigation;
     let { user } = this.props;
-    if (user === undefined) user = {};
-    return user.email ? (
-      // return user.id ? (
-      // <View  style={{flex: 1}}>
-      // <Navigation navigate={navigate} />
-      // <Home navigate={navigate} />
-      // </View>
-      // ) : (
-      //   <Login navigate={navigate} />
-      // );
-
+    return this.state.isLoggedIn ? (
       <Drawer
         ref={ref => (this._drawer = ref)}
         type="displace"
@@ -67,8 +66,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  isLoggedIn: () => dispatch(me()),
-  auth: (userData, formName) => dispatch(auth(userData, formName))
+  isLoggedIn: () => dispatch(me())
 });
 
 export default connect(

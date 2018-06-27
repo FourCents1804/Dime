@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Easing, ScrollView, Animated } from 'react-native';
 import { auth } from '../store';
 import { connect } from 'react-redux';
+import {slide, fade} from '../../public/common-util'
 import styles from '../../public';
 import {
   Slider,
@@ -25,35 +26,22 @@ class SignUp extends React.Component {
       rePassword: ''
     },
     submitTokins: 0,
-    slide: [
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500)
-    ],
-    fade: [
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500)
-    ]
+
   };
   componentDidMount() {
     let iteration = 0;
-    this.state.slide.forEach(animation => {
+    slide.forEach(animation => {
       iteration++;
       Animated.timing(animation, {
         toValue: 1,
-        duration: 350 * (iteration + 0.6),
+        duration: 175 * (iteration + 0.6),
         easing: Easing.in(Easing.ease)
       }).start();
       Animated.timing(
-        this.state.fade[iteration - 1], // The animated value to drive
+        fade[iteration - 1], // The animated value to drive
         {
           toValue: 1, // Animate to opacity: 1 (opaque)
-          duration: 250 * (iteration * 1.17) // Make it take a while
+          duration: 300 * (iteration * 1.17) // Make it take a while
         }
       ).start(); // Starts the animation
     });
@@ -71,8 +59,11 @@ class SignUp extends React.Component {
       if (form[keys] === '') return `${keys} is a required field!`;
     }
     if (form.password !== form.rePassword) return 'Passwords Do not Match';
-    if (form.password.length < 8) {return 'Password must be longer than 8 characters';}
-    else {return '';}
+    if (form.password.length < 8) {
+      return 'Password must be longer than 8 characters';
+    } else {
+      return '';
+    }
   };
 
   createFormInput = () => {
@@ -84,8 +75,8 @@ class SignUp extends React.Component {
       formInputArr.push(
         <Animated.View
           style={{
-            opacity: this.state.fade[iteration],
-            transform: [{ translateY: this.state.slide[iteration] }]
+            opacity: fade[iteration],
+            transform: [{ translateY: slide[iteration] }]
           }}
         >
           <FormInput
@@ -114,12 +105,16 @@ class SignUp extends React.Component {
         {this.createFormInput()}
         <FormValidationMessage>{this.handleError()}</FormValidationMessage>
         <Animated.View
-          style={{ transform: [{ translateY: this.state.slide[4] }] }}
+          style={{
+            opacity: fade[4],
+            transform: [{ translateY: slide[4] }]
+          }}
         >
           <Button
             onPress={() => {
-              newUserData.push(this.state.form)
-              this.handleNextButton()}}
+              newUserData.push(this.state.form);
+              this.handleNextButton();
+            }}
             width={400}
             title="Next 1 of 3"
             raised={true}
@@ -141,24 +136,24 @@ class SignUpV2 extends React.Component {
       age: 0,
       savingsGoal: 0
     },
-    slide: [
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500)
-    ]
   };
 
   componentDidMount() {
     let iteration = 0;
-    this.state.slide.forEach(animation => {
+    slide.forEach(animation => {
       iteration++;
       Animated.timing(animation, {
         toValue: 0,
         duration: 350 * (iteration + 0.6),
         easing: Easing.in(Easing.ease)
       }).start();
+      Animated.timing(
+        fade[iteration - 1], // The animated value to drive
+        {
+          toValue: 1, // Animate to opacity: 1 (opaque)
+          duration: 300 * (iteration * 1.17) // Make it take a while
+        }
+      ).start(); // Starts the animation
     });
   }
 
@@ -169,7 +164,11 @@ class SignUpV2 extends React.Component {
       let stateFields = keys;
       formInputArr.push(
         <Animated.View
-          style={{ transform: [{ translateY: this.state.slide[iteration] }] }}
+          style={{
+            opacity: fade[iteration],
+            transform: [{ translateY: slide[iteration] }]
+
+          }}
         >
           <FormInput
             containerStyle={styles.inputLine}
@@ -195,6 +194,8 @@ class SignUpV2 extends React.Component {
         contentContainerStyle={styles.scrollContainer}
       >
         {this.createFormInput()}
+        <Animated.View style={{opacity: fade[4],
+            transform: [{ translateY: slide[4] }] }}>
         <Button
           onPress={() => {
             newUserData.push(this.state.form);
@@ -205,6 +206,7 @@ class SignUpV2 extends React.Component {
           rounded={true}
           backgroundColor="green"
         />
+        </Animated.View>
       </ScrollView>
     );
   }
@@ -220,9 +222,11 @@ class SignUpV3 extends React.Component {
     entertainment: 0
   };
   handleSubmit = event => {
+    const { popToTop } = this.props.navigation;
     event.preventDefault();
     newUserData.push(this.state);
     this.props.sendInfo(newUserData, 'signup');
+    popToTop();
   };
 
   createCheckBox = () => {

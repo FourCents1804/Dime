@@ -13,11 +13,10 @@ import {
   Purchase,
   Navigation,
   Menu
-} from "./components/index";
-import Root from "./Root";
-import store from "./store";
-import { createStackNavigator } from "react-navigation";
-
+} from './components/index';
+import Root from './Root';
+import store from './store';
+import { createStackNavigator } from 'react-navigation';
 
 
 const AppNavigator = createStackNavigator({
@@ -37,19 +36,9 @@ const AppNavigator = createStackNavigator({
 });
 
 export default class App extends React.Component {
-  state = {
-    staticAssetsLoaded: false,
-    authStatusReported: false,
-    isUserAuthenticated: false
-  };
-  componentDidMount() {
-    Firebase.init();
-    Firebase.auth.onAuthStateChanged(user => {
-      this.setState({authStatusReported: true, isUserAuthenticated: user});
-    });
-  }
+
+
   render() {
-    const {authStatusReported, isUserAuthenticated} = this.state
     return (
       <Provider store={store}>
         <AppNavigator />

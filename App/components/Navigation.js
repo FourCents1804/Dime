@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Modal, Text, TouchableOpacity, TouchableHighlight, Image, View} from 'react-native'
 import {Header} from 'react-native-elements'
+import {connect} from 'react-redux'
+import { logout } from '../store';
 
 const Navigation = props => {
 
@@ -12,40 +14,42 @@ const Navigation = props => {
     leftComponent={
       <TouchableOpacity
         style={{
-          alignSelf: "flex-end",
-          alignItems: "center"
+          alignSelf: 'flex-end',
+          alignItems: 'center'
         }}
         onPress={() => {
           props.openMenu();
         }}>
         <Image
           style={{ top: 20, height: 80, width: 60 }}
-          source={require("../../public/menu.png")}
+          source={require('../../public/menu.png')}
         />
       </TouchableOpacity>
     }
     centerComponent={{
       text: 'LOGO',
-      style: { fontSize: 25, color: "#fff" }
+      style: { fontSize: 25, color: '#fff' }
     }}
     rightComponent={
       <TouchableOpacity
         style={{
-          alignSelf: "flex-end",
-          alignItems: "center"
+          alignSelf: 'flex-end',
+          alignItems: 'center'
         }}
-        onPress={() => navigate("User")}
+        onPress={() => navigate('User')}
       >
         <Image
           style={{ height: 40, width: 40 }}
-          source={require("../../public/user.png")}
+          source={require('../../public/user.png')}
         />
       </TouchableOpacity>
     }
   />
-  </View>
+    </View>
   )
 }
 
-
-export default Navigation
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+export default connect(null, mapDispatchToProps)(Navigation)

@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import { me } from '../store';
 import {
   Button,
+  Divider,
   FormInput,
   FormValidationMessage
 } from 'react-native-elements';
@@ -45,9 +46,11 @@ class Login extends React.Component {
 
   errorValidation = () => {
     const { user } = this.props;
-    if (user === 'Failed') {return (
+    if (user === 'Failed') {
+      return (
         <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
-      );}
+      );
+    }
   };
 
   handleSubmit = event => {
@@ -77,13 +80,14 @@ class Login extends React.Component {
           </Animated.View>
           <Animated.View style={{ opacity: fadeAnim }}>
             <View style={styles.loginContainer}>
+              <Divider style={styles.dividerVS} />
               <FormInput
                 placeholder="Email"
                 containerStyle={styles.inputLine}
                 autoCapitalize="none"
                 onChangeText={email => this.setState({ email })}
               />
-
+              <Divider style={styles.dividerVS} />
               <FormInput
                 containerStyle={styles.inputLine}
                 autoCapitalize="none"

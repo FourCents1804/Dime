@@ -11,6 +11,7 @@ import * as firebase from 'firebase'
 
 class Firebase {
     static auth
+    static database
     static init() {
         firebase.initializeApp(config)
         firebase.database().ref('users/002').set({
@@ -18,6 +19,7 @@ class Firebase {
             age: 1
         })
         Firebase.auth = firebase.auth()
+        Firebase.database = firebase.database()
     }
 }
 

@@ -17,17 +17,24 @@ export const defaultUser = {};
 export const getUser = user => ({ type: GET_USER, user });
 export const removeUser = () => ({ type: REMOVE_USER });
 
-// export const me = () => async dispatch => {
-//   dispatch(getUser(defaultUser));
-// };
+export const me = () => async dispatch => {
+  Firebase.auth.onAuthStateChanged(user => {
+    console.log('Fuck', user)
+    user ?
+    dispatch(getUser(user)) :
+    dispatch(getUser(defaultUser))
+  });
+};
 
 export const auth = (userData, method) => async dispatch => {
   if (method === 'signup') {
     Firebase.auth
       .createUserWithEmailAndPassword(userData[0].email, userData[0].password)
       .then(user => {
-        console.log(user);
-        dispatch(getUser(user));
+        Firebase.database.ref(`users/${user.user.uid}`).set({
+          ...userData[0], ...userData[1], ...userData[2]
+        })
+        dispatch(getUser(user))
       })
       .catch(err => {
         console.error(err);
@@ -36,6 +43,7 @@ export const auth = (userData, method) => async dispatch => {
     Firebase.auth
       .signInWithEmailAndPassword(userData.email, userData.password)
       .then(user => {
+
         dispatch(getUser(user));
       })
       .catch(err => {
