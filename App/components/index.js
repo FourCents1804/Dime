@@ -14,3 +14,4 @@ export {default as SignUpP3} from './SignUp/SignUpP3'
 
 export { default as Line } from '../D3/Line'
 export {default as PastSpend} from './PastSpend'
+export {default as SpendTable} from './SpendTable'

@@ -138,6 +138,20 @@ export default (styles = StyleSheet.create({
   donutCarousel: {
     position: 'absolute',
     top: 80,
+  },
+  spendTableDate: {
+    backgroundColor: '#000080',
+    height: 20,
+    paddingHorizontal: 20,
+  },
+  spendTableRow: {
+      backgroundColor: '#73C2FB',
+      display: 'flex',
+      flexDirection: 'row',
+      paddingHorizontal: 20,
+      justifyContent: 'space-between'
+  },
+  spendTableAmount: {
+      alignSelf: 'flex-end',
   }
-
 }));
