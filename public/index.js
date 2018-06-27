@@ -157,7 +157,8 @@ export default (styles = StyleSheet.create({
       flexDirection: 'row',
       paddingHorizontal: 20,
       height: 20,
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      alignItems: 'center'
   },
   spendTableAmount: {
       alignSelf: 'flex-end',
