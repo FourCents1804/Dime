@@ -6,18 +6,23 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import styles from '../../public';
 const purchaseData = require('../../seed/purchaseData')
+
+const formatMoney = (number) => {
+  return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+}
 
 const renderPurchase = (purchase) => {
   const { name, amount, categoryBroad, categoryDetailed, createdAt } = purchase;
 
   return (
     <View>
-      <Text style={styles.directorText}>Transaction Name: {name}</Text>
-      <Text style={styles.openingText}>Transaction Amount: {amount}</Text>
-      <Text style={styles.openingText}>Category: {categoryBroad}</Text>
-      <Text style={styles.openingText}>Subcategory: {categoryDetailed}</Text>
-      <Text style={styles.openingText}>Date: {createdAt}</Text>
+      <Text style={styles.searchResultHeader}>{name}</Text>
+      <Text style={styles.searchResultText}>Transaction Amount: {formatMoney(amount)}</Text>
+      <Text style={styles.searchResultText}>Category: {categoryBroad}</Text>
+      <Text style={styles.searchResultText}>Subcategory: {categoryDetailed}</Text>
+      <Text style={styles.searchResultText}>Date: {createdAt}</Text>
     </View>
   );
 }
@@ -52,11 +57,11 @@ class Search extends Component {
     const comp = (a, b) => a.toLowerCase().trim() === b.toLowerCase().trim();
 
     return (
-      <View style={styles.container}>
+      <View style={styles.searchContainer}>
         <Autocomplete
           autoCapitalize="none"
           autoCorrect={false}
-          containerStyle={styles.autocompleteContainer}
+          containerStyle={styles.searchAutoComplete}
           data={purchases.length === 1 && comp(query, purchases[0].name) ? [] : purchases}
           defaultValue={query}
           onChangeText={text => this.setState({ query: text })}
@@ -69,7 +74,7 @@ class Search extends Component {
             </TouchableOpacity>
           )}
         />
-        <View style={styles.descriptionContainer}>
+        <View style={styles.searchDescriptionHeader}>
           {purchases.length > 0 ? (
             renderPurchase(purchases[0])
           ) : (
@@ -83,45 +88,5 @@ class Search extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#F5FCFF',
-    flex: 1,
-    paddingTop: 25
-  },
-  autocompleteContainer: {
-    marginLeft: 10,
-    marginRight: 10
-  },
-  itemText: {
-    fontSize: 15,
-    margin: 2
-  },
-  descriptionContainer: {
-    // `backgroundColor` needs to be set otherwise the
-    // autocomplete input will disappear on text input.
-    backgroundColor: '#F5FCFF',
-    marginTop: 8
-  },
-  infoText: {
-    textAlign: 'center'
-  },
-  titleText: {
-    fontSize: 18,
-    fontWeight: '500',
-    marginBottom: 10,
-    marginTop: 10,
-    textAlign: 'center'
-  },
-  directorText: {
-    color: 'grey',
-    fontSize: 12,
-    marginBottom: 10,
-    textAlign: 'center'
-  },
-  openingText: {
-    textAlign: 'center'
-  }
-});
 
 export default Search;

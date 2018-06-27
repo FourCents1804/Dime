@@ -65,7 +65,7 @@ class DonutCarousel extends Component {
           loadMinimal loadMinimalSize={1}
           style={styles.wrapper}
           loop={false}
-          onIndexChanged={index => this.props.setSection(index)}
+          onIndexChanged={index => this.props.setSection(index - 1)}
         >
         {this.state.categories.map(category => (
           <View key={category} style={styles.slide1}>

@@ -172,5 +172,38 @@ export default (styles = StyleSheet.create({
   },
   faqContent: {
     textAlign: "center"
+  },
+  searchContainer: {
+    backgroundColor: '#F5FCFF',
+    flex: 1,
+    paddingTop: 50
+  },
+  searchAutoComplete: {
+    marginLeft: 20,
+    marginRight: 20
+  },
+  itemText: {
+    fontSize: 15,
+    margin: 2
+  },
+  searchDescriptionHeader: {
+    // `backgroundColor` needs to be set otherwise the
+    // autocomplete input will disappear on text input.
+    backgroundColor: '#F5FCFF',
+    marginTop: 8
+  },
+  infoText: {
+    textAlign: 'center'
+  },
+  searchResultHeader: {
+    fontSize: 18,
+    fontWeight: '500',
+    marginBottom: 10,
+    marginTop: 10,
+    textAlign: 'center'
+  },
+  searchResultText: {
+    textAlign: 'center',
+    fontSize: 14
   }
 }));
