@@ -4,11 +4,9 @@ import styles from "../../public";
 const purchaseData = require("../../seed/purchaseData");
 import * as d3 from "d3";
 
-function formatMoney(number) {
-  return number.toLocaleString(
-    "en-US",
-    { style: "currency", currency: "USD" }
-  );
+const formatMoney = (number) => {
+  return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
 }
 
 const formatter = d3.timeFormat("%B %d, %Y");

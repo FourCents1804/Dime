@@ -15,6 +15,7 @@ import {
   PastSpend,
   AboutUs,
   FAQ,
+  Search,
   SpendHistory
 } from "./components/index";
 import Root from "./Root";
@@ -37,6 +38,7 @@ const AppNavigator = createStackNavigator({
   PastSpend: { screen: PastSpend },
   AboutUs: { screen: AboutUs },
   FAQ: { screen: FAQ },
+  Search: { screen: Search },
   SpendHistory: { screen: SpendHistory }
 });
 

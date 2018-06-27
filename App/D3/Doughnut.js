@@ -10,7 +10,7 @@ class Pie extends React.Component {
 constructor () {
   super()
   this.state = {
-    selectedSection: 3
+    selectedSection: -1
   }
 }
 
