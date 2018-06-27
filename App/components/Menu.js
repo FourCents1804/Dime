@@ -42,6 +42,7 @@ const Menu = props => {
       <TouchableHighlight
         onPress={() => navigate("AboutUs")}
         style={styles.menuLinks}
+        navigate={props.navigate}
       >
         <Text style={styles.menuLinkText}>About Us</Text>
       </TouchableHighlight>
