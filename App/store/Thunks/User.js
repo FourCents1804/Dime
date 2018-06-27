@@ -19,10 +19,8 @@ export const removeUser = () => ({ type: REMOVE_USER });
 
 export const me = () => async dispatch => {
   Firebase.auth.onAuthStateChanged(user => {
-    console.log('Fuck', user)
-    user ?
-    dispatch(getUser(user)) :
-    dispatch(getUser(defaultUser))
+    console.log('Fuck', user);
+    user ? dispatch(getUser(user)) : dispatch(getUser(defaultUser));
   });
 };
 
@@ -32,9 +30,11 @@ export const auth = (userData, method) => async dispatch => {
       .createUserWithEmailAndPassword(userData[0].email, userData[0].password)
       .then(user => {
         Firebase.database.ref(`users/${user.user.uid}`).set({
-          ...userData[0], ...userData[1], ...userData[2]
-        })
-        dispatch(getUser(user))
+          ...userData[0],
+          ...userData[1],
+          ...userData[2]
+        });
+        dispatch(getUser(user));
       })
       .catch(err => {
         console.error(err);
@@ -43,7 +43,6 @@ export const auth = (userData, method) => async dispatch => {
     Firebase.auth
       .signInWithEmailAndPassword(userData.email, userData.password)
       .then(user => {
-
         dispatch(getUser(user));
       })
       .catch(err => {
@@ -59,6 +58,12 @@ export const logout = () => dispatch => {
     .then(() => dispatch(removeUser()))
     .catch(err => console.error(err));
   dispatch(removeUser());
+};
+
+export const addPicture = (uuid, uri) => dispatch => {
+  console.log('UUID HEREEEE', uuid);
+  console.log('URI HEREEEE', uri);
+  Firebase.database.ref(`users/${uuid}`).set({ uri: uri });
 };
 
 export default function(state = defaultUser, action) {

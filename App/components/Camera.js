@@ -1,8 +1,10 @@
-import React from "react";
-import { Text, View, TouchableOpacity, Image } from "react-native";
-import { Camera, Permissions } from "expo";
+import React from 'react';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Camera, Permissions } from 'expo';
+import { connect } from 'react-redux';
+import { addNewPurchase } from '../store/Thunks/Purchase';
 
-export default class Webcam extends React.Component {
+class Webcam extends React.Component {
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back
@@ -10,14 +12,16 @@ export default class Webcam extends React.Component {
 
   async componentWillMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === "granted" });
+    this.setState({ hasCameraPermission: status === 'granted' });
   }
 
   async takePicture() {
     const { navigate } = this.props.navigation;
+    const { user } = this.props;
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
-      navigate("TakenImage", { uri: photo.uri });
+      console.log(photo);
+      navigate('TakenImage', { uri: photo.base64 });
     }
   }
 
@@ -38,15 +42,15 @@ export default class Webcam extends React.Component {
             <View
               style={{
                 flex: 1,
-                backgroundColor: "transparent",
-                justifyContent: "space-evenly",
-                flexDirection: "row"
+                backgroundColor: 'transparent',
+                justifyContent: 'space-evenly',
+                flexDirection: 'row'
               }}
             >
               <TouchableOpacity
                 style={{
-                  alignSelf: "flex-end",
-                  alignItems: "center"
+                  alignSelf: 'flex-end',
+                  alignItems: 'center'
                 }}
                 onPress={() => {
                   this.takePicture();
@@ -54,7 +58,7 @@ export default class Webcam extends React.Component {
               >
                 <Image
                   style={{ height: 70, width: 70, marginBottom: 25 }}
-                  source={require("../../public/capture.png")}
+                  source={require('../../public/capture.png')}
                 />
               </TouchableOpacity>
             </View>
@@ -64,3 +68,16 @@ export default class Webcam extends React.Component {
     }
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  addNewPurchase: uri => dispatch(addNewPurchase(uri))
+});
+
+const mapStateToProps = state => ({
+  user: state.User
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Webcam);

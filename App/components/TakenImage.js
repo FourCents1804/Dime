@@ -8,9 +8,8 @@ import { connect } from 'react-redux';
 class TakenImage extends Component {
   render() {
     const uri = this.props.navigation.state.params.uri;
-    const {purchase} = this.props
-    return (
-      Object.keys(purchase).length === 0 ?
+    const { purchase } = this.props;
+    return Object.keys(purchase).length === 0 ? (
       <ScrollView>
         <TouchableOpacity
           style={{
@@ -28,12 +27,11 @@ class TakenImage extends Component {
             source={require('../../public/eye.png')}
           />
         </TouchableOpacity>
-        <CacheImage uri={uri} />
-      </ScrollView> :
-      <View>
-          {console.log(purchase)}
-      </View>
-    )
+        {/* <CacheImage uri={uri} /> */}
+      </ScrollView>
+    ) : (
+      <View>{console.log(purchase)}</View>
+    );
   }
 }
 
@@ -41,11 +39,9 @@ const mapStateToProps = state => ({
   purchase: state.Purchase
 });
 
-
 const mapDispatchToProps = dispatch => ({
   addNewPurchase: uri => dispatch(addNewPurchase(uri))
 });
-
 
 export default connect(
   mapStateToProps,

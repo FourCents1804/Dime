@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Expo from 'expo';
+import google from './GoogleVision';
 
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
@@ -16,13 +17,11 @@ export const defaultPurchase = {};
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 
 export const addNewPurchase = pictureUri => async dispatch => {
-  const fileName = pictureUri
-  console.log('ENTERTHUNK', fileName)
-  const { data } = await axios.post(`http://${ip}/api/receiptRecognition`, fileName);
-  console.log('DATA', data)
+  const fileName = pictureUri;
+  const data = await google(fileName);
+  console.log('DATA', data);
   dispatch(addPurchase(data));
 };
-
 
 export default function(state = defaultPurchase, action) {
   switch (action.type) {

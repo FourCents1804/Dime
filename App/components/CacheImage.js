@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Image, ScrollView, View } from "react-native";
-import shorthash from "shorthash";
-import { FileSystem } from "expo";
-import styles from "../../public/index";
+import React, { Component } from 'react';
+import { Image, ScrollView, View } from 'react-native';
+import shorthash from 'shorthash';
+import { FileSystem } from 'expo';
+import styles from '../../public/index';
 
 class CacheImage extends Component {
   state = {
@@ -10,8 +10,8 @@ class CacheImage extends Component {
   };
   componentDidMount = async () => {
     const { uri } = this.props;
-    // const name = shorthash.unique(uri);
-    // const path = `${FileSystem.cacheDirectory}${name}`;
+    const name = shorthash.unique(uri);
+    const path = `${FileSystem.cacheDirectory}${name}`;
     const image = await FileSystem.getInfoAsync(uri);
     if (image.exists) {
       this.setState({
@@ -34,7 +34,7 @@ class CacheImage extends Component {
     return uri ? (
       <View>
         <Image
-          style={{ height: 600, resizeMode: "contain" }}
+          style={{ height: 600, resizeMode: 'contain' }}
           source={this.state.source}
         />
       </View>
