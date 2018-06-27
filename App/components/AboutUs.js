@@ -4,11 +4,11 @@ import { sanFranciscoWeights } from "react-native-typography";
 import styles from "../../public";
 
 const AboutUs = props => {
-  const { navigate } = props;
+  const { navigate } = props.navigation;
   return (
     <View>
       <TouchableHighlight
-        onPress={() => navigate("Webcam")}
+        onPress={() => navigate("FAQ")}
         style={styles.menuLinks}
       >
         <Text style={[sanFranciscoWeights.medium, styles.linkText]}>FAQ</Text>

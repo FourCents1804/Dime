@@ -144,5 +144,8 @@ export default (styles = StyleSheet.create({
   donutCarousel: {
     position: "absolute",
     top: 80
+  },
+  faqContent: {
+    textAlign: "center"
   }
 }));
