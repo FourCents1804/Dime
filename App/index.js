@@ -15,7 +15,8 @@ import {
   PastSpend,
   AboutUs,
   FAQ,
-  Search
+  Search,
+  SpendHistory
 } from "./components/index";
 import Root from "./Root";
 import store from "./store";
@@ -37,7 +38,8 @@ const AppNavigator = createStackNavigator({
   PastSpend: { screen: PastSpend },
   AboutUs: { screen: AboutUs },
   FAQ: { screen: FAQ },
-  Search: { screen: Search }
+  Search: { screen: Search },
+  SpendHistory: { screen: SpendHistory }
 });
 
 export default class App extends React.Component {
