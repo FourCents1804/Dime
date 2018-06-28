@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text, Picker, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
@@ -10,6 +10,7 @@ const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
 const parser = d3.timeParse("%b %y");
+let dataArr = [];
 
 const month = d3
   .nest()
@@ -24,24 +25,26 @@ const monthArr = month.map(eachMon => {
   return valueObj;
 });
 
-let categoryArr = [];
+const categoryDataByMonth = d3
+  .nest()
+  .key(d => formatter(new Date(d.createdAt)))
+  .key(d => d.categoryBroad)
+  .rollup(d => d3.sum(d, g => g.amount))
+  .entries(purchases)
+  .sort((a, b) => parser(b.key) - parser(a.key));
 
 const categoryForSelectedVal = val => {
-  let month = "";
-  if (
-    parser(val)
-      .getMonth()
-      .toString().length === 2
-  ) {
-    month = `${parser(val).getFullYear()}-${parser(val).getMonth() + 1}`;
-  } else {
-    month = `${parser(val).getFullYear()}-0${parser(val).getMonth() + 1}`;
-  }
+  categoryDataByMonth.forEach(mon => {
+    if (mon.key === val) {
+      dataArr = mon.values;
+    }
+  });
+  return dataArr;
 };
 
 const SpendHistory = props => {
   return (
-    <View>
+    <ScrollView>
       <View>
         <Dropdown
           label="Select Month"
@@ -49,15 +52,19 @@ const SpendHistory = props => {
           style={sanFranciscoWeights.light}
           onChangeText={value => categoryForSelectedVal(value)}
         />
+        {dataArr.length ? (
+          <View>
+            {dataArr.map(data => {
+              return (
+                <View>
+                  <Card title={data.key} />
+                </View>
+              );
+            })}
+          </View>
+        ) : null}
       </View>
-      <View>
-        <Dropdown
-          label="Select Category"
-          data={categoryArr}
-          style={sanFranciscoWeights.light}
-        />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 
