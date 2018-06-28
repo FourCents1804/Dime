@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { ScrollView, Text, View } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
@@ -42,8 +42,8 @@ const categoryForSelectedVal = val => {
   return dataArr;
 };
 
-const SpendHistory = props => {
-  return (
+class SpendHistory extends Component {
+  render() {
     <ScrollView>
       <View>
         <Dropdown
@@ -64,8 +64,8 @@ const SpendHistory = props => {
           </View>
         ) : null}
       </View>
-    </ScrollView>
-  );
-};
+    </ScrollView>;
+  }
+}
 
 export default SpendHistory;
