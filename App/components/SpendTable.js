@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { View, Text } from "react-native";
-import styles from "../../public";
-const purchaseData = require("../../seed/purchaseData");
-import * as d3 from "d3";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import styles from '../../public';
+const purchaseData = require('../../seed/purchaseData');
+import * as d3 from 'd3';
 
 const formatMoney = (number) => {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 
 }
 
-const formatter = d3.timeFormat("%B %d, %Y");
-const parser = d3.timeParse("%B %d, %Y");
+const formatter = d3.timeFormat('%B %d, %Y');
+const parser = d3.timeParse('%B %d, %Y');
 const truncate = (str, length) => {
   return str.slice(0, length);
 };
