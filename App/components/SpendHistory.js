@@ -37,14 +37,6 @@ const categoryForSelectedVal = val => {
   } else {
     month = `${parser(val).getFullYear()}-0${parser(val).getMonth() + 1}`;
   }
-
-  purchases.forEach(eachPurchase => {
-    if (eachPurchase.createdAt.slice(0, 7) === month) {
-      categoryArr.push({ value: eachPurchase.categoryBroad });
-    }
-  });
-
-  return categoryArr;
 };
 
 const SpendHistory = props => {

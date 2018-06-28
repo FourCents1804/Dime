@@ -17,3 +17,5 @@ export { default as SpendTable } from "./SpendTable";
 export { default as AboutUs } from "./AboutUs";
 export { default as FAQ } from "./FAQ";
 export {default as Search} from './Search'
+export {default as FutureProjections} from './FutureProjections'
+export {default as ReceiptWallet} from './ReceiptWallet'
