@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Modal, Text, TouchableOpacity, TouchableHighlight, Image, View} from 'react-native'
 import {Header} from 'react-native-elements'
 import {connect} from 'react-redux'
-import { logout } from '../store';
+import { logout } from '../store/Thunks/User';
 import styles from '../../public'
 
 const Navigation = props => {

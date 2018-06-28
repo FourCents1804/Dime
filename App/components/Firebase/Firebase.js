@@ -14,10 +14,6 @@ class Firebase {
     static database
     static init() {
         firebase.initializeApp(config)
-        firebase.database().ref('users/002').set({
-            name: 'Craigs',
-            age: 1
-        })
         Firebase.auth = firebase.auth()
         Firebase.database = firebase.database()
     }
