@@ -26,8 +26,8 @@ const Home = props => {
   const { user, navigate } = props;
   return (
     <View style={styles.homeContainer}>
-      <ScrollView>
-        <Text style={styles.h1Text}>Welcome, {user.firstName}! </Text>
+      <ScrollView style={{paddingTop: 10}}>
+        <Text style={styles.thinTitle}>Welcome, {user.firstName}! </Text>
         <Pie userPurchases={userPurchases} />
         <SpendTable/>
       </ScrollView>

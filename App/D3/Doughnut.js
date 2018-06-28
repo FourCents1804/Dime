@@ -4,6 +4,7 @@ import { ART, View } from "react-native";
 const { Group, Shape, Text, Surface } = ART;
 import styles from "../../public";
 import DonutCarousel from './DonutCarousel'
+const purchaseData = require("../../seed/purchaseData");
 
 class Pie extends React.Component {
 
@@ -23,7 +24,22 @@ render () {
   const width = 260;
   const height = 260;
   const margin = 30;
-  const pieData = d3.pie().value(d => d.price)(this.props.userPurchases);
+
+  const categoryData = d3
+    .nest()
+    .key(d => d.categoryBroad)
+    .rollup(d => d3.sum(d, g => g.amount))
+    .entries(purchaseData)
+    .sort((a, b) => b.value - a.value)
+
+  const pieData = d3.pie().value(d => d.value)(categoryData);
+
+  const total = {
+    key: 'Total',
+    value: categoryData.reduce((acc, curr) => acc + curr.value, 0)
+  }
+
+  const top5 = [total, ...categoryData.slice(0, 5)]
 
   const piePath = d3
     .arc()
@@ -36,9 +52,6 @@ render () {
     .outerRadius(((width - margin) / 2) + 10)
     .padAngle(0.05)
     .innerRadius(80 + 10);
-
-  // const colors = d3.scaleLinear()
-  //   .domain([0, this.props.userPurchases.length]).range([0, 255])
 
   const colors = [
     "#cfebef",
@@ -57,10 +70,6 @@ render () {
     "#111E6C",
     "#111E6C",
   ];
-  const label = d3
-    .arc()
-    .outerRadius(130)
-    .innerRadius(110);
 
   return (
     <View style={styles.donutContainer}>
@@ -83,13 +92,13 @@ render () {
             >
               {`${section.data.category}`}
             </Text> */}
-          </Group>)
+        </Group>)
         }
         )}
       </Group>
     </Surface>
     <View style={styles.donutCarousel}>
-    <DonutCarousel setSection={this.setSection} />
+    <DonutCarousel setSection={this.setSection} categories={top5} />
     </View>
     </View>
   );

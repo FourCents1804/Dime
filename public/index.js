@@ -1,16 +1,19 @@
 import { StyleSheet } from "react-native";
+import { material } from 'react-native-typography'
+import { systemWeights } from 'react-native-typography'
 
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "transparent",
+    backgroundColor: "#fff7f2",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   homeContainer: {
     marginTop: 70,
     flex: 1,
-    backgroundColor: '#fff7f2'
+    backgroundColor: '#fff7f2',
+    width: '100%'
   },
   scrollContainer: {
     backgroundColor: "#fff",
@@ -58,11 +61,11 @@ export default (styles = StyleSheet.create({
     shadowRadius: 3
   },
   menu: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#383838",
     height: "100%"
   },
   menuLabel: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#494949",
     height: 40,
     padding: 10,
     display: "flex",
@@ -72,7 +75,7 @@ export default (styles = StyleSheet.create({
     color: "#D3D3D3"
   },
   menuLinks: {
-    backgroundColor: "#666666",
+    backgroundColor: "#383838",
     height: 60,
     padding: 10,
     display: "flex",
@@ -122,10 +125,6 @@ export default (styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  h1Text: {
-    textAlign: "center",
-    fontSize: 25
-  },
   actionButton: {
     alignSelf: "flex-end",
     position: "absolute",
@@ -151,12 +150,14 @@ export default (styles = StyleSheet.create({
     backgroundColor: '#008ECC',
     height: 25,
     paddingHorizontal: 20,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   spendTableDateText: {
     textAlign: 'center',
     color: 'white',
-    fontSize: 12
+    fontSize: 12,
+    ...systemWeights.bold,
+    ...material.captionObject,
   },
   spendTableRow: {
       backgroundColor: '#fff7f2',
@@ -169,6 +170,12 @@ export default (styles = StyleSheet.create({
   },
   spendTableAmount: {
       alignSelf: 'flex-end',
+      ...systemWeights.light,
+      ...material.body1Object,
+  },
+  spendTableText: {
+    ...systemWeights.light,
+    ...material.body1Object,
   },
   faqContent: {
     textAlign: "center"
@@ -209,5 +216,33 @@ export default (styles = StyleSheet.create({
   aboutUsHeader: {
     fontSize: 20,
     textAlign: 'center',
+  },
+  lightTitle: {
+    alignSelf: 'center',
+    ...material.display1Object,
+    ...systemWeights.light,
+    color: 'black'
+  },
+  thinTitle: {
+    alignSelf: 'center',
+    ...material.display1Object,
+    ...systemWeights.thin,
+    color: 'black'
+  },
+  donutCarouselWrapper: {
+    height: 140,
+  },
+  slide: {
+    flex: 1,
+    backgroundColor: 'transparent'
+  },
+  donutCarouselView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  donutCarouselText: {
+    alignSelf: 'center',
+    ...systemWeights.light,
   }
 }));
