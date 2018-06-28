@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Expo from 'expo';
 
-
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
   ? manifest.debuggerHost
