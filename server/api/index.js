@@ -7,8 +7,8 @@ module.exports = router;
 router.use('/user', require('./user'));
 router.use(`/purchase`, require('./purchase'));
 router.use('/transaction', require('./transaction'));
-/* router.use("/receiptRecognition", require("./receiptRecognition"));
- */
+router.use('/receiptRecognition', require('./receiptRecognition'));
+
 router.use((req, res, next) => {
   const err = new Error('API route not found!');
   err.status = 404;

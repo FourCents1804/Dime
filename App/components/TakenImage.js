@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
-    const uri = this.props.navigation.state.params.uri;
+    const {uri, base64} = this.props.navigation.state.params
     const { purchase } = this.props;
     return Object.keys(purchase).length === 0 ? (
       <ScrollView>
@@ -19,7 +19,7 @@ class TakenImage extends Component {
             width: '100%'
           }}
           onPress={() => {
-            this.props.addNewPurchase(uri);
+            this.props.addNewPurchase(base64);
           }}
         >
           <Image
@@ -27,7 +27,7 @@ class TakenImage extends Component {
             source={require('../../public/eye.png')}
           />
         </TouchableOpacity>
-        {/* <CacheImage uri={uri} /> */}
+        <CacheImage uri={uri} />
       </ScrollView>
     ) : (
       <View>{console.log(purchase)}</View>

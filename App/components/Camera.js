@@ -20,8 +20,8 @@ class Webcam extends React.Component {
     const { user } = this.props;
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
-      console.log(photo);
-      navigate('TakenImage', { uri: photo.base64 });
+
+      navigate('TakenImage', { uri: photo.uri, base64: photo.base64 });
     }
   }
 
