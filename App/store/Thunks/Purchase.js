@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Expo from 'expo';
+import {key} from '../../../secrets'
 
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
@@ -16,7 +17,7 @@ export const defaultPurchase = {};
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 
 export const addNewPurchase = base64String => async dispatch => {
-  const key = 'AIzaSyAjAp4cp8hu-VyA2s89V5bvH7gd9PDpsTI'
+
   const body = {
     requests: [
       {
