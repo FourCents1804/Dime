@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
-import styles from "../../public";
 import * as d3 from "d3";
 
 const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
 const parser = d3.timeParse("%b %y");
-let dataArr = [];
 
 const month = d3
   .nest()
@@ -33,38 +31,46 @@ const categoryDataByMonth = d3
   .entries(purchases)
   .sort((a, b) => parser(b.key) - parser(a.key));
 
-const categoryForSelectedVal = val => {
-  categoryDataByMonth.forEach(mon => {
-    if (mon.key === val) {
-      dataArr = mon.values;
-    }
-  });
-  return dataArr;
-};
-
 class SpendHistory extends Component {
+  state = {
+    dataArr: []
+  };
+
+  categoryForSelectedVal = val => {
+    categoryDataByMonth.forEach(mon => {
+      if (mon.key === val) {
+        console.log(mon.values);
+        this.setState({
+          dataArr: mon.values
+        });
+      }
+    });
+  };
+
   render() {
-    <ScrollView>
-      <View>
-        <Dropdown
-          label="Select Month"
-          data={monthArr}
-          style={sanFranciscoWeights.light}
-          onChangeText={value => categoryForSelectedVal(value)}
-        />
-        {dataArr.length ? (
-          <View>
-            {dataArr.map(data => {
-              return (
-                <View>
-                  <Card title={data.key} />
-                </View>
-              );
-            })}
-          </View>
-        ) : null}
-      </View>
-    </ScrollView>;
+    return (
+      <ScrollView>
+        <View>
+          <Dropdown
+            label="Select Month"
+            data={monthArr}
+            style={sanFranciscoWeights.light}
+            onChangeText={value => this.categoryForSelectedVal(value)}
+          />
+          {this.state.dataArr.length ? (
+            <View>
+              {this.state.dataArr.map(data => {
+                return (
+                  <View>
+                    <Card title={data.key} />
+                  </View>
+                );
+              })}
+            </View>
+          ) : null}
+        </View>
+      </ScrollView>
+    );
   }
 }
 

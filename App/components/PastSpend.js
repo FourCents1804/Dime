@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "./";
 import SpendHistory from "./SpendHistory";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import styles from "../../public";
 
 const PastSpend = () => {
@@ -13,9 +13,9 @@ const PastSpend = () => {
       <View>
         <Line />
       </View>
-      <View>
+      <ScrollView>
         <SpendHistory />
-      </View>
+      </ScrollView>
     </View>
   );
 };
