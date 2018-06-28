@@ -40,6 +40,13 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>CONNECT</Text>
       </View>
       <TouchableHighlight
+        onPress={() => navigate("FAQ")}
+        style={styles.menuLinks}
+        navigate={props.navigate}
+      >
+        <Text style={styles.menuLinkText}>FAQ</Text>
+      </TouchableHighlight>
+      <TouchableHighlight
         onPress={() => navigate("AboutUs")}
         style={styles.menuLinks}
         navigate={props.navigate}

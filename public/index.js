@@ -205,5 +205,9 @@ export default (styles = StyleSheet.create({
   searchResultText: {
     textAlign: 'center',
     fontSize: 14
+  },
+  aboutUsHeader: {
+    fontSize: 20,
+    textAlign: 'center',
   }
 }));
