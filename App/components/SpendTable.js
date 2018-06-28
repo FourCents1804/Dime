@@ -6,7 +6,6 @@ import * as d3 from 'd3';
 
 const formatMoney = (number) => {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-
 }
 
 const formatter = d3.timeFormat('%B %d, %Y');
@@ -25,7 +24,7 @@ const DaySpend = props => {
       </View>
       {purchases.map((purchase, index) => (
         <View key={purchase + index} style={styles.spendTableRow}>
-          <Text>{truncate(purchase.name, 30)}</Text>
+          <Text style={styles.spendTableText}>{truncate(purchase.name, 30)}</Text>
           <Text style={styles.spendTableAmount}>
             {formatMoney(purchase.amount)}
           </Text>
@@ -36,13 +35,13 @@ const DaySpend = props => {
 };
 
 const SpendTable = props => {
-  const last50Purchases = purchaseData
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0, 50);
+
+  const last50Purchases = purchaseData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 50)
 
   const purchases = last50Purchases.reduce((purchaseObj, curr, index) => {
-    const parsedDate = parser(formatter(new Date(curr.createdAt)));
-    const purchase = { name: curr.name, amount: curr.amount };
+    const parsedDate = parser(formatter(new Date(curr.createdAt)))
+    const purchase = {name: curr.name, amount: curr.amount}
+
     if (!purchaseObj[parsedDate]) {
       purchaseObj[parsedDate] = [purchase];
     } else {

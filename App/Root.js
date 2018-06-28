@@ -70,12 +70,12 @@ class Root extends React.Component {
     //     main: { opacity: (2 - ratio) / 2 }
     //   })}
     // >
-    //   <View style={{ flex: 1 }}>
+    //   <View style={styles.container}>
     //     <Navigation navigate={navigate} openMenu={this.openMenu} />
     //     <Home navigate={navigate} />
     //   </View>
     //   </Drawer>
-
+    // )
   }
 }
 
