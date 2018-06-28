@@ -1,6 +1,6 @@
-import axios from 'axios';
-import Expo from 'expo';
-import {key} from '../../../secrets'
+import axios from "axios";
+import Expo from "expo";
+import { key } from "../../../secrets";
 
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
@@ -10,41 +10,42 @@ const ip = manifest.packagerOpts.dev
       .concat(`:19004`)
   : `localhost:19004`;
 
-export const ADD_PURCHASE = 'ADD_PURCHASE';
+export const ADD_PURCHASE = "ADD_PURCHASE";
 
 export const defaultPurchase = {};
 
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 
 export const addNewPurchase = base64String => async dispatch => {
-
   const body = {
     requests: [
       {
         image: {
-          content: base64String,
+          content: base64String
         },
         features: [
           {
-            type: 'TEXT_DETECTION',
-            maxResults: 1,
+            type: "TEXT_DETECTION",
+            maxResults: 1
           }
         ]
-      },
-    ],
+      }
+    ]
   };
-  let responce = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${key}`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-
-    },
-    body: JSON.stringify(body)
-  })
-  const parsed = await responce.json()
+  let responce = await fetch(
+    `https://vision.googleapis.com/v1/images:annotate?key=${key}`,
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    }
+  );
+  const parsed = await responce.json();
   const elements = parsed.responses[0].textAnnotations[0].description.split(
-    '\n'
+    "\n"
   );
   const items = [];
   const prices = [];
@@ -55,7 +56,7 @@ export const addNewPurchase = base64String => async dispatch => {
       prices.push(el);
     }
   });
-  console.log(items, prices)
+  console.log(items, prices);
   // const brand = elements[0];
   // let summary = {};
   // if (brand === 'Walmart') {
