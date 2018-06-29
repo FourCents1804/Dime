@@ -16,10 +16,10 @@ export default (styles = StyleSheet.create({
     width: '100%'
   },
   scrollContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: "#fff7f2",
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   containerChart: {
     flex: 1,
@@ -36,11 +36,18 @@ export default (styles = StyleSheet.create({
     justifyContent: "center",
     width: 500
   },
-  loginButton: {
-    margin: 10
+  wideButton: {
+    marginTop: 30,
+    width: 250,
   },
-  signUp: {
-    textAlign: "center"
+  signUpButton: {
+    marginTop: 30,
+    marginBottom: 5,
+    width: 250,
+  },
+  linkButton: {
+    textAlign: "center",
+    margin: 30
   },
   signUpFont: {
     fontSize: 5,
@@ -53,7 +60,8 @@ export default (styles = StyleSheet.create({
     borderColor: "grey",
     display: "flex",
     alignItems: "center",
-    width: 300
+    width: 300,
+    padding: 10
   },
   drawerStyles: {
     shadowColor: "#000000",
@@ -91,11 +99,17 @@ export default (styles = StyleSheet.create({
     fontSize: 35
   },
   inputLine: {
+    alignSelf: 'center',
     width: 250,
     margin: 10
   },
+  signUpInput: {
+    margin: 10,
+  },
   row: {
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   fontM: {
     fontSize: 20,
@@ -266,5 +280,17 @@ export default (styles = StyleSheet.create({
   donutCarouselText: {
     alignSelf: 'center',
     ...systemWeights.light,
+  },
+  signUpDropdown: {
+    width: 250,
+  },
+  signUpSlider: {
+    width: 190
+  },
+  signUpAmt: {
+    width: 60,
+  },
+  signUpCheckbox: {
+    width: 250
   }
 }));

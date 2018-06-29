@@ -5,7 +5,6 @@ import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
 import styles from "../../public";
 import * as d3 from "d3";
-
 const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
