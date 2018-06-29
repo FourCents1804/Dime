@@ -20,12 +20,6 @@ export const getUser = user => ({ type: GET_USER, user });
 export const removeUser = () => ({ type: REMOVE_USER });
 const commitedPurchase = () => ({type: COMMITED_PURCHASE})
 
-export const me = () => async dispatch => {
-  Firebase.auth.onAuthStateChanged(user => {
-    user ? dispatch(getUser(user)) : dispatch(getUser(defaultUser));
-  });
-};
-
 export const auth = (userData, method) => async dispatch => {
   if (method === "signup") {
     await Firebase.auth
@@ -50,11 +44,15 @@ export const auth = (userData, method) => async dispatch => {
       .signInWithEmailAndPassword(userData.email, userData.password)
       .then(async user => {
         const allPurchases = await Firebase.database
-          .ref(`users/${user.user.uid}/purchases`)
-          .once("value");
+          .ref(`users/${user.user.uid}`)
+          .once("value").then((snapshot) => {
+            return snapshot.val().purchases || ''
+          })
         const userData = await Firebase.database
-          .ref(`users/${user.user.uid}/userData`)
-          .once("value");
+          .ref(`users/${user.user.uid}`)
+          .once("value").then((snapshot) => {
+            return snapshot.val().userData || ''
+          })
 
         dispatch(
           getUser({
