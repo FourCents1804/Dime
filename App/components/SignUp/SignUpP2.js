@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated } from 'react-native';
+import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
 import styles from '../../../public';
 import {
   Divider,
@@ -32,6 +32,11 @@ export default class SignUpP2 extends React.Component {
         <ScrollView
           showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollContainer}
+        >
+        <ImageBackground
+          source={require('../../../public/park2.jpg')}
+          style={styles.backgroundImg}
+          resizeMode="cover"
         >
           <View style={styles.loginContainer}>
         <View>
@@ -95,6 +100,7 @@ export default class SignUpP2 extends React.Component {
           />
           </View>
           </View>
+          </ImageBackground>
         </ScrollView>
       );
     }

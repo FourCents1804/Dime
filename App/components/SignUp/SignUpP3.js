@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated } from 'react-native';
+import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
 import { auth } from '../../store';
 import { connect } from 'react-redux';
 import {slide, fade} from '../../../public/common-util'
@@ -74,6 +74,12 @@ class SignUpP3 extends React.Component {
         <ScrollView
           showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollContainer}
+          bounces={false}
+        >
+        <ImageBackground
+          source={require('../../../public/park3.jpg')}
+          style={styles.backgroundImg}
+          resizeMode="cover"
         >
           <View style={styles.loginContainer}>
           <Text style={styles.thinTitle}>Monthly Expenses</Text>
@@ -86,6 +92,7 @@ class SignUpP3 extends React.Component {
               style={styles.signUpButton}
             />
           </View>
+          </ImageBackground>
         </ScrollView>
       );
     }

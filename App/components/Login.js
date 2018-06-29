@@ -23,25 +23,16 @@ class Login extends React.Component {
     email: '',
     password: '',
     fadeAnim: new Animated.Value(0),
-    fadeAnim2: new Animated.Value(0)
   };
 
   componentDidMount() {
     Animated.timing(
-      // Animate over time
-      this.state.fadeAnim, // The animated value to drive
+      this.state.fadeAnim,
       {
-        toValue: 1, // Animate to opacity: 1 (opaque)
-        duration: 1000 // Make it take a while
+        toValue: 1,
+        duration: 1000
       }
-    ).start(); // Starts the animation
-    Animated.timing(
-      this.state.fadeAnim2, // The animated value to drive
-      {
-        toValue: 1, // Animate to opacity: 1 (opaque)
-        duration: 3000 // Make it take a while
-      }
-    ).start(); // Starts the animation
+    ).start()
   }
 
   errorValidation = () => {
@@ -51,7 +42,7 @@ class Login extends React.Component {
         <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
       );
     }
-  };
+  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -60,7 +51,7 @@ class Login extends React.Component {
   };
 
   render() {
-    let { fadeAnim, fadeAnim2 } = this.state;
+    let { fadeAnim } = this.state;
     const { navigate } = this.props;
     return (
       <View style={styles.container}>
