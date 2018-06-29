@@ -1,15 +1,14 @@
-import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import React, { Component } from "react";
+import { ScrollView, View, Text } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
-import styles from "../../public";
 import * as d3 from "d3";
+import styles from "../../public";
 const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
 const parser = d3.timeParse("%b %y");
-let dataArr = [];
 
 const month = d3
   .nest()
@@ -32,39 +31,54 @@ const categoryDataByMonth = d3
   .entries(purchases)
   .sort((a, b) => parser(b.key) - parser(a.key));
 
-const categoryForSelectedVal = val => {
-  categoryDataByMonth.forEach(mon => {
-    if (mon.key === val) {
-      dataArr = mon.values;
-    }
-  });
-  return dataArr;
-};
+class SpendHistory extends Component {
+  state = {
+    dataArr: [],
+    height: 0
+  };
 
-const SpendHistory = props => {
-  return (
-    <ScrollView>
+  categoryForSelectedVal = val => {
+    categoryDataByMonth.forEach(mon => {
+      if (mon.key === val) {
+        this.setState({
+          dataArr: mon.values
+        });
+      }
+    });
+  };
+
+  render() {
+    return (
       <View>
         <Dropdown
           label="Select Month"
           data={monthArr}
-          style={sanFranciscoWeights.light}
-          onChangeText={value => categoryForSelectedVal(value)}
+          style={sanFranciscoWeights.medium}
+          onChangeText={value => this.categoryForSelectedVal(value)}
         />
-        {dataArr.length ? (
-          <View>
-            {dataArr.map(data => {
+        {this.state.dataArr.length ? (
+          <View style={{ flex: 1 }}>
+            {this.state.dataArr.map(data => {
               return (
-                <View>
-                  <Card title={data.key} />
+                <View key={data.key}>
+                  <Card title={data.key}>
+                    <Text
+                      style={[
+                        sanFranciscoWeights.regular,
+                        styles.spendHistoryCat
+                      ]}
+                    >
+                      Amount: ${data.value.toFixed(2)}
+                    </Text>
+                  </Card>
                 </View>
               );
             })}
           </View>
         ) : null}
       </View>
-    </ScrollView>
-  );
-};
+    );
+  }
+}
 
 export default SpendHistory;

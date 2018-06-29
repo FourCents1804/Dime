@@ -1,11 +1,11 @@
-import React from 'react';
-import {  View, ActivityIndicator } from 'react-native';
-import {  me } from './store/Thunks/User';
-import { Home, Login, Navigation, Menu } from './components';
-import { connect } from 'react-redux';
-import Firebase from './components/Firebase/Firebase';
-import styles from '../public';
-import Drawer from 'react-native-drawer';
+import React from "react";
+import { View, ActivityIndicator } from "react-native";
+import { me } from "./store/Thunks/User";
+import { Home, Login, Navigation, Menu } from "./components";
+import { connect } from "react-redux";
+import Firebase from "./components/Firebase/Firebase";
+import styles from "../public";
+import Drawer from "react-native-drawer";
 
 class Root extends React.Component {
   state = {
@@ -18,9 +18,8 @@ class Root extends React.Component {
       user
         ? this.setState({ isLoggedIn: true, loading: false })
         : this.setState({ isLoggedIn: false, loading: false });
-    })
+    });
   }
-
 
   closeMenu = () => {
     this._drawer.close();
@@ -32,41 +31,40 @@ class Root extends React.Component {
 
   render() {
     const drawerStyles = {
-      drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3 },
+      drawer: { shadowColor: "#000000", shadowOpacity: 0.8, shadowRadius: 3 },
       main: { paddingLeft: 3 }
     };
     const { navigate } = this.props.navigation;
 
     if (this.state.loading) {
       return (
-      <View style={styles.container}>
-        <ActivityIndicator size="large" color="#008ECC" />
-      </View>)
+        <View style={styles.container}>
+          <ActivityIndicator size="large" color="#008ECC" />
+        </View>
+      );
     } else if (this.state.isLoggedIn) {
       return (
         <Drawer
-        ref={ref => (this._drawer = ref)}
-        type="displace"
-        content={<Menu navigate={navigate} />}
-        tapToClose={true}
-        openDrawerOffset={0.3}
-        panCloseMask={0.2}
-        closedDrawerOffset={-3}
-        styles={drawerStyles}
-        tweenHandler={ratio => ({
-          main: { opacity: (2 - ratio) / 2 }
-        })}
-      >
-        <View style={{ flex: 1 }}>
-          <Navigation navigate={navigate} openMenu={this.openMenu} />
-          <Home navigate={navigate} />
-        </View>
+          ref={ref => (this._drawer = ref)}
+          type="displace"
+          content={<Menu navigate={navigate} />}
+          tapToClose={true}
+          openDrawerOffset={0.3}
+          panCloseMask={0.2}
+          closedDrawerOffset={-3}
+          styles={drawerStyles}
+          tweenHandler={ratio => ({
+            main: { opacity: (2 - ratio) / 2 }
+          })}
+        >
+          <View style={{ flex: 1 }}>
+            <Navigation navigate={navigate} openMenu={this.openMenu} />
+            <Home navigate={navigate} />
+          </View>
         </Drawer>
-      )
+      );
     } else {
-      return (
-      <Login navigate={navigate} />
-    )
+      return <Login navigate={navigate} />;
     }
   }
 }
