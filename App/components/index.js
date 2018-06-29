@@ -19,3 +19,4 @@ export { default as FAQ } from "./FAQ";
 export {default as Search} from './Search'
 export {default as FutureProjections} from './FutureProjections'
 export {default as ReceiptWallet} from './ReceiptWallet'
+export {default as Loading} from './Loading'

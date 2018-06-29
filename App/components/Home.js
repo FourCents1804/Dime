@@ -1,44 +1,31 @@
 import { ScrollView, View, Text } from "react-native";
-import { Header, Divider } from "react-native-elements";
-const { Surface, Group, Shape } = ART;
-const ARTText = ART.Text;
 import { connect } from "react-redux";
 import Pie, { userPurchases } from "../D3/Doughnut";
-import RNSCHistogram, { userPurchasesYear } from "../D3/RNSCHistogram";
 import { SpendTable } from "./";
 import styles from "../../public";
 import React, { Component } from "react";
-import Histogram from "../D3/Histogram";
-import Line from "../D3/Line";
+
 import ActionButton from "react-native-action-button";
 import Icon from "react-native-vector-icons/Ionicons";
 
 class Home extends Component {
-  // state = {
-  //   user: {}
-  // };
-
-  // componentWillMount() {
-  //   this.setState({
-  //     user: this.props.user
-  //   });
-  // }
+  state = {
+    user: {}
+  };
 
   render() {
-    console.log("This is props", this.props);
     const chartWidth = 250;
     const chartHeight = 250;
     const { user, navigate } = this.props;
-    // const userObj = Object.assign(user);
-
-    if (!this.props.user) {
-      return <Text>Loading user info...</Text>;
-    } else {
-      console.log(userObj);
+    console.log('state.User', user)
+    console.log('props', this.props)
+    // if (!this.props.user) {
+    //   return <Loading />
+    // } else {
       return (
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
-            <Text style={styles.thinTitle}>Welcome, }!</Text>
+            <Text style={styles.thinTitle}>Welcome, !</Text>
             <Pie userPurchases={userPurchases} />
             <SpendTable />
           </ScrollView>
@@ -63,15 +50,15 @@ class Home extends Component {
           </ActionButton>
         </View>
       );
-    }
+    // }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    user: state.User.userInfo
-  };
-};
+    user: state.User
+  }
+}
 
 export default connect(
   mapStateToProps,

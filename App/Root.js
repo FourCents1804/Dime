@@ -1,7 +1,6 @@
 import React from "react";
-import { View, ActivityIndicator } from "react-native";
-import { me } from "./store/Thunks/User";
-import { Home, Login, Navigation, Menu } from "./components";
+import { View } from "react-native";
+import { Home, Login, Navigation, Menu, Loading } from "./components";
 import { connect } from "react-redux";
 import Firebase from "./components/Firebase/Firebase";
 import styles from "../public";
@@ -38,9 +37,7 @@ class Root extends React.Component {
 
     if (this.state.loading) {
       return (
-        <View style={styles.container}>
-          <ActivityIndicator size="large" color="#008ECC" />
-        </View>
+        <Loading />
       );
     } else if (this.state.isLoggedIn) {
       return (
@@ -73,11 +70,7 @@ const mapStateToProps = state => ({
   user: state.User
 });
 
-const mapDispatchToProps = dispatch => ({
-  isLoggedIn: () => dispatch(me())
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Root);
