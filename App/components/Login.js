@@ -102,10 +102,10 @@ class Login extends React.Component {
                 title="Login"
                 raised={true}
                 backgroundColor="#0080ff"
-                style={styles.loginButton}
+                style={styles.wideButton}
               />
               <ButtonAlt
-                buttonStyle={styles.signUp}
+                buttonStyle={styles.linkButton}
                 onPress={() => navigate('SignUpP1')}
                 title="Sign Up"
               >

@@ -18,27 +18,9 @@ export default class SignUpP2 extends React.Component {
         age: 0,
         savingsGoal: 0
       },
-      submitTokins: 0
     };
 
-    componentDidMount() {
-      let iteration = 0;
-      slide.forEach(animation => {
-        iteration++;
-        Animated.timing(animation, {
-          toValue: 0,
-          duration: 350 * (iteration + 0.6),
-          easing: Easing.in(Easing.ease)
-        }).start();
-        Animated.timing(
-          fade[iteration - 1], // The animated value to drive
-          {
-            toValue: 1, // Animate to opacity: 1 (opaque)
-            duration: 300 * (iteration * 1.17) // Make it take a while
-          }
-        ).start(); // Starts the animation
-      });
-    }
+
     handleNextButton = () => {
         let newUserData = this.props.navigation.state.params.newUserData
         const { navigate } = this.props.navigation;
@@ -55,12 +37,7 @@ export default class SignUpP2 extends React.Component {
       for (let keys in this.state.form) {
         let stateFields = keys;
         formInputArr.push(
-          <Animated.View
-            style={{
-              opacity: fade[iteration],
-              transform: [{ translateY: slide[iteration] }]
-
-            }}
+          <View
           >
             <FormInput
               containerStyle={styles.inputLine}
@@ -72,7 +49,7 @@ export default class SignUpP2 extends React.Component {
               }}
             />
             <Divider style={styles.dividerS} />
-          </Animated.View>
+          </View>
         );
         iteration++;
       }
@@ -87,8 +64,7 @@ export default class SignUpP2 extends React.Component {
           contentContainerStyle={styles.scrollContainer}
         >
           {this.createFormInput()}
-          <Animated.View style={{opacity: fade[4],
-              transform: [{ translateY: slide[4] }] }}>
+          <View>
           <Button
             onPress={() => {
             this.handleNextButton()
@@ -98,7 +74,7 @@ export default class SignUpP2 extends React.Component {
             rounded={true}
             backgroundColor="green"
           />
-          </Animated.View>
+          </View>
         </ScrollView>
       );
     }
