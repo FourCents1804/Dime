@@ -211,7 +211,7 @@ export default (styles = StyleSheet.create({
     // `backgroundColor` needs to be set otherwise the
     // autocomplete input will disappear on text input.
     backgroundColor: '#F5FCFF',
-    marginTop: 8
+    margin: 10
   },
   infoText: {
     textAlign: 'center'
@@ -240,6 +240,28 @@ export default (styles = StyleSheet.create({
   thinTitle: {
     alignSelf: 'center',
     ...material.display1Object,
+    ...systemWeights.thin,
+    color: 'black'
+  },
+  smallTitle: {
+    alignSelf: 'center',
+    ...material.titleObject,
+    ...systemWeights.light,
+    color: 'black'
+  },
+  regSmallTitle: {
+    alignSelf: 'center',
+    ...material.titleObject,
+    color: 'black'
+  },
+  thinText: {
+    ...material.body2Object,
+    ...systemWeights.thin,
+    color: 'black'
+  },
+  regText: {
+    alignSelf: 'center',
+    ...material.subheadingObject,
     ...systemWeights.thin,
     color: 'black'
   },

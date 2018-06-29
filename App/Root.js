@@ -34,49 +34,28 @@ class Root extends React.Component {
       main: { paddingLeft: 3 }
     };
     const { navigate } = this.props.navigation;
-    return (<SignUpP3 navigation={this.props.navigation}/>)
-    // return this.state.isLoggedIn ? (
-    //   <Drawer
-    //     ref={ref => (this._drawer = ref)}
-    //     type="displace"
-    //     content={<Menu navigate={navigate} />}
-    //     tapToClose={true}
-    //     openDrawerOffset={0.3}
-    //     panCloseMask={0.2}
-    //     closedDrawerOffset={-3}
-    //     styles={drawerStyles}
-    //     tweenHandler={ratio => ({
-    //       main: { opacity: (2 - ratio) / 2 }
-    //     })}
-    //   >
-    //     <View style={{ flex: 1 }}>
-    //       <Navigation navigate={navigate} openMenu={this.openMenu} />
-    //       <Home navigate={navigate} />
-    //     </View>
-    //   </Drawer>
-    // ) : (
-    //   <Login navigate={navigate} />
-    // );
-    // return (
-    //   <Drawer
-    //   ref={ref => (this._drawer = ref)}
-    //   type="displace"
-    //   content={<Menu navigate={navigate} />}
-    //   tapToClose={true}
-    //   openDrawerOffset={0.3}
-    //   panCloseMask={0.2}
-    //   closedDrawerOffset={-3}
-    //   styles={drawerStyles}
-    //   tweenHandler={ratio => ({
-    //     main: { opacity: (2 - ratio) / 2 }
-    //   })}
-    // >
-    //   <View style={styles.container}>
-    //     <Navigation navigate={navigate} openMenu={this.openMenu} />
-    //     <Home navigate={navigate} />
-    //   </View>
-    //   </Drawer>
-    // )
+    return this.state.isLoggedIn ? (
+      <Drawer
+        ref={ref => (this._drawer = ref)}
+        type="displace"
+        content={<Menu navigate={navigate} />}
+        tapToClose={true}
+        openDrawerOffset={0.3}
+        panCloseMask={0.2}
+        closedDrawerOffset={-3}
+        styles={drawerStyles}
+        tweenHandler={ratio => ({
+          main: { opacity: (2 - ratio) / 2 }
+        })}
+      >
+        <View style={{ flex: 1 }}>
+          <Navigation navigate={navigate} openMenu={this.openMenu} />
+          <Home navigate={navigate} />
+        </View>
+      </Drawer>
+    ) : (
+      <Login navigate={navigate} />
+    );
   }
 }
 
