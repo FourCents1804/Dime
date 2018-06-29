@@ -21,7 +21,6 @@ const commitedPurchase = () => ({type: COMMITED_PURCHASE})
 
 export const me = () => async dispatch => {
   Firebase.auth.onAuthStateChanged(user => {
-    console.log('Fuck', user);
     user ? dispatch(getUser(user)) : dispatch(getUser(defaultUser));
   });
 };
