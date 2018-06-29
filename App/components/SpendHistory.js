@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
 import * as d3 from "d3";
+import styles from "../../public";
 const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
@@ -52,15 +53,24 @@ class SpendHistory extends Component {
         <Dropdown
           label="Select Month"
           data={monthArr}
-          style={sanFranciscoWeights.light}
+          style={sanFranciscoWeights.medium}
           onChangeText={value => this.categoryForSelectedVal(value)}
         />
         {this.state.dataArr.length ? (
           <View style={{ flex: 1 }}>
             {this.state.dataArr.map(data => {
               return (
-                <View>
-                  <Card key={data} title={data.key} />
+                <View key={data.key}>
+                  <Card title={data.key}>
+                    <Text
+                      style={[
+                        sanFranciscoWeights.regular,
+                        styles.spendHistoryCat
+                      ]}
+                    >
+                      Amount: ${data.value.toFixed(2)}
+                    </Text>
+                  </Card>
                 </View>
               );
             })}

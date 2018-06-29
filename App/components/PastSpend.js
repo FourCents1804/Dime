@@ -6,16 +6,15 @@ import styles from "../../public";
 
 const PastSpend = () => {
   return (
-    <View>
+    <ScrollView bounce={false}>
       <View>
         <Text style={styles.h1Text}>You have spent $'' in the past year.</Text>
       </View>
-      <ScrollView bounce={false}>
+      <View>
         <Line />
-
-        <SpendHistory />
-      </ScrollView>
-    </View>
+        <SpendHistory style={styles.spendHistory} />
+      </View>
+    </ScrollView>
   );
 };
 
