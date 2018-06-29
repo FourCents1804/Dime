@@ -10,10 +10,9 @@ const PastSpend = () => {
       <View>
         <Text style={styles.h1Text}>You have spent $'' in the past year.</Text>
       </View>
-      <View>
+      <ScrollView bounce={false}>
         <Line />
-      </View>
-      <ScrollView>
+
         <SpendHistory />
       </ScrollView>
     </View>

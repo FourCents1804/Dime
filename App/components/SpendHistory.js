@@ -33,13 +33,13 @@ const categoryDataByMonth = d3
 
 class SpendHistory extends Component {
   state = {
-    dataArr: []
+    dataArr: [],
+    height: 0
   };
 
   categoryForSelectedVal = val => {
     categoryDataByMonth.forEach(mon => {
       if (mon.key === val) {
-        console.log(mon.values);
         this.setState({
           dataArr: mon.values
         });
@@ -49,27 +49,25 @@ class SpendHistory extends Component {
 
   render() {
     return (
-      <ScrollView>
-        <View>
-          <Dropdown
-            label="Select Month"
-            data={monthArr}
-            style={sanFranciscoWeights.light}
-            onChangeText={value => this.categoryForSelectedVal(value)}
-          />
-          {this.state.dataArr.length ? (
-            <View>
-              {this.state.dataArr.map(data => {
-                return (
-                  <View>
-                    <Card title={data.key} />
-                  </View>
-                );
-              })}
-            </View>
-          ) : null}
-        </View>
-      </ScrollView>
+      <View>
+        <Dropdown
+          label="Select Month"
+          data={monthArr}
+          style={sanFranciscoWeights.light}
+          onChangeText={value => this.categoryForSelectedVal(value)}
+        />
+        {this.state.dataArr.length ? (
+          <View style={{ flex: 1 }}>
+            {this.state.dataArr.map(data => {
+              return (
+                <View>
+                  <Card key={data} title={data.key} />
+                </View>
+              );
+            })}
+          </View>
+        ) : null}
+      </View>
     );
   }
 }
