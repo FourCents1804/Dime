@@ -13,8 +13,8 @@ class Root extends React.Component {
     loading: true
   };
   async componentDidMount() {
-    await Firebase.init();
-    await Firebase.auth.onAuthStateChanged(user => {
+    Firebase.init();
+    Firebase.auth.onAuthStateChanged(user => {
       console.log('user retrieved')
       console.log('loading1', this.state.loading)
       user

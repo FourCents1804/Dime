@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Modal, Text, TouchableOpacity, TouchableHighlight, Image, View} from 'react-native'
 import {Header} from 'react-native-elements'
-import { logout } from '../store/Thunks/User';
 
 const Navigation = props => {
 
@@ -11,7 +10,7 @@ const Navigation = props => {
     <Header
     placement="left"
     outerContainerStyles={{ backgroundColor: '#008ECC',
-    height: 70}}
+    height: 71}}
     leftComponent={
       <TouchableOpacity
         style={{
