@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { View, Easing, ScrollView, Animated } from 'react-native';
-import { connect } from 'react-redux';
-import styles from '../../public';
-import { commitPurchase } from '../store/Thunks/User';
+import React, { Component } from "react";
+import { View, Easing, ScrollView, Animated } from "react-native";
+import { connect } from "react-redux";
+import styles from "../../public";
+import { commitPurchase } from "../store/Thunks/User";
 import {
   Divider,
   Button,
   FormInput,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 class Purchase extends Component {
   state = {
     form: {
-      name: '',
+      name: "",
       amount: 0,
-      categoryBroad: '',
-      categoryDetailed: ''
+      categoryBroad: "",
+      categoryDetailed: ""
     },
     slide: [
       new Animated.Value(-500),
@@ -68,7 +68,6 @@ class Purchase extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
     this.props.commitPurchase(this.props.user, this.state.form);
   };
 
@@ -94,13 +93,13 @@ class Purchase extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    commitPurchase: ( uid, purchase) => dispatch(commitPurchase(uid, purchase))
+    commitPurchase: (uid, purchase) => dispatch(commitPurchase(uid, purchase))
   };
 };
 
 const mapStateToProps = state => ({
   user: state.User
-})
+});
 
 export default connect(
   mapStateToProps,

@@ -1,27 +1,25 @@
-import React from 'react';
-import {  View } from 'react-native';
-import {  me } from './store/Thunks/User';
-import { Home, Login, Navigation, SignUpP3, Menu } from './components';
-import { connect } from 'react-redux';
-import Firebase from './components/Firebase/Firebase';
-import styles from '../public';
-import Drawer from 'react-native-drawer';
+import React from "react";
+import { View } from "react-native";
+import { me } from "./store/Thunks/User";
+import { Home, Login, Navigation, SignUpP3, Menu } from "./components";
+import { connect } from "react-redux";
+import Firebase from "./components/Firebase/Firebase";
+import styles from "../public";
+import Drawer from "react-native-drawer";
 
 class Root extends React.Component {
   state = {
     isLoggedIn: false
   };
   async componentDidMount() {
-    console.log('Mounted the Component', this.state.isLoggedIn)
     Firebase.init();
     // await this.props.isLoggedIn()
-    console.log('Mounted the Component', this.state.isLoggedIn)
-    console.log(this.props.user)
     Firebase.auth.onAuthStateChanged(user => {
       user
-      ? this.setState({ isLoggedIn: true })
-      : this.setState({ isLoggedIn: false });
-  })}
+        ? this.setState({ isLoggedIn: true })
+        : this.setState({ isLoggedIn: false });
+    });
+  }
 
   closeMenu = () => {
     this._drawer.close();
@@ -33,7 +31,7 @@ class Root extends React.Component {
 
   render() {
     const drawerStyles = {
-      drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3 },
+      drawer: { shadowColor: "#000000", shadowOpacity: 0.8, shadowRadius: 3 },
       main: { paddingLeft: 3 }
     };
     const { navigate } = this.props.navigation;

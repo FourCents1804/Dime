@@ -1,7 +1,7 @@
-import axios from 'axios';
-import Expo from 'expo';
-import uuidV1 from 'uuid/v1';
-import Firebase from '../../components/Firebase/Firebase';
+import axios from "axios";
+import Expo from "expo";
+import uuidV1 from "uuid/v1";
+import Firebase from "../../components/Firebase/Firebase";
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
   ? manifest.debuggerHost
@@ -10,9 +10,9 @@ const ip = manifest.packagerOpts.dev
       .concat(`:19004`)
   : `localhost:19004`;
 
-export const GET_USER = 'GET_USER';
-export const REMOVE_USER = 'REMOVE_USER';
-const COMMITED_PURCHASE = 'COMMITED_PURCHASE';
+export const GET_USER = "GET_USER";
+export const REMOVE_USER = "REMOVE_USER";
+const COMMITED_PURCHASE = "COMMITED_PURCHASE";
 
 export const defaultUser = {};
 
@@ -21,7 +21,7 @@ export const removeUser = () => ({ type: REMOVE_USER });
 const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
 
 export const auth = (userData, method) => async dispatch => {
-  if (method === 'signup') {
+  if (method === "signup") {
     await Firebase.auth
       .createUserWithEmailAndPassword(userData[0].email, userData[0].password)
       .then(user => {
@@ -42,9 +42,21 @@ export const auth = (userData, method) => async dispatch => {
   } else {
     await Firebase.auth
       .signInWithEmailAndPassword(userData.email, userData.password)
-      .then(user => {
-        console.log(user.user.uid)
-        dispatch(getUser(user.user.uid));
+      .then(async user => {
+        const allPurchases = await Firebase.database
+          .ref(`users/${user.user.uid}/purchases`)
+          .once("value");
+        const userData = await Firebase.database
+          .ref(`users/${user.user.uid}/userData`)
+          .once("value");
+
+        dispatch(
+          getUser({
+            uid: user.user.uid,
+            purchases: allPurchases,
+            userInfo: userData
+          })
+        );
       })
       .catch(err => {
         console.error(err);
@@ -53,7 +65,6 @@ export const auth = (userData, method) => async dispatch => {
 };
 
 export const logout = () => dispatch => {
-  console.log('LOGOUTTTTTTTTTTTTT')
   Firebase.auth
     .signOut()
     .then(() => dispatch(removeUser()))
@@ -62,7 +73,6 @@ export const logout = () => dispatch => {
 
 export const commitPurchase = (user, purchaseToCommit) => dispatch => {
   let upid = uuidV1();
-  console.log(user, upid, purchaseToCommit);
 
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
@@ -71,21 +81,17 @@ export const commitPurchase = (user, purchaseToCommit) => dispatch => {
 };
 
 export const addPicture = (uuid, uri) => dispatch => {
-  console.log('UUID HEREEEE', uuid);
-  console.log('URI HEREEEE', uri);
   Firebase.database.ref(`users/${uuid}`).set({ uri: uri });
 };
 
 export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
-    console.log(action)
       return action.user;
     case REMOVE_USER:
-      console.log(action)
       return defaultUser;
     case COMMITED_PURCHASE:
-      return 'Purchase Has Been Noted';
+      return "Purchase Has Been Noted";
     default:
       return state;
   }
