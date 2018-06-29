@@ -107,7 +107,9 @@ export default (styles = StyleSheet.create({
     margin: 10,
   },
   row: {
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   fontM: {
     fontSize: 20,
@@ -261,6 +263,12 @@ export default (styles = StyleSheet.create({
     width: 250,
   },
   signUpSlider: {
+    width: 190
+  },
+  signUpAmt: {
+    width: 60,
+  },
+  signUpCheckbox: {
     width: 250
   }
 }));

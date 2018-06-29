@@ -43,17 +43,23 @@ class SignUpP3 extends React.Component {
               onPress={() =>
                 this.setState(this.state[el] ? { [el]: 0 } : { [el]: 1 })
               }
+              checkedColor="#0080ff"
+              containerStyle={styles.signUpCheckbox}
             />
             {this.state[keys] ? (
-              <View>
+              <View style={styles.row}>
                 <Slider
-                  style={{ width: 100 }}
+                  style={styles.signUpSlider}
                   minimumValue={0}
                   maximumValue={4000}
                   value={this.state[el]}
                   onValueChange={value => this.setState({ [el]: value })}
+                  thumbTintColor="#0080ff"
+                  minimumTrackTintColor="#99CCFF"
                 />
-                <Text> {Math.floor(this.state[el])}</Text>
+                <View style={styles.signUpAmt}>
+                <Text style={styles.searchResultText}> {`$${Math.floor(this.state[el])}`}</Text>
+                </View>
               </View>
             ) : (
               <Divider style={styles.dividerVS} />
