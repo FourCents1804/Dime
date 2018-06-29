@@ -18,7 +18,13 @@ export const defaultUser = {};
 
 export const getUser = user => ({ type: GET_USER, user });
 export const removeUser = () => ({ type: REMOVE_USER });
-const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
+const commitedPurchase = () => ({type: COMMITED_PURCHASE})
+
+export const me = () => async dispatch => {
+  Firebase.auth.onAuthStateChanged(user => {
+    user ? dispatch(getUser(user)) : dispatch(getUser(defaultUser));
+  });
+};
 
 export const auth = (userData, method) => async dispatch => {
   if (method === 'signup') {
