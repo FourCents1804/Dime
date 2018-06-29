@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated } from 'react-native';
+import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
 import {slide, fade} from '../../../public/common-util'
 import styles from '../../../public';
 import {
@@ -18,16 +18,34 @@ export default class SignUpP1 extends React.Component {
       password: '',
       rePassword: '',
       error: ' ',
+      fadeAnim: new Animated.Value(0),
     };
+
+    componentDidMount() {
+      Animated.timing(
+        this.state.fadeAnim,
+        {
+          toValue: 1,
+          duration: 1000
+        }
+      ).start()
+    }
 
     handleNextButton = async () => {
       await this.handleError()
       const { navigate } = this.props.navigation;
+      const form = (({firstName, lastName, email, password, rePassword}) => ({firstName, lastName, email, password, rePassword}))(this.state)
+      console.log(form)
       if (this.state.error === ' ') {
-        newUserData.push(this.state)
+        newUserData.push(form)
           navigate('SignUpP2', {newUserData})
       }
     };
+
+    validateEmail = email => {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
 
     handleError = () => {
       const {firstName, lastName, email, password, rePassword} = this.state;
@@ -35,8 +53,8 @@ export default class SignUpP1 extends React.Component {
         this.setState({error: `First name is a required field`})
       } else if (lastName === '') {
         this.setState({error: `Last name is a required field`})
-      } else if (email === '') {
-        this.setState({error: `Email is a required field`})
+      } else if (!this.validateEmail(email)) {
+        this.setState({error: `Please enter a valid email`})
       } else if (password !== rePassword) {
         this.setState({error: 'Passwords Do not Match'})
       } else if (password.length < 8) {
@@ -47,8 +65,15 @@ export default class SignUpP1 extends React.Component {
     };
 
     render() {
+      let { fadeAnim } = this.state;
       return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <Animated.View style={{ opacity: fadeAnim }}>
+          <ImageBackground
+          source={require('../../../public/park1.jpg')}
+          style={styles.backgroundImg}
+          resizeMode="cover"
+        >
           <View style={styles.loginContainer}>
                 <View>
                   <FormInput
@@ -126,6 +151,8 @@ export default class SignUpP1 extends React.Component {
             </View>
             <FormValidationMessage>{this.state.error}</FormValidationMessage>
           </View>
+          </ImageBackground>
+          </Animated.View>
         </ScrollView>
       );
     }

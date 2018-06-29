@@ -84,8 +84,7 @@ export const addNewPurchase = base64String => async dispatch => {
     //   }
     // );
 
-    console.log(langResponse.request._response[0])
-    summary.category = langResponse.request._response[0].categories[0].name.slice(1);
+    summary.category = langResponse.data[0].categories[0].name.slice(1);
     summary.Total = TotalPrice;
     summary.purchasedItems = boughtItems;
     console.log(summary);

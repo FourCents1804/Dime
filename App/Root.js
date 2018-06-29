@@ -11,14 +11,17 @@ class Root extends React.Component {
   state = {
     isLoggedIn: false
   };
-  componentDidMount() {
+  async componentDidMount() {
+    console.log('Mounted the Component', this.state.isLoggedIn)
     Firebase.init();
+    // await this.props.isLoggedIn()
+    console.log('Mounted the Component', this.state.isLoggedIn)
+    console.log(this.props.user)
     Firebase.auth.onAuthStateChanged(user => {
       user
-        ? this.setState({ isLoggedIn: true })
-        : this.setState({ isLoggedIn: false });
-    });
-  }
+      ? this.setState({ isLoggedIn: true })
+      : this.setState({ isLoggedIn: false });
+  })}
 
   closeMenu = () => {
     this._drawer.close();
