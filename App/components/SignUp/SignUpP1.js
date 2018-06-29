@@ -1,9 +1,8 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated } from 'react-native';
+import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
 import {slide, fade} from '../../../public/common-util'
 import styles from '../../../public';
 import {
-  Divider,
   Button,
   FormInput,
   FormValidationMessage
@@ -11,114 +10,148 @@ import {
 
 let newUserData = []
 
-export default  class SignUpP1 extends React.Component {
+export default class SignUpP1 extends React.Component {
     state = {
-      form: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        rePassword: ''
-      },
-      submitTokins: 0,
-
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      rePassword: '',
+      error: ' ',
+      fadeAnim: new Animated.Value(0),
     };
+
     componentDidMount() {
-      let iteration = 0;
-      slide.forEach(animation => {
-        iteration++;
-        Animated.timing(animation, {
+      Animated.timing(
+        this.state.fadeAnim,
+        {
           toValue: 1,
-          duration: 175 * (iteration + 0.6),
-          easing: Easing.in(Easing.ease)
-        }).start();
-        Animated.timing(
-          fade[iteration - 1], // The animated value to drive
-          {
-            toValue: 1, // Animate to opacity: 1 (opaque)
-            duration: 300 * (iteration * 1.17) // Make it take a while
-          }
-        ).start(); // Starts the animation
-      });
+          duration: 1000
+        }
+      ).start()
     }
 
-    handleNextButton = () => {
+    handleNextButton = async () => {
+      await this.handleError()
       const { navigate } = this.props.navigation;
-      this.setState({ submitTokins: 1 });
-      if (this.handleError() === '') {
-        newUserData.push(this.state.form)
+      const form = (({firstName, lastName, email, password, rePassword}) => ({firstName, lastName, email, password, rePassword}))(this.state)
+      console.log(form)
+      if (this.state.error === ' ') {
+        newUserData.push(form)
           navigate('SignUpP2', {newUserData})
-        }
+      }
     };
+
+    validateEmail = email => {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
 
     handleError = () => {
-      const { form, submitTokins } = this.state;
-      for (let keys in form) {
-        if (form[keys] === '') return `${keys} is a required field!`;
-      }
-      if (form.password !== form.rePassword) return 'Passwords Do not Match';
-      if (form.password.length < 8) {
-        return 'Password must be longer than 8 characters';
+      const {firstName, lastName, email, password, rePassword} = this.state;
+      if (firstName === '') {
+        this.setState({error: `First name is a required field`})
+      } else if (lastName === '') {
+        this.setState({error: `Last name is a required field`})
+      } else if (!this.validateEmail(email)) {
+        this.setState({error: `Please enter a valid email`})
+      } else if (password !== rePassword) {
+        this.setState({error: 'Passwords Do not Match'})
+      } else if (password.length < 8) {
+        this.setState({error: 'Password must be longer than 8 characters'})
       } else {
-        return '';
+        this.setState({error: ' '})
       }
-    };
-
-    createFormInput = () => {
-      let formInputArr = [];
-
-      let iteration = 0;
-      for (let keys in this.state.form) {
-        let stateFields = keys;
-        formInputArr.push(
-          <Animated.View
-            style={{
-              opacity: fade[iteration],
-              transform: [{ translateY: slide[iteration] }]
-            }}
-          >
-            <FormInput
-              errorMessage
-              autoCapitalize="none"
-              containerStyle={styles.inputLine}
-              placeholder={stateFields}
-              onChangeText={value => {
-                stateFields = { ...this.state.form };
-                stateFields[keys] = value;
-                this.setState({ form: stateFields });
-              }}
-            />
-            <Divider style={styles.dividerS} />
-          </Animated.View>
-        );
-
-        iteration++;
-      }
-      return formInputArr;
     };
 
     render() {
+      let { fadeAnim } = this.state;
       return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-          {this.createFormInput()}
-          <FormValidationMessage>{this.handleError()}</FormValidationMessage>
-          <Animated.View
-            style={{
-              opacity: fade[4],
-              transform: [{ translateY: slide[4] }]
-            }}
-          >
-            <Button
-              onPress={() => {
+        <Animated.View style={{ opacity: fadeAnim }}>
+          <ImageBackground
+          source={require('../../../public/park1.jpg')}
+          style={styles.backgroundImg}
+          resizeMode="cover"
+        >
+          <View style={styles.loginContainer}>
+                <View>
+                  <FormInput
+                    errorMessage
+                    autoCapitalize="none"
+                    containerStyle={styles.inputLine}
+                    placeholder="First Name (required)"
+                    onChangeText={value => {
+                      this.setState({ firstName: value})
+                    }}
+                  />
+                </View>
 
-                this.handleNextButton();
-              }}
-              width={400}
-              title="Next 1 of 3"
-              raised={true}
-              rounded={true}
-              backgroundColor="#388e3c"
-            />
+                <View>
+                  <FormInput
+                    errorMessage
+                    autoCapitalize="none"
+                    containerStyle={styles.inputLine}
+                    placeholder="Last Name (required)"
+                    onChangeText={value => {
+                      this.setState({ lastName: value})
+                    }}
+                  />
+                </View>
+
+                <View>
+                  <FormInput
+                    errorMessage
+                    autoCapitalize="none"
+                    containerStyle={styles.inputLine}
+                    placeholder="Email (required)"
+                    onChangeText={value => {
+                      this.setState({ email: value})
+                    }}
+                  />
+                </View>
+
+                <View>
+                  <FormInput
+                    secureTextEntry
+                    errorMessage
+                    autoCapitalize="none"
+                    containerStyle={styles.inputLine}
+                    placeholder="Password (required)"
+                    onChangeText={value => {
+                      this.setState({ password: value})
+                    }}
+                  />
+                </View>
+
+                <View>
+                  <FormInput
+                    secureTextEntry
+                    errorMessage
+                    autoCapitalize="none"
+                    containerStyle={styles.inputLine}
+                    placeholder="Confirm Password"
+                    onChangeText={value => {
+                      this.setState({ rePassword: value})
+                    }}
+                  />
+                </View>
+
+
+            <View>
+              <Button
+                onPress={() => {
+                  this.handleNextButton();
+                }}
+                title="Next (1 of 3)"
+                raised={true}
+                backgroundColor="#0080ff"
+                style={styles.signUpButton}
+              />
+            </View>
+            <FormValidationMessage>{this.state.error}</FormValidationMessage>
+          </View>
+          </ImageBackground>
           </Animated.View>
         </ScrollView>
       );
