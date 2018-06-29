@@ -23,7 +23,7 @@ export default class SignUpP1 extends React.Component {
     handleNextButton = async () => {
       await this.handleError()
       const { navigate } = this.props.navigation;
-      if (this.state.error === '') {
+      if (this.state.error === ' ') {
         newUserData.push(this.state)
           navigate('SignUpP2', {newUserData})
       }

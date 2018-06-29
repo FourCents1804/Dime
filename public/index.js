@@ -257,4 +257,10 @@ export default (styles = StyleSheet.create({
     alignSelf: 'center',
     ...systemWeights.light,
   },
+  signUpDropdown: {
+    width: 250,
+  },
+  signUpSlider: {
+    width: 250
+  }
 }));

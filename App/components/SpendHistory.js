@@ -3,7 +3,6 @@ import { ScrollView, Text } from "react-native";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
 import styles from "../../public";
-
 const purchases = require("../../seed/purchaseData");
 
 const spendHistory = purchaseData => {

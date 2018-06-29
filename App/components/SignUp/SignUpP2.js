@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, Easing, ScrollView, Animated } from 'react-native';
-import {slide, fade} from '../../../public/common-util'
 import styles from '../../../public';
 import {
   Divider,
@@ -8,62 +7,82 @@ import {
   FormInput,
   FormValidationMessage
 } from 'react-native-elements';
+import {Dropdown} from 'react-native-material-dropdown'
+import {occupations, genders} from '../Utility/signUpData'
 
 export default class SignUpP2 extends React.Component {
     state = {
-      form: {
-        occupation: '',
-        gender: '',
-        monthlyIncome: 0,
-        age: 0,
-        savingsGoal: 0
-      },
+      occupation: '',
+      gender: '',
+      monthlyIncome: 0,
+      age: 0,
+      savingsGoal: 0
     };
-
 
     handleNextButton = () => {
         let newUserData = this.props.navigation.state.params.newUserData
         const { navigate } = this.props.navigation;
-        this.setState({ submitTokins: 1 });
-
-          newUserData.push(this.state.form)
-            navigate('SignUpP3', {newUserData})
-
+        newUserData.push(this.state)
+        navigate('SignUpP3', {newUserData})
       };
 
-    createFormInput = () => {
-      let formInputArr = [];
-      let iteration = 0;
-      for (let keys in this.state.form) {
-        let stateFields = keys;
-        formInputArr.push(
-          <View
-          >
-            <FormInput
-              containerStyle={styles.inputLine}
-              placeholder={stateFields}
-              onChangeText={value => {
-                stateFields = { ...this.state.form };
-                stateFields[keys] = value;
-                this.setState({ form: stateFields });
-              }}
-            />
-            <Divider style={styles.dividerS} />
-          </View>
-        );
-        iteration++;
-      }
-      return formInputArr;
-    };
-    render() {
 
-      const { navigate } = this.props.navigation;
+    render() {
       return (
         <ScrollView
           showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollContainer}
         >
-          {this.createFormInput()}
+          <View style={styles.loginContainer}>
+        <View>
+        <Dropdown
+          label="Occupation"
+          data={occupations}
+          containerStyle={styles.signUpDropdown}
+          onChangeText={(value) => this.setState({occupation: value})}
+        />
+        </View>
+        <View>
+        <Dropdown
+          label="Gender"
+          data={genders}
+          containerStyle={styles.signUpDropdown}
+          onChangeText={(value) => this.setState({gender: value})}
+        />
+        </View>
+        <View>
+          <FormInput
+            errorMessage
+            autoCapitalize="none"
+            containerStyle={styles.inputLine}
+            placeholder="Monthly Income"
+            onChangeText={value => {
+              this.setState({ monthlyIncome: value})
+            }}
+          />
+        </View>
+        <View>
+          <FormInput
+            errorMessage
+            autoCapitalize="none"
+            containerStyle={styles.inputLine}
+            placeholder="Age"
+            onChangeText={value => {
+              this.setState({ age: value})
+            }}
+          />
+        </View>
+        <View>
+          <FormInput
+            errorMessage
+            autoCapitalize="none"
+            containerStyle={styles.inputLine}
+            placeholder="Savings Goal"
+            onChangeText={value => {
+              this.setState({ savingsGoal: value})
+            }}
+          />
+        </View>
           <View>
           <Button
             onPress={() => {
@@ -71,9 +90,10 @@ export default class SignUpP2 extends React.Component {
             }}
             title="Next 2 of 3"
             raised={true}
-            rounded={true}
-            backgroundColor="green"
+            backgroundColor="#0080ff"
+            style={styles.signUpButton}
           />
+          </View>
           </View>
         </ScrollView>
       );
