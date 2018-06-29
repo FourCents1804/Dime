@@ -31,7 +31,6 @@ const Line = props => {
     .sortKeys((a, b) => parser(a) - parser(b))
     .rollup(d => d3.sum(d, g => g.amount))
     .entries(purchases);
-
   return (
     <View style={{ height: height }}>
       <View style={{ height: height - margin }} flexDirection="row">
