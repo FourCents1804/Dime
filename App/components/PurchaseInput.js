@@ -68,7 +68,8 @@ class Purchase extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.commitPurchase(this.props.user.uid, this.state.form);
+
+    this.props.commitPurchase(this.props.user, this.state.form);
   };
 
   render() {
