@@ -6,7 +6,6 @@ import * as d3 from 'd3';
 
 const formatMoney = (number) => {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-
 }
 
 const formatter = d3.timeFormat('%B %d, %Y');
@@ -25,7 +24,7 @@ const DaySpend = props => {
       </View>
       {purchases.map((purchase, index) => (
         <View key={purchase + index} style={styles.spendTableRow}>
-          <Text>{truncate(purchase.name, 30)}</Text>
+          <Text style={styles.spendTableText}>{truncate(purchase.name, 30)}</Text>
           <Text style={styles.spendTableAmount}>
             {formatMoney(purchase.amount)}
           </Text>

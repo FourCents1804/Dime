@@ -1,7 +1,6 @@
 import Autocomplete from 'react-native-autocomplete-input';
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
   TouchableOpacity,
   View
@@ -18,11 +17,11 @@ const renderPurchase = (purchase) => {
 
   return (
     <View>
-      <Text style={styles.searchResultHeader}>{name}</Text>
-      <Text style={styles.searchResultText}>Transaction Amount: {formatMoney(amount)}</Text>
-      <Text style={styles.searchResultText}>Category: {categoryBroad}</Text>
-      <Text style={styles.searchResultText}>Subcategory: {categoryDetailed}</Text>
-      <Text style={styles.searchResultText}>Date: {createdAt}</Text>
+      <Text style={styles.regSmallTitle}>{name}</Text>
+      <Text style={styles.regText}>Transaction Amount: {formatMoney(amount)}</Text>
+      <Text style={styles.regText}>Category: {categoryBroad}</Text>
+      <Text style={styles.regText}>Subcategory: {categoryDetailed}</Text>
+      <Text style={styles.regText}>Date: {createdAt}</Text>
     </View>
   );
 }
@@ -68,7 +67,7 @@ class Search extends Component {
           placeholder="e.g. 'CVS'"
           renderItem={({ name, amount }) => (
             <TouchableOpacity onPress={() => this.setState({ query: name })}>
-              <Text style={styles.itemText}>
+              <Text style={styles.thinText}>
                 {name} ({amount})
               </Text>
             </TouchableOpacity>
@@ -78,7 +77,7 @@ class Search extends Component {
           {purchases.length > 0 ? (
             renderPurchase(purchases[0])
           ) : (
-            <Text style={styles.infoText}>
+            <Text style={styles.smallTitle}>
               Enter Store Name
             </Text>
           )}

@@ -1,22 +1,20 @@
 import React from "react";
 import { Line } from "./";
 import SpendHistory from "./SpendHistory";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import styles from "../../public";
 
 const PastSpend = () => {
   return (
-    <View>
+    <ScrollView bounce={false}>
       <View>
         <Text style={styles.h1Text}>You have spent $'' in the past year.</Text>
       </View>
       <View>
         <Line />
+        <SpendHistory style={styles.spendHistory} />
       </View>
-      <View>
-        <SpendHistory />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -1,85 +1,41 @@
-import React, { Component } from 'react'
-import {
-  Text,
-  View,
-  Image,
-  Dimensions
-} from 'react-native'
-import Swiper from 'react-native-swiper'
-const { width } = Dimensions.get('window')
+import React from "react";
+import { Text, View, Dimensions } from "react-native";
+import Swiper from "react-native-swiper";
+const { width } = Dimensions.get("window");
+import styles from "../../public";
 
-const styles = {
-  wrapper: {
-    height: 140,
-  },
-  slide: {
-    flex: 1,
-    backgroundColor: 'transparent'
-  },
-  viewStyle: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  text: {
-    alignSelf: 'center',
-  },
-  textValue: {
-    alignSelf: 'center',
-    fontSize: 30
-  }
-}
+const formatMoney = number => {
+  return number
+    .toLocaleString(
+      "en-US",
+      { style: "currency", currency: "USD" }
+    )
+    .slice(0, -3);
+};
 
-class DonutCarousel extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      categories: [
-        {
-          category: 'Total',
-          value: 140,
-          sectionId: -1
-        },
-        {
-          category: 'Transportation',
-          value: 60,
-          sectionId: 0
-        },
-        {
-          category: 'Food and Dining',
-          value: 70,
-          sectionId: 1
-        },
-        {
-          category: 'Entertainment',
-          value: 10,
-          sectionId: 2
-        }
-      ],
-    }
-  }
-  render () {
-    return (
-      <View style={styles.viewStyle}>
-        <Swiper
-          loadMinimal loadMinimalSize={1}
-          style={styles.wrapper}
-          loop={false}
-          onIndexChanged={index => this.props.setSection(index - 1)}
-        >
-        {this.state.categories.map(category => (
+const DonutCarousel = props => {
+  const { categories, setSection } = props;
+
+  return (
+    <View style={styles.donutCarouselView}>
+      <Swiper
+        loadMinimal
+        loadMinimalSize={1}
+        style={styles.donutCarouselWrapper}
+        loop={false}
+        onIndexChanged={index => setSection(index - 1)}
+      >
+        {categories.map(category => (
           <View key={category} style={styles.slide1}>
-            <Text style={styles.text}>You have spent</Text>
-            <Text style={styles.textValue}>${category.value}</Text>
-            <Text style={styles.text}>in {category.category}</Text>
-            <Text style={styles.text}>this month.</Text>
+            <Text style={styles.donutCarouselText}>You have spent</Text>
+            <Text style={styles.lightTitle}>{formatMoney(category.value)}</Text>
+            <Text style={styles.donutCarouselText}>in {category.key}</Text>
+            <Text style={styles.donutCarouselText}>this month.</Text>
           </View>
         ))}
-        </Swiper>
-      </View>
-    )
-  }
-}
+      </Swiper>
+    </View>
+  );
+};
 
-
-export default DonutCarousel
+export default DonutCarousel;

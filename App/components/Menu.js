@@ -1,16 +1,18 @@
 import React from "react";
-import { View, Text, TouchableHighlight } from "react-native";
+import { ScrollView, View, Text, TouchableHighlight } from "react-native";
 import styles from "../../public";
+import { connect } from "react-redux";
+import { logout } from "../store/Thunks/User";
 
 const Menu = props => {
   const { navigate } = props;
   return (
-    <View style={styles.menu}>
+    <ScrollView style={styles.menu}>
       <View style={styles.menuLabel}>
         <Text style={styles.menuLabelText}>TRANSACTIONS</Text>
       </View>
       <TouchableHighlight
-        onPress={() => navigate("Webcam")}
+        onPress={() => navigate("ReceiptWallet")}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Receipt Wallet</Text>
@@ -21,6 +23,7 @@ const Menu = props => {
       >
         <Text style={styles.menuLinkText}>Find Transactions</Text>
       </TouchableHighlight>
+
       <View style={styles.menuLabel}>
         <Text style={styles.menuLabelText}>ANALYSIS AND INSIGHTS</Text>
       </View>
@@ -31,11 +34,12 @@ const Menu = props => {
         <Text style={styles.menuLinkText}>Past Expense Analysis</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => navigate("Webcam")}
+        onPress={() => navigate("FutureProjections")}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Future Projections</Text>
       </TouchableHighlight>
+
       <View style={styles.menuLabel}>
         <Text style={styles.menuLabelText}>CONNECT</Text>
       </View>
@@ -53,8 +57,30 @@ const Menu = props => {
       >
         <Text style={styles.menuLinkText}>About Us</Text>
       </TouchableHighlight>
-    </View>
+
+      <View style={styles.menuLabel}>
+        <Text style={styles.menuLabelText}>SETTINGS</Text>
+      </View>
+      <TouchableHighlight
+        onPress={() => navigate("User")}
+        style={styles.menuLinks}
+      >
+        <Text style={styles.menuLinkText}>Edit Settings</Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => props.logout()}
+        style={styles.menuLinks}
+      >
+        <Text style={styles.menuLinkText}>Logout</Text>
+      </TouchableHighlight>
+    </ScrollView>
   );
 };
 
-export default Menu;
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+export default connect(
+  null,
+  mapDispatchToProps
+)(Menu);
