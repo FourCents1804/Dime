@@ -1,18 +1,10 @@
 const purchases = require("../../seed/purchaseData");
 import React from "react";
 const d3 = require("d3");
-import { ART, View } from "react-native";
+import { View } from "react-native";
 import { YAxis, XAxis, BarChart, Grid } from "react-native-svg-charts";
-import * as scale from "d3-scale";
-
-const { Surface, Group, Shape, ClippingRectangle } = ART;
-
-const { Rectangle } = Shape;
-
-import Svg, { Rect, Circle } from "react-native-svg";
 
 const Histogram = props => {
-  console.log("rect", ClippingRectangle);
 
   const { width, height, margin } = props;
 
@@ -47,7 +39,6 @@ const Histogram = props => {
           svg={{ fill: "rgba(54, 125, 224, 0.8)" }}
           yAccessor={({ item }) => item.value}
           xAccessor={({ item }) => parser(item.key)}
-          // xScale={ scale.scaleTime }
         >
           <Grid />
         </BarChart>
