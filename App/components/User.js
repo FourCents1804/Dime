@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {  View, Text } from 'react-native';
+import {  View } from 'react-native';
 import  styles from '../../public/index'
 import {
   Button,
@@ -21,10 +21,32 @@ class User extends Component {
     }
   }
 
+  validateEmail = email => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  handleError = () => {
+    const {firstName, lastName, email} = this.state;
+    if (firstName === '') {
+      this.setState({error: `First name is a required field`})
+    } else if (lastName === '') {
+      this.setState({error: `Last name is a required field`})
+    } else if (!this.validateEmail(email)) {
+      this.setState({error: `Please enter a valid email`})
+    } else {
+      this.setState({error: ' '})
+    }
+  };
+
   handleSubmit = async () => {
     await this.handleError()
     const { navigate } = this.props.navigation;
     const form = (({firstName, lastName, email}) => ({firstName, lastName, email}))(this.state)
+    if (this.state.error === ' ') {
+      console.log('ADD USER PUT THUNK HERE', form)
+      navigate('Home')
+    }
   };
 
   render() {
@@ -59,7 +81,6 @@ class User extends Component {
             />
           </View>
 
-
           <View>
           <FormLabel>Email</FormLabel>
             <FormInput
@@ -83,6 +104,7 @@ class User extends Component {
               style={styles.signUpButton}
             />
           </View>
+          <FormValidationMessage>{this.state.error}</FormValidationMessage>
         </View>
       </View>
     );

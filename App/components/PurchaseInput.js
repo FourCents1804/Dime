@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { View, Easing, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../../public';
 import { commitPurchase } from '../store/Thunks/User';
 import {
-  Divider,
   Button,
   FormInput,
-  FormValidationMessage
 } from 'react-native-elements';
 
 class Purchase extends Component {
@@ -29,7 +27,6 @@ class Purchase extends Component {
     }
 
     let formInputArr = [];
-    let iteration = 0;
     for (let keys in this.state.form) {
       let stateFields = keys;
       formInputArr.push(
@@ -47,7 +44,6 @@ class Purchase extends Component {
           />
         </View>
       );
-      iteration++;
     }
     return formInputArr;
   };

@@ -1,7 +1,7 @@
 import React from 'react';
 import {  View, ActivityIndicator } from 'react-native';
 import {  me } from './store/Thunks/User';
-import { Home, Login, Navigation, SignUpP3, Menu } from './components';
+import { Home, Login, Navigation, Menu } from './components';
 import { connect } from 'react-redux';
 import Firebase from './components/Firebase/Firebase';
 import styles from '../public';
@@ -12,16 +12,13 @@ class Root extends React.Component {
     isLoggedIn: false,
     loading: true
   };
-  async componentDidMount() {
+  componentDidMount() {
     Firebase.init();
     Firebase.auth.onAuthStateChanged(user => {
-      console.log('user retrieved')
-      console.log('loading1', this.state.loading)
       user
         ? this.setState({ isLoggedIn: true, loading: false })
         : this.setState({ isLoggedIn: false, loading: false });
     })
-    console.log('loading2', this.state.loading)
   }
 
 
@@ -34,8 +31,6 @@ class Root extends React.Component {
   };
 
   render() {
-    console.log('render loading', this.state.loading)
-    console.log('render loggedin', this.state.isLoggedIn)
     const drawerStyles = {
       drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3 },
       main: { paddingLeft: 3 }

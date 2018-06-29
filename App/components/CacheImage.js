@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Image, ScrollView, View } from 'react-native';
+import { Image, View } from 'react-native';
 import shorthash from 'shorthash';
 import { FileSystem } from 'expo';
-import styles from '../../public/index';
 
 class CacheImage extends Component {
   state = {

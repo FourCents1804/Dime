@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
-import { Card, ListItem } from "react-native-elements";
+import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
 import styles from "../../public";
 
