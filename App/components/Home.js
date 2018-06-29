@@ -1,11 +1,4 @@
-import {
-  ScrollView,
-  TouchableOpacity,
-  ART,
-  Image,
-  View,
-  Text
-} from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import { Header, Divider } from "react-native-elements";
 const { Surface, Group, Shape } = ART;
 const ARTText = ART.Text;

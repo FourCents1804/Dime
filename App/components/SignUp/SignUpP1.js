@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
-import {slide, fade} from '../../../public/common-util'
+import { View, ScrollView, Animated, ImageBackground } from 'react-native';
 import styles from '../../../public';
 import {
   Button,
@@ -35,7 +34,6 @@ export default class SignUpP1 extends React.Component {
       await this.handleError()
       const { navigate } = this.props.navigation;
       const form = (({firstName, lastName, email, password, rePassword}) => ({firstName, lastName, email, password, rePassword}))(this.state)
-      console.log(form)
       if (this.state.error === ' ') {
         newUserData.push(form)
           navigate('SignUpP2', {newUserData})
@@ -45,7 +43,7 @@ export default class SignUpP1 extends React.Component {
     validateEmail = email => {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
-  }
+    }
 
     handleError = () => {
       const {firstName, lastName, email, password, rePassword} = this.state;
@@ -68,13 +66,13 @@ export default class SignUpP1 extends React.Component {
       let { fadeAnim } = this.state;
       return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Animated.View style={{ opacity: fadeAnim }}>
-          <ImageBackground
-          source={require('../../../public/park1.jpg')}
-          style={styles.backgroundImg}
-          resizeMode="cover"
-        >
-          <View style={styles.loginContainer}>
+          <Animated.View style={{ opacity: fadeAnim }}>
+            <ImageBackground
+            source={require('../../../public/park1.jpg')}
+            style={styles.backgroundImg}
+            resizeMode="cover"
+            >
+              <View style={styles.loginContainer}>
                 <View>
                   <FormInput
                     errorMessage
@@ -138,20 +136,21 @@ export default class SignUpP1 extends React.Component {
                 </View>
 
 
-            <View>
-              <Button
-                onPress={() => {
-                  this.handleNextButton();
-                }}
-                title="Next (1 of 3)"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.signUpButton}
-              />
-            </View>
-            <FormValidationMessage>{this.state.error}</FormValidationMessage>
-          </View>
-          </ImageBackground>
+                <View>
+                  <Button
+                    onPress={() => {
+                      this.handleNextButton();
+                    }}
+                    title="Next (1 of 3)"
+                    raised={true}
+                    backgroundColor="#0080ff"
+                    style={styles.signUpButton}
+                  />
+                </View>
+                <FormValidationMessage>{this.state.error}</FormValidationMessage>
+              </View>
+
+            </ImageBackground>
           </Animated.View>
         </ScrollView>
       );

@@ -1,11 +1,9 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
+import { View, ScrollView, ImageBackground } from 'react-native';
 import styles from '../../../public';
 import {
-  Divider,
   Button,
   FormInput,
-  FormValidationMessage
 } from 'react-native-elements';
 import {Dropdown} from 'react-native-material-dropdown'
 import {occupations, genders} from '../Utility/signUpData'
@@ -33,73 +31,73 @@ export default class SignUpP2 extends React.Component {
           showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollContainer}
         >
-        <ImageBackground
+          <ImageBackground
           source={require('../../../public/park2.jpg')}
           style={styles.backgroundImg}
           resizeMode="cover"
-        >
-          <View style={styles.loginContainer}>
-        <View>
-        <Dropdown
-          label="Occupation"
-          data={occupations}
-          containerStyle={styles.signUpDropdown}
-          onChangeText={(value) => this.setState({occupation: value})}
-        />
-        </View>
-        <View>
-        <Dropdown
-          label="Gender"
-          data={genders}
-          containerStyle={styles.signUpDropdown}
-          onChangeText={(value) => this.setState({gender: value})}
-        />
-        </View>
-        <View>
-          <FormInput
-            errorMessage
-            autoCapitalize="none"
-            containerStyle={styles.inputLine}
-            placeholder="Monthly Income"
-            onChangeText={value => {
-              this.setState({ monthlyIncome: value})
-            }}
-          />
-        </View>
-        <View>
-          <FormInput
-            errorMessage
-            autoCapitalize="none"
-            containerStyle={styles.inputLine}
-            placeholder="Age"
-            onChangeText={value => {
-              this.setState({ age: value})
-            }}
-          />
-        </View>
-        <View>
-          <FormInput
-            errorMessage
-            autoCapitalize="none"
-            containerStyle={styles.inputLine}
-            placeholder="Savings Goal"
-            onChangeText={value => {
-              this.setState({ savingsGoal: value})
-            }}
-          />
-        </View>
-          <View>
-          <Button
-            onPress={() => {
-            this.handleNextButton()
-            }}
-            title="Next 2 of 3"
-            raised={true}
-            backgroundColor="#0080ff"
-            style={styles.signUpButton}
-          />
-          </View>
-          </View>
+          >
+            <View style={styles.loginContainer}>
+            <View>
+            <Dropdown
+              label="Occupation"
+              data={occupations}
+              containerStyle={styles.signUpDropdown}
+              onChangeText={(value) => this.setState({occupation: value})}
+            />
+            </View>
+            <View>
+            <Dropdown
+              label="Gender"
+              data={genders}
+              containerStyle={styles.signUpDropdown}
+              onChangeText={(value) => this.setState({gender: value})}
+            />
+            </View>
+            <View>
+              <FormInput
+                errorMessage
+                autoCapitalize="none"
+                containerStyle={styles.inputLine}
+                placeholder="Monthly Income"
+                onChangeText={value => {
+                  this.setState({ monthlyIncome: value})
+                }}
+              />
+            </View>
+            <View>
+              <FormInput
+                errorMessage
+                autoCapitalize="none"
+                containerStyle={styles.inputLine}
+                placeholder="Age"
+                onChangeText={value => {
+                  this.setState({ age: value})
+                }}
+              />
+            </View>
+            <View>
+              <FormInput
+                errorMessage
+                autoCapitalize="none"
+                containerStyle={styles.inputLine}
+                placeholder="Savings Goal"
+                onChangeText={value => {
+                  this.setState({ savingsGoal: value})
+                }}
+              />
+            </View>
+              <View>
+              <Button
+                onPress={() => {
+                this.handleNextButton()
+                }}
+                title="Next 2 of 3"
+                raised={true}
+                backgroundColor="#0080ff"
+                style={styles.signUpButton}
+              />
+              </View>
+            </View>
           </ImageBackground>
         </ScrollView>
       );

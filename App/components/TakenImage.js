@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { CacheImage } from './index';
 import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
-
 import { addNewPurchase } from '../store/Thunks/Purchase';
 import { connect } from 'react-redux';
 
