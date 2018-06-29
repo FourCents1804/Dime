@@ -46,7 +46,17 @@ const AppNavigator = createStackNavigator({
   ReceiptWallet: { screen: ReceiptWallet }
 });
 
-export default class App extends React.Component {
+export default class App extends React.Component
+ {
+
+  closeMenu = () => {
+    this._drawer.close();
+  };
+
+  openMenu = () => {
+    this._drawer.open();
+  };
+
   render() {
     return (
       <Provider store={store}>

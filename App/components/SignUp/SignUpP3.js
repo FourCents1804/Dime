@@ -1,16 +1,13 @@
 import React from 'react';
-import { Text, View, Easing, ScrollView, Animated, ImageBackground } from 'react-native';
+import { Text, View, ScrollView, ImageBackground } from 'react-native';
 import { auth } from '../../store';
 import { connect } from 'react-redux';
-import {slide, fade} from '../../../public/common-util'
 import styles from '../../../public';
 import {
   Slider,
   CheckBox,
   Divider,
   Button,
-  FormInput,
-  FormValidationMessage
 } from 'react-native-elements';
 
 class SignUpP3 extends React.Component {
@@ -76,22 +73,22 @@ class SignUpP3 extends React.Component {
           contentContainerStyle={styles.scrollContainer}
           bounces={false}
         >
-        <ImageBackground
-          source={require('../../../public/park3.jpg')}
-          style={styles.backgroundImg}
-          resizeMode="cover"
-        >
-          <View style={styles.loginContainer}>
-          <Text style={styles.thinTitle}>Monthly Expenses</Text>
-            {this.createCheckBox()}
-            <Button
-              onPress={this.handleSubmit}
-              title="Create Your Account"
-              raised={true}
-              backgroundColor="#0080ff"
-              style={styles.signUpButton}
-            />
-          </View>
+          <ImageBackground
+            source={require('../../../public/park3.jpg')}
+            style={styles.backgroundImg}
+            resizeMode="cover"
+          >
+            <View style={styles.loginContainer}>
+              <Text style={styles.thinTitle}>Monthly Expenses</Text>
+                {this.createCheckBox()}
+                <Button
+                  onPress={this.handleSubmit}
+                  title="Create Your Account"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.signUpButton}
+              />
+            </View>
           </ImageBackground>
         </ScrollView>
       );

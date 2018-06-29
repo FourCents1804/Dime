@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { View, Easing, ScrollView, Animated } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../../public';
 import { commitPurchase } from '../store/Thunks/User';
 import {
-  Divider,
   Button,
   FormInput,
-  FormValidationMessage
 } from 'react-native-elements';
 
 class Purchase extends Component {
@@ -18,50 +16,34 @@ class Purchase extends Component {
       categoryBroad: '',
       categoryDetailed: ''
     },
-    slide: [
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500),
-      new Animated.Value(-500)
-    ]
   };
 
-  componentDidMount() {
-    let iteration = 0;
-    this.state.slide.forEach(animation => {
-      iteration++;
-      Animated.timing(animation, {
-        toValue: 0,
-        duration: 350 * (iteration + 0.6),
-        easing: Easing.in(Easing.ease)
-      }).start();
-    });
-  }
-
   createFormInput = () => {
+    const categoryNames = {
+      name: 'Name',
+      amount: 'Amount',
+      categoryBroad: 'Category',
+      categoryDetailed: 'Subcategory'
+    }
+
     let formInputArr = [];
-    let iteration = 0;
     for (let keys in this.state.form) {
       let stateFields = keys;
       formInputArr.push(
-        <Animated.View
+        <View
           key={stateFields}
-          style={{ transform: [{ translateY: this.state.slide[iteration] }] }}
         >
           <FormInput
             containerStyle={styles.inputLine}
-            placeholder={stateFields[0].toUpperCase() + stateFields.slice(1)}
+            placeholder={categoryNames[stateFields]}
             onChangeText={value => {
               stateFields = { ...this.state.form };
               stateFields[keys] = value;
               this.setState({ form: stateFields });
             }}
           />
-          <Divider style={styles.dividerS} />
-        </Animated.View>
+        </View>
       );
-      iteration++;
     }
     return formInputArr;
   };
@@ -79,13 +61,17 @@ class Purchase extends Component {
         contentContainerStyle={styles.scrollContainer}
       >
         <View style={styles.container}>
+        <View style={styles.loginContainer}>
+        <Text style={styles.thinTitle}>Add an Expense</Text>
           {this.createFormInput()}
           <Button
-            rounded={true}
-            backgroundColor="green"
             onPress={this.handleSubmit}
-            title="Create New Expense"
+            title="Submit"
+            raised={true}
+            backgroundColor="#0080ff"
+            style={styles.signUpButton}
           />
+        </View>
         </View>
       </ScrollView>
     );

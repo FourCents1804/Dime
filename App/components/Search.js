@@ -1,7 +1,6 @@
 import Autocomplete from 'react-native-autocomplete-input';
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
   TouchableOpacity,
   View

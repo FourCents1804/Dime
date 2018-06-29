@@ -8,7 +8,7 @@ const questionsNAnswers = [
   {
     q: "What is Dime?",
     a:
-      "Dime is personal finance app that provides spending analysis and prediction by analyzing your spending habits."
+      "Dime is  apersonal finance app that provides spending analysis and predictions by analyzing your spending habits."
   },
   {
     q: "How do I register with Dime?",
@@ -27,7 +27,7 @@ const questionsNAnswers = [
   }
 ];
 
-const FAQ = props => {
+const FAQ = () => {
   return (
     <View>
       {questionsNAnswers.map(el => {
