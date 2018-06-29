@@ -17,15 +17,12 @@ class Home extends Component {
     const chartWidth = 250;
     const chartHeight = 250;
     const { user, navigate } = this.props;
-    console.log('state.User', user)
-    console.log('props', this.props)
-    // if (!this.props.user) {
-    //   return <Loading />
-    // } else {
+    const firstName = user ? `, ${user.firstName}` : ``
+    //In
       return (
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
-            <Text style={styles.thinTitle}>Welcome, !</Text>
+            <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
             <Pie userPurchases={userPurchases} />
             <SpendTable />
           </ScrollView>
@@ -56,7 +53,8 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.User
+    user: state.User.userInfo,
+    purchases: state.User.purchases,
   }
 }
 

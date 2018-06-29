@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {  View } from 'react-native';
+import {  View, Text } from 'react-native';
 import  styles from '../../public/index'
 import {
   Button,
@@ -14,9 +14,9 @@ class User extends Component {
   constructor () {
     super()
     this.state = {
-      firstName: 'Jenny',
-      lastName: 'Wang',
-      email: 'jenny@jenny.com',
+      firstName: '',
+      lastName: '',
+      email: '',
       error: ' '
     }
   }
@@ -50,18 +50,19 @@ class User extends Component {
   };
 
   render() {
-    const { user } = this.props;
-    console.log(this.props)
+    const { firstName, lastName, email} = this.props.user;
+    console.log('props', this.props)
     return (
       <View style={styles.container}>
         <View style={styles.loginContainer}>
+        <Text style={styles.thinTitle}>Edit Profile</Text>
           <View>
             <FormLabel>First Name</FormLabel>
             <FormInput
               errorMessage
               autoCapitalize="words"
               containerStyle={styles.inputLine}
-              value={this.state.firstName}
+              value={firstName}
               onChangeText={value => {
                 this.setState({ firstName: value})
               }}
@@ -74,7 +75,7 @@ class User extends Component {
               errorMessage
               autoCapitalize="words"
               containerStyle={styles.inputLine}
-              value={this.state.lastName}
+              value={lastName}
               onChangeText={value => {
                 this.setState({ firstName: value})
               }}
@@ -87,7 +88,7 @@ class User extends Component {
               errorMessage
               autoCapitalize="none"
               containerStyle={styles.inputLine}
-              value={this.state.email}
+              value={email}
               onChangeText={value => {
                 this.setState({ email: value})
               }}
@@ -112,7 +113,7 @@ class User extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.User
+  user: state.User.userInfo,
 });
 
 export default connect(
