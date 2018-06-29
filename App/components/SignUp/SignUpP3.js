@@ -43,17 +43,23 @@ class SignUpP3 extends React.Component {
               onPress={() =>
                 this.setState(this.state[el] ? { [el]: 0 } : { [el]: 1 })
               }
+              checkedColor="#0080ff"
+              containerStyle={styles.signUpCheckbox}
             />
             {this.state[keys] ? (
-              <View>
+              <View style={styles.row}>
                 <Slider
-                  style={{ width: 100 }}
+                  style={styles.signUpSlider}
                   minimumValue={0}
                   maximumValue={4000}
                   value={this.state[el]}
                   onValueChange={value => this.setState({ [el]: value })}
+                  thumbTintColor="#0080ff"
+                  minimumTrackTintColor="#99CCFF"
                 />
-                <Text> {Math.floor(this.state[el])}</Text>
+                <View style={styles.signUpAmt}>
+                <Text style={styles.searchResultText}> {`$${Math.floor(this.state[el])}`}</Text>
+                </View>
               </View>
             ) : (
               <Divider style={styles.dividerVS} />
@@ -69,16 +75,15 @@ class SignUpP3 extends React.Component {
           showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollContainer}
         >
-          <View style={styles.container}>
-            <Text>What Are Your Monthly Expenses</Text>
-            <Divider style={styles.dividerS} />
+          <View style={styles.loginContainer}>
+          <Text style={styles.thinTitle}>Monthly Expenses</Text>
             {this.createCheckBox()}
-            <Divider style={styles.dividerVS} />
             <Button
-              rounded={true}
-              backgroundColor="green"
               onPress={this.handleSubmit}
               title="Create Your Account"
+              raised={true}
+              backgroundColor="#0080ff"
+              style={styles.signUpButton}
             />
           </View>
         </ScrollView>

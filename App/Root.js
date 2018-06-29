@@ -1,7 +1,7 @@
 import React from 'react';
 import {  View } from 'react-native';
 import {  me } from './store/Thunks/User';
-import { Home, Login, Navigation, Menu } from './components';
+import { Home, Login, Navigation, SignUpP3, Menu } from './components';
 import { connect } from 'react-redux';
 import Firebase from './components/Firebase/Firebase';
 import styles from '../public';
@@ -56,26 +56,6 @@ class Root extends React.Component {
     ) : (
       <Login navigate={navigate} />
     );
-    // return (
-    //   <Drawer
-    //   ref={ref => (this._drawer = ref)}
-    //   type="displace"
-    //   content={<Menu navigate={navigate} />}
-    //   tapToClose={true}
-    //   openDrawerOffset={0.3}
-    //   panCloseMask={0.2}
-    //   closedDrawerOffset={-3}
-    //   styles={drawerStyles}
-    //   tweenHandler={ratio => ({
-    //     main: { opacity: (2 - ratio) / 2 }
-    //   })}
-    // >
-    //   <View style={styles.container}>
-    //     <Navigation navigate={navigate} openMenu={this.openMenu} />
-    //     <Home navigate={navigate} />
-    //   </View>
-    //   </Drawer>
-    // )
   }
 }
 

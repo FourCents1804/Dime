@@ -4,7 +4,6 @@ import { Dropdown } from "react-native-material-dropdown";
 import { Card } from "react-native-elements";
 import { sanFranciscoWeights } from "react-native-typography";
 import * as d3 from "d3";
-
 const purchases = require("../../seed/purchaseData");
 
 const formatter = d3.timeFormat("%b %y");
