@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Expo from 'expo';
+import uuidV1 from 'uuid/v1';
 import Firebase from '../../components/Firebase/Firebase';
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
@@ -11,7 +12,7 @@ const ip = manifest.packagerOpts.dev
 
 export const GET_USER = 'GET_USER';
 export const REMOVE_USER = 'REMOVE_USER';
-const COMMITED_PURCHASE = 'COMMITED_PURCHASE'
+const COMMITED_PURCHASE = 'COMMITED_PURCHASE';
 
 export const defaultUser = {};
 
@@ -27,47 +28,53 @@ export const me = () => async dispatch => {
 
 export const auth = (userData, method) => async dispatch => {
   if (method === 'signup') {
-    Firebase.auth
+    await Firebase.auth
       .createUserWithEmailAndPassword(userData[0].email, userData[0].password)
       .then(user => {
-        Firebase.database.ref(`users/${user.user.uid}`).set({
-          userData:  {
-          ...userData[0],
-          ...userData[1],
-          ...userData[2]
+        Firebase.database.ref(`users/${user.uid}`).set({
+          userData: {
+            ...userData[0],
+            ...userData[1]
+          },
+          recurringExpenses: {
+            ...userData[2]
           }
         });
-        dispatch(getUser(user));
+        dispatch(getUser(user.user.uid));
       })
       .catch(err => {
         console.error(err);
       });
   } else {
-    Firebase.auth
+    await Firebase.auth
       .signInWithEmailAndPassword(userData.email, userData.password)
       .then(user => {
-        dispatch(getUser(user));
+        console.log(user.user.uid)
+        dispatch(getUser(user.user.uid));
       })
       .catch(err => {
-        dispatch(getUser('Failed'));
         console.error(err);
       });
   }
 };
 
 export const logout = () => dispatch => {
+  console.log('LOGOUTTTTTTTTTTTTT')
   Firebase.auth
     .signOut()
     .then(() => dispatch(removeUser()))
     .catch(err => console.error(err));
-  dispatch(removeUser());
 };
 
-export const commitPurchase = (uid, purhcaseToCommit) => dispatch => {
-  console.log(uid, purhcaseToCommit)
-  Firebase.database.ref(`users/${uid}`).update({purchases: purhcaseToCommit})
+export const commitPurchase = (user, purchaseToCommit) => dispatch => {
+  let upid = uuidV1();
+  console.log(user, upid, purchaseToCommit);
+
+  Firebase.database
+    .ref(`users/${user}/purchases/${upid}`)
+    .set({ ...purchaseToCommit });
   // dispatch(commitedPurchase())
-}
+};
 
 export const addPicture = (uuid, uri) => dispatch => {
   console.log('UUID HEREEEE', uuid);
@@ -78,11 +85,13 @@ export const addPicture = (uuid, uri) => dispatch => {
 export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
-      return action.user.user;
+    console.log(action)
+      return action.user;
     case REMOVE_USER:
+      console.log(action)
       return defaultUser;
     case COMMITED_PURCHASE:
-      return 'Purchase Has Been Noted'
+      return 'Purchase Has Been Noted';
     default:
       return state;
   }

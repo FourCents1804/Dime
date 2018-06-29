@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, TouchableHighlight } from "react-native";
-import styles from "../../public";
+import React from 'react';
+import { View, Text, TouchableHighlight } from 'react-native';
+import styles from '../../public';
 import {connect} from 'react-redux'
 import { logout } from '../store/Thunks/User'
 
@@ -13,13 +13,13 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>TRANSACTIONS</Text>
       </View>
         <TouchableHighlight
-          onPress={() => navigate("ReceiptWallet")}
+          onPress={() => navigate('ReceiptWallet')}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Receipt Wallet</Text>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => navigate("Search")}
+          onPress={() => navigate('Search')}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Find Transactions</Text>
@@ -29,13 +29,13 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>ANALYSIS AND INSIGHTS</Text>
       </View>
         <TouchableHighlight
-          onPress={() => navigate("PastSpend")}
+          onPress={() => navigate('PastSpend')}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Past Expense Analysis</Text>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => navigate("FutureProjections")}
+          onPress={() => navigate('FutureProjections')}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Future Projections</Text>
@@ -45,14 +45,14 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>CONNECT</Text>
       </View>
         <TouchableHighlight
-          onPress={() => navigate("FAQ")}
+          onPress={() => navigate('FAQ')}
           style={styles.menuLinks}
           navigate={props.navigate}
         >
           <Text style={styles.menuLinkText}>FAQ</Text>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => navigate("AboutUs")}
+          onPress={() => navigate('AboutUs')}
           style={styles.menuLinks}
           navigate={props.navigate}
         >
@@ -63,13 +63,17 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>SETTINGS</Text>
       </View>
         <TouchableHighlight
-          onPress={() => navigate("User")}
+          onPress={() => navigate('User')}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Edit Settings</Text>
         </TouchableHighlight>
         <TouchableHighlight
-          onPress={() => props.logout()}
+          onPress={() => {
+            console.log('logout')
+            props.logout()
+
+          }}
           style={styles.menuLinks}
         >
           <Text style={styles.menuLinkText}>Logout</Text>

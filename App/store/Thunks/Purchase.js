@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Expo from 'expo';
-import {key} from '../../../secrets'
-
+import { key } from '../../../secrets';
 const { manifest } = Expo.Constants;
 const ip = manifest.packagerOpts.dev
   ? manifest.debuggerHost
@@ -17,32 +16,33 @@ export const defaultPurchase = {};
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 
 export const addNewPurchase = base64String => async dispatch => {
-
   const body = {
     requests: [
       {
         image: {
-          content: base64String,
+          content: base64String
         },
         features: [
           {
             type: 'TEXT_DETECTION',
-            maxResults: 1,
+            maxResults: 1
           }
         ]
-      },
-    ],
+      }
+    ]
   };
-  let responce = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${key}`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-
-    },
-    body: JSON.stringify(body)
-  })
-  const parsed = await responce.json()
+  let response = await fetch(
+    `https://vision.googleapis.com/v1/images:annotate?key=${key}`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    }
+  );
+  const parsed = await response.json();
   const elements = parsed.responses[0].textAnnotations[0].description.split(
     '\n'
   );
@@ -55,63 +55,41 @@ export const addNewPurchase = base64String => async dispatch => {
       prices.push(el);
     }
   });
-  console.log(items, prices)
-  // const brand = elements[0];
-  // let summary = {};
-  // if (brand === 'Walmart') {
-  //   const TotalPrice = prices[prices.length - 2];
-  //   const subTotalIdx = items.findIndex(el => {
-  //     return el.startsWith('SUBTOTAL');
-  //   });
-  //   const boughtItems = items.slice(6, subTotalIdx);
-  //   const document = {
-  //     content: boughtItems.join(' '),
-  //     type: 'PLAIN_TEXT'
-  //   };
-  //    responce = await fetch(`https://vision.googleapis.com/v1/images:annotate?key=${key}`, {
-  //     method: 'POST',
-  //     headers: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json'
+  const brand = elements[0];
+  let summary = {};
+  if (brand === 'Walmart') {
+    const TotalPrice = prices[prices.length - 2];
+    const subTotalIdx = items.findIndex(el => {
+      return el.startsWith('SUBTOTAL');
+    });
+    const boughtItems = items.slice(6, subTotalIdx);
+    const boughtItemsStr = boughtItems.join(' ');
+    let langResponse = await axios.post(`http://${ip}/api/receiptRecognition`, {boughtItemsStr})
 
-  //     },
-  //     body: JSON.stringify({
-  //       requests: [
-  //         {
-  //           image: {
-  //             content: base64String,
-  //           },
-  //           features: [
-  //             {
-  //               type: 'TEXT_DETECTION',
-  //               maxResults: 1,
-  //             }
-  //           ]
-  //         },
-  //       ],
-  //     };)
-  //   })
-  //   summary.category = textContent.categories[0].name.slice(1);
-  //   summary.Total = TotalPrice;
-  //   summary.purchasedItems = boughtItems;
-  // }
+    // let elresponse = await fetch(
+    //   `https://language.googleapis.com/v1/documents:classifyText?key=${key}`,
+    //   {
+    //     method: 'POST',
+    //     headers: {
+    //       Accept: 'application/json',
+    //       'Content-Type': 'application/json'
+    //     },
+    //     data: {
+    //       document: {
+    //         type: 'PLAIN_TEXT',
+    //         language: 'EN',
+    //         content: boughtItemsStr
+    //       }
+    //     }
+    //   }
+    // );
 
-  // if (brand === 'WHOLE') {
-  //   const NetSalesIdx = items.findIndex(el => {
-  //     return el.startsWith('Net Sales');
-  //   });
-  //   const TotalIdx = elements.findIndex(el => {
-  //     return el.startsWith('Subtotal');
-  //   });
-  //   const TotalPrice = elements[TotalIdx - 1].replace(/\$/g, '');
-  //   const boughtItems = items.slice(5, NetSalesIdx);
-  //   const document = {
-  //     content: boughtItems.join(' '),
-  //     type: 'PLAIN_TEXT'
-  //   };
-  // const {data } = await axios.post(`http://${ip}/api/receiptRecognition`, {base64String});
-
-  // dispatch(addPurchase(data));
+    summary.category = langResponse.data[0].categories[0].name.slice(1);
+    summary.Total = TotalPrice;
+    summary.purchasedItems = boughtItems;
+    console.log(summary);
+    dispatch(addPurchase(summary))
+  }
 };
 
 export default function(state = defaultPurchase, action) {
