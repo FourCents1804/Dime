@@ -1,8 +1,8 @@
-import React from "react";
-import { Line } from "./";
-import SpendHistory from "./SpendHistory";
-import { View, Text, ScrollView } from "react-native";
-import styles from "../../public";
+import React from 'react';
+import { Line } from './';
+import SpendHistory from './SpendHistory';
+import { View, Text, ScrollView } from 'react-native';
+import styles from '../../public';
 
 const PastSpend = () => {
   return (

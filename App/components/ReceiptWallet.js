@@ -3,7 +3,10 @@ import {ScrollView} from 'react-native'
 
 const ReceiptWallet = props => {
   return (
-    <ScrollView/>
+    <ScrollView />
+  //   <ScrollView>
+  //       <TouchableOpa>
+  //   </ScrollView>
   )
 }
 

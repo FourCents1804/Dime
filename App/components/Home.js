@@ -1,12 +1,12 @@
-import { ScrollView, View, Text } from "react-native";
-import { connect } from "react-redux";
-import Pie, { userPurchases } from "../D3/Doughnut";
-import { SpendTable } from "./";
-import styles from "../../public";
-import React, { Component } from "react";
+import { ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
+import Pie, { userPurchases } from '../D3/Doughnut';
+import { SpendTable } from './';
+import styles from '../../public';
+import React, { Component } from 'react';
 
-import ActionButton from "react-native-action-button";
-import Icon from "react-native-vector-icons/Ionicons";
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class Home extends Component {
   state = {
@@ -17,8 +17,7 @@ class Home extends Component {
     const chartWidth = 250;
     const chartHeight = 250;
     const { user, navigate } = this.props;
-    console.log('state.User', user)
-    console.log('props', this.props)
+
     // if (!this.props.user) {
     //   return <Loading />
     // } else {
@@ -36,14 +35,14 @@ class Home extends Component {
             <ActionButton.Item
               buttonColor="#3498db"
               title="Camera"
-              onPress={() => navigate("Webcam")}
+              onPress={() => navigate('Webcam')}
             >
               <Icon name="ios-camera" size={30} />
             </ActionButton.Item>
             <ActionButton.Item
               buttonColor="#3498db"
               title="Keyboard"
-              onPress={() => navigate("Purchase")}
+              onPress={() => navigate('Purchase')}
             >
               <Icon name="ios-keypad" size={30} />
             </ActionButton.Item>

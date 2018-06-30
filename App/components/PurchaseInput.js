@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import { View, ScrollView, Text } from "react-native";
-import { connect } from "react-redux";
-import styles from "../../public";
-import { commitPurchase } from "../store/Thunks/User";
-import { Button, FormInput } from "react-native-elements";
+import React, { Component } from 'react';
+import { View, ScrollView, Text } from 'react-native';
+import { connect } from 'react-redux';
+import styles from '../../public';
+import { commitPurchase } from '../store/Thunks/Purchase';
+import { Button, FormInput } from 'react-native-elements';
 
 class Purchase extends Component {
   state = {
     form: {
-      name: "",
+      name: '',
       amount: 0,
-      categoryBroad: "",
-      categoryDetailed: ""
+      categoryBroad: '',
+      categoryDetailed: ''
     }
   };
 
   createFormInput = () => {
     const categoryNames = {
-      name: "Name",
-      amount: "Amount",
-      categoryBroad: "Category",
-      categoryDetailed: "Subcategory"
+      name: 'Name',
+      amount: 'Amount',
+      categoryBroad: 'Category',
+      categoryDetailed: 'Subcategory'
     };
 
     let formInputArr = [];
