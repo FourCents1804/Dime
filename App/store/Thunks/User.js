@@ -16,7 +16,10 @@ const COMMITED_PURCHASE = "COMMITED_PURCHASE";
 
 export const defaultUser = {};
 
-export const getUser = user => ({ type: GET_USER, user });
+export const getUser = user => {
+  console.log('here!!!!')
+  return({ type: GET_USER, user })
+}
 export const removeUser = () => ({ type: REMOVE_USER });
 const commitedPurchase = () => ({type: COMMITED_PURCHASE})
 

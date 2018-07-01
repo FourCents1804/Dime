@@ -7,18 +7,17 @@ import React, { Component } from "react";
 
 import ActionButton from "react-native-action-button";
 import Icon from "react-native-vector-icons/Ionicons";
+import {getUser} from '../store/Thunks/User'
+import User from './Utility/exampleUser'
 
 class Home extends Component {
-  state = {
-    user: {}
-  };
+  async componentDidMount () {
+    await this.props.getUser(User)
+  }
 
   render() {
-    const chartWidth = 250;
-    const chartHeight = 250;
     const { user, navigate } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``
-    //In
       return (
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
@@ -55,10 +54,15 @@ const mapStateToProps = state => {
   return {
     user: state.User.userInfo,
     purchases: state.User.purchases,
+    state: state
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  getUser: user => dispatch(getUser(user))
+})
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Home);
