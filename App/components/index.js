@@ -12,6 +12,7 @@ export { default as SignUpP2 } from "./SignUp/SignUpP2";
 export { default as SignUpP3 } from "./SignUp/SignUpP3";
 export { default as SpendHistory } from "./SpendHistory";
 export { default as Line } from "../D3/Line";
+export { default as Histogram } from "../D3/Histogram";
 export { default as PastSpend } from "./PastSpend";
 export { default as SpendTable } from "./SpendTable";
 export { default as AboutUs } from "./AboutUs";

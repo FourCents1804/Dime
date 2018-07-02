@@ -54,7 +54,6 @@ const mapStateToProps = state => {
   return {
     user: state.User.userInfo,
     purchases: state.User.purchases || [],
-    state: state
   }
 }
 

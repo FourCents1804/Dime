@@ -1,60 +1,52 @@
 const purchases = require("../../seed/purchaseData");
 import React from "react";
 const d3 = require("d3");
-import { View } from "react-native";
+import { View, Dimensions } from "react-native";
 import { YAxis, XAxis, BarChart, Grid } from "react-native-svg-charts";
 
 const Histogram = props => {
 
-  const { width, height, margin } = props;
+  const { height, margin } = props;
+  const {width} = Dimensions.get('window')
 
-  const formatter = d3.timeFormat("%b %y");
-  const parser = d3.timeParse("%b %y");
-
-  const data = d3
-    .nest()
-    .key(d => formatter(new Date(d.createdAt)))
-    .sortKeys((a, b) => parser(a) - parser(b))
-    .rollup(d => d3.sum(d, g => g.amount))
-    .entries(purchases);
+  const {data} = props
+  const label = data.key
+  const categories = data.values || [{key: undefined, value: undefined}]
 
   return (
     <View style={{ height: height, width: width }}>
       <View style={{ height: height - margin }} flexDirection="row">
         <YAxis
-          data={data}
+          data={categories}
           contentInset={{ top: 20, bottom: 20 }}
           svg={{
             fill: "grey",
             fontSize: 10
           }}
           numberOfTicks={10}
-          formatLabel={value => `$${value}`}
+          formatLabel={value => value > 999 ? `$${(value/1000).toFixed(1)}k` : `$${value}`}
           yAccessor={({ item }) => item.value}
         />
         <BarChart
           style={{ flex: 1 }}
-          data={data}
+          data={categories}
           contentInset={{ top: 20, bottom: 20 }}
           svg={{ fill: "rgba(54, 125, 224, 0.8)" }}
           yAccessor={({ item }) => item.value}
-          xAccessor={({ item }) => parser(item.key)}
+          xAccessor={({ item }) => item.key}
         >
           <Grid />
         </BarChart>
       </View>
       <XAxis
-        data={data}
+        data={categories}
         numberOfTicks={3}
         svg={{
           fill: "grey",
           fontSize: 8
         }}
-        contentInset={{ left: 20 }}
-        // margin
-        xAccessor={({ item }) => parser(item.key)}
-        formatLabel={value => formatter(value)}
-        // scale={ scale.scaleTime }
+        contentInset={{ left: 10, right: 10 }}
+        xAccessor={({ item }) => item.key}
       />
     </View>
   );
