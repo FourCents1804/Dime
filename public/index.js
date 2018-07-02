@@ -301,6 +301,13 @@ export default (styles = StyleSheet.create({
     width: 250
   },
   spendHistoryCat: {
-    textAlign: 'center'
-  }
+    textAlign: "center"
+  },
+  pastSpendContainer: {
+    flex: 1,
+    backgroundColor: "#fff7f2",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10
+  },
 }));

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { View } from 'react-native';
 import { Home, Login, Navigation, Menu, Loading } from './components';
@@ -5,6 +6,7 @@ import { connect } from 'react-redux';
 import Firebase from './components/Firebase/Firebase';
 import styles from '../public';
 import Drawer from 'react-native-drawer';
+
 
 class Root extends React.Component {
   state = {

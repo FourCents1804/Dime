@@ -30,7 +30,7 @@ const purchases = purchaseData
 //     "amount": 13.07,
 //     "categoryBroad": "Shops",
 //     "categoryDetailed": "Food and Beverage Store",
-//     "createdAt": "2018-05-16",
+//     "date": "2018-05-16",
 //     "name": "LEONIDAS CHOCOLATES",
 //     "transaction_id": 1
 //   },
@@ -38,7 +38,7 @@ const purchases = purchaseData
 //     "amount": 26.25,
 //     "categoryBroad": "Travel",
 //     "categoryDetailed": "Public Transportation Services",
-//     "createdAt": "2018-05-16",
+//     "date": "2018-05-16",
 //     "name": "MTA MVM VENDING MACHINES",
 //     "transaction_id": 2
 //   },
@@ -46,7 +46,7 @@ const purchases = purchaseData
 //     "amount": 90.46,
 //     "categoryBroad": "Shops",
 //     "categoryDetailed": "Clothing and Accessories",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "260 SAMPLE SALE CHELSE",
 //     "transaction_id": 3
 //   },
@@ -54,7 +54,7 @@ const purchases = purchaseData
 //     "amount": 9.8,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "KING OF FALAFEL &",
 //     "transaction_id": 4
 //   },
@@ -62,7 +62,7 @@ const purchases = purchaseData
 //     "amount": 18,
 //     "categoryBroad": "Service",
 //     "categoryDetailed": "Personal Care",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "PAYGATE_KIWDISK 4552788",
 //     "transaction_id": 5
 //   },
@@ -70,7 +70,7 @@ const purchases = purchaseData
 //     "amount": 25,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "Starbucks",
 //     "transaction_id": 6
 //   },
@@ -78,7 +78,7 @@ const purchases = purchaseData
 //     "amount": 8.5,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "TACOS MORELOS",
 //     "transaction_id": 7
 //   },
@@ -86,7 +86,7 @@ const purchases = purchaseData
 //     "amount": 1.1,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "",
-//     "createdAt": "2018-05-15",
+//     "date": "2018-05-15",
 //     "name": "USA*IDEAL VENDING",
 //     "transaction_id": 8
 //   },
@@ -94,7 +94,7 @@ const purchases = purchaseData
 //     "amount": 8.01,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-14",
+//     "date": "2018-05-14",
 //     "name": "KILLARNEY ROSE",
 //     "transaction_id": 9
 //   },
@@ -102,7 +102,7 @@ const purchases = purchaseData
 //     "amount": 3.27,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-14",
+//     "date": "2018-05-14",
 //     "name": "OPEN KITCHEN 15 IN",
 //     "transaction_id": 10
 //   },
@@ -110,7 +110,7 @@ const purchases = purchaseData
 //     "amount": 4.9,
 //     "categoryBroad": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
-//     "createdAt": "2018-05-14",
+//     "date": "2018-05-14",
 //     "name": "OPEN KITCHEN 15 IN",
 //     "transaction_id": 11
 //   }]

@@ -3,7 +3,7 @@ const purchaseData = [
     "amount": 13.07,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-05-16",
+    "date": "2018-05-16",
     "name": "LEONIDAS CHOCOLATES",
     "transaction_id": 1
   },
@@ -11,7 +11,7 @@ const purchaseData = [
     "amount": 26.25,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2018-05-16",
+    "date": "2018-05-16",
     "name": "MTA MVM VENDING MACHINES",
     "transaction_id": 2
   },
@@ -19,7 +19,7 @@ const purchaseData = [
     "amount": 90.46,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "260 SAMPLE SALE CHELSE",
     "transaction_id": 3
   },
@@ -27,7 +27,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "KING OF FALAFEL &",
     "transaction_id": 4
   },
@@ -35,7 +35,7 @@ const purchaseData = [
     "amount": 18,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "PAYGATE_KIWDISK 4552788",
     "transaction_id": 5
   },
@@ -43,7 +43,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "Starbucks",
     "transaction_id": 6
   },
@@ -51,7 +51,7 @@ const purchaseData = [
     "amount": 8.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "TACOS MORELOS",
     "transaction_id": 7
   },
@@ -59,7 +59,7 @@ const purchaseData = [
     "amount": 1.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2018-05-15",
+    "date": "2018-05-15",
     "name": "USA*IDEAL VENDING",
     "transaction_id": 8
   },
@@ -67,7 +67,7 @@ const purchaseData = [
     "amount": 8.01,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-14",
+    "date": "2018-05-14",
     "name": "KILLARNEY ROSE",
     "transaction_id": 9
   },
@@ -75,7 +75,7 @@ const purchaseData = [
     "amount": 3.27,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-14",
+    "date": "2018-05-14",
     "name": "OPEN KITCHEN 15 IN",
     "transaction_id": 10
   },
@@ -83,7 +83,7 @@ const purchaseData = [
     "amount": 4.9,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-14",
+    "date": "2018-05-14",
     "name": "OPEN KITCHEN 15 IN",
     "transaction_id": 11
   },
@@ -91,7 +91,7 @@ const purchaseData = [
     "amount": 690.79,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-05-14",
+    "date": "2018-05-14",
     "name": "Payment to Chase card ending in 8623 05/14",
     "transaction_id": 12
   },
@@ -99,7 +99,7 @@ const purchaseData = [
     "amount": 42,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-05-14",
+    "date": "2018-05-14",
     "name": "TRADE FAIR #7",
     "transaction_id": 13
   },
@@ -107,7 +107,7 @@ const purchaseData = [
     "amount": 13.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-13",
+    "date": "2018-05-13",
     "name": "HONG KONG RESTAURANT",
     "transaction_id": 14
   },
@@ -115,7 +115,7 @@ const purchaseData = [
     "amount": 690.79,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-05-13",
+    "date": "2018-05-13",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 15
   },
@@ -123,7 +123,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-13",
+    "date": "2018-05-13",
     "name": "Starbucks",
     "transaction_id": 16
   },
@@ -131,7 +131,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-13",
+    "date": "2018-05-13",
     "name": "TACOS MORELOS",
     "transaction_id": 17
   },
@@ -139,7 +139,7 @@ const purchaseData = [
     "amount": 312.6,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2018-05-11",
+    "date": "2018-05-11",
     "name": "BILL PAYMENT",
     "transaction_id": 18
   },
@@ -147,7 +147,7 @@ const purchaseData = [
     "amount": 8.44,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-05-10",
+    "date": "2018-05-10",
     "name": "RUBY'S CANDY & GROCERY IN",
     "transaction_id": 19
   },
@@ -155,7 +155,7 @@ const purchaseData = [
     "amount": 1.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2018-05-10",
+    "date": "2018-05-10",
     "name": "USA*IDEAL VENDING",
     "transaction_id": 20
   },
@@ -163,7 +163,7 @@ const purchaseData = [
     "amount": 1.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2018-05-10",
+    "date": "2018-05-10",
     "name": "USA*IDEAL VENDING",
     "transaction_id": 21
   },
@@ -171,7 +171,7 @@ const purchaseData = [
     "amount": 12.79,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-09",
+    "date": "2018-05-09",
     "name": "ROTI MEDITERRANEAN GRILL",
     "transaction_id": 22
   },
@@ -179,7 +179,7 @@ const purchaseData = [
     "amount": 29.06,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-05-08",
+    "date": "2018-05-08",
     "name": "FAMILY MARKET",
     "transaction_id": 23
   },
@@ -187,7 +187,7 @@ const purchaseData = [
     "amount": 21.78,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-08",
+    "date": "2018-05-08",
     "name": "KING OF FALAFEL & SHA",
     "transaction_id": 24
   },
@@ -195,7 +195,7 @@ const purchaseData = [
     "amount": 1.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2018-05-08",
+    "date": "2018-05-08",
     "name": "USA*IDEAL VENDING",
     "transaction_id": 25
   },
@@ -203,7 +203,7 @@ const purchaseData = [
     "amount": 725,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-05-07",
+    "date": "2018-05-07",
     "name": "Venmo",
     "transaction_id": 26
   },
@@ -211,7 +211,7 @@ const purchaseData = [
     "amount": 15.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-06",
+    "date": "2018-05-06",
     "name": "ROTI MEDITERRANEAN GRILL",
     "transaction_id": 27
   },
@@ -219,7 +219,7 @@ const purchaseData = [
     "amount": 13.63,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-06",
+    "date": "2018-05-06",
     "name": "TERRACE FISH & CHIPS",
     "transaction_id": 28
   },
@@ -227,7 +227,7 @@ const purchaseData = [
     "amount": 4.12,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-05-06",
+    "date": "2018-05-06",
     "name": "Walgreens",
     "transaction_id": 29
   },
@@ -235,7 +235,7 @@ const purchaseData = [
     "amount": 0.01,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2018-05-03",
+    "date": "2018-05-03",
     "name": "INTEREST PAYMENT",
     "transaction_id": 30
   },
@@ -243,7 +243,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2018-05-03",
+    "date": "2018-05-03",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 31
   },
@@ -251,7 +251,7 @@ const purchaseData = [
     "amount": 68.79,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-02",
+    "date": "2018-05-02",
     "name": "ALIADA",
     "transaction_id": 32
   },
@@ -259,7 +259,7 @@ const purchaseData = [
     "amount": 6.22,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-05-02",
+    "date": "2018-05-02",
     "name": "Lyft",
     "transaction_id": 33
   },
@@ -267,7 +267,7 @@ const purchaseData = [
     "amount": 12.09,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-05-02",
+    "date": "2018-05-02",
     "name": "Potbelly Sandwich Shop",
     "transaction_id": 34
   },
@@ -275,7 +275,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Community",
     "categoryDetailed": "Organizations and Associations",
-    "createdAt": "2018-05-02",
+    "date": "2018-05-02",
     "name": "QueensJS",
     "transaction_id": 35
   },
@@ -283,7 +283,7 @@ const purchaseData = [
     "amount": 26.9,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-05-01",
+    "date": "2018-05-01",
     "name": "FOOD BAZAAR",
     "transaction_id": 36
   },
@@ -291,7 +291,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-30",
+    "date": "2018-04-30",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:6466591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 8953100120GS",
     "transaction_id": 37
   },
@@ -299,7 +299,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2018-04-30",
+    "date": "2018-04-30",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 38
   },
@@ -307,7 +307,7 @@ const purchaseData = [
     "amount": 4.75,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-04-30",
+    "date": "2018-04-30",
     "name": "LA COLOMBE - PRINCE",
     "transaction_id": 39
   },
@@ -315,7 +315,7 @@ const purchaseData = [
     "amount": 7.25,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-30",
+    "date": "2018-04-30",
     "name": "POMMES FRITES",
     "transaction_id": 40
   },
@@ -323,7 +323,7 @@ const purchaseData = [
     "amount": 29.92,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-30",
+    "date": "2018-04-30",
     "name": "SEAMLSSMOKJAKOREANEAT",
     "transaction_id": 41
   },
@@ -331,7 +331,7 @@ const purchaseData = [
     "amount": 7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-29",
+    "date": "2018-04-29",
     "name": "JUSTINO`S PIZZERIA",
     "transaction_id": 42
   },
@@ -339,7 +339,7 @@ const purchaseData = [
     "amount": 11.97,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-29",
+    "date": "2018-04-29",
     "name": "LENWICH 10 HANOVER LLC",
     "transaction_id": 43
   },
@@ -347,7 +347,7 @@ const purchaseData = [
     "amount": 73.33,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-04-27",
+    "date": "2018-04-27",
     "name": "H MART",
     "transaction_id": 44
   },
@@ -355,7 +355,7 @@ const purchaseData = [
     "amount": 10,
     "categoryBroad": "Community",
     "categoryDetailed": "Religious",
-    "createdAt": "2018-04-27",
+    "date": "2018-04-27",
     "name": "UNITY",
     "transaction_id": 45
   },
@@ -363,7 +363,7 @@ const purchaseData = [
     "amount": 12.83,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-26",
+    "date": "2018-04-26",
     "name": "Subway",
     "transaction_id": 46
   },
@@ -371,7 +371,7 @@ const purchaseData = [
     "amount": 294.6,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-04-24",
+    "date": "2018-04-24",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 47
   },
@@ -379,7 +379,7 @@ const purchaseData = [
     "amount": 294.6,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-04-24",
+    "date": "2018-04-24",
     "name": "Payment to Chase card ending in 8623 04/24",
     "transaction_id": 48
   },
@@ -387,7 +387,7 @@ const purchaseData = [
     "amount": 5.54,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-04-22",
+    "date": "2018-04-22",
     "name": "Duane Reade",
     "transaction_id": 49
   },
@@ -395,7 +395,7 @@ const purchaseData = [
     "amount": 44.6,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-22",
+    "date": "2018-04-22",
     "name": "KONDO RESTAURANT",
     "transaction_id": 50
   },
@@ -403,7 +403,7 @@ const purchaseData = [
     "amount": 29.94,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-22",
+    "date": "2018-04-22",
     "name": "OBAO",
     "transaction_id": 51
   },
@@ -411,7 +411,7 @@ const purchaseData = [
     "amount": 9.45,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-04-22",
+    "date": "2018-04-22",
     "name": "Rite Aid",
     "transaction_id": 52
   },
@@ -419,7 +419,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-19",
+    "date": "2018-04-19",
     "name": "KING OF FALAFEL & SHA",
     "transaction_id": 53
   },
@@ -427,7 +427,7 @@ const purchaseData = [
     "amount": 6.39,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-19",
+    "date": "2018-04-19",
     "name": "OPEN KITCHEN 15 IN",
     "transaction_id": 54
   },
@@ -435,7 +435,7 @@ const purchaseData = [
     "amount": 10,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-19",
+    "date": "2018-04-19",
     "name": "Venmo",
     "transaction_id": 55
   },
@@ -443,7 +443,7 @@ const purchaseData = [
     "amount": 28.04,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "FAMILY MARKET",
     "transaction_id": 56
   },
@@ -451,7 +451,7 @@ const purchaseData = [
     "amount": 121,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 57
   },
@@ -459,7 +459,7 @@ const purchaseData = [
     "amount": 669.8,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 58
   },
@@ -467,7 +467,7 @@ const purchaseData = [
     "amount": 669.8,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "Payment to Chase card ending in 8623 04/18",
     "transaction_id": 59
   },
@@ -475,7 +475,7 @@ const purchaseData = [
     "amount": 12,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "Venmo",
     "transaction_id": 60
   },
@@ -483,7 +483,7 @@ const purchaseData = [
     "amount": 38,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-18",
+    "date": "2018-04-18",
     "name": "Venmo",
     "transaction_id": 61
   },
@@ -491,7 +491,7 @@ const purchaseData = [
     "amount": 39.84,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-17",
+    "date": "2018-04-17",
     "name": "SEAMLSSPELICANACHICKE",
     "transaction_id": 62
   },
@@ -499,7 +499,7 @@ const purchaseData = [
     "amount": 70.36,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "A TIME FOR WINE TROPICANA",
     "transaction_id": 63
   },
@@ -507,7 +507,7 @@ const purchaseData = [
     "amount": 62.65,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "DOCK'S OYSTER HOUSE",
     "transaction_id": 64
   },
@@ -515,7 +515,7 @@ const purchaseData = [
     "amount": 32.67,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "P.F. Chang's China Bistro",
     "transaction_id": 65
   },
@@ -523,7 +523,7 @@ const purchaseData = [
     "amount": 70,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "Venmo",
     "transaction_id": 66
   },
@@ -531,7 +531,7 @@ const purchaseData = [
     "amount": 300.99,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "Venmo",
     "transaction_id": 67
   },
@@ -539,7 +539,7 @@ const purchaseData = [
     "amount": 50.65,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-16",
+    "date": "2018-04-16",
     "name": "YAKITORI TOTTO",
     "transaction_id": 68
   },
@@ -547,7 +547,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2018-04-15",
+    "date": "2018-04-15",
     "name": "GREYHOUND F/S #2007",
     "transaction_id": 69
   },
@@ -555,7 +555,7 @@ const purchaseData = [
     "amount": 130.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2018-04-13",
+    "date": "2018-04-13",
     "name": "MEALPAL",
     "transaction_id": 70
   },
@@ -563,7 +563,7 @@ const purchaseData = [
     "amount": 13.07,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-11",
+    "date": "2018-04-11",
     "name": "OBAO",
     "transaction_id": 71
   },
@@ -571,7 +571,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-11",
+    "date": "2018-04-11",
     "name": "Starbucks",
     "transaction_id": 72
   },
@@ -579,7 +579,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2018-04-10",
+    "date": "2018-04-10",
     "name": "PAYGATE_KIWDISK 4552788",
     "transaction_id": 73
   },
@@ -587,7 +587,7 @@ const purchaseData = [
     "amount": 21.51,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "DISTRICT MOT.",
     "transaction_id": 74
   },
@@ -595,7 +595,7 @@ const purchaseData = [
     "amount": 13.66,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "FAMILY MARKET",
     "transaction_id": 75
   },
@@ -603,7 +603,7 @@ const purchaseData = [
     "amount": 45.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "KONDO RESTAURANT",
     "transaction_id": 76
   },
@@ -611,7 +611,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 77
   },
@@ -619,7 +619,7 @@ const purchaseData = [
     "amount": 51.75,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "NON-CHASE ATM WITHDRAW 079564 04/082523 BROA",
     "transaction_id": 78
   },
@@ -627,7 +627,7 @@ const purchaseData = [
     "amount": 33.81,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-09",
+    "date": "2018-04-09",
     "name": "SEAMLSSPELICANACHICKE",
     "transaction_id": 79
   },
@@ -635,7 +635,7 @@ const purchaseData = [
     "amount": 9.42,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-08",
+    "date": "2018-04-08",
     "name": "Chipotle Mexican Grill",
     "transaction_id": 80
   },
@@ -643,7 +643,7 @@ const purchaseData = [
     "amount": 98,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2018-04-08",
+    "date": "2018-04-08",
     "name": "GREYHOUND LINES CNP",
     "transaction_id": 81
   },
@@ -651,7 +651,7 @@ const purchaseData = [
     "amount": 12.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-08",
+    "date": "2018-04-08",
     "name": "McDonald's",
     "transaction_id": 82
   },
@@ -659,7 +659,7 @@ const purchaseData = [
     "amount": 9.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-06",
+    "date": "2018-04-06",
     "name": "JUSTINO`S PIZZERIA",
     "transaction_id": 83
   },
@@ -667,7 +667,7 @@ const purchaseData = [
     "amount": 7.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-04-05",
+    "date": "2018-04-05",
     "name": "TAXI SVC LONG ISALND C",
     "transaction_id": 84
   },
@@ -675,7 +675,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-04-04",
+    "date": "2018-04-04",
     "name": "ATM WITHDRAWAL 003555 04/0445 WALL S",
     "transaction_id": 85
   },
@@ -683,7 +683,7 @@ const purchaseData = [
     "amount": 0.01,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2018-04-04",
+    "date": "2018-04-04",
     "name": "INTEREST PAYMENT",
     "transaction_id": 86
   },
@@ -691,7 +691,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2018-04-04",
+    "date": "2018-04-04",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 87
   },
@@ -699,7 +699,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2018-04-04",
+    "date": "2018-04-04",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 88
   },
@@ -707,7 +707,7 @@ const purchaseData = [
     "amount": 24.69,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-04-03",
+    "date": "2018-04-03",
     "name": "LAN LARB",
     "transaction_id": 89
   },
@@ -715,7 +715,7 @@ const purchaseData = [
     "amount": 8.84,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-04-03",
+    "date": "2018-04-03",
     "name": "Lyft",
     "transaction_id": 90
   },
@@ -723,7 +723,7 @@ const purchaseData = [
     "amount": 130.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2018-04-03",
+    "date": "2018-04-03",
     "name": "MEALPAL",
     "transaction_id": 91
   },
@@ -731,7 +731,7 @@ const purchaseData = [
     "amount": 9.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-04-03",
+    "date": "2018-04-03",
     "name": "TAXI SVC 41-25 36TH ST",
     "transaction_id": 92
   },
@@ -739,7 +739,7 @@ const purchaseData = [
     "amount": 15.66,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2018-04-02",
+    "date": "2018-04-02",
     "name": "UA KAUFMAN ASTORIA 14",
     "transaction_id": 93
   },
@@ -747,7 +747,7 @@ const purchaseData = [
     "amount": 725,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-04-02",
+    "date": "2018-04-02",
     "name": "Venmo",
     "transaction_id": 94
   },
@@ -755,7 +755,7 @@ const purchaseData = [
     "amount": 36,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2018-04-01",
+    "date": "2018-04-01",
     "name": "Regal Cinemas",
     "transaction_id": 95
   },
@@ -763,7 +763,7 @@ const purchaseData = [
     "amount": 5.54,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-04-01",
+    "date": "2018-04-01",
     "name": "TRADE FAIR #7",
     "transaction_id": 96
   },
@@ -771,7 +771,7 @@ const purchaseData = [
     "amount": 25.02,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-04-01",
+    "date": "2018-04-01",
     "name": "TRADE FAIR #7",
     "transaction_id": 97
   },
@@ -779,7 +779,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-03-30",
+    "date": "2018-03-30",
     "name": "ATM WITHDRAWAL 003609 03/3055 WATER",
     "transaction_id": 98
   },
@@ -787,7 +787,7 @@ const purchaseData = [
     "amount": 25.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-30",
+    "date": "2018-03-30",
     "name": "FAMILY MARKET",
     "transaction_id": 99
   },
@@ -795,7 +795,7 @@ const purchaseData = [
     "amount": 653.23,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-03-30",
+    "date": "2018-03-30",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 100
   },
@@ -803,7 +803,7 @@ const purchaseData = [
     "amount": 653.23,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-03-30",
+    "date": "2018-03-30",
     "name": "Payment to Chase card ending in 8623 03/30",
     "transaction_id": 101
   },
@@ -811,7 +811,7 @@ const purchaseData = [
     "amount": 149.55,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2018-03-29",
+    "date": "2018-03-29",
     "name": "TEXT2PAY",
     "transaction_id": 102
   },
@@ -819,7 +819,7 @@ const purchaseData = [
     "amount": 8.7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-28",
+    "date": "2018-03-28",
     "name": "CAFE ARTE 2",
     "transaction_id": 103
   },
@@ -827,7 +827,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-28",
+    "date": "2018-03-28",
     "name": "KING OF FALAFEL & SHA",
     "transaction_id": 104
   },
@@ -835,7 +835,7 @@ const purchaseData = [
     "amount": 26.01,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-27",
+    "date": "2018-03-27",
     "name": "FAMILY MARKET",
     "transaction_id": 105
   },
@@ -843,7 +843,7 @@ const purchaseData = [
     "amount": 6.48,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-03-27",
+    "date": "2018-03-27",
     "name": "PINKBERRY 15049",
     "transaction_id": 106
   },
@@ -851,7 +851,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-27",
+    "date": "2018-03-27",
     "name": "Starbucks",
     "transaction_id": 107
   },
@@ -859,7 +859,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-03-26",
+    "date": "2018-03-26",
     "name": "ATM WITHDRAWAL 001230 03/2655 WATER",
     "transaction_id": 108
   },
@@ -867,7 +867,7 @@ const purchaseData = [
     "amount": 12.92,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-03-26",
+    "date": "2018-03-26",
     "name": "Lyft",
     "transaction_id": 109
   },
@@ -875,7 +875,7 @@ const purchaseData = [
     "amount": 52.64,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-26",
+    "date": "2018-03-26",
     "name": "YAKITORI TOTTO",
     "transaction_id": 110
   },
@@ -883,7 +883,7 @@ const purchaseData = [
     "amount": 15.78,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-03-25",
+    "date": "2018-03-25",
     "name": "CVS",
     "transaction_id": 111
   },
@@ -891,7 +891,7 @@ const purchaseData = [
     "amount": 5.17,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-03-25",
+    "date": "2018-03-25",
     "name": "GONG CHA CHINATOWN",
     "transaction_id": 112
   },
@@ -899,7 +899,7 @@ const purchaseData = [
     "amount": 16.2,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-25",
+    "date": "2018-03-25",
     "name": "McDonald's",
     "transaction_id": 113
   },
@@ -907,7 +907,7 @@ const purchaseData = [
     "amount": 12.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-23",
+    "date": "2018-03-23",
     "name": "Potbelly Sandwich Shop",
     "transaction_id": 114
   },
@@ -915,7 +915,7 @@ const purchaseData = [
     "amount": 39.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-23",
+    "date": "2018-03-23",
     "name": "SEAMLSSENTHAICETHAIKI",
     "transaction_id": 115
   },
@@ -923,7 +923,7 @@ const purchaseData = [
     "amount": 42.95,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-22",
+    "date": "2018-03-22",
     "name": "BONCHON ASTORIA",
     "transaction_id": 116
   },
@@ -931,7 +931,7 @@ const purchaseData = [
     "amount": 13.9,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-03-21",
+    "date": "2018-03-21",
     "name": "Lyft",
     "transaction_id": 117
   },
@@ -939,7 +939,7 @@ const purchaseData = [
     "amount": 3.54,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-21",
+    "date": "2018-03-21",
     "name": "Starbucks",
     "transaction_id": 118
   },
@@ -947,7 +947,7 @@ const purchaseData = [
     "amount": 4.84,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-21",
+    "date": "2018-03-21",
     "name": "Starbucks",
     "transaction_id": 119
   },
@@ -955,7 +955,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-03-21",
+    "date": "2018-03-21",
     "name": "Venmo",
     "transaction_id": 120
   },
@@ -963,7 +963,7 @@ const purchaseData = [
     "amount": 14.4,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-19",
+    "date": "2018-03-19",
     "name": "FAMILY MARKET",
     "transaction_id": 121
   },
@@ -971,7 +971,7 @@ const purchaseData = [
     "amount": 1.06,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-03-19",
+    "date": "2018-03-19",
     "name": "Lyft",
     "transaction_id": 122
   },
@@ -979,7 +979,7 @@ const purchaseData = [
     "amount": 18.16,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-03-19",
+    "date": "2018-03-19",
     "name": "Lyft",
     "transaction_id": 123
   },
@@ -987,7 +987,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2018-03-19",
+    "date": "2018-03-19",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 124
   },
@@ -995,7 +995,7 @@ const purchaseData = [
     "amount": 51.75,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-03-19",
+    "date": "2018-03-19",
     "name": "NON-CHASE ATM WITHDRAW 452611 03/192523 BROA",
     "transaction_id": 125
   },
@@ -1003,7 +1003,7 @@ const purchaseData = [
     "amount": 7.61,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-18",
+    "date": "2018-03-18",
     "name": "COTTON GOURMET INC.",
     "transaction_id": 126
   },
@@ -1011,7 +1011,7 @@ const purchaseData = [
     "amount": 61.17,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-18",
+    "date": "2018-03-18",
     "name": "HAEIN SUSHI AND SASHIMI",
     "transaction_id": 127
   },
@@ -1019,7 +1019,7 @@ const purchaseData = [
     "amount": 23.22,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-14",
+    "date": "2018-03-14",
     "name": "TRADE FAIR #7",
     "transaction_id": 128
   },
@@ -1027,7 +1027,7 @@ const purchaseData = [
     "amount": 25.04,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-13",
+    "date": "2018-03-13",
     "name": "KING OF FALAFEL & SHA",
     "transaction_id": 129
   },
@@ -1035,7 +1035,7 @@ const purchaseData = [
     "amount": 121,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2018-03-13",
+    "date": "2018-03-13",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 130
   },
@@ -1043,7 +1043,7 @@ const purchaseData = [
     "amount": 30.22,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-13",
+    "date": "2018-03-13",
     "name": "SEAMLSSDISTRICTSAIGON",
     "transaction_id": 131
   },
@@ -1051,7 +1051,7 @@ const purchaseData = [
     "amount": 5000,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:646591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 5906700071HG",
     "transaction_id": 132
   },
@@ -1059,7 +1059,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 133
   },
@@ -1067,7 +1067,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Online Transfer from CHK ...6254 transaction#: 6975337282",
     "transaction_id": 134
   },
@@ -1075,7 +1075,7 @@ const purchaseData = [
     "amount": 166,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Online Transfer from SAV ...1371 transaction#: 6973370665",
     "transaction_id": 135
   },
@@ -1083,7 +1083,7 @@ const purchaseData = [
     "amount": 166,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Online Transfer to CHK ...6254 transaction#: 6973370665 03/12",
     "transaction_id": 136
   },
@@ -1091,7 +1091,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Online Transfer to SAV ...1371 transaction#: 6975337282 03/12",
     "transaction_id": 137
   },
@@ -1099,7 +1099,7 @@ const purchaseData = [
     "amount": 304.86,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 138
   },
@@ -1107,7 +1107,7 @@ const purchaseData = [
     "amount": 81.44,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 139
   },
@@ -1115,7 +1115,7 @@ const purchaseData = [
     "amount": 81.44,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Payment to Chase card ending in 8623 03/12",
     "transaction_id": 140
   },
@@ -1123,7 +1123,7 @@ const purchaseData = [
     "amount": 304.86,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "Payment to Chase card ending in 8623 03/12",
     "transaction_id": 141
   },
@@ -1131,7 +1131,7 @@ const purchaseData = [
     "amount": 34.29,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-12",
+    "date": "2018-03-12",
     "name": "TAKE 31",
     "transaction_id": 142
   },
@@ -1139,7 +1139,7 @@ const purchaseData = [
     "amount": 7.61,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-11",
+    "date": "2018-03-11",
     "name": "H MART",
     "transaction_id": 143
   },
@@ -1147,7 +1147,7 @@ const purchaseData = [
     "amount": 21,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-03-11",
+    "date": "2018-03-11",
     "name": "NYCTAXI2L65",
     "transaction_id": 144
   },
@@ -1155,7 +1155,7 @@ const purchaseData = [
     "amount": 6.48,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-09",
+    "date": "2018-03-09",
     "name": "COTTON GOURMET INC.",
     "transaction_id": 145
   },
@@ -1163,7 +1163,7 @@ const purchaseData = [
     "amount": 95,
     "categoryBroad": "Shops",
     "categoryDetailed": "Department Stores",
-    "createdAt": "2018-03-09",
+    "date": "2018-03-09",
     "name": "MACYS HERALD SQUARE",
     "transaction_id": 146
   },
@@ -1171,7 +1171,7 @@ const purchaseData = [
     "amount": 5.43,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-09",
+    "date": "2018-03-09",
     "name": "Panera Bread",
     "transaction_id": 147
   },
@@ -1179,7 +1179,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-08",
+    "date": "2018-03-08",
     "name": "Online Transfer from SAV ...1371 transaction#: 6965778565",
     "transaction_id": 148
   },
@@ -1187,7 +1187,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2018-03-08",
+    "date": "2018-03-08",
     "name": "Online Transfer to CHK ...6254 transaction#: 6965778565 03/08",
     "transaction_id": 149
   },
@@ -1195,7 +1195,7 @@ const purchaseData = [
     "amount": 81.44,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-03-07",
+    "date": "2018-03-07",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 150
   },
@@ -1203,7 +1203,7 @@ const purchaseData = [
     "amount": 81.44,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-03-07",
+    "date": "2018-03-07",
     "name": "Payment to Chase card ending in 8623 03/07",
     "transaction_id": 151
   },
@@ -1211,7 +1211,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-03-06",
+    "date": "2018-03-06",
     "name": "ATM WITHDRAWAL 003148 03/063 TIMES S",
     "transaction_id": 152
   },
@@ -1219,7 +1219,7 @@ const purchaseData = [
     "amount": 30.39,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2018-03-06",
+    "date": "2018-03-06",
     "name": "DELIVERY.COM",
     "transaction_id": 153
   },
@@ -1227,7 +1227,7 @@ const purchaseData = [
     "amount": 11.07,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-06",
+    "date": "2018-03-06",
     "name": "FAMILY MARKET",
     "transaction_id": 154
   },
@@ -1235,7 +1235,7 @@ const purchaseData = [
     "amount": 27.52,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-03-06",
+    "date": "2018-03-06",
     "name": "TRADE FAIR #7",
     "transaction_id": 155
   },
@@ -1243,7 +1243,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2018-03-05",
+    "date": "2018-03-05",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 156
   },
@@ -1251,7 +1251,7 @@ const purchaseData = [
     "amount": 160.24,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-03-05",
+    "date": "2018-03-05",
     "name": "Payment to Chase card ending in 8623 03/05",
     "transaction_id": 157
   },
@@ -1259,7 +1259,7 @@ const purchaseData = [
     "amount": 36,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-03-05",
+    "date": "2018-03-05",
     "name": "TAKE 31",
     "transaction_id": 158
   },
@@ -1267,7 +1267,7 @@ const purchaseData = [
     "amount": 70,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-03-05",
+    "date": "2018-03-05",
     "name": "Venmo",
     "transaction_id": 159
   },
@@ -1275,7 +1275,7 @@ const purchaseData = [
     "amount": 130.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2018-03-04",
+    "date": "2018-03-04",
     "name": "MEALPAL",
     "transaction_id": 160
   },
@@ -1283,7 +1283,7 @@ const purchaseData = [
     "amount": 160.24,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-03-04",
+    "date": "2018-03-04",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 161
   },
@@ -1291,7 +1291,7 @@ const purchaseData = [
     "amount": 15.37,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-03-04",
+    "date": "2018-03-04",
     "name": "UBER *TRIP 4MY3U",
     "transaction_id": 162
   },
@@ -1299,7 +1299,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2018-03-01",
+    "date": "2018-03-01",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 163
   },
@@ -1307,7 +1307,7 @@ const purchaseData = [
     "amount": 102,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-03-01",
+    "date": "2018-03-01",
     "name": "NON-CHASE ATM WITHDRAW 271581 03/0191 FIRST",
     "transaction_id": 164
   },
@@ -1315,7 +1315,7 @@ const purchaseData = [
     "amount": 3107,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-02-28",
+    "date": "2018-02-28",
     "name": "CHECK # 5040",
     "transaction_id": 165
   },
@@ -1323,7 +1323,7 @@ const purchaseData = [
     "amount": 15.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-28",
+    "date": "2018-02-28",
     "name": "KING OF FALAFEL & SHA",
     "transaction_id": 166
   },
@@ -1331,7 +1331,7 @@ const purchaseData = [
     "amount": 145,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-27",
+    "date": "2018-02-27",
     "name": "MURPHYS PUB",
     "transaction_id": 167
   },
@@ -1339,7 +1339,7 @@ const purchaseData = [
     "amount": 322.15,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-02-27",
+    "date": "2018-02-27",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 168
   },
@@ -1347,7 +1347,7 @@ const purchaseData = [
     "amount": 322.15,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-02-27",
+    "date": "2018-02-27",
     "name": "Payment to Chase card ending in 8623 02/27",
     "transaction_id": 169
   },
@@ -1355,7 +1355,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2018-02-26",
+    "date": "2018-02-26",
     "name": "ATM CASH DEPOSIT 02/25 3818 BROADWAY",
     "transaction_id": 170
   },
@@ -1363,7 +1363,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Wire",
-    "createdAt": "2018-02-26",
+    "date": "2018-02-26",
     "name": "DOMESTIC INCOMING WIRE FEE",
     "transaction_id": 171
   },
@@ -1371,7 +1371,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Wire",
-    "createdAt": "2018-02-26",
+    "date": "2018-02-26",
     "name": "FEDWIRE CREDIT VIA: WOORI BANK, NEW YORK/026005416 B/O: PARK HYE SUK SINDAEBANG-DONG DONGJAK-GU REF: CHASE NYC/CTR/BNF=JOSHUA SHIN PARK ASTORIA, NY 111063320/AC-0000000094 07 RFB=O/B WOORI BANK N OBI=/ROC/FD T8218000672 TEL:6466591495 IMAD: 0226QMGFT005002168 TRN: 6734509057FF",
     "transaction_id": 172
   },
@@ -1379,7 +1379,7 @@ const purchaseData = [
     "amount": 17.2,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-25",
+    "date": "2018-02-25",
     "name": "251 GINZA SUSHI HUANG I",
     "transaction_id": 173
   },
@@ -1387,7 +1387,7 @@ const purchaseData = [
     "amount": 48.48,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2018-02-25",
+    "date": "2018-02-25",
     "name": "9640 AMC ONLINE",
     "transaction_id": 174
   },
@@ -1395,7 +1395,7 @@ const purchaseData = [
     "amount": 23.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-25",
+    "date": "2018-02-25",
     "name": "DONG CHUN HONG",
     "transaction_id": 175
   },
@@ -1403,7 +1403,7 @@ const purchaseData = [
     "amount": 33.39,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-25",
+    "date": "2018-02-25",
     "name": "DONG CHUN HONG",
     "transaction_id": 176
   },
@@ -1411,7 +1411,7 @@ const purchaseData = [
     "amount": 149.55,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2018-02-23",
+    "date": "2018-02-23",
     "name": "BILL PAYMENT",
     "transaction_id": 177
   },
@@ -1419,7 +1419,7 @@ const purchaseData = [
     "amount": 12.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-23",
+    "date": "2018-02-23",
     "name": "Potbelly Sandwich Shop",
     "transaction_id": 178
   },
@@ -1427,7 +1427,7 @@ const purchaseData = [
     "amount": 19.6,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-23",
+    "date": "2018-02-23",
     "name": "WOORI JIP",
     "transaction_id": 179
   },
@@ -1435,7 +1435,7 @@ const purchaseData = [
     "amount": 18.5,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-02-22",
+    "date": "2018-02-22",
     "name": "D'AGOSTINO STORE #",
     "transaction_id": 180
   },
@@ -1443,7 +1443,7 @@ const purchaseData = [
     "amount": 270.02,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-02-22",
+    "date": "2018-02-22",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 181
   },
@@ -1451,7 +1451,7 @@ const purchaseData = [
     "amount": 270.02,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-02-22",
+    "date": "2018-02-22",
     "name": "Payment to Chase card ending in 8623 02/22",
     "transaction_id": 182
   },
@@ -1459,7 +1459,7 @@ const purchaseData = [
     "amount": 499.75,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-02-22",
+    "date": "2018-02-22",
     "name": "Venmo",
     "transaction_id": 183
   },
@@ -1467,7 +1467,7 @@ const purchaseData = [
     "amount": 27.22,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2018-02-21",
+    "date": "2018-02-21",
     "name": "CELL NATION",
     "transaction_id": 184
   },
@@ -1475,7 +1475,7 @@ const purchaseData = [
     "amount": 31.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-21",
+    "date": "2018-02-21",
     "name": "KONDO RESTAURANT",
     "transaction_id": 185
   },
@@ -1483,7 +1483,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-21",
+    "date": "2018-02-21",
     "name": "Starbucks",
     "transaction_id": 186
   },
@@ -1491,7 +1491,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2018-02-20",
+    "date": "2018-02-20",
     "name": "PAYGATE_KIWDISK 4552788",
     "transaction_id": 187
   },
@@ -1499,7 +1499,7 @@ const purchaseData = [
     "amount": 17.42,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-20",
+    "date": "2018-02-20",
     "name": "SEAMLSSOLIVERS",
     "transaction_id": 188
   },
@@ -1507,7 +1507,7 @@ const purchaseData = [
     "amount": 14.19,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-02-20",
+    "date": "2018-02-20",
     "name": "TRADE FAIR #7",
     "transaction_id": 189
   },
@@ -1515,7 +1515,7 @@ const purchaseData = [
     "amount": 20.67,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-02-20",
+    "date": "2018-02-20",
     "name": "TRADE FAIR #7",
     "transaction_id": 190
   },
@@ -1523,7 +1523,7 @@ const purchaseData = [
     "amount": 9.41,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-18",
+    "date": "2018-02-18",
     "name": "OPEN KITCHEN 15 IN",
     "transaction_id": 191
   },
@@ -1531,7 +1531,7 @@ const purchaseData = [
     "amount": 16.77,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-18",
+    "date": "2018-02-18",
     "name": "Potbelly Sandwich Shop",
     "transaction_id": 192
   },
@@ -1539,7 +1539,7 @@ const purchaseData = [
     "amount": 6.75,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-02-16",
+    "date": "2018-02-16",
     "name": "RUBY'S CANDY & GROCERY IN",
     "transaction_id": 193
   },
@@ -1547,7 +1547,7 @@ const purchaseData = [
     "amount": 2,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-02-16",
+    "date": "2018-02-16",
     "name": "Venmo",
     "transaction_id": 194
   },
@@ -1555,7 +1555,7 @@ const purchaseData = [
     "amount": 1818,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-02-16",
+    "date": "2018-02-16",
     "name": "Venmo",
     "transaction_id": 195
   },
@@ -1563,7 +1563,7 @@ const purchaseData = [
     "amount": 6.12,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-02-13",
+    "date": "2018-02-13",
     "name": "Duane Reade",
     "transaction_id": 196
   },
@@ -1571,7 +1571,7 @@ const purchaseData = [
     "amount": 290.88,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-02-13",
+    "date": "2018-02-13",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 197
   },
@@ -1579,7 +1579,7 @@ const purchaseData = [
     "amount": 290.88,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-02-13",
+    "date": "2018-02-13",
     "name": "Payment to Chase card ending in 8623 02/13",
     "transaction_id": 198
   },
@@ -1587,7 +1587,7 @@ const purchaseData = [
     "amount": 6.53,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-13",
+    "date": "2018-02-13",
     "name": "Subway",
     "transaction_id": 199
   },
@@ -1595,7 +1595,7 @@ const purchaseData = [
     "amount": 51.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-12",
+    "date": "2018-02-12",
     "name": "BBQ CHICKEN",
     "transaction_id": 200
   },
@@ -1603,7 +1603,7 @@ const purchaseData = [
     "amount": 8.26,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-12",
+    "date": "2018-02-12",
     "name": "KILLARNEY ROSE",
     "transaction_id": 201
   },
@@ -1611,7 +1611,7 @@ const purchaseData = [
     "amount": 9.28,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-02-12",
+    "date": "2018-02-12",
     "name": "TRADE FAIR #7",
     "transaction_id": 202
   },
@@ -1619,7 +1619,7 @@ const purchaseData = [
     "amount": 17.8,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "FAMILY MARKET",
     "transaction_id": 203
   },
@@ -1627,7 +1627,7 @@ const purchaseData = [
     "amount": 15.79,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "FRITESNMEATS GROUP LL",
     "transaction_id": 204
   },
@@ -1635,7 +1635,7 @@ const purchaseData = [
     "amount": 121,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 205
   },
@@ -1643,7 +1643,7 @@ const purchaseData = [
     "amount": 8.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "NYCTAXI4K27",
     "transaction_id": 206
   },
@@ -1651,7 +1651,7 @@ const purchaseData = [
     "amount": 21.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "NYCTAXI4K27",
     "transaction_id": 207
   },
@@ -1659,7 +1659,7 @@ const purchaseData = [
     "amount": 4.26,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "PIE BY THE POUND",
     "transaction_id": 208
   },
@@ -1667,7 +1667,7 @@ const purchaseData = [
     "amount": 5.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-11",
+    "date": "2018-02-11",
     "name": "THINK COFFEE 4TH",
     "transaction_id": 209
   },
@@ -1675,7 +1675,7 @@ const purchaseData = [
     "amount": 7.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-02-09",
+    "date": "2018-02-09",
     "name": "Duane Reade",
     "transaction_id": 210
   },
@@ -1683,7 +1683,7 @@ const purchaseData = [
     "amount": 8.76,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2018-02-09",
+    "date": "2018-02-09",
     "name": "TAXI SVC PARLIN",
     "transaction_id": 211
   },
@@ -1691,7 +1691,7 @@ const purchaseData = [
     "amount": 54,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-08",
+    "date": "2018-02-08",
     "name": "GYU-KAKU RESTAURANT",
     "transaction_id": 212
   },
@@ -1699,7 +1699,7 @@ const purchaseData = [
     "amount": 5.44,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-08",
+    "date": "2018-02-08",
     "name": "OPEN KITCHEN 15 IN",
     "transaction_id": 213
   },
@@ -1707,7 +1707,7 @@ const purchaseData = [
     "amount": 20.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "",
-    "createdAt": "2018-02-07",
+    "date": "2018-02-07",
     "name": "Amazon",
     "transaction_id": 214
   },
@@ -1715,7 +1715,7 @@ const purchaseData = [
     "amount": 282.46,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-02-07",
+    "date": "2018-02-07",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 215
   },
@@ -1723,7 +1723,7 @@ const purchaseData = [
     "amount": 282.46,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-02-07",
+    "date": "2018-02-07",
     "name": "Payment to Chase card ending in 8623 02/07",
     "transaction_id": 216
   },
@@ -1731,7 +1731,7 @@ const purchaseData = [
     "amount": 37.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Convenience Stores",
-    "createdAt": "2018-02-06",
+    "date": "2018-02-06",
     "name": "GREENBAY ESSENTIALS",
     "transaction_id": 217
   },
@@ -1739,7 +1739,7 @@ const purchaseData = [
     "amount": 26.86,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-06",
+    "date": "2018-02-06",
     "name": "SHUYA CAFE DE RAMEN.",
     "transaction_id": 218
   },
@@ -1747,7 +1747,7 @@ const purchaseData = [
     "amount": 11.98,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-05",
+    "date": "2018-02-05",
     "name": "ASTORIA BIER AND CHEESE",
     "transaction_id": 219
   },
@@ -1755,7 +1755,7 @@ const purchaseData = [
     "amount": 20.57,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-05",
+    "date": "2018-02-05",
     "name": "ASTORIA BIER AND CHEESE",
     "transaction_id": 220
   },
@@ -1763,7 +1763,7 @@ const purchaseData = [
     "amount": 15.23,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-04",
+    "date": "2018-02-04",
     "name": "PETEY'S BURGER",
     "transaction_id": 221
   },
@@ -1771,7 +1771,7 @@ const purchaseData = [
     "amount": 78.26,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2018-02-02",
+    "date": "2018-02-02",
     "name": "MEALPAL",
     "transaction_id": 222
   },
@@ -1779,7 +1779,7 @@ const purchaseData = [
     "amount": 15.79,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-02",
+    "date": "2018-02-02",
     "name": "UNDERGROUND PIZZA",
     "transaction_id": 223
   },
@@ -1787,7 +1787,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-02-01",
+    "date": "2018-02-01",
     "name": "ATM WITHDRAWAL 004785 02/0155 WATER",
     "transaction_id": 224
   },
@@ -1795,7 +1795,7 @@ const purchaseData = [
     "amount": 75.78,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-02-01",
+    "date": "2018-02-01",
     "name": "JEAN GEORGES",
     "transaction_id": 225
   },
@@ -1803,7 +1803,7 @@ const purchaseData = [
     "amount": 7.28,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-02-01",
+    "date": "2018-02-01",
     "name": "Lyft",
     "transaction_id": 226
   },
@@ -1811,7 +1811,7 @@ const purchaseData = [
     "amount": 412.37,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-02-01",
+    "date": "2018-02-01",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 227
   },
@@ -1819,7 +1819,7 @@ const purchaseData = [
     "amount": 412.37,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-02-01",
+    "date": "2018-02-01",
     "name": "Payment to Chase card ending in 8623 02/01",
     "transaction_id": 228
   },
@@ -1827,7 +1827,7 @@ const purchaseData = [
     "amount": 11.31,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-31",
+    "date": "2018-01-31",
     "name": "Burger King",
     "transaction_id": 229
   },
@@ -1835,7 +1835,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-01-31",
+    "date": "2018-01-31",
     "name": "Venmo",
     "transaction_id": 230
   },
@@ -1843,7 +1843,7 @@ const purchaseData = [
     "amount": 154.84,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2018-01-30",
+    "date": "2018-01-30",
     "name": "BILL PAYMENT",
     "transaction_id": 231
   },
@@ -1851,7 +1851,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-30",
+    "date": "2018-01-30",
     "name": "Starbucks",
     "transaction_id": 232
   },
@@ -1859,7 +1859,7 @@ const purchaseData = [
     "amount": 11.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-30",
+    "date": "2018-01-30",
     "name": "TST* DOS TOROS - MAIDEN L",
     "transaction_id": 233
   },
@@ -1867,7 +1867,7 @@ const purchaseData = [
     "amount": 22,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-30",
+    "date": "2018-01-30",
     "name": "VITE VINOSTERIA",
     "transaction_id": 234
   },
@@ -1875,7 +1875,7 @@ const purchaseData = [
     "amount": 12.88,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-01-28",
+    "date": "2018-01-28",
     "name": "FAMILY MARKET",
     "transaction_id": 235
   },
@@ -1883,7 +1883,7 @@ const purchaseData = [
     "amount": 3.92,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-01-28",
+    "date": "2018-01-28",
     "name": "INSOMNIA COOKIES - 3RD",
     "transaction_id": 236
   },
@@ -1891,7 +1891,7 @@ const purchaseData = [
     "amount": 3.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-01-28",
+    "date": "2018-01-28",
     "name": "Rite Aid",
     "transaction_id": 237
   },
@@ -1899,7 +1899,7 @@ const purchaseData = [
     "amount": 24.54,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-01-28",
+    "date": "2018-01-28",
     "name": "TRADE FAIR #7",
     "transaction_id": 238
   },
@@ -1907,7 +1907,7 @@ const purchaseData = [
     "amount": 43.02,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-28",
+    "date": "2018-01-28",
     "name": "TST* OKA -",
     "transaction_id": 239
   },
@@ -1915,7 +1915,7 @@ const purchaseData = [
     "amount": 9.42,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-26",
+    "date": "2018-01-26",
     "name": "Chipotle Mexican Grill",
     "transaction_id": 240
   },
@@ -1923,7 +1923,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2018-01-26",
+    "date": "2018-01-26",
     "name": "Venmo",
     "transaction_id": 241
   },
@@ -1931,7 +1931,7 @@ const purchaseData = [
     "amount": 52.55,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-25",
+    "date": "2018-01-25",
     "name": "BAEKJEONG",
     "transaction_id": 242
   },
@@ -1939,7 +1939,7 @@ const purchaseData = [
     "amount": 14,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-25",
+    "date": "2018-01-25",
     "name": "Dig Inn Broad Street",
     "transaction_id": 243
   },
@@ -1947,7 +1947,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-01-24",
+    "date": "2018-01-24",
     "name": "ATM WITHDRAWAL 007429 01/2455 WATER",
     "transaction_id": 244
   },
@@ -1955,7 +1955,7 @@ const purchaseData = [
     "amount": 23.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-23",
+    "date": "2018-01-23",
     "name": "DONG CHUN HONG",
     "transaction_id": 245
   },
@@ -1963,7 +1963,7 @@ const purchaseData = [
     "amount": 7.34,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-23",
+    "date": "2018-01-23",
     "name": "Lyft",
     "transaction_id": 246
   },
@@ -1971,7 +1971,7 @@ const purchaseData = [
     "amount": 1894.22,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-01-23",
+    "date": "2018-01-23",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 247
   },
@@ -1979,7 +1979,7 @@ const purchaseData = [
     "amount": 1894.22,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-01-23",
+    "date": "2018-01-23",
     "name": "Payment to Chase card ending in 8623 01/23",
     "transaction_id": 248
   },
@@ -1987,7 +1987,7 @@ const purchaseData = [
     "amount": 1630.95,
     "categoryBroad": "Shops",
     "categoryDetailed": "Computers and Electronics",
-    "createdAt": "2018-01-22",
+    "date": "2018-01-22",
     "name": "Apple Store",
     "transaction_id": 249
   },
@@ -1995,7 +1995,7 @@ const purchaseData = [
     "amount": 44.11,
     "categoryBroad": "Shops",
     "categoryDetailed": "Bookstores",
-    "createdAt": "2018-01-22",
+    "date": "2018-01-22",
     "name": "GAM MEE OK",
     "transaction_id": 250
   },
@@ -2003,7 +2003,7 @@ const purchaseData = [
     "amount": 4.36,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-22",
+    "date": "2018-01-22",
     "name": "IDEA COFFEE",
     "transaction_id": 251
   },
@@ -2011,7 +2011,7 @@ const purchaseData = [
     "amount": 36,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-22",
+    "date": "2018-01-22",
     "name": "KILLARNEY ROSE",
     "transaction_id": 252
   },
@@ -2019,7 +2019,7 @@ const purchaseData = [
     "amount": 71.51,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-22",
+    "date": "2018-01-22",
     "name": "MERMAID OYSTER BAR",
     "transaction_id": 253
   },
@@ -2027,7 +2027,7 @@ const purchaseData = [
     "amount": 7.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2018-01-21",
+    "date": "2018-01-21",
     "name": "CVS",
     "transaction_id": 254
   },
@@ -2035,7 +2035,7 @@ const purchaseData = [
     "amount": 19.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2018-01-21",
+    "date": "2018-01-21",
     "name": "Hale and Hearty Soups",
     "transaction_id": 255
   },
@@ -2043,7 +2043,7 @@ const purchaseData = [
     "amount": 13.05,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-21",
+    "date": "2018-01-21",
     "name": "PETEY'S BURGER",
     "transaction_id": 256
   },
@@ -2051,7 +2051,7 @@ const purchaseData = [
     "amount": 20.83,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2018-01-19",
+    "date": "2018-01-19",
     "name": "CITY ACRES MARKET",
     "transaction_id": 257
   },
@@ -2059,7 +2059,7 @@ const purchaseData = [
     "amount": 17.91,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-19",
+    "date": "2018-01-19",
     "name": "TASTE OF TOKYO INC",
     "transaction_id": 258
   },
@@ -2067,7 +2067,7 @@ const purchaseData = [
     "amount": 12.52,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-18",
+    "date": "2018-01-18",
     "name": "UNDERGROUND PIZZA",
     "transaction_id": 259
   },
@@ -2075,7 +2075,7 @@ const purchaseData = [
     "amount": 316.71,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2018-01-17",
+    "date": "2018-01-17",
     "name": "Payment Thank You-Mobile",
     "transaction_id": 260
   },
@@ -2083,7 +2083,7 @@ const purchaseData = [
     "amount": 316.71,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-01-17",
+    "date": "2018-01-17",
     "name": "Payment to Chase card ending in 8623 01/17",
     "transaction_id": 261
   },
@@ -2091,7 +2091,7 @@ const purchaseData = [
     "amount": 15.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2018-01-16",
+    "date": "2018-01-16",
     "name": "TST* DOS TOROS - MAIDEN L",
     "transaction_id": 262
   },
@@ -2099,7 +2099,7 @@ const purchaseData = [
     "amount": 431.08,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2018-01-12",
+    "date": "2018-01-12",
     "name": "Payment to Chase card ending in 8623 01/12",
     "transaction_id": 263
   },
@@ -2107,7 +2107,7 @@ const purchaseData = [
     "amount": 635.52,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2018-01-11",
+    "date": "2018-01-11",
     "name": "ATM CHECK DEPOSIT 01/11 28 LIBERTY ST",
     "transaction_id": 264
   },
@@ -2115,7 +2115,7 @@ const purchaseData = [
     "amount": 15610,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-01-11",
+    "date": "2018-01-11",
     "name": "CHECK # 5039",
     "transaction_id": 265
   },
@@ -2123,7 +2123,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2018-01-11",
+    "date": "2018-01-11",
     "name": "DEPOSIT ID NUMBER 145211",
     "transaction_id": 266
   },
@@ -2131,7 +2131,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2018-01-09",
+    "date": "2018-01-09",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 267
   },
@@ -2139,7 +2139,7 @@ const purchaseData = [
     "amount": 51.75,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-01-09",
+    "date": "2018-01-09",
     "name": "NON-CHASE ATM WITHDRAW 946293 01/092523 BROA",
     "transaction_id": 268
   },
@@ -2147,7 +2147,7 @@ const purchaseData = [
     "amount": 2,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-01-08",
+    "date": "2018-01-08",
     "name": "COUNTER CHECK",
     "transaction_id": 269
   },
@@ -2155,7 +2155,7 @@ const purchaseData = [
     "amount": 21.28,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-08",
+    "date": "2018-01-08",
     "name": "Lyft",
     "transaction_id": 270
   },
@@ -2163,7 +2163,7 @@ const purchaseData = [
     "amount": 33.61,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-08",
+    "date": "2018-01-08",
     "name": "Lyft",
     "transaction_id": 271
   },
@@ -2171,7 +2171,7 @@ const purchaseData = [
     "amount": 10.37,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-04",
+    "date": "2018-01-04",
     "name": "Lyft",
     "transaction_id": 272
   },
@@ -2179,7 +2179,7 @@ const purchaseData = [
     "amount": 10.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-04",
+    "date": "2018-01-04",
     "name": "Lyft",
     "transaction_id": 273
   },
@@ -2187,7 +2187,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2018-01-02",
+    "date": "2018-01-02",
     "name": "ATM WITHDRAWAL 003412 12/313536 154T",
     "transaction_id": 274
   },
@@ -2195,7 +2195,7 @@ const purchaseData = [
     "amount": 9.84,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2018-01-02",
+    "date": "2018-01-02",
     "name": "Lyft",
     "transaction_id": 275
   },
@@ -2203,7 +2203,7 @@ const purchaseData = [
     "amount": 10000,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-12-29",
+    "date": "2017-12-29",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:6466591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 7697000363JS",
     "transaction_id": 276
   },
@@ -2211,7 +2211,7 @@ const purchaseData = [
     "amount": 10000,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-12-29",
+    "date": "2017-12-29",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:6466591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 7697100363JS",
     "transaction_id": 277
   },
@@ -2219,7 +2219,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2017-12-29",
+    "date": "2017-12-29",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 278
   },
@@ -2227,7 +2227,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2017-12-29",
+    "date": "2017-12-29",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 279
   },
@@ -2235,7 +2235,7 @@ const purchaseData = [
     "amount": 584.41,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-26",
+    "date": "2017-12-26",
     "name": "Payment to Chase card ending in 8623 12/26",
     "transaction_id": 280
   },
@@ -2243,7 +2243,7 @@ const purchaseData = [
     "amount": 584.41,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-26",
+    "date": "2017-12-26",
     "name": "Payment to Chase card ending in 8623 12/26",
     "transaction_id": 281
   },
@@ -2251,7 +2251,7 @@ const purchaseData = [
     "amount": 56,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-12-26",
+    "date": "2017-12-26",
     "name": "Venmo",
     "transaction_id": 282
   },
@@ -2259,7 +2259,7 @@ const purchaseData = [
     "amount": 182.59,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-21",
+    "date": "2017-12-21",
     "name": "Payment to Chase card ending in 8623 12/21",
     "transaction_id": 283
   },
@@ -2267,7 +2267,7 @@ const purchaseData = [
     "amount": 280.18,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-19",
+    "date": "2017-12-19",
     "name": "Payment to Chase card ending in 8623 12/19",
     "transaction_id": 284
   },
@@ -2275,7 +2275,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2017-12-18",
+    "date": "2017-12-18",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 285
   },
@@ -2283,7 +2283,7 @@ const purchaseData = [
     "amount": 22,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-12-18",
+    "date": "2017-12-18",
     "name": "NON-CHASE ATM WITHDRAW 456209 12/182544 BROA",
     "transaction_id": 286
   },
@@ -2291,7 +2291,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-12-18",
+    "date": "2017-12-18",
     "name": "Venmo",
     "transaction_id": 287
   },
@@ -2299,7 +2299,7 @@ const purchaseData = [
     "amount": 151.18,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-15",
+    "date": "2017-12-15",
     "name": "Payment to Chase card ending in 8623 12/15",
     "transaction_id": 288
   },
@@ -2307,7 +2307,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "DEPOSIT ID NUMBER 288873",
     "transaction_id": 289
   },
@@ -2315,7 +2315,7 @@ const purchaseData = [
     "amount": 43.02,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "DISTRICT MOT. ASTORIA NY 12/09",
     "transaction_id": 290
   },
@@ -2323,7 +2323,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Golf",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "DWIT GOL MOK FLUSHING NY 12/08",
     "transaction_id": 291
   },
@@ -2331,7 +2331,7 @@ const purchaseData = [
     "amount": 48.37,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "H MART NEW YORK NY 12/11",
     "transaction_id": 292
   },
@@ -2339,7 +2339,7 @@ const purchaseData = [
     "amount": 61.72,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "IZAKAYA NOMAD NEW YORK NY 12/09",
     "transaction_id": 293
   },
@@ -2347,7 +2347,7 @@ const purchaseData = [
     "amount": 38.01,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "K-TOWN BBQ NEW YORK NY 12/10",
     "transaction_id": 294
   },
@@ -2355,7 +2355,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 295
   },
@@ -2363,7 +2363,7 @@ const purchaseData = [
     "amount": 25.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-12-11",
+    "date": "2017-12-11",
     "name": "TAXI SVC LONG ISLAND LONG ISLAND C NY 12/09",
     "transaction_id": 296
   },
@@ -2371,7 +2371,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-12-05",
+    "date": "2017-12-05",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 297
   },
@@ -2379,7 +2379,7 @@ const purchaseData = [
     "amount": 295.13,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-12-04",
+    "date": "2017-12-04",
     "name": "Payment to Chase card ending in 6097 12/04",
     "transaction_id": 298
   },
@@ -2387,7 +2387,7 @@ const purchaseData = [
     "amount": 12.34,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-12-04",
+    "date": "2017-12-04",
     "name": "Seamless",
     "transaction_id": 299
   },
@@ -2395,7 +2395,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-11-28",
+    "date": "2017-11-28",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 300
   },
@@ -2403,7 +2403,7 @@ const purchaseData = [
     "amount": 15.24,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-27",
+    "date": "2017-11-27",
     "name": "Seamless",
     "transaction_id": 301
   },
@@ -2411,7 +2411,7 @@ const purchaseData = [
     "amount": 11.84,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-24",
+    "date": "2017-11-24",
     "name": "Seamless",
     "transaction_id": 302
   },
@@ -2419,7 +2419,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-11-22",
+    "date": "2017-11-22",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:6466591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 9859200326FI",
     "transaction_id": 303
   },
@@ -2427,7 +2427,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2017-11-22",
+    "date": "2017-11-22",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 304
   },
@@ -2435,7 +2435,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2017-11-22",
+    "date": "2017-11-22",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 305
   },
@@ -2443,7 +2443,7 @@ const purchaseData = [
     "amount": 62,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-11-22",
+    "date": "2017-11-22",
     "name": "NON-CHASE ATM WITHDRAW 576608 11/2225-30 BRO",
     "transaction_id": 306
   },
@@ -2451,7 +2451,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Community",
     "categoryDetailed": "Education",
-    "createdAt": "2017-11-21",
+    "date": "2017-11-21",
     "name": "FULLSTACK ACADEMY IN FULLSTACKACAD NY 11/20",
     "transaction_id": 307
   },
@@ -2459,7 +2459,7 @@ const purchaseData = [
     "amount": 17.53,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-20",
+    "date": "2017-11-20",
     "name": "Seamless",
     "transaction_id": 308
   },
@@ -2467,7 +2467,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-11-20",
+    "date": "2017-11-20",
     "name": "Venmo",
     "transaction_id": 309
   },
@@ -2475,7 +2475,7 @@ const purchaseData = [
     "amount": 250.87,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-17",
+    "date": "2017-11-17",
     "name": "Payment to Chase card ending in 6097 11/17",
     "transaction_id": 310
   },
@@ -2483,7 +2483,7 @@ const purchaseData = [
     "amount": 281.69,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-17",
+    "date": "2017-11-17",
     "name": "Payment to Chase card ending in 6097 11/17",
     "transaction_id": 311
   },
@@ -2491,7 +2491,7 @@ const purchaseData = [
     "amount": 191.35,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-16",
+    "date": "2017-11-16",
     "name": "Payment to Chase card ending in 6097 11/16",
     "transaction_id": 312
   },
@@ -2499,7 +2499,7 @@ const purchaseData = [
     "amount": 48.48,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-11-13",
+    "date": "2017-11-13",
     "name": "9640 AMC ONLINE KS 11/12",
     "transaction_id": 313
   },
@@ -2507,7 +2507,7 @@ const purchaseData = [
     "amount": 80.74,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-13",
+    "date": "2017-11-13",
     "name": "Payment to Chase card ending in 6097 11/13",
     "transaction_id": 314
   },
@@ -2515,7 +2515,7 @@ const purchaseData = [
     "amount": 31.85,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-13",
+    "date": "2017-11-13",
     "name": "Seamless",
     "transaction_id": 315
   },
@@ -2523,7 +2523,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-11-10",
+    "date": "2017-11-10",
     "name": "TRANSFER FROM CHK XXXXXX2811",
     "transaction_id": 316
   },
@@ -2531,7 +2531,7 @@ const purchaseData = [
     "amount": 453.62,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-09",
+    "date": "2017-11-09",
     "name": "Payment to Chase card ending in 6097 11/09",
     "transaction_id": 317
   },
@@ -2539,7 +2539,7 @@ const purchaseData = [
     "amount": 26.95,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-09",
+    "date": "2017-11-09",
     "name": "Seamless",
     "transaction_id": 318
   },
@@ -2547,7 +2547,7 @@ const purchaseData = [
     "amount": 56,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-11-06",
+    "date": "2017-11-06",
     "name": "MISSION ESCAPE GAMES MISSIONESCAPE NY 11/05",
     "transaction_id": 319
   },
@@ -2555,7 +2555,7 @@ const purchaseData = [
     "amount": 250.74,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-06",
+    "date": "2017-11-06",
     "name": "Payment to Chase card ending in 6097 11/06",
     "transaction_id": 320
   },
@@ -2563,7 +2563,7 @@ const purchaseData = [
     "amount": 10.33,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-06",
+    "date": "2017-11-06",
     "name": "Seamless",
     "transaction_id": 321
   },
@@ -2571,7 +2571,7 @@ const purchaseData = [
     "amount": 35.66,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-11-06",
+    "date": "2017-11-06",
     "name": "Seamless",
     "transaction_id": 322
   },
@@ -2579,7 +2579,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2017-11-01",
+    "date": "2017-11-01",
     "name": "PAYGATE_KIWDISK 45527 SEOUL 10/30",
     "transaction_id": 323
   },
@@ -2587,7 +2587,7 @@ const purchaseData = [
     "amount": 196.19,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-11-01",
+    "date": "2017-11-01",
     "name": "Payment to Chase card ending in 6097 11/01",
     "transaction_id": 324
   },
@@ -2595,7 +2595,7 @@ const purchaseData = [
     "amount": 12.89,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-30",
+    "date": "2017-10-30",
     "name": "Seamless",
     "transaction_id": 325
   },
@@ -2603,7 +2603,7 @@ const purchaseData = [
     "amount": 15.01,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-27",
+    "date": "2017-10-27",
     "name": "Seamless",
     "transaction_id": 326
   },
@@ -2611,7 +2611,7 @@ const purchaseData = [
     "amount": 17.22,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-26",
+    "date": "2017-10-26",
     "name": "Seamless",
     "transaction_id": 327
   },
@@ -2619,7 +2619,7 @@ const purchaseData = [
     "amount": 205.24,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-25",
+    "date": "2017-10-25",
     "name": "Payment to Chase card ending in 6097 10/25",
     "transaction_id": 328
   },
@@ -2627,7 +2627,7 @@ const purchaseData = [
     "amount": 38.93,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-25",
+    "date": "2017-10-25",
     "name": "Seamless",
     "transaction_id": 329
   },
@@ -2635,7 +2635,7 @@ const purchaseData = [
     "amount": 18.47,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-10-23",
+    "date": "2017-10-23",
     "name": "Lyft",
     "transaction_id": 330
   },
@@ -2643,7 +2643,7 @@ const purchaseData = [
     "amount": 233.27,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-23",
+    "date": "2017-10-23",
     "name": "Payment to Chase card ending in 6097 10/23",
     "transaction_id": 331
   },
@@ -2651,7 +2651,7 @@ const purchaseData = [
     "amount": 27.57,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-10-20",
+    "date": "2017-10-20",
     "name": "Papa John's",
     "transaction_id": 332
   },
@@ -2659,7 +2659,7 @@ const purchaseData = [
     "amount": 16.84,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-20",
+    "date": "2017-10-20",
     "name": "Seamless",
     "transaction_id": 333
   },
@@ -2667,7 +2667,7 @@ const purchaseData = [
     "amount": 23.47,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-10-19",
+    "date": "2017-10-19",
     "name": "Seamless",
     "transaction_id": 334
   },
@@ -2675,7 +2675,7 @@ const purchaseData = [
     "amount": 7.44,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-10-17",
+    "date": "2017-10-17",
     "name": "Lyft",
     "transaction_id": 335
   },
@@ -2683,7 +2683,7 @@ const purchaseData = [
     "amount": 93.56,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-16",
+    "date": "2017-10-16",
     "name": "Payment to Chase card ending in 6097 10/16",
     "transaction_id": 336
   },
@@ -2691,7 +2691,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-10-12",
+    "date": "2017-10-12",
     "name": "TRANSFER FROM CHK XXXXXX2811",
     "transaction_id": 337
   },
@@ -2699,7 +2699,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-10-11",
+    "date": "2017-10-11",
     "name": "DEPOSIT ID NUMBER 510568",
     "transaction_id": 338
   },
@@ -2707,7 +2707,7 @@ const purchaseData = [
     "amount": 333.34,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-11",
+    "date": "2017-10-11",
     "name": "Payment to Chase card ending in 6097 10/11",
     "transaction_id": 339
   },
@@ -2715,7 +2715,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-10-10",
+    "date": "2017-10-10",
     "name": "TRANSFER FROM CHK XXXXXX2811",
     "transaction_id": 340
   },
@@ -2723,7 +2723,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-10-10",
+    "date": "2017-10-10",
     "name": "TREEHOUSE FL 10/06",
     "transaction_id": 341
   },
@@ -2731,7 +2731,7 @@ const purchaseData = [
     "amount": 3.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-10-10",
+    "date": "2017-10-10",
     "name": "Yodo1 Games g.co/helppay# CA 10/07",
     "transaction_id": 342
   },
@@ -2739,7 +2739,7 @@ const purchaseData = [
     "amount": 307.68,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-06",
+    "date": "2017-10-06",
     "name": "Payment to Chase card ending in 6097 10/06",
     "transaction_id": 343
   },
@@ -2747,7 +2747,7 @@ const purchaseData = [
     "amount": 163.87,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-10-03",
+    "date": "2017-10-03",
     "name": "Payment to Chase card ending in 6097 10/03",
     "transaction_id": 344
   },
@@ -2755,7 +2755,7 @@ const purchaseData = [
     "amount": 27,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-10-03",
+    "date": "2017-10-03",
     "name": "Venmo",
     "transaction_id": 345
   },
@@ -2763,7 +2763,7 @@ const purchaseData = [
     "amount": 8.4,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-10-02",
+    "date": "2017-10-02",
     "name": "Lyft",
     "transaction_id": 346
   },
@@ -2771,7 +2771,7 @@ const purchaseData = [
     "amount": 22.46,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-10-02",
+    "date": "2017-10-02",
     "name": "Lyft",
     "transaction_id": 347
   },
@@ -2779,7 +2779,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-10-02",
+    "date": "2017-10-02",
     "name": "Venmo",
     "transaction_id": 348
   },
@@ -2787,7 +2787,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-09-29",
+    "date": "2017-09-29",
     "name": "BOOK TRANSFER CREDIT B/O: WOORI BANK CHUNG KU SEOUL KOREA REP. SOUTH 100 ORG:/010097743 PARK HYE SUK REF: TEL:6466591495/BNF/CHASE BANK 39-01 MAIN STREET, FLUSHING, NY. CHASE TRN: 6426200272JL",
     "transaction_id": 349
   },
@@ -2795,7 +2795,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Foreign Transaction",
-    "createdAt": "2017-09-29",
+    "date": "2017-09-29",
     "name": "INTERNATIONAL INCOMING WIRE FEE",
     "transaction_id": 350
   },
@@ -2803,7 +2803,7 @@ const purchaseData = [
     "amount": 331.26,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-28",
+    "date": "2017-09-28",
     "name": "Payment to Chase card ending in 6097 09/28",
     "transaction_id": 351
   },
@@ -2811,7 +2811,7 @@ const purchaseData = [
     "amount": 12.4,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-09-26",
+    "date": "2017-09-26",
     "name": "Lyft",
     "transaction_id": 352
   },
@@ -2819,7 +2819,7 @@ const purchaseData = [
     "amount": 251.49,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-25",
+    "date": "2017-09-25",
     "name": "Payment to Chase card ending in 6097 09/25",
     "transaction_id": 353
   },
@@ -2827,7 +2827,7 @@ const purchaseData = [
     "amount": 40.89,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-09-20",
+    "date": "2017-09-20",
     "name": "Lyft",
     "transaction_id": 354
   },
@@ -2835,7 +2835,7 @@ const purchaseData = [
     "amount": 30.11,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-09-20",
+    "date": "2017-09-20",
     "name": "Seamless",
     "transaction_id": 355
   },
@@ -2843,7 +2843,7 @@ const purchaseData = [
     "amount": 252.47,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-19",
+    "date": "2017-09-19",
     "name": "Payment to Chase card ending in 6097 09/19",
     "transaction_id": 356
   },
@@ -2851,7 +2851,7 @@ const purchaseData = [
     "amount": 2000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-09-12",
+    "date": "2017-09-12",
     "name": "DEPOSIT ID NUMBER 45113",
     "transaction_id": 357
   },
@@ -2859,7 +2859,7 @@ const purchaseData = [
     "amount": 104.68,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-12",
+    "date": "2017-09-12",
     "name": "Payment to Chase card ending in 6097 09/12",
     "transaction_id": 358
   },
@@ -2867,7 +2867,7 @@ const purchaseData = [
     "amount": 5.71,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-09-11",
+    "date": "2017-09-11",
     "name": "Lyft",
     "transaction_id": 359
   },
@@ -2875,7 +2875,7 @@ const purchaseData = [
     "amount": 365.41,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-08",
+    "date": "2017-09-08",
     "name": "Payment to Chase card ending in 6097 09/08",
     "transaction_id": 360
   },
@@ -2883,7 +2883,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-09-07",
+    "date": "2017-09-07",
     "name": "TREEHOUSE FL 09/06",
     "transaction_id": 361
   },
@@ -2891,7 +2891,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-09-06",
+    "date": "2017-09-06",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 362
   },
@@ -2899,7 +2899,7 @@ const purchaseData = [
     "amount": 8.93,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-09-05",
+    "date": "2017-09-05",
     "name": "Lyft",
     "transaction_id": 363
   },
@@ -2907,7 +2907,7 @@ const purchaseData = [
     "amount": 210.17,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-05",
+    "date": "2017-09-05",
     "name": "Payment to Chase card ending in 6097 09/05",
     "transaction_id": 364
   },
@@ -2915,7 +2915,7 @@ const purchaseData = [
     "amount": 285.92,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-09-05",
+    "date": "2017-09-05",
     "name": "Payment to Chase card ending in 6097 09/05",
     "transaction_id": 365
   },
@@ -2923,7 +2923,7 @@ const purchaseData = [
     "amount": 13.67,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-09-01",
+    "date": "2017-09-01",
     "name": "Lyft",
     "transaction_id": 366
   },
@@ -2931,7 +2931,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-09-01",
+    "date": "2017-09-01",
     "name": "Venmo",
     "transaction_id": 367
   },
@@ -2939,7 +2939,7 @@ const purchaseData = [
     "amount": 350.02,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-08-28",
+    "date": "2017-08-28",
     "name": "Payment to Chase card ending in 6097 08/28",
     "transaction_id": 368
   },
@@ -2947,7 +2947,7 @@ const purchaseData = [
     "amount": 180.22,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-08-25",
+    "date": "2017-08-25",
     "name": "342 WEST 40TH STREET LL NEW YORK NY 08/24",
     "transaction_id": 369
   },
@@ -2955,7 +2955,7 @@ const purchaseData = [
     "amount": 26.41,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-08-24",
+    "date": "2017-08-24",
     "name": "UBER *US AUG23 UZGR CA 08/23",
     "transaction_id": 370
   },
@@ -2963,7 +2963,7 @@ const purchaseData = [
     "amount": 15.23,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "BBQ CHICKEN NEW YORK NY 08/18",
     "transaction_id": 371
   },
@@ -2971,7 +2971,7 @@ const purchaseData = [
     "amount": 36.84,
     "categoryBroad": "Recreation",
     "categoryDetailed": "",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "CULL AND PISTOL NEW YORK NY 08/17",
     "transaction_id": 372
   },
@@ -2979,7 +2979,7 @@ const purchaseData = [
     "amount": 2,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Credit",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "Cash Redemption",
     "transaction_id": 373
   },
@@ -2987,7 +2987,7 @@ const purchaseData = [
     "amount": 39.72,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "GRACE STREET NEW YORK NY 08/18",
     "transaction_id": 374
   },
@@ -2995,7 +2995,7 @@ const purchaseData = [
     "amount": 14.62,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "Seamless",
     "transaction_id": 375
   },
@@ -3003,7 +3003,7 @@ const purchaseData = [
     "amount": 77.19,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "The Lobster Place (Reta New York NY 08/17",
     "transaction_id": 376
   },
@@ -3011,7 +3011,7 @@ const purchaseData = [
     "amount": 150,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-08-21",
+    "date": "2017-08-21",
     "name": "Venmo",
     "transaction_id": 377
   },
@@ -3019,7 +3019,7 @@ const purchaseData = [
     "amount": 48,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-08-18",
+    "date": "2017-08-18",
     "name": "CARHARTT WORK IN PROGRE NEW YORK NY 08/17",
     "transaction_id": 378
   },
@@ -3027,7 +3027,7 @@ const purchaseData = [
     "amount": 19.32,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-08-18",
+    "date": "2017-08-18",
     "name": "Lyft",
     "transaction_id": 379
   },
@@ -3035,7 +3035,7 @@ const purchaseData = [
     "amount": 55,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-08-18",
+    "date": "2017-08-18",
     "name": "Nike SOHO 325 New York NY 08/17",
     "transaction_id": 380
   },
@@ -3043,7 +3043,7 @@ const purchaseData = [
     "amount": 572.64,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-08-17",
+    "date": "2017-08-17",
     "name": "Payment to Chase card ending in 6097 08/17",
     "transaction_id": 381
   },
@@ -3051,7 +3051,7 @@ const purchaseData = [
     "amount": 10.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-08-16",
+    "date": "2017-08-16",
     "name": "GRACE STREET NEW YORK NY 08/15",
     "transaction_id": 382
   },
@@ -3059,7 +3059,7 @@ const purchaseData = [
     "amount": 34.5,
     "categoryBroad": "Service",
     "categoryDetailed": "Travel Agents and Tour Operators",
-    "createdAt": "2017-08-16",
+    "date": "2017-08-16",
     "name": "PLN*PRICELINE.COM AI CT 08/15",
     "transaction_id": 383
   },
@@ -3067,7 +3067,7 @@ const purchaseData = [
     "amount": 34.5,
     "categoryBroad": "Service",
     "categoryDetailed": "Travel Agents and Tour Operators",
-    "createdAt": "2017-08-16",
+    "date": "2017-08-16",
     "name": "PRICELINE*AIR TICKETS CT 08/15",
     "transaction_id": 384
   },
@@ -3075,7 +3075,7 @@ const purchaseData = [
     "amount": 14.9,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-08-16",
+    "date": "2017-08-16",
     "name": "UNIQLO NY 34TH ST #32 NEW YORK NY 08/15",
     "transaction_id": 385
   },
@@ -3083,7 +3083,7 @@ const purchaseData = [
     "amount": 16.32,
     "categoryBroad": "Shops",
     "categoryDetailed": "Computers and Electronics",
-    "createdAt": "2017-08-15",
+    "date": "2017-08-15",
     "name": "Blizzard Entertainment",
     "transaction_id": 386
   },
@@ -3091,7 +3091,7 @@ const purchaseData = [
     "amount": 637,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "ATM CASH DEPOSIT 08/14 1260 BROADWAY",
     "transaction_id": 387
   },
@@ -3099,7 +3099,7 @@ const purchaseData = [
     "amount": 510,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "ATM CASH DEPOSIT 08/14 1260 BROADWAY",
     "transaction_id": 388
   },
@@ -3107,7 +3107,7 @@ const purchaseData = [
     "amount": 45,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "ATM CHECK DEPOSIT 08/14 1260 BROADWAY",
     "transaction_id": 389
   },
@@ -3115,7 +3115,7 @@ const purchaseData = [
     "amount": 8.36,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "Lyft",
     "transaction_id": 390
   },
@@ -3123,7 +3123,7 @@ const purchaseData = [
     "amount": 101.19,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "Payment to Chase card ending in 6097 08/14",
     "transaction_id": 391
   },
@@ -3131,7 +3131,7 @@ const purchaseData = [
     "amount": 19.37,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-08-14",
+    "date": "2017-08-14",
     "name": "Seamless",
     "transaction_id": 392
   },
@@ -3139,7 +3139,7 @@ const purchaseData = [
     "amount": 226,
     "categoryBroad": "Travel",
     "categoryDetailed": "Lodging",
-    "createdAt": "2017-08-11",
+    "date": "2017-08-11",
     "name": "AMOMA.COM HOTELS ANNEMASSE 08/10",
     "transaction_id": 393
   },
@@ -3147,7 +3147,7 @@ const purchaseData = [
     "amount": 11.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-08-11",
+    "date": "2017-08-11",
     "name": "MEGABUS.COM WWW.MEGABUS.C NJ 08/10",
     "transaction_id": 394
   },
@@ -3155,7 +3155,7 @@ const purchaseData = [
     "amount": 12.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-08-11",
+    "date": "2017-08-11",
     "name": "MEGABUS.COM WWW.MEGABUS.C NJ 08/10",
     "transaction_id": 395
   },
@@ -3163,7 +3163,7 @@ const purchaseData = [
     "amount": 180.98,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-08-10",
+    "date": "2017-08-10",
     "name": "Payment to Chase card ending in 6097 08/10",
     "transaction_id": 396
   },
@@ -3171,7 +3171,7 @@ const purchaseData = [
     "amount": 12,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-08-09",
+    "date": "2017-08-09",
     "name": "BOLT BUS TX 08/08",
     "transaction_id": 397
   },
@@ -3179,7 +3179,7 @@ const purchaseData = [
     "amount": 19.96,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-08-08",
+    "date": "2017-08-08",
     "name": "Seamless",
     "transaction_id": 398
   },
@@ -3187,7 +3187,7 @@ const purchaseData = [
     "amount": 18.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-08-07",
+    "date": "2017-08-07",
     "name": "GREYHOUND #4146 TX 08/06",
     "transaction_id": 399
   },
@@ -3195,7 +3195,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-08-07",
+    "date": "2017-08-07",
     "name": "TREEHOUSE FL 08/06",
     "transaction_id": 400
   },
@@ -3203,7 +3203,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-08-04",
+    "date": "2017-08-04",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 401
   },
@@ -3211,7 +3211,7 @@ const purchaseData = [
     "amount": 0.04,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-08-03",
+    "date": "2017-08-03",
     "name": "INTEREST PAYMENT",
     "transaction_id": 402
   },
@@ -3219,7 +3219,7 @@ const purchaseData = [
     "amount": 31.58,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-08-03",
+    "date": "2017-08-03",
     "name": "Seamless",
     "transaction_id": 403
   },
@@ -3227,7 +3227,7 @@ const purchaseData = [
     "amount": 13.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-08-02",
+    "date": "2017-08-02",
     "name": "Seamless",
     "transaction_id": 404
   },
@@ -3235,7 +3235,7 @@ const purchaseData = [
     "amount": 1604,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-01",
+    "date": "2017-08-01",
     "name": "ATM CASH DEPOSIT 08/01 1260 BROADWAY",
     "transaction_id": 405
   },
@@ -3243,7 +3243,7 @@ const purchaseData = [
     "amount": 417,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-01",
+    "date": "2017-08-01",
     "name": "ATM CASH DEPOSIT 08/01 1260 BROADWAY",
     "transaction_id": 406
   },
@@ -3251,7 +3251,7 @@ const purchaseData = [
     "amount": 182.25,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-08-01",
+    "date": "2017-08-01",
     "name": "ATM CHECK DEPOSIT 08/01 1260 BROADWAY",
     "transaction_id": 407
   },
@@ -3259,7 +3259,7 @@ const purchaseData = [
     "amount": 2599,
     "categoryBroad": "Community",
     "categoryDetailed": "Education",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "APP ACADEMY CA 07/27",
     "transaction_id": 408
   },
@@ -3267,7 +3267,7 @@ const purchaseData = [
     "amount": 2622.74,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Debit",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "EBOOKERS COM 22d9e6b7 f6c8 07/30 Pound Sterl1935.84 X 1.315372 (EXCHG RTE) + 76.39 (EXCHG RTE ADJ)",
     "transaction_id": 409
   },
@@ -3275,7 +3275,7 @@ const purchaseData = [
     "amount": 76.85,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Lyft",
     "transaction_id": 410
   },
@@ -3283,7 +3283,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Online Transfer from SAV ...1371 transaction#: 6403773733",
     "transaction_id": 411
   },
@@ -3291,7 +3291,7 @@ const purchaseData = [
     "amount": 2300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Online Transfer from SAV ...1371 transaction#: 6403879578",
     "transaction_id": 412
   },
@@ -3299,7 +3299,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Online Transfer to CHK ...6254 transaction#: 6403773733 07/31",
     "transaction_id": 413
   },
@@ -3307,7 +3307,7 @@ const purchaseData = [
     "amount": 2300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Online Transfer to CHK ...6254 transaction#: 6403879578 07/31",
     "transaction_id": 414
   },
@@ -3315,7 +3315,7 @@ const purchaseData = [
     "amount": 85.55,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Payment to Chase card ending in 6097 07/31",
     "transaction_id": 415
   },
@@ -3323,7 +3323,7 @@ const purchaseData = [
     "amount": 411.94,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Payment to Chase card ending in 6097 07/31",
     "transaction_id": 416
   },
@@ -3331,7 +3331,7 @@ const purchaseData = [
     "amount": 17.19,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Seamless",
     "transaction_id": 417
   },
@@ -3339,7 +3339,7 @@ const purchaseData = [
     "amount": 150,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-07-31",
+    "date": "2017-07-31",
     "name": "Venmo",
     "transaction_id": 418
   },
@@ -3347,7 +3347,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-28",
+    "date": "2017-07-28",
     "name": "Online Transfer from SAV ...1371 transaction#: 6398629565",
     "transaction_id": 419
   },
@@ -3355,7 +3355,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-28",
+    "date": "2017-07-28",
     "name": "Online Transfer to CHK ...6254 transaction#: 6398629565 07/28",
     "transaction_id": 420
   },
@@ -3363,7 +3363,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-27",
+    "date": "2017-07-27",
     "name": "Online Transfer from SAV ...1371 transaction#: 6397488263",
     "transaction_id": 421
   },
@@ -3371,7 +3371,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-27",
+    "date": "2017-07-27",
     "name": "Online Transfer to CHK ...6254 transaction#: 6397488263 07/27",
     "transaction_id": 422
   },
@@ -3379,7 +3379,7 @@ const purchaseData = [
     "amount": 1062.26,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-27",
+    "date": "2017-07-27",
     "name": "Payment to Chase card ending in 6097 07/27",
     "transaction_id": 423
   },
@@ -3387,7 +3387,7 @@ const purchaseData = [
     "amount": 320.61,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-26",
+    "date": "2017-07-26",
     "name": "Payment to Chase card ending in 6097 07/26",
     "transaction_id": 424
   },
@@ -3395,7 +3395,7 @@ const purchaseData = [
     "amount": 480.47,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-24",
+    "date": "2017-07-24",
     "name": "Payment to Chase card ending in 6097 07/24",
     "transaction_id": 425
   },
@@ -3403,7 +3403,7 @@ const purchaseData = [
     "amount": 149.38,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-07-20",
+    "date": "2017-07-20",
     "name": "BILL PAYMENT WWW.ATT.COM TX 07/19",
     "transaction_id": 426
   },
@@ -3411,7 +3411,7 @@ const purchaseData = [
     "amount": 4.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-07-19",
+    "date": "2017-07-19",
     "name": "NetmarbleGam g.co/helppay# CA 07/19",
     "transaction_id": 427
   },
@@ -3419,7 +3419,7 @@ const purchaseData = [
     "amount": 50,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-07-18",
+    "date": "2017-07-18",
     "name": "Venmo",
     "transaction_id": 428
   },
@@ -3427,7 +3427,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-07-18",
+    "date": "2017-07-18",
     "name": "Venmo",
     "transaction_id": 429
   },
@@ -3435,7 +3435,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-07-17",
+    "date": "2017-07-17",
     "name": "ATM WITHDRAWAL 002521 07/1632000 PAC",
     "transaction_id": 430
   },
@@ -3443,7 +3443,7 @@ const purchaseData = [
     "amount": 416.44,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-17",
+    "date": "2017-07-17",
     "name": "Payment to Chase card ending in 6097 07/17",
     "transaction_id": 431
   },
@@ -3451,7 +3451,7 @@ const purchaseData = [
     "amount": 25.91,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-07-13",
+    "date": "2017-07-13",
     "name": "Seamless",
     "transaction_id": 432
   },
@@ -3459,7 +3459,7 @@ const purchaseData = [
     "amount": 241.51,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-12",
+    "date": "2017-07-12",
     "name": "Payment to Chase card ending in 6097 07/12",
     "transaction_id": 433
   },
@@ -3467,7 +3467,7 @@ const purchaseData = [
     "amount": 17.44,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-07-12",
+    "date": "2017-07-12",
     "name": "Seamless",
     "transaction_id": 434
   },
@@ -3475,7 +3475,7 @@ const purchaseData = [
     "amount": 26.84,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-07-11",
+    "date": "2017-07-11",
     "name": "Seamless",
     "transaction_id": 435
   },
@@ -3483,7 +3483,7 @@ const purchaseData = [
     "amount": 2700,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 436
   },
@@ -3491,7 +3491,7 @@ const purchaseData = [
     "amount": 740,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 437
   },
@@ -3499,7 +3499,7 @@ const purchaseData = [
     "amount": 330,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 438
   },
@@ -3507,7 +3507,7 @@ const purchaseData = [
     "amount": 280,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 439
   },
@@ -3515,7 +3515,7 @@ const purchaseData = [
     "amount": 69,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 440
   },
@@ -3523,7 +3523,7 @@ const purchaseData = [
     "amount": 38,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CASH DEPOSIT 07/10 3105 30TH AVE",
     "transaction_id": 441
   },
@@ -3531,7 +3531,7 @@ const purchaseData = [
     "amount": 75,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "ATM CHECK DEPOSIT 07/09 1260 BROADWAY",
     "transaction_id": 442
   },
@@ -3539,7 +3539,7 @@ const purchaseData = [
     "amount": 24.48,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "Lyft",
     "transaction_id": 443
   },
@@ -3547,7 +3547,7 @@ const purchaseData = [
     "amount": 350.02,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-10",
+    "date": "2017-07-10",
     "name": "Payment to Chase card ending in 6097 07/10",
     "transaction_id": 444
   },
@@ -3555,7 +3555,7 @@ const purchaseData = [
     "amount": 84.58,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-07-07",
+    "date": "2017-07-07",
     "name": "Payment to Chase card ending in 6097 07/07",
     "transaction_id": 445
   },
@@ -3563,7 +3563,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-07-07",
+    "date": "2017-07-07",
     "name": "TREEHOUSE FL 07/06",
     "transaction_id": 446
   },
@@ -3571,7 +3571,7 @@ const purchaseData = [
     "amount": 0.06,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-07-06",
+    "date": "2017-07-06",
     "name": "INTEREST PAYMENT",
     "transaction_id": 447
   },
@@ -3579,7 +3579,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-07-06",
+    "date": "2017-07-06",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 448
   },
@@ -3587,7 +3587,7 @@ const purchaseData = [
     "amount": 400,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-06",
+    "date": "2017-07-06",
     "name": "Online Transfer from SAV ...1371 transaction#: 6349487263",
     "transaction_id": 449
   },
@@ -3595,7 +3595,7 @@ const purchaseData = [
     "amount": 400,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-07-06",
+    "date": "2017-07-06",
     "name": "Online Transfer to CHK ...6254 transaction#: 6349487263 07/06",
     "transaction_id": 450
   },
@@ -3603,7 +3603,7 @@ const purchaseData = [
     "amount": 88.19,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-07-05",
+    "date": "2017-07-05",
     "name": "KARAOKE WOW NEW YORK NY 06/30",
     "transaction_id": 451
   },
@@ -3611,7 +3611,7 @@ const purchaseData = [
     "amount": 23.67,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-07-05",
+    "date": "2017-07-05",
     "name": "Seamless",
     "transaction_id": 452
   },
@@ -3619,7 +3619,7 @@ const purchaseData = [
     "amount": 94.77,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-07-03",
+    "date": "2017-07-03",
     "name": "NEW WONJO RESTAURANT NEW YORK NY 06/29",
     "transaction_id": 453
   },
@@ -3627,7 +3627,7 @@ const purchaseData = [
     "amount": 23,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-07-03",
+    "date": "2017-07-03",
     "name": "NYCTAXI9V31 ASTORIA NY 06/30",
     "transaction_id": 454
   },
@@ -3635,7 +3635,7 @@ const purchaseData = [
     "amount": 12.9,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-30",
+    "date": "2017-06-30",
     "name": "PARIS BAGUETTE QUEENS NY 06/28",
     "transaction_id": 455
   },
@@ -3643,7 +3643,7 @@ const purchaseData = [
     "amount": 24.22,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-30",
+    "date": "2017-06-30",
     "name": "Seamless",
     "transaction_id": 456
   },
@@ -3651,7 +3651,7 @@ const purchaseData = [
     "amount": 113.35,
     "categoryBroad": "Service",
     "categoryDetailed": "Utilities",
-    "createdAt": "2017-06-29",
+    "date": "2017-06-29",
     "name": "CONED BILL PAYMEN NY 06/28",
     "transaction_id": 457
   },
@@ -3659,7 +3659,7 @@ const purchaseData = [
     "amount": 56.25,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-06-29",
+    "date": "2017-06-29",
     "name": "THE MAZE NEW YORK NY 06/28",
     "transaction_id": 458
   },
@@ -3667,7 +3667,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-28",
+    "date": "2017-06-28",
     "name": "Online Transfer from SAV ...1371 transaction#: 6326023554",
     "transaction_id": 459
   },
@@ -3675,7 +3675,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-28",
+    "date": "2017-06-28",
     "name": "Online Transfer to CHK ...6254 transaction#: 6326023554 06/28",
     "transaction_id": 460
   },
@@ -3683,7 +3683,7 @@ const purchaseData = [
     "amount": 24.32,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-28",
+    "date": "2017-06-28",
     "name": "Seamless",
     "transaction_id": 461
   },
@@ -3691,7 +3691,7 @@ const purchaseData = [
     "amount": 149.4,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-06-27",
+    "date": "2017-06-27",
     "name": "BILL PAYMENT WWW.ATT.COM TX 06/25",
     "transaction_id": 462
   },
@@ -3699,7 +3699,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2017-06-27",
+    "date": "2017-06-27",
     "name": "PAYGATE_KIWDISK 45527 SEOUL 06/24",
     "transaction_id": 463
   },
@@ -3707,7 +3707,7 @@ const purchaseData = [
     "amount": 20.51,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-27",
+    "date": "2017-06-27",
     "name": "Seamless",
     "transaction_id": 464
   },
@@ -3715,7 +3715,7 @@ const purchaseData = [
     "amount": 86.04,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "HER NAME IS HAN NEW YORK NY 06/22",
     "transaction_id": 465
   },
@@ -3723,7 +3723,7 @@ const purchaseData = [
     "amount": 52.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "KARAOKE WOW NEW YORK NY 06/24",
     "transaction_id": 466
   },
@@ -3731,7 +3731,7 @@ const purchaseData = [
     "amount": 57.7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "KONDO RESTAURANT NY 06/26",
     "transaction_id": 467
   },
@@ -3739,7 +3739,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 468
   },
@@ -3747,7 +3747,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "Online Transfer from SAV ...1371 transaction#: 6318576011",
     "transaction_id": 469
   },
@@ -3755,7 +3755,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "Online Transfer to CHK ...6254 transaction#: 6318576011 06/26",
     "transaction_id": 470
   },
@@ -3763,7 +3763,7 @@ const purchaseData = [
     "amount": 5.39,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "PARIS BAGUETTE-NEW YOR NEW YORK NY 06/22",
     "transaction_id": 471
   },
@@ -3771,7 +3771,7 @@ const purchaseData = [
     "amount": 13.17,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "PARIS BAGUETTE-NEW YOR NEW YORK NY 06/24",
     "transaction_id": 472
   },
@@ -3779,7 +3779,7 @@ const purchaseData = [
     "amount": 87.62,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "Payment to Chase card ending in 6097 06/26",
     "transaction_id": 473
   },
@@ -3787,7 +3787,7 @@ const purchaseData = [
     "amount": 35.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-26",
+    "date": "2017-06-26",
     "name": "TAKE 31 NEW YORK NY 06/24",
     "transaction_id": 474
   },
@@ -3795,7 +3795,7 @@ const purchaseData = [
     "amount": 9.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "",
-    "createdAt": "2017-06-23",
+    "date": "2017-06-23",
     "name": "Amazon",
     "transaction_id": 475
   },
@@ -3803,7 +3803,7 @@ const purchaseData = [
     "amount": 166.18,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-23",
+    "date": "2017-06-23",
     "name": "Payment to Chase card ending in 6097 06/23",
     "transaction_id": 476
   },
@@ -3811,7 +3811,7 @@ const purchaseData = [
     "amount": 11.11,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-06-23",
+    "date": "2017-06-23",
     "name": "TOUS LES JOURS NEW YORK NY 06/22",
     "transaction_id": 477
   },
@@ -3819,7 +3819,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-06-22",
+    "date": "2017-06-22",
     "name": "210 - BOWLERO QUEENS - WOODSIDE NY 06/21",
     "transaction_id": 478
   },
@@ -3827,7 +3827,7 @@ const purchaseData = [
     "amount": 24.36,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-06-22",
+    "date": "2017-06-22",
     "name": "210 - BOWLERO QUEENS WOODSIDE NY 06/21",
     "transaction_id": 479
   },
@@ -3835,7 +3835,7 @@ const purchaseData = [
     "amount": 50.45,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-06-22",
+    "date": "2017-06-22",
     "name": "210 - BOWLERO QUEENS WOODSIDE NY 06/21",
     "transaction_id": 480
   },
@@ -3843,7 +3843,7 @@ const purchaseData = [
     "amount": 7.98,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-06-22",
+    "date": "2017-06-22",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 06/22",
     "transaction_id": 481
   },
@@ -3851,7 +3851,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-06-21",
+    "date": "2017-06-21",
     "name": "NYCTAXI8J57 NEW YORK NY 06/20",
     "transaction_id": 482
   },
@@ -3859,7 +3859,7 @@ const purchaseData = [
     "amount": 74.44,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-06-20",
+    "date": "2017-06-20",
     "name": "MK KARAOKE LLC NEW YORK NY 06/20",
     "transaction_id": 483
   },
@@ -3867,7 +3867,7 @@ const purchaseData = [
     "amount": 29.84,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-20",
+    "date": "2017-06-20",
     "name": "Seamless",
     "transaction_id": 484
   },
@@ -3875,7 +3875,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-06-19",
+    "date": "2017-06-19",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 485
   },
@@ -3883,7 +3883,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-19",
+    "date": "2017-06-19",
     "name": "Online Transfer from SAV ...1371 transaction#: 6305114006",
     "transaction_id": 486
   },
@@ -3891,7 +3891,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-19",
+    "date": "2017-06-19",
     "name": "Online Transfer to CHK ...6254 transaction#: 6305114006 06/19",
     "transaction_id": 487
   },
@@ -3899,7 +3899,7 @@ const purchaseData = [
     "amount": 642.61,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-19",
+    "date": "2017-06-19",
     "name": "Payment to Chase card ending in 6097 06/19",
     "transaction_id": 488
   },
@@ -3907,7 +3907,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-06-16",
+    "date": "2017-06-16",
     "name": "Lyft",
     "transaction_id": 489
   },
@@ -3915,7 +3915,7 @@ const purchaseData = [
     "amount": 16.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-16",
+    "date": "2017-06-16",
     "name": "Seamless",
     "transaction_id": 490
   },
@@ -3923,7 +3923,7 @@ const purchaseData = [
     "amount": 56.35,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-13",
+    "date": "2017-06-13",
     "name": "Payment to Chase card ending in 6097 06/13",
     "transaction_id": 491
   },
@@ -3931,7 +3931,7 @@ const purchaseData = [
     "amount": 15.07,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-12",
+    "date": "2017-06-12",
     "name": "Seamless",
     "transaction_id": 492
   },
@@ -3939,7 +3939,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-09",
+    "date": "2017-06-09",
     "name": "Online Transfer from SAV ...1371 transaction#: 6285049859",
     "transaction_id": 493
   },
@@ -3947,7 +3947,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-06-09",
+    "date": "2017-06-09",
     "name": "Online Transfer to CHK ...6254 transaction#: 6285049859 06/09",
     "transaction_id": 494
   },
@@ -3955,7 +3955,7 @@ const purchaseData = [
     "amount": 134.91,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-09",
+    "date": "2017-06-09",
     "name": "Payment to Chase card ending in 6097 06/09",
     "transaction_id": 495
   },
@@ -3963,7 +3963,7 @@ const purchaseData = [
     "amount": 25.22,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-09",
+    "date": "2017-06-09",
     "name": "Seamless",
     "transaction_id": 496
   },
@@ -3971,7 +3971,7 @@ const purchaseData = [
     "amount": 20.18,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-07",
+    "date": "2017-06-07",
     "name": "Seamless",
     "transaction_id": 497
   },
@@ -3979,7 +3979,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-06-07",
+    "date": "2017-06-07",
     "name": "TREEHOUSE FL 06/06",
     "transaction_id": 498
   },
@@ -3987,7 +3987,7 @@ const purchaseData = [
     "amount": 16.48,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-06-06",
+    "date": "2017-06-06",
     "name": "Seamless",
     "transaction_id": 499
   },
@@ -3995,7 +3995,7 @@ const purchaseData = [
     "amount": 267.09,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-06-05",
+    "date": "2017-06-05",
     "name": "Payment to Chase card ending in 6097 06/05",
     "transaction_id": 500
   },
@@ -4003,7 +4003,7 @@ const purchaseData = [
     "amount": 27.75,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-05-31",
+    "date": "2017-05-31",
     "name": "Payment to Chase card ending in 6097 05/31",
     "transaction_id": 501
   },
@@ -4011,7 +4011,7 @@ const purchaseData = [
     "amount": 35.39,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-31",
+    "date": "2017-05-31",
     "name": "Seamless",
     "transaction_id": 502
   },
@@ -4019,7 +4019,7 @@ const purchaseData = [
     "amount": 907,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "ATM CASH DEPOSIT 05/30 1260 BROADWAY",
     "transaction_id": 503
   },
@@ -4027,7 +4027,7 @@ const purchaseData = [
     "amount": 569,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "ATM CASH DEPOSIT 05/30 1260 BROADWAY",
     "transaction_id": 504
   },
@@ -4035,7 +4035,7 @@ const purchaseData = [
     "amount": 202.5,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "ATM CHECK DEPOSIT 05/30 1260 BROADWAY",
     "transaction_id": 505
   },
@@ -4043,7 +4043,7 @@ const purchaseData = [
     "amount": 20.27,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Lyft",
     "transaction_id": 506
   },
@@ -4051,7 +4051,7 @@ const purchaseData = [
     "amount": 10.74,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "M1 Long Island NY 05/26",
     "transaction_id": 507
   },
@@ -4059,7 +4059,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Online Transfer from SAV ...1371 transaction#: 6257675997",
     "transaction_id": 508
   },
@@ -4067,7 +4067,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Online Transfer to CHK ...6254 transaction#: 6257675997 05/30",
     "transaction_id": 509
   },
@@ -4075,7 +4075,7 @@ const purchaseData = [
     "amount": 53.87,
     "categoryBroad": "Payment",
     "categoryDetailed": "Credit Card",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Payment to Chase card ending in 6097 05/30",
     "transaction_id": 510
   },
@@ -4083,7 +4083,7 @@ const purchaseData = [
     "amount": 15.83,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Seamless",
     "transaction_id": 511
   },
@@ -4091,7 +4091,7 @@ const purchaseData = [
     "amount": 22.69,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Seamless",
     "transaction_id": 512
   },
@@ -4099,7 +4099,7 @@ const purchaseData = [
     "amount": 25.26,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-30",
+    "date": "2017-05-30",
     "name": "Seamless",
     "transaction_id": 513
   },
@@ -4107,7 +4107,7 @@ const purchaseData = [
     "amount": 8.71,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-26",
+    "date": "2017-05-26",
     "name": "RUBY'S CANDY & GROCERY ASTORIA NY 05/23",
     "transaction_id": 514
   },
@@ -4115,7 +4115,7 @@ const purchaseData = [
     "amount": 13.59,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-25",
+    "date": "2017-05-25",
     "name": "McDonald's",
     "transaction_id": 515
   },
@@ -4123,7 +4123,7 @@ const purchaseData = [
     "amount": 17.74,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-25",
+    "date": "2017-05-25",
     "name": "UBER *US MAY24 IY6P CA 05/25",
     "transaction_id": 516
   },
@@ -4131,7 +4131,7 @@ const purchaseData = [
     "amount": 154.69,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-05-24",
+    "date": "2017-05-24",
     "name": "BILL PAYMENT WWW.ATT.COM TX 05/22",
     "transaction_id": 517
   },
@@ -4139,7 +4139,7 @@ const purchaseData = [
     "amount": 13,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-24",
+    "date": "2017-05-24",
     "name": "GRACE STREET NEW YORK NY 05/23",
     "transaction_id": 518
   },
@@ -4147,7 +4147,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2017-05-24",
+    "date": "2017-05-24",
     "name": "PAYGATE_KIWDISK 45527 SEOUL 05/23",
     "transaction_id": 519
   },
@@ -4155,7 +4155,7 @@ const purchaseData = [
     "amount": 45.2,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-23",
+    "date": "2017-05-23",
     "name": "ALIADA RESTAURANT ASTORIA NY 05/22",
     "transaction_id": 520
   },
@@ -4163,7 +4163,7 @@ const purchaseData = [
     "amount": 24.21,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-23",
+    "date": "2017-05-23",
     "name": "Seamless",
     "transaction_id": 521
   },
@@ -4171,7 +4171,7 @@ const purchaseData = [
     "amount": 11.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-23",
+    "date": "2017-05-23",
     "name": "Starbucks",
     "transaction_id": 522
   },
@@ -4179,7 +4179,7 @@ const purchaseData = [
     "amount": 56.65,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "DONG CHUN HONG NEW YORK NY 05/18",
     "transaction_id": 523
   },
@@ -4187,7 +4187,7 @@ const purchaseData = [
     "amount": 23.41,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "DONG CHUN HONG NEW YORK NY 05/21",
     "transaction_id": 524
   },
@@ -4195,7 +4195,7 @@ const purchaseData = [
     "amount": 5.5,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "FRESH FRUIT & GROCERY ASTORIA NY 05/19",
     "transaction_id": 525
   },
@@ -4203,7 +4203,7 @@ const purchaseData = [
     "amount": 8.99,
     "categoryBroad": "Travel",
     "categoryDetailed": "Airports",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "LAGUARDIA-CC-BK 31-1 LONG ISLAND C NY126602 05/22",
     "transaction_id": 526
   },
@@ -4211,7 +4211,7 @@ const purchaseData = [
     "amount": 17.88,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "Lyft",
     "transaction_id": 527
   },
@@ -4219,7 +4219,7 @@ const purchaseData = [
     "amount": 22.58,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "Seamless",
     "transaction_id": 528
   },
@@ -4227,7 +4227,7 @@ const purchaseData = [
     "amount": 25.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "TAXI SVC LIC LONG IS CITY NY 05/19",
     "transaction_id": 529
   },
@@ -4235,7 +4235,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-22",
+    "date": "2017-05-22",
     "name": "TOUS LES JOURS NEW YORK NY 05/20",
     "transaction_id": 530
   },
@@ -4243,7 +4243,7 @@ const purchaseData = [
     "amount": 43.51,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-19",
+    "date": "2017-05-19",
     "name": "ABIKO CURRY NEW YORK NY 05/18",
     "transaction_id": 531
   },
@@ -4251,7 +4251,7 @@ const purchaseData = [
     "amount": 3.5,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-05-19",
+    "date": "2017-05-19",
     "name": "FOOD GALLERY 32 NY NY 05/18",
     "transaction_id": 532
   },
@@ -4259,7 +4259,7 @@ const purchaseData = [
     "amount": 121,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-05-19",
+    "date": "2017-05-19",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 533
   },
@@ -4267,7 +4267,7 @@ const purchaseData = [
     "amount": 4.48,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-05-19",
+    "date": "2017-05-19",
     "name": "SWEET CHURROS, INC. NEW YORK NY 05/18",
     "transaction_id": 534
   },
@@ -4275,7 +4275,7 @@ const purchaseData = [
     "amount": 7.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-19",
+    "date": "2017-05-19",
     "name": "TOUS LES JOURS NEW YORK NY 05/18",
     "transaction_id": 535
   },
@@ -4283,7 +4283,7 @@ const purchaseData = [
     "amount": 14.95,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-17",
+    "date": "2017-05-17",
     "name": "HONG KONG RESTAURANT ASTORIA NY 05/15",
     "transaction_id": 536
   },
@@ -4291,7 +4291,7 @@ const purchaseData = [
     "amount": 28.84,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-17",
+    "date": "2017-05-17",
     "name": "Lyft",
     "transaction_id": 537
   },
@@ -4299,7 +4299,7 @@ const purchaseData = [
     "amount": 9.48,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-17",
+    "date": "2017-05-17",
     "name": "TOUS LES JOURS NEW YORK NY 05/16",
     "transaction_id": 538
   },
@@ -4307,7 +4307,7 @@ const purchaseData = [
     "amount": 15.74,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-16",
+    "date": "2017-05-16",
     "name": "AMPLE HILLS CREAMERY NEW YORK NY 05/14",
     "transaction_id": 539
   },
@@ -4315,7 +4315,7 @@ const purchaseData = [
     "amount": 321.88,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-16",
+    "date": "2017-05-16",
     "name": "ATM CHECK DEPOSIT 05/16 1260 BROADWAY",
     "transaction_id": 540
   },
@@ -4323,7 +4323,7 @@ const purchaseData = [
     "amount": 13.06,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-16",
+    "date": "2017-05-16",
     "name": "KING OF FALAFEL & S ASTORIA NY 05/15",
     "transaction_id": 541
   },
@@ -4331,7 +4331,7 @@ const purchaseData = [
     "amount": 2.18,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-16",
+    "date": "2017-05-16",
     "name": "KING OF FALAFEL & S Queens NY 05/15",
     "transaction_id": 542
   },
@@ -4339,7 +4339,7 @@ const purchaseData = [
     "amount": 17.79,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-16",
+    "date": "2017-05-16",
     "name": "Seamless",
     "transaction_id": 543
   },
@@ -4347,7 +4347,7 @@ const purchaseData = [
     "amount": 7.5,
     "categoryBroad": "Shops",
     "categoryDetailed": "Department Stores",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "BLOOMINGDALES NEW YORK NEW YORK NY 05/12",
     "transaction_id": 544
   },
@@ -4355,7 +4355,7 @@ const purchaseData = [
     "amount": 33.19,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "DONG CHUN HONG NEW YORK NY 05/11",
     "transaction_id": 545
   },
@@ -4363,7 +4363,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "GRACE STREET NEW YORK NY 05/13",
     "transaction_id": 546
   },
@@ -4371,7 +4371,7 @@ const purchaseData = [
     "amount": 35.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "GREYHOUND LINES CNP TX 05/12",
     "transaction_id": 547
   },
@@ -4379,7 +4379,7 @@ const purchaseData = [
     "amount": 9.86,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "M1 Long Island NY 05/12",
     "transaction_id": 548
   },
@@ -4387,7 +4387,7 @@ const purchaseData = [
     "amount": 35.7,
     "categoryBroad": "Travel",
     "categoryDetailed": "Charter Buses",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "MEGABUS.COM / COACHU WWW.MEGABUS.C NJ 05/12",
     "transaction_id": 549
   },
@@ -4395,7 +4395,7 @@ const purchaseData = [
     "amount": 50,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "RAMEN OKIDOKI NY 05/10",
     "transaction_id": 550
   },
@@ -4403,7 +4403,7 @@ const purchaseData = [
     "amount": 2.18,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "SWEET CHURROS, INC. NEW YORK NY 05/13",
     "transaction_id": 551
   },
@@ -4411,7 +4411,7 @@ const purchaseData = [
     "amount": 3.05,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "SWEET CHURROS, INC. New York NY 05/13",
     "transaction_id": 552
   },
@@ -4419,7 +4419,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "Venmo",
     "transaction_id": 553
   },
@@ -4427,7 +4427,7 @@ const purchaseData = [
     "amount": 144,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-05-15",
+    "date": "2017-05-15",
     "name": "Venmo",
     "transaction_id": 554
   },
@@ -4435,7 +4435,7 @@ const purchaseData = [
     "amount": 3.95,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-12",
+    "date": "2017-05-12",
     "name": "TOUS LES JOURS NEW YORK NY 05/11",
     "transaction_id": 555
   },
@@ -4443,7 +4443,7 @@ const purchaseData = [
     "amount": 4.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-12",
+    "date": "2017-05-12",
     "name": "TOUS LES JOURS NEW YORK NY 05/11",
     "transaction_id": 556
   },
@@ -4451,7 +4451,7 @@ const purchaseData = [
     "amount": 6.44,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-12",
+    "date": "2017-05-12",
     "name": "TOUS LES JOURS NEW YORK NY 05/11",
     "transaction_id": 557
   },
@@ -4459,7 +4459,7 @@ const purchaseData = [
     "amount": 806,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-11",
+    "date": "2017-05-11",
     "name": "ATM CASH DEPOSIT 05/11 1260 BROADWAY",
     "transaction_id": 558
   },
@@ -4467,7 +4467,7 @@ const purchaseData = [
     "amount": 52.26,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-05-11",
+    "date": "2017-05-11",
     "name": "KARAOKE CITY NEW YORK NY 05/10",
     "transaction_id": 559
   },
@@ -4475,7 +4475,7 @@ const purchaseData = [
     "amount": 19.42,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-11",
+    "date": "2017-05-11",
     "name": "Seamless",
     "transaction_id": 560
   },
@@ -4483,7 +4483,7 @@ const purchaseData = [
     "amount": 6.97,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-11",
+    "date": "2017-05-11",
     "name": "Starbucks",
     "transaction_id": 561
   },
@@ -4491,7 +4491,7 @@ const purchaseData = [
     "amount": 6.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-10",
+    "date": "2017-05-10",
     "name": "GRACE STREET NEW YORK NY 05/09",
     "transaction_id": 562
   },
@@ -4499,7 +4499,7 @@ const purchaseData = [
     "amount": 6.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-10",
+    "date": "2017-05-10",
     "name": "KEY FOODS #0564 ASTORIA NY 421897 05/10",
     "transaction_id": 563
   },
@@ -4507,7 +4507,7 @@ const purchaseData = [
     "amount": 152.43,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-09",
+    "date": "2017-05-09",
     "name": "A.P.C. 2129669685 NY 05/07",
     "transaction_id": 564
   },
@@ -4515,7 +4515,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-09",
+    "date": "2017-05-09",
     "name": "BAEKJEONG NEW YORK NY 05/08",
     "transaction_id": 565
   },
@@ -4523,7 +4523,7 @@ const purchaseData = [
     "amount": 154.69,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-05-09",
+    "date": "2017-05-09",
     "name": "BILL PAYMENT WWW.ATT.COM TX 05/08",
     "transaction_id": 566
   },
@@ -4531,7 +4531,7 @@ const purchaseData = [
     "amount": 18,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-05-09",
+    "date": "2017-05-09",
     "name": "TAXI SVC FLUSHING LONG IS CITY NY 05/07",
     "transaction_id": 567
   },
@@ -4539,7 +4539,7 @@ const purchaseData = [
     "amount": 42,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "BARNJOO UNION SQUARE IN NEW YORK NY 05/07",
     "transaction_id": 568
   },
@@ -4547,7 +4547,7 @@ const purchaseData = [
     "amount": 5.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "GRACE STREET NEW YORK NY 05/06",
     "transaction_id": 569
   },
@@ -4555,7 +4555,7 @@ const purchaseData = [
     "amount": 8.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "GRACE STREET NEW YORK NY 05/06",
     "transaction_id": 570
   },
@@ -4563,7 +4563,7 @@ const purchaseData = [
     "amount": 7.41,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "M1 Long Island NY 05/08",
     "transaction_id": 571
   },
@@ -4571,7 +4571,7 @@ const purchaseData = [
     "amount": 56,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "MAX BRENNER NEW YORK NY 05/07",
     "transaction_id": 572
   },
@@ -4579,7 +4579,7 @@ const purchaseData = [
     "amount": 58.79,
     "categoryBroad": "Shops",
     "categoryDetailed": "Beauty Products",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "Sephora",
     "transaction_id": 573
   },
@@ -4587,7 +4587,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "TREEHOUSE FL 05/06",
     "transaction_id": 574
   },
@@ -4595,7 +4595,7 @@ const purchaseData = [
     "amount": 367.45,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-05-08",
+    "date": "2017-05-08",
     "name": "VINCE #909 SOHO MERCER NEW YORK NY 013548 05/07",
     "transaction_id": 575
   },
@@ -4603,7 +4603,7 @@ const purchaseData = [
     "amount": 236.2,
     "categoryBroad": "Travel",
     "categoryDetailed": "Airlines and Aviation Services",
-    "createdAt": "2017-05-05",
+    "date": "2017-05-05",
     "name": "American Airlines",
     "transaction_id": 576
   },
@@ -4611,7 +4611,7 @@ const purchaseData = [
     "amount": 23.41,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-05",
+    "date": "2017-05-05",
     "name": "FAMILY MARKET ASTORIA NY 05/03",
     "transaction_id": 577
   },
@@ -4619,7 +4619,7 @@ const purchaseData = [
     "amount": 6.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-05",
+    "date": "2017-05-05",
     "name": "GRACE STREET NEW YORK NY 05/04",
     "transaction_id": 578
   },
@@ -4627,7 +4627,7 @@ const purchaseData = [
     "amount": 6.58,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-05",
+    "date": "2017-05-05",
     "name": "TOUS LES JOURS NEW YORK NY 05/04",
     "transaction_id": 579
   },
@@ -4635,7 +4635,7 @@ const purchaseData = [
     "amount": 815,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-05-04",
+    "date": "2017-05-04",
     "name": "ATM CASH DEPOSIT 05/04 1260 BROADWAY",
     "transaction_id": 580
   },
@@ -4643,7 +4643,7 @@ const purchaseData = [
     "amount": 5.86,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-04",
+    "date": "2017-05-04",
     "name": "Panera Bread",
     "transaction_id": 581
   },
@@ -4651,7 +4651,7 @@ const purchaseData = [
     "amount": 96.66,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "GAMMEEOK NEW YORK NY 05/02",
     "transaction_id": 582
   },
@@ -4659,7 +4659,7 @@ const purchaseData = [
     "amount": 44.33,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "HANBAT RESTAURANT NEW YORK NY 05/03",
     "transaction_id": 583
   },
@@ -4667,7 +4667,7 @@ const purchaseData = [
     "amount": 0.06,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "INTEREST PAYMENT",
     "transaction_id": 584
   },
@@ -4675,7 +4675,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 585
   },
@@ -4683,7 +4683,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "Online Transfer from SAV ...1371 transaction#: 6197655330",
     "transaction_id": 586
   },
@@ -4691,7 +4691,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "Online Transfer to CHK ...6254 transaction#: 6197655330 05/03",
     "transaction_id": 587
   },
@@ -4699,7 +4699,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-05-03",
+    "date": "2017-05-03",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 588
   },
@@ -4707,7 +4707,7 @@ const purchaseData = [
     "amount": 35.54,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-02",
+    "date": "2017-05-02",
     "name": "MATSUNOYA NEW YORK NY 05/01",
     "transaction_id": 589
   },
@@ -4715,7 +4715,7 @@ const purchaseData = [
     "amount": 21.6,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-05-02",
+    "date": "2017-05-02",
     "name": "Seamless",
     "transaction_id": 590
   },
@@ -4723,7 +4723,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "ATM WITHDRAWAL 002192 04/29349 5TH A",
     "transaction_id": 591
   },
@@ -4731,7 +4731,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "ATM WITHDRAWAL 002194 04/29349 5TH A",
     "transaction_id": 592
   },
@@ -4739,7 +4739,7 @@ const purchaseData = [
     "amount": 60,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "ATM WITHDRAWAL 008403 05/011260 BROA",
     "transaction_id": 593
   },
@@ -4747,7 +4747,7 @@ const purchaseData = [
     "amount": 61.7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "BAEKJEONG NEW YORK NY 04/29",
     "transaction_id": 594
   },
@@ -4755,7 +4755,7 @@ const purchaseData = [
     "amount": 3.79,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 04/29",
     "transaction_id": 595
   },
@@ -4763,7 +4763,7 @@ const purchaseData = [
     "amount": 32.24,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "H MART NEW YORK NY 04/28",
     "transaction_id": 596
   },
@@ -4771,7 +4771,7 @@ const purchaseData = [
     "amount": 7.41,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "M2 Pomona NY 04/28",
     "transaction_id": 597
   },
@@ -4779,7 +4779,7 @@ const purchaseData = [
     "amount": 26,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "TAXI SVC WOODSIDE WOODSIDE NY 04/30",
     "transaction_id": 598
   },
@@ -4787,7 +4787,7 @@ const purchaseData = [
     "amount": 4.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "TOUS LES JOURS NEW YORK NY 04/29",
     "transaction_id": 599
   },
@@ -4795,7 +4795,7 @@ const purchaseData = [
     "amount": 20.78,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "UBER *US APR29 T5PY CA 04/29",
     "transaction_id": 600
   },
@@ -4803,7 +4803,7 @@ const purchaseData = [
     "amount": 34.39,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "UBER *US APR30 XCMG CA 05/01",
     "transaction_id": 601
   },
@@ -4811,7 +4811,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-05-01",
+    "date": "2017-05-01",
     "name": "USA*CANTEEN VEND AMITYVILLE NY 05/01",
     "transaction_id": 602
   },
@@ -4819,7 +4819,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-04-28",
+    "date": "2017-04-28",
     "name": "ATM WITHDRAWAL 006579 04/281260 BROA",
     "transaction_id": 603
   },
@@ -4827,7 +4827,7 @@ const purchaseData = [
     "amount": 16.96,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-04-28",
+    "date": "2017-04-28",
     "name": "FAMILY MARKET ASTORIA NY 04/26",
     "transaction_id": 604
   },
@@ -4835,7 +4835,7 @@ const purchaseData = [
     "amount": 12,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-28",
+    "date": "2017-04-28",
     "name": "GRACE STREET NEW YORK NY 04/27",
     "transaction_id": 605
   },
@@ -4843,7 +4843,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-04-28",
+    "date": "2017-04-28",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 606
   },
@@ -4851,7 +4851,7 @@ const purchaseData = [
     "amount": 3.12,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-04-27",
+    "date": "2017-04-27",
     "name": "CVS/PHARMACY #02 02457 NEW YORK NY 847514 04/27",
     "transaction_id": 607
   },
@@ -4859,7 +4859,7 @@ const purchaseData = [
     "amount": 30.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-27",
+    "date": "2017-04-27",
     "name": "KONDO RESTAURANT NY 04/26",
     "transaction_id": 608
   },
@@ -4867,7 +4867,7 @@ const purchaseData = [
     "amount": 37.56,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-04-27",
+    "date": "2017-04-27",
     "name": "NYCTAXI6G20 MANHASSET NY 04/25",
     "transaction_id": 609
   },
@@ -4875,7 +4875,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-04-27",
+    "date": "2017-04-27",
     "name": "SWEET CHURROS, INC. New York NY 04/27",
     "transaction_id": 610
   },
@@ -4883,7 +4883,7 @@ const purchaseData = [
     "amount": 29.37,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-26",
+    "date": "2017-04-26",
     "name": "DADAM New York NY 04/25",
     "transaction_id": 611
   },
@@ -4891,7 +4891,7 @@ const purchaseData = [
     "amount": 11.7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-26",
+    "date": "2017-04-26",
     "name": "SUBWAY 031925 LONG ISLAND C NY 04/26",
     "transaction_id": 612
   },
@@ -4899,7 +4899,7 @@ const purchaseData = [
     "amount": 13.06,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-25",
+    "date": "2017-04-25",
     "name": "KING OF FALAFEL & S Queens NY 04/24",
     "transaction_id": 613
   },
@@ -4907,7 +4907,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-04-25",
+    "date": "2017-04-25",
     "name": "NYCTAXI5H11 LONG ISLAND NY 04/24",
     "transaction_id": 614
   },
@@ -4915,7 +4915,7 @@ const purchaseData = [
     "amount": 17.79,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-04-25",
+    "date": "2017-04-25",
     "name": "Seamless",
     "transaction_id": 615
   },
@@ -4923,7 +4923,7 @@ const purchaseData = [
     "amount": 11.18,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-25",
+    "date": "2017-04-25",
     "name": "Starbucks",
     "transaction_id": 616
   },
@@ -4931,7 +4931,7 @@ const purchaseData = [
     "amount": 15.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-25",
+    "date": "2017-04-25",
     "name": "WA BAR NEW YORK NY 04/23",
     "transaction_id": 617
   },
@@ -4939,7 +4939,7 @@ const purchaseData = [
     "amount": 4.13,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "GRACE STREET NEW YORK NY 04/22",
     "transaction_id": 618
   },
@@ -4947,7 +4947,7 @@ const purchaseData = [
     "amount": 18.2,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "Lyft",
     "transaction_id": 619
   },
@@ -4955,7 +4955,7 @@ const purchaseData = [
     "amount": 19.78,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "McDonald's",
     "transaction_id": 620
   },
@@ -4963,7 +4963,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "ATM",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "NON-CHASE ATM FEE-WITH",
     "transaction_id": 621
   },
@@ -4971,7 +4971,7 @@ const purchaseData = [
     "amount": 102,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "NON-CHASE ATM WITHDRAW 060474 04/23315 5th A",
     "transaction_id": 622
   },
@@ -4979,7 +4979,7 @@ const purchaseData = [
     "amount": 17.69,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "RUBY'S CANDY & GROCERY ASTORIA NY 04/21",
     "transaction_id": 623
   },
@@ -4987,7 +4987,7 @@ const purchaseData = [
     "amount": 57.71,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "SANFORDSRESTAURANT ASTORIA NY 04/21",
     "transaction_id": 624
   },
@@ -4995,7 +4995,7 @@ const purchaseData = [
     "amount": 4.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-24",
+    "date": "2017-04-24",
     "name": "TOUS LES JOURS NEW YORK NY 04/22",
     "transaction_id": 625
   },
@@ -5003,7 +5003,7 @@ const purchaseData = [
     "amount": 4.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-21",
+    "date": "2017-04-21",
     "name": "TOUS LES JOURS NEW YORK NY 04/20",
     "transaction_id": 626
   },
@@ -5011,7 +5011,7 @@ const purchaseData = [
     "amount": 831,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-20",
+    "date": "2017-04-20",
     "name": "ATM CASH DEPOSIT 04/20 1260 BROADWAY",
     "transaction_id": 627
   },
@@ -5019,7 +5019,7 @@ const purchaseData = [
     "amount": 11.32,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-04-20",
+    "date": "2017-04-20",
     "name": "CAFFE BENE SUNNYSIDE SUNNYSIDE NY 04/19",
     "transaction_id": 628
   },
@@ -5027,7 +5027,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-04-20",
+    "date": "2017-04-20",
     "name": "USA*CANTEEN VEND AMITYVILLE NY 04/19",
     "transaction_id": 629
   },
@@ -5035,7 +5035,7 @@ const purchaseData = [
     "amount": 2.91,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "CVS/PHARMACY #01 01058 SUNNYSIDE NY 808625 04/19",
     "transaction_id": 630
   },
@@ -5043,7 +5043,7 @@ const purchaseData = [
     "amount": 18.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "DADAM New York NY 04/18",
     "transaction_id": 631
   },
@@ -5051,7 +5051,7 @@ const purchaseData = [
     "amount": 121,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 632
   },
@@ -5059,7 +5059,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "Online Transfer from SAV ...1371 transaction#: 6160781470",
     "transaction_id": 633
   },
@@ -5067,7 +5067,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "Online Transfer to CHK ...6254 transaction#: 6160781470 04/19",
     "transaction_id": 634
   },
@@ -5075,7 +5075,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "PAYGATE_KIWDISK 45527 SEOUL 04/18",
     "transaction_id": 635
   },
@@ -5083,7 +5083,7 @@ const purchaseData = [
     "amount": 16.16,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "SUBWAY 031925 LONG ISLAND C NY 04/19",
     "transaction_id": 636
   },
@@ -5091,7 +5091,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Recreation",
     "categoryDetailed": "",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "SUNCTRYAIR 33782056705 EAGAN MN 04/16",
     "transaction_id": 637
   },
@@ -5099,7 +5099,7 @@ const purchaseData = [
     "amount": 20.51,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-04-19",
+    "date": "2017-04-19",
     "name": "Seamless",
     "transaction_id": 638
   },
@@ -5107,7 +5107,7 @@ const purchaseData = [
     "amount": 66.33,
     "categoryBroad": "Shops",
     "categoryDetailed": "Department Stores",
-    "createdAt": "2017-04-18",
+    "date": "2017-04-18",
     "name": "DFS GROUP LP LAX LOS ANGELES CA 04/17",
     "transaction_id": 639
   },
@@ -5115,7 +5115,7 @@ const purchaseData = [
     "amount": 6.61,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-18",
+    "date": "2017-04-18",
     "name": "LOS ANGELES 3154B LOS ANGELES CA 04/16",
     "transaction_id": 640
   },
@@ -5123,7 +5123,7 @@ const purchaseData = [
     "amount": 8.86,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-18",
+    "date": "2017-04-18",
     "name": "Lyft",
     "transaction_id": 641
   },
@@ -5131,7 +5131,7 @@ const purchaseData = [
     "amount": 46.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-04-18",
+    "date": "2017-04-18",
     "name": "NYCTAXI1R17 LONG ISLAND NY 04/17",
     "transaction_id": 642
   },
@@ -5139,7 +5139,7 @@ const purchaseData = [
     "amount": 13.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Convenience Stores",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "7-Eleven",
     "transaction_id": 643
   },
@@ -5147,7 +5147,7 @@ const purchaseData = [
     "amount": 36,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Fandango",
     "transaction_id": 644
   },
@@ -5155,7 +5155,7 @@ const purchaseData = [
     "amount": 84.74,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "JAE BU DO LOS ANGELES CA 04/16",
     "transaction_id": 645
   },
@@ -5163,7 +5163,7 @@ const purchaseData = [
     "amount": 2,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 646
   },
@@ -5171,7 +5171,7 @@ const purchaseData = [
     "amount": 4.05,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 647
   },
@@ -5179,7 +5179,7 @@ const purchaseData = [
     "amount": 4.55,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 648
   },
@@ -5187,7 +5187,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 649
   },
@@ -5195,7 +5195,7 @@ const purchaseData = [
     "amount": 12.79,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 650
   },
@@ -5203,7 +5203,7 @@ const purchaseData = [
     "amount": 17.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 651
   },
@@ -5211,7 +5211,7 @@ const purchaseData = [
     "amount": 18.6,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Lyft",
     "transaction_id": 652
   },
@@ -5219,7 +5219,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Online Transfer from SAV ...1371 transaction#: 6154087848",
     "transaction_id": 653
   },
@@ -5227,7 +5227,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "Online Transfer to CHK ...6254 transaction#: 6154087848 04/17",
     "transaction_id": 654
   },
@@ -5235,7 +5235,7 @@ const purchaseData = [
     "amount": 294.13,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "THIRD ST PROMENADE #1 SANTA MONICA CA 04/14",
     "transaction_id": 655
   },
@@ -5243,7 +5243,7 @@ const purchaseData = [
     "amount": 4.34,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "THREE BROOMSTICKS UNIVERSAL CTY CA 04/13",
     "transaction_id": 656
   },
@@ -5251,7 +5251,7 @@ const purchaseData = [
     "amount": 6.51,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "TOKYO JAPANESE LIFESTY LOS ANGELES CA 04/16",
     "transaction_id": 657
   },
@@ -5259,7 +5259,7 @@ const purchaseData = [
     "amount": 5.72,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "TST* DIRT DOG LOS ANGELES CA 04/15",
     "transaction_id": 658
   },
@@ -5267,7 +5267,7 @@ const purchaseData = [
     "amount": 22.61,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "TST* DIRT DOG LOS ANGELES CA 04/15",
     "transaction_id": 659
   },
@@ -5275,7 +5275,7 @@ const purchaseData = [
     "amount": 34,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-04-17",
+    "date": "2017-04-17",
     "name": "X LANES LOS ANGELES CA 04/16",
     "transaction_id": 660
   },
@@ -5283,7 +5283,7 @@ const purchaseData = [
     "amount": 16.48,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-14",
+    "date": "2017-04-14",
     "name": "Lyft",
     "transaction_id": 661
   },
@@ -5291,7 +5291,7 @@ const purchaseData = [
     "amount": 17,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-14",
+    "date": "2017-04-14",
     "name": "Lyft",
     "transaction_id": 662
   },
@@ -5299,7 +5299,7 @@ const purchaseData = [
     "amount": 438,
     "categoryBroad": "Community",
     "categoryDetailed": "Education",
-    "createdAt": "2017-04-14",
+    "date": "2017-04-14",
     "name": "UNIV STUDIOS O40000010 CA 04/12",
     "transaction_id": 663
   },
@@ -5307,7 +5307,7 @@ const purchaseData = [
     "amount": 375,
     "categoryBroad": "Tax",
     "categoryDetailed": "Payment",
-    "createdAt": "2017-04-13",
+    "date": "2017-04-13",
     "name": "IRS USATAXPYMT PPD ID: 3387702000",
     "transaction_id": 664
   },
@@ -5315,7 +5315,7 @@ const purchaseData = [
     "amount": 307,
     "categoryBroad": "Tax",
     "categoryDetailed": "Payment",
-    "createdAt": "2017-04-13",
+    "date": "2017-04-13",
     "name": "NYS DTF PIT Tax Paymnt PPD ID: N146013200",
     "transaction_id": 665
   },
@@ -5323,7 +5323,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-13",
+    "date": "2017-04-13",
     "name": "Online Transfer from SAV ...1371 transaction#: 6146341215",
     "transaction_id": 666
   },
@@ -5331,7 +5331,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-13",
+    "date": "2017-04-13",
     "name": "Online Transfer to CHK ...6254 transaction#: 6146341215 04/13",
     "transaction_id": 667
   },
@@ -5339,7 +5339,7 @@ const purchaseData = [
     "amount": 35.41,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "CAL MART BEER & WINE LOS ANGELES CA 04/11",
     "transaction_id": 668
   },
@@ -5347,7 +5347,7 @@ const purchaseData = [
     "amount": 33.89,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "H MART LOS ANGELES LOS ANGELES CA 188177 04/11",
     "transaction_id": 669
   },
@@ -5355,7 +5355,7 @@ const purchaseData = [
     "amount": 25,
     "categoryBroad": "Travel",
     "categoryDetailed": "Airlines and Aviation Services",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "JetBlue",
     "transaction_id": 670
   },
@@ -5363,7 +5363,7 @@ const purchaseData = [
     "amount": 7.33,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "Lyft",
     "transaction_id": 671
   },
@@ -5371,7 +5371,7 @@ const purchaseData = [
     "amount": 10.53,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "Lyft",
     "transaction_id": 672
   },
@@ -5379,7 +5379,7 @@ const purchaseData = [
     "amount": 15.04,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "Lyft",
     "transaction_id": 673
   },
@@ -5387,7 +5387,7 @@ const purchaseData = [
     "amount": 6.51,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-12",
+    "date": "2017-04-12",
     "name": "TOKYO JAPANESE LIFESTY LOS ANGELES CA 04/11",
     "transaction_id": 674
   },
@@ -5395,7 +5395,7 @@ const purchaseData = [
     "amount": 4.06,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "DUNKIN #356521 Q3 BOSTON MA 04/10",
     "transaction_id": 675
   },
@@ -5403,7 +5403,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "GAMMEEOK NEW YORK NY 04/10",
     "transaction_id": 676
   },
@@ -5411,7 +5411,7 @@ const purchaseData = [
     "amount": 78,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "Groupon",
     "transaction_id": 677
   },
@@ -5419,7 +5419,7 @@ const purchaseData = [
     "amount": 10.62,
     "categoryBroad": "Shops",
     "categoryDetailed": "Newsstands",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "HUDSON ST 1509 BOSTON MA 04/10",
     "transaction_id": 678
   },
@@ -5427,7 +5427,7 @@ const purchaseData = [
     "amount": 29.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "RAMEN OKIDOKI NY 04/09",
     "transaction_id": 679
   },
@@ -5435,7 +5435,7 @@ const purchaseData = [
     "amount": 2.57,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "Starbucks",
     "transaction_id": 680
   },
@@ -5443,7 +5443,7 @@ const purchaseData = [
     "amount": 15.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-11",
+    "date": "2017-04-11",
     "name": "UBER *US APR10 V7ED CA 04/10",
     "transaction_id": 681
   },
@@ -5451,7 +5451,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "ATM WITHDRAWAL 006296 04/09349 5TH A",
     "transaction_id": 682
   },
@@ -5459,7 +5459,7 @@ const purchaseData = [
     "amount": 154.65,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "BILL PAYMENT WWW.ATT.COM TX 04/07",
     "transaction_id": 683
   },
@@ -5467,7 +5467,7 @@ const purchaseData = [
     "amount": 1.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "CMSVEND*CV FARMINGDALE AMITYVILLE NY 04/07",
     "transaction_id": 684
   },
@@ -5475,7 +5475,7 @@ const purchaseData = [
     "amount": 18.23,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "FAMILY MARKET ASTORIA NY 04/07",
     "transaction_id": 685
   },
@@ -5483,7 +5483,7 @@ const purchaseData = [
     "amount": 6.41,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "GRACE STREET NEW YORK NY 04/08",
     "transaction_id": 686
   },
@@ -5491,7 +5491,7 @@ const purchaseData = [
     "amount": 5.72,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "M1 New York NY 04/07",
     "transaction_id": 687
   },
@@ -5499,7 +5499,7 @@ const purchaseData = [
     "amount": 8.15,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "NYCTAXI5C17 ASTORIA NY 04/09",
     "transaction_id": 688
   },
@@ -5507,7 +5507,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Online Transfer from SAV ...1371 transaction#: 6136391007",
     "transaction_id": 689
   },
@@ -5515,7 +5515,7 @@ const purchaseData = [
     "amount": 1000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Online Transfer to CHK ...6254 transaction#: 6136391007 04/10",
     "transaction_id": 690
   },
@@ -5523,7 +5523,7 @@ const purchaseData = [
     "amount": 150.97,
     "categoryBroad": "Travel",
     "categoryDetailed": "Lodging",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "PLN*PRICELINE HOTELS CT 04/08",
     "transaction_id": 691
   },
@@ -5531,7 +5531,7 @@ const purchaseData = [
     "amount": 9.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Pixonic LLC g.co/payhelp# CA 04/10",
     "transaction_id": 692
   },
@@ -5539,7 +5539,7 @@ const purchaseData = [
     "amount": 3.49,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Rite Aid",
     "transaction_id": 693
   },
@@ -5547,7 +5547,7 @@ const purchaseData = [
     "amount": 26.65,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Shake Shack",
     "transaction_id": 694
   },
@@ -5555,7 +5555,7 @@ const purchaseData = [
     "amount": 3.21,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "Starbucks",
     "transaction_id": 695
   },
@@ -5563,7 +5563,7 @@ const purchaseData = [
     "amount": 4.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "TOUS LES JOURS NEW YORK NY 04/06",
     "transaction_id": 696
   },
@@ -5571,7 +5571,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-10",
+    "date": "2017-04-10",
     "name": "WOORI JIP NEW YORK NY 04/08",
     "transaction_id": 697
   },
@@ -5579,7 +5579,7 @@ const purchaseData = [
     "amount": 13.61,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "SUBWAY 031925 LONG ISLAND C NY 04/07",
     "transaction_id": 698
   },
@@ -5587,7 +5587,7 @@ const purchaseData = [
     "amount": 3.63,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "SWEET CHURROS, INC. NEW YORK NY 04/06",
     "transaction_id": 699
   },
@@ -5595,7 +5595,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "TREEHOUSE FL 04/06",
     "transaction_id": 700
   },
@@ -5603,7 +5603,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "Telephone transfer from SAV XXXXXX1371",
     "transaction_id": 701
   },
@@ -5611,7 +5611,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "Telephone transfer to CHK XXXXX6254 04/07",
     "transaction_id": 702
   },
@@ -5619,7 +5619,7 @@ const purchaseData = [
     "amount": 21.74,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-04-07",
+    "date": "2017-04-07",
     "name": "Walgreens",
     "transaction_id": 703
   },
@@ -5627,7 +5627,7 @@ const purchaseData = [
     "amount": 1475,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "ATM CASH DEPOSIT 04/06 1260 BROADWAY",
     "transaction_id": 704
   },
@@ -5635,7 +5635,7 @@ const purchaseData = [
     "amount": 1050,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "ATM CASH DEPOSIT 04/06 1260 BROADWAY",
     "transaction_id": 705
   },
@@ -5643,7 +5643,7 @@ const purchaseData = [
     "amount": 776,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "ATM CASH DEPOSIT 04/06 1260 BROADWAY",
     "transaction_id": 706
   },
@@ -5651,7 +5651,7 @@ const purchaseData = [
     "amount": 325,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "ATM CASH DEPOSIT 04/06 1260 BROADWAY",
     "transaction_id": 707
   },
@@ -5659,7 +5659,7 @@ const purchaseData = [
     "amount": 127.5,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "ATM CHECK DEPOSIT 04/06 1260 BROADWAY",
     "transaction_id": 708
   },
@@ -5667,7 +5667,7 @@ const purchaseData = [
     "amount": 6.76,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "CVS/PHARM 02457--320FI NEW YORK NY 04/06",
     "transaction_id": 709
   },
@@ -5675,7 +5675,7 @@ const purchaseData = [
     "amount": 7.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "GRACE STREET NEW YORK NY 04/04",
     "transaction_id": 710
   },
@@ -5683,7 +5683,7 @@ const purchaseData = [
     "amount": 9,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "KARAOKE CITY NEW YORK NY 04/04",
     "transaction_id": 711
   },
@@ -5691,7 +5691,7 @@ const purchaseData = [
     "amount": 58,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "KARAOKE CITY NEW YORK NY 04/05",
     "transaction_id": 712
   },
@@ -5699,7 +5699,7 @@ const purchaseData = [
     "amount": 14.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-06",
+    "date": "2017-04-06",
     "name": "McDonald's",
     "transaction_id": 713
   },
@@ -5707,7 +5707,7 @@ const purchaseData = [
     "amount": 0.08,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-04-05",
+    "date": "2017-04-05",
     "name": "INTEREST PAYMENT",
     "transaction_id": 714
   },
@@ -5715,7 +5715,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-04-05",
+    "date": "2017-04-05",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 715
   },
@@ -5723,7 +5723,7 @@ const purchaseData = [
     "amount": 9.44,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-05",
+    "date": "2017-04-05",
     "name": "UBER *US APR05 7FYR CA 04/05",
     "transaction_id": 716
   },
@@ -5731,7 +5731,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-04-05",
+    "date": "2017-04-05",
     "name": "USA*CANTEEN VEND AMITYVILLE NY 04/05",
     "transaction_id": 717
   },
@@ -5739,7 +5739,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-04-04",
+    "date": "2017-04-04",
     "name": "Seamless",
     "transaction_id": 718
   },
@@ -5747,7 +5747,7 @@ const purchaseData = [
     "amount": 26.02,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-04",
+    "date": "2017-04-04",
     "name": "TAMASHII ASTORIA NY 04/03",
     "transaction_id": 719
   },
@@ -5755,7 +5755,7 @@ const purchaseData = [
     "amount": 17.54,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "Lyft",
     "transaction_id": 720
   },
@@ -5763,7 +5763,7 @@ const purchaseData = [
     "amount": 1.63,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "M2 Pomona NY 03/31",
     "transaction_id": 721
   },
@@ -5771,7 +5771,7 @@ const purchaseData = [
     "amount": 10.79,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "M2 Pomona NY 03/31",
     "transaction_id": 722
   },
@@ -5779,7 +5779,7 @@ const purchaseData = [
     "amount": 37.06,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "Seamless",
     "transaction_id": 723
   },
@@ -5787,7 +5787,7 @@ const purchaseData = [
     "amount": 28.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "TREATSA PIZZA CORP NEW YORK NY 04/02",
     "transaction_id": 724
   },
@@ -5795,7 +5795,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-04-03",
+    "date": "2017-04-03",
     "name": "USA*CANTEEN VEND AMITYVILLE NY 04/03",
     "transaction_id": 725
   },
@@ -5803,7 +5803,7 @@ const purchaseData = [
     "amount": 5.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-31",
+    "date": "2017-03-31",
     "name": "GRACE STREET NEW YORK NY 03/30",
     "transaction_id": 726
   },
@@ -5811,7 +5811,7 @@ const purchaseData = [
     "amount": 4.3,
     "categoryBroad": "Shops",
     "categoryDetailed": "Bookstores",
-    "createdAt": "2017-03-31",
+    "date": "2017-03-31",
     "name": "KORYO BOOKS NEW YORK NY 03/30",
     "transaction_id": 727
   },
@@ -5819,7 +5819,7 @@ const purchaseData = [
     "amount": 72.11,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-30",
+    "date": "2017-03-30",
     "name": "FIVE SENSES NEW YORK NY 03/28",
     "transaction_id": 728
   },
@@ -5827,7 +5827,7 @@ const purchaseData = [
     "amount": 35.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-30",
+    "date": "2017-03-30",
     "name": "KONDO RESTAURANT NY 03/29",
     "transaction_id": 729
   },
@@ -5835,7 +5835,7 @@ const purchaseData = [
     "amount": 4.14,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-03-30",
+    "date": "2017-03-30",
     "name": "SWEET CHURROS, INC. New York NY 03/30",
     "transaction_id": 730
   },
@@ -5843,7 +5843,7 @@ const purchaseData = [
     "amount": 4.3,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-30",
+    "date": "2017-03-30",
     "name": "Starbucks",
     "transaction_id": 731
   },
@@ -5851,7 +5851,7 @@ const purchaseData = [
     "amount": 5.42,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-29",
+    "date": "2017-03-29",
     "name": "GRACE STREET NEW YORK NY 03/28",
     "transaction_id": 732
   },
@@ -5859,7 +5859,7 @@ const purchaseData = [
     "amount": 16.33,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-29",
+    "date": "2017-03-29",
     "name": "SUBWAY 031925 LONG ISLAND C NY 03/29",
     "transaction_id": 733
   },
@@ -5867,7 +5867,7 @@ const purchaseData = [
     "amount": 22.16,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-29",
+    "date": "2017-03-29",
     "name": "TRADE FAIR #7 LONG ISLAND C NY 03/29",
     "transaction_id": 734
   },
@@ -5875,7 +5875,7 @@ const purchaseData = [
     "amount": 5.93,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "CAFFE BENE SUNNYSIDE SUNNYSIDE NY 03/27",
     "transaction_id": 735
   },
@@ -5883,7 +5883,7 @@ const purchaseData = [
     "amount": 13.95,
     "categoryBroad": "Service",
     "categoryDetailed": "Travel Agents and Tour Operators",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "COA*CHEAPOAIR.COM AI CHEAPOAIR.COM NY 03/28",
     "transaction_id": 736
   },
@@ -5891,7 +5891,7 @@ const purchaseData = [
     "amount": 53,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "ENTHAICE THAI KITCHEN ASTORIA NY 03/27",
     "transaction_id": 737
   },
@@ -5899,7 +5899,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "GAMMEEOK NEW YORK NY 03/25",
     "transaction_id": 738
   },
@@ -5907,7 +5907,7 @@ const purchaseData = [
     "amount": 21,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "NATURAL TOFU SUNNYSIDE NY 03/27",
     "transaction_id": 739
   },
@@ -5915,7 +5915,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "Online Transfer from SAV ...1371 transaction#: 6108099140",
     "transaction_id": 740
   },
@@ -5923,7 +5923,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "Online Transfer to CHK ...6254 transaction#: 6108099140 03/28",
     "transaction_id": 741
   },
@@ -5931,7 +5931,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 742
   },
@@ -5939,7 +5939,7 @@ const purchaseData = [
     "amount": 13.98,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-03-28",
+    "date": "2017-03-28",
     "name": "Seamless",
     "transaction_id": 743
   },
@@ -5947,7 +5947,7 @@ const purchaseData = [
     "amount": 73,
     "categoryBroad": "Travel",
     "categoryDetailed": "Lodging",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "AIRBNB * HM4QYHEMWB CA 03/27",
     "transaction_id": 744
   },
@@ -5955,7 +5955,7 @@ const purchaseData = [
     "amount": 14.55,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "DD/BR #346449 Q35 ASTORIA NY 03/24",
     "transaction_id": 745
   },
@@ -5963,7 +5963,7 @@ const purchaseData = [
     "amount": 19.96,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "FAMILY MARKET ASTORIA NY 03/24",
     "transaction_id": 746
   },
@@ -5971,7 +5971,7 @@ const purchaseData = [
     "amount": 56.49,
     "categoryBroad": "Travel",
     "categoryDetailed": "Airlines and Aviation Services",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "JetBlue",
     "transaction_id": 747
   },
@@ -5979,7 +5979,7 @@ const purchaseData = [
     "amount": 700,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "Online Transfer from SAV ...1371 transaction#: 6104930111",
     "transaction_id": 748
   },
@@ -5987,7 +5987,7 @@ const purchaseData = [
     "amount": 10,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "Online Transfer to CHK ...6254 transaction#: 6104930111 03/27",
     "transaction_id": 749
   },
@@ -5995,7 +5995,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 750
   },
@@ -6003,7 +6003,7 @@ const purchaseData = [
     "amount": 350.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "SUNCTRYAIR 33779932263 NEW YORK NY 03/24",
     "transaction_id": 751
   },
@@ -6011,7 +6011,7 @@ const purchaseData = [
     "amount": 5.23,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "SWEET CHURROS, INC. NEW YORK NY 03/25",
     "transaction_id": 752
   },
@@ -6019,7 +6019,7 @@ const purchaseData = [
     "amount": 7,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-27",
+    "date": "2017-03-27",
     "name": "WOORI JIP NEW YORK NY 03/25",
     "transaction_id": 753
   },
@@ -6027,7 +6027,7 @@ const purchaseData = [
     "amount": 32.58,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "AMC EMPIRE 25 #0552 NEW YORK NY 03/22",
     "transaction_id": 754
   },
@@ -6035,7 +6035,7 @@ const purchaseData = [
     "amount": 82.2,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "OOTOYA TIMES SQUARE NEW YORK NY 03/22",
     "transaction_id": 755
   },
@@ -6043,7 +6043,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "Online Transfer from SAV ...1371 transaction#: 6099591654",
     "transaction_id": 756
   },
@@ -6051,7 +6051,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "Online Transfer to CHK ...6254 transaction#: 6099591654 03/24",
     "transaction_id": 757
   },
@@ -6059,7 +6059,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 758
   },
@@ -6067,7 +6067,7 @@ const purchaseData = [
     "amount": 22.69,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-24",
+    "date": "2017-03-24",
     "name": "SUBWAY 031925 LONG ISLAND C NY 03/24",
     "transaction_id": 759
   },
@@ -6075,7 +6075,7 @@ const purchaseData = [
     "amount": 7.56,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-03-23",
+    "date": "2017-03-23",
     "name": "E-K New York NY 03/22",
     "transaction_id": 760
   },
@@ -6083,7 +6083,7 @@ const purchaseData = [
     "amount": 6.31,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-03-23",
+    "date": "2017-03-23",
     "name": "M1 Pomona NY 03/22",
     "transaction_id": 761
   },
@@ -6091,7 +6091,7 @@ const purchaseData = [
     "amount": 6.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-03-23",
+    "date": "2017-03-23",
     "name": "Symbolab g.co/payhelp# CA 03/22",
     "transaction_id": 762
   },
@@ -6099,7 +6099,7 @@ const purchaseData = [
     "amount": 1.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-03-23",
+    "date": "2017-03-23",
     "name": "USA*CANTEEN VEND AMITYVILLE NY 03/22",
     "transaction_id": 763
   },
@@ -6107,7 +6107,7 @@ const purchaseData = [
     "amount": 15.87,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "GRACE STREET NEW YORK NY 03/21",
     "transaction_id": 764
   },
@@ -6115,7 +6115,7 @@ const purchaseData = [
     "amount": 10.33,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "McDonald's",
     "transaction_id": 765
   },
@@ -6123,7 +6123,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "Men's Wearhouse",
     "transaction_id": 766
   },
@@ -6131,7 +6131,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "Online Transfer from SAV ...1371 transaction#: 6095257535",
     "transaction_id": 767
   },
@@ -6139,7 +6139,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "Online Transfer to CHK ...6254 transaction#: 6095257535 03/22",
     "transaction_id": 768
   },
@@ -6147,7 +6147,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 769
   },
@@ -6155,7 +6155,7 @@ const purchaseData = [
     "amount": 25.41,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-03-22",
+    "date": "2017-03-22",
     "name": "Seamless",
     "transaction_id": 770
   },
@@ -6163,7 +6163,7 @@ const purchaseData = [
     "amount": 62,
     "categoryBroad": "Community",
     "categoryDetailed": "Organizations and Associations",
-    "createdAt": "2017-03-21",
+    "date": "2017-03-21",
     "name": "EDUCO INTERNATIONAL I GA 03/20",
     "transaction_id": 771
   },
@@ -6171,7 +6171,7 @@ const purchaseData = [
     "amount": 90.26,
     "categoryBroad": "Shops",
     "categoryDetailed": "Beauty Products",
-    "createdAt": "2017-03-21",
+    "date": "2017-03-21",
     "name": "LUSH LEXINGTON (750) NEW YORK NY 03/20",
     "transaction_id": 772
   },
@@ -6179,7 +6179,7 @@ const purchaseData = [
     "amount": 51.55,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-21",
+    "date": "2017-03-21",
     "name": "TONY DI NAPOLI 3RD AVE NEW YORK NY 03/20",
     "transaction_id": 773
   },
@@ -6187,7 +6187,7 @@ const purchaseData = [
     "amount": 1.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "CMSVEND*CV FARMINGDALE AMITYVILLE NY 03/17",
     "transaction_id": 774
   },
@@ -6195,7 +6195,7 @@ const purchaseData = [
     "amount": 21.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "DONG CHUN HONG NEW YORK NY 03/19",
     "transaction_id": 775
   },
@@ -6203,7 +6203,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "GAMMEEOK NEW YORK NY 03/18",
     "transaction_id": 776
   },
@@ -6211,7 +6211,7 @@ const purchaseData = [
     "amount": 15.2,
     "categoryBroad": "Travel",
     "categoryDetailed": "Airports",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "LAGUARDIA-CC-BK 31-1 LONG ISLAND C NY662131 03/20",
     "transaction_id": 777
   },
@@ -6219,7 +6219,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Lyft",
     "transaction_id": 778
   },
@@ -6227,7 +6227,7 @@ const purchaseData = [
     "amount": 23.95,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Lyft",
     "transaction_id": 779
   },
@@ -6235,7 +6235,7 @@ const purchaseData = [
     "amount": 9.98,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "McDonald's",
     "transaction_id": 780
   },
@@ -6243,7 +6243,7 @@ const purchaseData = [
     "amount": 22.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "NYCTAXI5K88 BROOKLYN NY 03/18",
     "transaction_id": 781
   },
@@ -6251,7 +6251,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Online Transfer from SAV ...1371 transaction#: 6087052435",
     "transaction_id": 782
   },
@@ -6259,7 +6259,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Online Transfer from SAV ...1371 transaction#: 6090209956",
     "transaction_id": 783
   },
@@ -6267,7 +6267,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Online Transfer to CHK ...6254 transaction#: 6087052435 03/20",
     "transaction_id": 784
   },
@@ -6275,7 +6275,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Online Transfer to CHK ...6254 transaction#: 6090209956 03/20",
     "transaction_id": 785
   },
@@ -6283,7 +6283,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "Excess Activity",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "SAVINGS WITHDRAWAL LIMIT FEE",
     "transaction_id": 786
   },
@@ -6291,7 +6291,7 @@ const purchaseData = [
     "amount": 3.76,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "Starbucks",
     "transaction_id": 787
   },
@@ -6299,7 +6299,7 @@ const purchaseData = [
     "amount": 40.49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "THIRD FLOOR CAFE NEW YORK NY 03/18",
     "transaction_id": 788
   },
@@ -6307,7 +6307,7 @@ const purchaseData = [
     "amount": 5.92,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "TOUS LES JOURS NEW YORK NY 03/18",
     "transaction_id": 789
   },
@@ -6315,7 +6315,7 @@ const purchaseData = [
     "amount": 29.03,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-20",
+    "date": "2017-03-20",
     "name": "TRADE FAIR #7 LONG ISLAND C NY 03/19",
     "transaction_id": 790
   },
@@ -6323,7 +6323,7 @@ const purchaseData = [
     "amount": 10.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-17",
+    "date": "2017-03-17",
     "name": "GREGORYS COFFEE 31 New York NY 03/16",
     "transaction_id": 791
   },
@@ -6331,7 +6331,7 @@ const purchaseData = [
     "amount": 65.56,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-17",
+    "date": "2017-03-17",
     "name": "HANBAT RESTAURANT NEW YORK NY 03/16",
     "transaction_id": 792
   },
@@ -6339,7 +6339,7 @@ const purchaseData = [
     "amount": 88.99,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-16",
+    "date": "2017-03-16",
     "name": "DONG CHUN HONG NEW YORK NY 03/14",
     "transaction_id": 793
   },
@@ -6347,7 +6347,7 @@ const purchaseData = [
     "amount": 7.62,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-03-16",
+    "date": "2017-03-16",
     "name": "SWEET CHURROS, INC. NEW YORK NY 03/16",
     "transaction_id": 794
   },
@@ -6355,7 +6355,7 @@ const purchaseData = [
     "amount": 13.01,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-16",
+    "date": "2017-03-16",
     "name": "Starbucks",
     "transaction_id": 795
   },
@@ -6363,7 +6363,7 @@ const purchaseData = [
     "amount": 31.29,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-16",
+    "date": "2017-03-16",
     "name": "TAMASHII ASTORIA NY 03/15",
     "transaction_id": 796
   },
@@ -6371,7 +6371,7 @@ const purchaseData = [
     "amount": 16.24,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-15",
+    "date": "2017-03-15",
     "name": "GRACE STREET NEW YORK NY 03/14",
     "transaction_id": 797
   },
@@ -6379,7 +6379,7 @@ const purchaseData = [
     "amount": 65.55,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-15",
+    "date": "2017-03-15",
     "name": "KENKA RESTAURANT NEW YORK NY 03/13",
     "transaction_id": 798
   },
@@ -6387,7 +6387,7 @@ const purchaseData = [
     "amount": 23.46,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-15",
+    "date": "2017-03-15",
     "name": "Lyft",
     "transaction_id": 799
   },
@@ -6395,7 +6395,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "Online Transfer from SAV ...1371 transaction#: 6074759217",
     "transaction_id": 800
   },
@@ -6403,7 +6403,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "Online Transfer to CHK ...6254 transaction#: 6074759217 03/14",
     "transaction_id": 801
   },
@@ -6411,7 +6411,7 @@ const purchaseData = [
     "amount": 6.53,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "SUBWAY 031925 LONG ISLAND C NY 03/13",
     "transaction_id": 802
   },
@@ -6419,7 +6419,7 @@ const purchaseData = [
     "amount": 16.1,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "Seamless",
     "transaction_id": 803
   },
@@ -6427,7 +6427,7 @@ const purchaseData = [
     "amount": 3.76,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "Starbucks",
     "transaction_id": 804
   },
@@ -6435,7 +6435,7 @@ const purchaseData = [
     "amount": 32.95,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-14",
+    "date": "2017-03-14",
     "name": "UBER *US MAR13 I6NA CA 03/14",
     "transaction_id": 805
   },
@@ -6443,7 +6443,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "ATM WITHDRAWAL 002747 03/11349 5TH A",
     "transaction_id": 806
   },
@@ -6451,7 +6451,7 @@ const purchaseData = [
     "amount": 6.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "GRACE STREET NEW YORK NY 03/11",
     "transaction_id": 807
   },
@@ -6459,7 +6459,7 @@ const purchaseData = [
     "amount": 20.7,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "Lyft",
     "transaction_id": 808
   },
@@ -6467,7 +6467,7 @@ const purchaseData = [
     "amount": 11.28,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "M2 New York NY 03/10",
     "transaction_id": 809
   },
@@ -6475,7 +6475,7 @@ const purchaseData = [
     "amount": 18.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "QUEENS MEDALLION ENTE LONG ISLAND NY 03/11",
     "transaction_id": 810
   },
@@ -6483,7 +6483,7 @@ const purchaseData = [
     "amount": 25.76,
     "categoryBroad": "Shops",
     "categoryDetailed": "Pharmacies",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "Rite Aid",
     "transaction_id": 811
   },
@@ -6491,7 +6491,7 @@ const purchaseData = [
     "amount": 2.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-13",
+    "date": "2017-03-13",
     "name": "WOORI JIP NEW YORK NY 03/11",
     "transaction_id": 812
   },
@@ -6499,7 +6499,7 @@ const purchaseData = [
     "amount": 5.25,
     "categoryBroad": "Shops",
     "categoryDetailed": "Arts and Crafts",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "ARTIST & CRAFTSMAN LIC LONG ISLAND NY696306 03/10",
     "transaction_id": 813
   },
@@ -6507,7 +6507,7 @@ const purchaseData = [
     "amount": 100,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Withdrawal",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "ATM WITHDRAWAL 000158 03/101260 BROA",
     "transaction_id": 814
   },
@@ -6515,7 +6515,7 @@ const purchaseData = [
     "amount": 18.2,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "FAMILY MARKET ASTORIA NY 03/08",
     "transaction_id": 815
   },
@@ -6523,7 +6523,7 @@ const purchaseData = [
     "amount": 7.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "GRACE STREET NEW YORK NY 03/09",
     "transaction_id": 816
   },
@@ -6531,7 +6531,7 @@ const purchaseData = [
     "amount": 9.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "Pixonic LLC g.co/payhelp# CA 03/09",
     "transaction_id": 817
   },
@@ -6539,7 +6539,7 @@ const purchaseData = [
     "amount": 9.53,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "SUBWAY 031925 LONG ISLAND C NY 03/10",
     "transaction_id": 818
   },
@@ -6547,7 +6547,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-10",
+    "date": "2017-03-10",
     "name": "TOUS LES JOURS NEW YORK NY 03/09",
     "transaction_id": 819
   },
@@ -6555,7 +6555,7 @@ const purchaseData = [
     "amount": 125.21,
     "categoryBroad": "Shops",
     "categoryDetailed": "Department Stores",
-    "createdAt": "2017-03-09",
+    "date": "2017-03-09",
     "name": "Macy's",
     "transaction_id": 820
   },
@@ -6563,7 +6563,7 @@ const purchaseData = [
     "amount": 4.45,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-09",
+    "date": "2017-03-09",
     "name": "Panera Bread",
     "transaction_id": 821
   },
@@ -6571,7 +6571,7 @@ const purchaseData = [
     "amount": 62.68,
     "categoryBroad": "Shops",
     "categoryDetailed": "",
-    "createdAt": "2017-03-08",
+    "date": "2017-03-08",
     "name": "Amazon",
     "transaction_id": 822
   },
@@ -6579,7 +6579,7 @@ const purchaseData = [
     "amount": 12,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-08",
+    "date": "2017-03-08",
     "name": "FRESH FRUIT & GROCERY ASTORIA NY 03/06",
     "transaction_id": 823
   },
@@ -6587,7 +6587,7 @@ const purchaseData = [
     "amount": 13.4,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-08",
+    "date": "2017-03-08",
     "name": "Lyft",
     "transaction_id": 824
   },
@@ -6595,7 +6595,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "CMSVEND*CV FARMINGDALE AMITYVILLE NY 03/06",
     "transaction_id": 825
   },
@@ -6603,7 +6603,7 @@ const purchaseData = [
     "amount": 2608.45,
     "categoryBroad": "Service",
     "categoryDetailed": "Financial",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "LAG01 CUNY LAGUA PAYMENT SV 000001163181 WEB ID: 9751000422",
     "transaction_id": 826
   },
@@ -6611,7 +6611,7 @@ const purchaseData = [
     "amount": 3000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "Online Transfer from SAV ...1371 transaction#: 6059086447",
     "transaction_id": 827
   },
@@ -6619,7 +6619,7 @@ const purchaseData = [
     "amount": 3000,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "Online Transfer to CHK ...6254 transaction#: 6059086447 03/07",
     "transaction_id": 828
   },
@@ -6627,7 +6627,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Service",
     "categoryDetailed": "Personal Care",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "PAYGATE_KIWDISK 45527 SEOUL 03/06",
     "transaction_id": 829
   },
@@ -6635,7 +6635,7 @@ const purchaseData = [
     "amount": 21.6,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "Seamless",
     "transaction_id": 830
   },
@@ -6643,7 +6643,7 @@ const purchaseData = [
     "amount": 49,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "TREEHOUSE FL 03/06",
     "transaction_id": 831
   },
@@ -6651,7 +6651,7 @@ const purchaseData = [
     "amount": 12.74,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-07",
+    "date": "2017-03-07",
     "name": "UBER *US MAR07 JL3E CA 03/07",
     "transaction_id": 832
   },
@@ -6659,7 +6659,7 @@ const purchaseData = [
     "amount": 22.23,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "DONG CHUN HONG NEW YORK NY 03/05",
     "transaction_id": 833
   },
@@ -6667,7 +6667,7 @@ const purchaseData = [
     "amount": 10.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "GRACE STREET NEW YORK NY 03/04",
     "transaction_id": 834
   },
@@ -6675,7 +6675,7 @@ const purchaseData = [
     "amount": 16.4,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "GRACE STREET NEW YORK NY 03/04",
     "transaction_id": 835
   },
@@ -6683,7 +6683,7 @@ const purchaseData = [
     "amount": 8.94,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Lyft",
     "transaction_id": 836
   },
@@ -6691,7 +6691,7 @@ const purchaseData = [
     "amount": 116.5,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 837
   },
@@ -6699,7 +6699,7 @@ const purchaseData = [
     "amount": 23.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "NYCTAXI1R58 NEW YORK NY 03/04",
     "transaction_id": 838
   },
@@ -6707,7 +6707,7 @@ const purchaseData = [
     "amount": 9.8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "NYCTAXI5P63 LONG ISLAND NY 03/05",
     "transaction_id": 839
   },
@@ -6715,7 +6715,7 @@ const purchaseData = [
     "amount": 19.3,
     "categoryBroad": "Travel",
     "categoryDetailed": "Taxi",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "NYCTAXI5P63 LONG ISLAND NY 03/05",
     "transaction_id": 840
   },
@@ -6723,7 +6723,7 @@ const purchaseData = [
     "amount": 45.73,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "ON NOW NEW YORK NY 03/05",
     "transaction_id": 841
   },
@@ -6731,7 +6731,7 @@ const purchaseData = [
     "amount": 390,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Online Transfer from SAV ...1371 transaction#: 6053771886",
     "transaction_id": 842
   },
@@ -6739,7 +6739,7 @@ const purchaseData = [
     "amount": 390,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Online Transfer to CHK ...6254 transaction#: 6053771886 03/06",
     "transaction_id": 843
   },
@@ -6747,7 +6747,7 @@ const purchaseData = [
     "amount": 46.91,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "PELICANA USA SUNNYSIDE NY 03/02",
     "transaction_id": 844
   },
@@ -6755,7 +6755,7 @@ const purchaseData = [
     "amount": 3.76,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Starbucks",
     "transaction_id": 845
   },
@@ -6763,7 +6763,7 @@ const purchaseData = [
     "amount": 6.97,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "Starbucks",
     "transaction_id": 846
   },
@@ -6771,7 +6771,7 @@ const purchaseData = [
     "amount": 44.73,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "TAMASHII ASTORIA NY 03/03",
     "transaction_id": 847
   },
@@ -6779,7 +6779,7 @@ const purchaseData = [
     "amount": 18.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "TREATSA PIZZA CORP NEW YORK NY 03/03",
     "transaction_id": 848
   },
@@ -6787,7 +6787,7 @@ const purchaseData = [
     "amount": 21,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-06",
+    "date": "2017-03-06",
     "name": "TREATSA PIZZA CORP NEW YORK NY 03/03",
     "transaction_id": 849
   },
@@ -6795,7 +6795,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "ATM CASH DEPOSIT 03/02 4610 QUEENS BLVD",
     "transaction_id": 850
   },
@@ -6803,7 +6803,7 @@ const purchaseData = [
     "amount": 15.57,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "FAMILY MARKET ASTORIA NY 03/01",
     "transaction_id": 851
   },
@@ -6811,7 +6811,7 @@ const purchaseData = [
     "amount": 0.09,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "INTEREST PAYMENT",
     "transaction_id": 852
   },
@@ -6819,7 +6819,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 853
   },
@@ -6827,7 +6827,7 @@ const purchaseData = [
     "amount": 6.42,
     "categoryBroad": "Shops",
     "categoryDetailed": "Beauty Products",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "NATURE REPUBLIC NEW YORK NY 03/02",
     "transaction_id": 854
   },
@@ -6835,7 +6835,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "Online Transfer from SAV ...1371 transaction#: 6052614226",
     "transaction_id": 855
   },
@@ -6843,7 +6843,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-03-03",
+    "date": "2017-03-03",
     "name": "Online Transfer to CHK ...6254 transaction#: 6052614226 03/03",
     "transaction_id": 856
   },
@@ -6851,7 +6851,7 @@ const purchaseData = [
     "amount": 148.75,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-03-02",
+    "date": "2017-03-02",
     "name": "BILL PAYMENT WWW.ATT.COM TX 03/01",
     "transaction_id": 857
   },
@@ -6859,7 +6859,7 @@ const purchaseData = [
     "amount": 4.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-03-02",
+    "date": "2017-03-02",
     "name": "Pixonic LLC g.co/payhelp# CA 03/02",
     "transaction_id": 858
   },
@@ -6867,7 +6867,7 @@ const purchaseData = [
     "amount": 4.14,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-03-02",
+    "date": "2017-03-02",
     "name": "SWEET CHURROS, INC. NEW YORK NY 03/02",
     "transaction_id": 859
   },
@@ -6875,7 +6875,7 @@ const purchaseData = [
     "amount": 25.75,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-03-02",
+    "date": "2017-03-02",
     "name": "Seamless",
     "transaction_id": 860
   },
@@ -6883,7 +6883,7 @@ const purchaseData = [
     "amount": 3.76,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-03-01",
+    "date": "2017-03-01",
     "name": "Starbucks",
     "transaction_id": 861
   },
@@ -6891,7 +6891,7 @@ const purchaseData = [
     "amount": 5.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-28",
+    "date": "2017-02-28",
     "name": "GRACE STREET NEW YORK NY 02/27",
     "transaction_id": 862
   },
@@ -6899,7 +6899,7 @@ const purchaseData = [
     "amount": 16.82,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-28",
+    "date": "2017-02-28",
     "name": "TREATSA PIZZA CORP NEW YORK NY 02/27",
     "transaction_id": 863
   },
@@ -6907,7 +6907,7 @@ const purchaseData = [
     "amount": 2240,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "ATM CASH DEPOSIT 02/26 1260 BROADWAY",
     "transaction_id": 864
   },
@@ -6915,7 +6915,7 @@ const purchaseData = [
     "amount": 266,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "ATM CASH DEPOSIT 02/26 1260 BROADWAY",
     "transaction_id": 865
   },
@@ -6923,7 +6923,7 @@ const purchaseData = [
     "amount": 35,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "ATM CASH DEPOSIT 02/26 1260 BROADWAY",
     "transaction_id": 866
   },
@@ -6931,7 +6931,7 @@ const purchaseData = [
     "amount": 420,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "ATM CHECK DEPOSIT 02/26 1260 BROADWAY",
     "transaction_id": 867
   },
@@ -6939,7 +6939,7 @@ const purchaseData = [
     "amount": 34.07,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "BCD TOFU HOUSE NEW YORK NY 02/26",
     "transaction_id": 868
   },
@@ -6947,7 +6947,7 @@ const purchaseData = [
     "amount": 41.4,
     "categoryBroad": "Shops",
     "categoryDetailed": "Convenience Stores",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "CIRCLE NYC INC NEW YORK NY 02/25",
     "transaction_id": 869
   },
@@ -6955,7 +6955,7 @@ const purchaseData = [
     "amount": 1.5,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "FOOD GALLERY 32 NY NY 02/25",
     "transaction_id": 870
   },
@@ -6963,7 +6963,7 @@ const purchaseData = [
     "amount": 9.56,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "GRACE STREET NEW YORK NY 02/25",
     "transaction_id": 871
   },
@@ -6971,7 +6971,7 @@ const purchaseData = [
     "amount": 13,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "GRACE STREET NEW YORK NY 02/25",
     "transaction_id": 872
   },
@@ -6979,7 +6979,7 @@ const purchaseData = [
     "amount": 106,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "KARAOKE WOW NEW YORK NY 02/25",
     "transaction_id": 873
   },
@@ -6987,7 +6987,7 @@ const purchaseData = [
     "amount": 10.33,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "McDonald's",
     "transaction_id": 874
   },
@@ -6995,7 +6995,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "Online Transfer from SAV ...1371 transaction#: 6032940983",
     "transaction_id": 875
   },
@@ -7003,7 +7003,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "Online Transfer to CHK ...6254 transaction#: 6032940983 02/27",
     "transaction_id": 876
   },
@@ -7011,7 +7011,7 @@ const purchaseData = [
     "amount": 12.39,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "Panera Bread",
     "transaction_id": 877
   },
@@ -7019,7 +7019,7 @@ const purchaseData = [
     "amount": 13.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "ROLL & KATSU KITCHE New York NY 02/25",
     "transaction_id": 878
   },
@@ -7027,7 +7027,7 @@ const purchaseData = [
     "amount": 10.89,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "RUBY'S CANDY & GROCERY ASTORIA NY 02/23",
     "transaction_id": 879
   },
@@ -7035,7 +7035,7 @@ const purchaseData = [
     "amount": 9.53,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "SUBWAY 031925 LONG ISLAND C NY 02/26",
     "transaction_id": 880
   },
@@ -7043,7 +7043,7 @@ const purchaseData = [
     "amount": 5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-27",
+    "date": "2017-02-27",
     "name": "WOORI JIP NEW YORK NY 02/25",
     "transaction_id": 881
   },
@@ -7051,7 +7051,7 @@ const purchaseData = [
     "amount": 27.25,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-24",
+    "date": "2017-02-24",
     "name": "GRACE STREET NEW YORK NY 02/23",
     "transaction_id": 882
   },
@@ -7059,7 +7059,7 @@ const purchaseData = [
     "amount": 14.52,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-24",
+    "date": "2017-02-24",
     "name": "Seamless",
     "transaction_id": 883
   },
@@ -7067,7 +7067,7 @@ const purchaseData = [
     "amount": 4.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Digital Purchase",
-    "createdAt": "2017-02-23",
+    "date": "2017-02-23",
     "name": "Altitude Gam g.co/payhelp# CA 02/23",
     "transaction_id": 884
   },
@@ -7075,7 +7075,7 @@ const purchaseData = [
     "amount": 12,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-23",
+    "date": "2017-02-23",
     "name": "CHIPOTLE 2135 NEW YORK NY 02/22",
     "transaction_id": 885
   },
@@ -7083,7 +7083,7 @@ const purchaseData = [
     "amount": 35.01,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-23",
+    "date": "2017-02-23",
     "name": "Seamless",
     "transaction_id": 886
   },
@@ -7091,7 +7091,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-02-22",
+    "date": "2017-02-22",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 887
   },
@@ -7099,7 +7099,7 @@ const purchaseData = [
     "amount": 39.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "BANGIA NEW YORK NY 02/16",
     "transaction_id": 888
   },
@@ -7107,7 +7107,7 @@ const purchaseData = [
     "amount": 19.58,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "DADAM New York NY 02/20",
     "transaction_id": 889
   },
@@ -7115,7 +7115,7 @@ const purchaseData = [
     "amount": 40,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "DONG CHUN HONG NEW YORK NY 02/19",
     "transaction_id": 890
   },
@@ -7123,7 +7123,7 @@ const purchaseData = [
     "amount": 6.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "GRACE STREET NEW YORK NY 02/18",
     "transaction_id": 891
   },
@@ -7131,7 +7131,7 @@ const purchaseData = [
     "amount": 19.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "H MART NEW YORK NY 02/16",
     "transaction_id": 892
   },
@@ -7139,7 +7139,7 @@ const purchaseData = [
     "amount": 16.59,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Lyft",
     "transaction_id": 893
   },
@@ -7147,7 +7147,7 @@ const purchaseData = [
     "amount": 17.63,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Lyft",
     "transaction_id": 894
   },
@@ -7155,7 +7155,7 @@ const purchaseData = [
     "amount": 40.69,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Lyft",
     "transaction_id": 895
   },
@@ -7163,7 +7163,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Online Transfer from SAV ...1371 transaction#: 6019465459",
     "transaction_id": 896
   },
@@ -7171,7 +7171,7 @@ const purchaseData = [
     "amount": 300,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Online Transfer to CHK ...6254 transaction#: 6019465459 02/21",
     "transaction_id": 897
   },
@@ -7179,7 +7179,7 @@ const purchaseData = [
     "amount": 4.57,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "SWEET CHURROS, INC. New York NY 02/20",
     "transaction_id": 898
   },
@@ -7187,7 +7187,7 @@ const purchaseData = [
     "amount": 19.42,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Seamless",
     "transaction_id": 899
   },
@@ -7195,7 +7195,7 @@ const purchaseData = [
     "amount": 23.57,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-21",
+    "date": "2017-02-21",
     "name": "Seamless",
     "transaction_id": 900
   },
@@ -7203,7 +7203,7 @@ const purchaseData = [
     "amount": 9.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-17",
+    "date": "2017-02-17",
     "name": "GREGORYS COFFEE 31 New York NY 02/16",
     "transaction_id": 901
   },
@@ -7211,7 +7211,7 @@ const purchaseData = [
     "amount": 52.11,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-17",
+    "date": "2017-02-17",
     "name": "Lyft",
     "transaction_id": 902
   },
@@ -7219,7 +7219,7 @@ const purchaseData = [
     "amount": 18.33,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-17",
+    "date": "2017-02-17",
     "name": "Seamless",
     "transaction_id": 903
   },
@@ -7227,7 +7227,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-16",
+    "date": "2017-02-16",
     "name": "Lyft",
     "transaction_id": 904
   },
@@ -7235,7 +7235,7 @@ const purchaseData = [
     "amount": 25.34,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-16",
+    "date": "2017-02-16",
     "name": "Lyft",
     "transaction_id": 905
   },
@@ -7243,7 +7243,7 @@ const purchaseData = [
     "amount": 5.57,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-02-16",
+    "date": "2017-02-16",
     "name": "SWEET CHURROS, INC. NEW YORK NY 02/16",
     "transaction_id": 906
   },
@@ -7251,7 +7251,7 @@ const purchaseData = [
     "amount": 15.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-15",
+    "date": "2017-02-15",
     "name": "WOORI JIP NEW YORK NY 02/13",
     "transaction_id": 907
   },
@@ -7259,7 +7259,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "Lyft",
     "transaction_id": 908
   },
@@ -7267,7 +7267,7 @@ const purchaseData = [
     "amount": 32.84,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "Lyft",
     "transaction_id": 909
   },
@@ -7275,7 +7275,7 @@ const purchaseData = [
     "amount": 41.99,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "Lyft",
     "transaction_id": 910
   },
@@ -7283,7 +7283,7 @@ const purchaseData = [
     "amount": 45.48,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "Lyft",
     "transaction_id": 911
   },
@@ -7291,7 +7291,7 @@ const purchaseData = [
     "amount": 3.21,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "PARIS BAGUETTE-NEW YOR NEW YORK NY 02/12",
     "transaction_id": 912
   },
@@ -7299,7 +7299,7 @@ const purchaseData = [
     "amount": 27,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-14",
+    "date": "2017-02-14",
     "name": "PHO 32 NEW YORK NY 02/12",
     "transaction_id": 913
   },
@@ -7307,7 +7307,7 @@ const purchaseData = [
     "amount": 46.26,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "DONG CHUN HONG NEW YORK NY 02/10",
     "transaction_id": 914
   },
@@ -7315,7 +7315,7 @@ const purchaseData = [
     "amount": 12.6,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "GRACE STREET NEW YORK NY 02/11",
     "transaction_id": 915
   },
@@ -7323,7 +7323,7 @@ const purchaseData = [
     "amount": 2.17,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "H MART NEW YORK NY 02/12",
     "transaction_id": 916
   },
@@ -7331,7 +7331,7 @@ const purchaseData = [
     "amount": 120,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "KARAOKE CITY NEW YORK NY 02/11",
     "transaction_id": 917
   },
@@ -7339,7 +7339,7 @@ const purchaseData = [
     "amount": 54.38,
     "categoryBroad": "Shops",
     "categoryDetailed": "Beauty Products",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "LUSH HERALD SQUARE(762) NEW YORK NY 02/11",
     "transaction_id": 918
   },
@@ -7347,7 +7347,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Lyft",
     "transaction_id": 919
   },
@@ -7355,7 +7355,7 @@ const purchaseData = [
     "amount": 18.34,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Lyft",
     "transaction_id": 920
   },
@@ -7363,7 +7363,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Lyft",
     "transaction_id": 921
   },
@@ -7371,7 +7371,7 @@ const purchaseData = [
     "amount": 66.87,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Lyft",
     "transaction_id": 922
   },
@@ -7379,7 +7379,7 @@ const purchaseData = [
     "amount": 135.77,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Lyft",
     "transaction_id": 923
   },
@@ -7387,7 +7387,7 @@ const purchaseData = [
     "amount": 47.06,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "MUI NEW YORK NY 02/10",
     "transaction_id": 924
   },
@@ -7395,7 +7395,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 925
   },
@@ -7403,7 +7403,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Online Transfer from SAV ...1371 transaction#: 6001081178",
     "transaction_id": 926
   },
@@ -7411,7 +7411,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Online Transfer from SAV ...1371 transaction#: 6001748183",
     "transaction_id": 927
   },
@@ -7419,7 +7419,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Online Transfer to CHK ...6254 transaction#: 6001081178 02/13",
     "transaction_id": 928
   },
@@ -7427,7 +7427,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Online Transfer to CHK ...6254 transaction#: 6001748183 02/13",
     "transaction_id": 929
   },
@@ -7435,7 +7435,7 @@ const purchaseData = [
     "amount": 19.88,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "Seamless",
     "transaction_id": 930
   },
@@ -7443,7 +7443,7 @@ const purchaseData = [
     "amount": 11.6,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-13",
+    "date": "2017-02-13",
     "name": "UBER *US FEB11 SLBG CA 02/11",
     "transaction_id": 931
   },
@@ -7451,7 +7451,7 @@ const purchaseData = [
     "amount": 23.89,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-10",
+    "date": "2017-02-10",
     "name": "GRACE STREET NEW YORK NY 02/09",
     "transaction_id": 932
   },
@@ -7459,7 +7459,7 @@ const purchaseData = [
     "amount": 15,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-10",
+    "date": "2017-02-10",
     "name": "Lyft",
     "transaction_id": 933
   },
@@ -7467,7 +7467,7 @@ const purchaseData = [
     "amount": 13.98,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-10",
+    "date": "2017-02-10",
     "name": "Seamless",
     "transaction_id": 934
   },
@@ -7475,7 +7475,7 @@ const purchaseData = [
     "amount": 5.72,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-10",
+    "date": "2017-02-10",
     "name": "TOUS LES JOURS NEW YORK NY 02/09",
     "transaction_id": 935
   },
@@ -7483,7 +7483,7 @@ const purchaseData = [
     "amount": 3.26,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-09",
+    "date": "2017-02-09",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 02/09",
     "transaction_id": 936
   },
@@ -7491,7 +7491,7 @@ const purchaseData = [
     "amount": 19.42,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-09",
+    "date": "2017-02-09",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 02/09",
     "transaction_id": 937
   },
@@ -7499,7 +7499,7 @@ const purchaseData = [
     "amount": 1.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "",
-    "createdAt": "2017-02-08",
+    "date": "2017-02-08",
     "name": "CMSVEND*CV FARMINGDALE AMITYVILLE NY 02/07",
     "transaction_id": 938
   },
@@ -7507,7 +7507,7 @@ const purchaseData = [
     "amount": 16.32,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-08",
+    "date": "2017-02-08",
     "name": "KOBEQUE NEW YORK NY 02/06",
     "transaction_id": 939
   },
@@ -7515,7 +7515,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-08",
+    "date": "2017-02-08",
     "name": "Lyft",
     "transaction_id": 940
   },
@@ -7523,7 +7523,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Travel",
     "categoryDetailed": "Public Transportation Services",
-    "createdAt": "2017-02-07",
+    "date": "2017-02-07",
     "name": "Metropolitan Transportation Authority",
     "transaction_id": 941
   },
@@ -7531,7 +7531,7 @@ const purchaseData = [
     "amount": 18.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "DADAM New York NY 02/04",
     "transaction_id": 942
   },
@@ -7539,7 +7539,7 @@ const purchaseData = [
     "amount": 7.75,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "GRACE STREET NEW YORK NY 02/04",
     "transaction_id": 943
   },
@@ -7547,7 +7547,7 @@ const purchaseData = [
     "amount": 44,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "JONGRO BBQ NEW YORK NY 02/05",
     "transaction_id": 944
   },
@@ -7555,7 +7555,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "Lyft",
     "transaction_id": 945
   },
@@ -7563,7 +7563,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "Online Transfer from SAV ...1371 transaction#: 5985193589",
     "transaction_id": 946
   },
@@ -7571,7 +7571,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "Online Transfer to CHK ...6254 transaction#: 5985193589 02/06",
     "transaction_id": 947
   },
@@ -7579,7 +7579,7 @@ const purchaseData = [
     "amount": 3.76,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "PARIS BAGUETTE-NEW YOR NEW YORK NY 02/02",
     "transaction_id": 948
   },
@@ -7587,7 +7587,7 @@ const purchaseData = [
     "amount": 6.97,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "SWEET CHURROS, INC. New York NY 02/04",
     "transaction_id": 949
   },
@@ -7595,7 +7595,7 @@ const purchaseData = [
     "amount": 31.8,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "Seamless",
     "transaction_id": 950
   },
@@ -7603,7 +7603,7 @@ const purchaseData = [
     "amount": 31.89,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-06",
+    "date": "2017-02-06",
     "name": "TRADE FAIR #7 LONG ISLAND C NY 02/05",
     "transaction_id": 951
   },
@@ -7611,7 +7611,7 @@ const purchaseData = [
     "amount": 18.73,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-03",
+    "date": "2017-02-03",
     "name": "FAMILY MARKET ASTORIA NY 02/01",
     "transaction_id": 952
   },
@@ -7619,7 +7619,7 @@ const purchaseData = [
     "amount": 15.74,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-03",
+    "date": "2017-02-03",
     "name": "GRACE STREET NEW YORK NY 02/02",
     "transaction_id": 953
   },
@@ -7627,7 +7627,7 @@ const purchaseData = [
     "amount": 0.08,
     "categoryBroad": "Interest",
     "categoryDetailed": "Interest Earned",
-    "createdAt": "2017-02-03",
+    "date": "2017-02-03",
     "name": "INTEREST PAYMENT",
     "transaction_id": 954
   },
@@ -7635,7 +7635,7 @@ const purchaseData = [
     "amount": 12.74,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-03",
+    "date": "2017-02-03",
     "name": "Lyft",
     "transaction_id": 955
   },
@@ -7643,7 +7643,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Bank Fees",
     "categoryDetailed": "",
-    "createdAt": "2017-02-03",
+    "date": "2017-02-03",
     "name": "MONTHLY SERVICE FEE",
     "transaction_id": 956
   },
@@ -7651,7 +7651,7 @@ const purchaseData = [
     "amount": 15.87,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-02",
+    "date": "2017-02-02",
     "name": "FAMILY MARKET ASTORIA NY 01/31",
     "transaction_id": 957
   },
@@ -7659,7 +7659,7 @@ const purchaseData = [
     "amount": 13.84,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-02-02",
+    "date": "2017-02-02",
     "name": "Lyft",
     "transaction_id": 958
   },
@@ -7667,7 +7667,7 @@ const purchaseData = [
     "amount": 10.89,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-02",
+    "date": "2017-02-02",
     "name": "STRAND SMOKEHOUSE ASTORIA NY 02/01",
     "transaction_id": 959
   },
@@ -7675,7 +7675,7 @@ const purchaseData = [
     "amount": 4.57,
     "categoryBroad": "Shops",
     "categoryDetailed": "Food and Beverage Store",
-    "createdAt": "2017-02-02",
+    "date": "2017-02-02",
     "name": "SWEET CHURROS, INC. NEW YORK NY 02/02",
     "transaction_id": 960
   },
@@ -7683,7 +7683,7 @@ const purchaseData = [
     "amount": 31.85,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-02",
+    "date": "2017-02-02",
     "name": "Seamless",
     "transaction_id": 961
   },
@@ -7691,7 +7691,7 @@ const purchaseData = [
     "amount": 20,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-02-01",
+    "date": "2017-02-01",
     "name": "85281700721 HKTW 4552 SEOUL 01/31",
     "transaction_id": 962
   },
@@ -7699,7 +7699,7 @@ const purchaseData = [
     "amount": 22.54,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-02-01",
+    "date": "2017-02-01",
     "name": "Seamless",
     "transaction_id": 963
   },
@@ -7707,7 +7707,7 @@ const purchaseData = [
     "amount": 32.96,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-02-01",
+    "date": "2017-02-01",
     "name": "TRADE FAIR #7 LONG ISLAND C NY 01/31",
     "transaction_id": 964
   },
@@ -7715,7 +7715,7 @@ const purchaseData = [
     "amount": 8.47,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-31",
+    "date": "2017-01-31",
     "name": "GRACE STREET NEW YORK NY 01/30",
     "transaction_id": 965
   },
@@ -7723,7 +7723,7 @@ const purchaseData = [
     "amount": 13.91,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-01-31",
+    "date": "2017-01-31",
     "name": "Lyft",
     "transaction_id": 966
   },
@@ -7731,7 +7731,7 @@ const purchaseData = [
     "amount": 31.04,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-01-31",
+    "date": "2017-01-31",
     "name": "Seamless",
     "transaction_id": 967
   },
@@ -7739,7 +7739,7 @@ const purchaseData = [
     "amount": 120,
     "categoryBroad": "Shops",
     "categoryDetailed": "Clothing and Accessories",
-    "createdAt": "2017-01-31",
+    "date": "2017-01-31",
     "name": "TOMI JAZZ NEW YORK NY 01/29",
     "transaction_id": 968
   },
@@ -7747,7 +7747,7 @@ const purchaseData = [
     "amount": 5.1,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-31",
+    "date": "2017-01-31",
     "name": "TOUS LES JOURS NEW YORK NY 01/30",
     "transaction_id": 969
   },
@@ -7755,7 +7755,7 @@ const purchaseData = [
     "amount": 4.99,
     "categoryBroad": "Shops",
     "categoryDetailed": "Convenience Stores",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "7-Eleven",
     "transaction_id": 970
   },
@@ -7763,7 +7763,7 @@ const purchaseData = [
     "amount": 178.75,
     "categoryBroad": "Service",
     "categoryDetailed": "Telecommunication Services",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "BILL PAYMENT WWW.ATT.COM TX 01/28",
     "transaction_id": 971
   },
@@ -7771,7 +7771,7 @@ const purchaseData = [
     "amount": 23,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "BROADWAY STATION ASTORIA NY 01/26",
     "transaction_id": 972
   },
@@ -7779,7 +7779,7 @@ const purchaseData = [
     "amount": 30.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "DONG CHUN HONG NEW YORK NY 01/29",
     "transaction_id": 973
   },
@@ -7787,7 +7787,7 @@ const purchaseData = [
     "amount": 6,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "GREGORYS COFFEE 31 New York NY 01/28",
     "transaction_id": 974
   },
@@ -7795,7 +7795,7 @@ const purchaseData = [
     "amount": 61.33,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Bar",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "KARAOKE WOW NEW YORK NY 01/26",
     "transaction_id": 975
   },
@@ -7803,7 +7803,7 @@ const purchaseData = [
     "amount": 70,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "KONDO RESTAURANT NY 01/30",
     "transaction_id": 976
   },
@@ -7811,7 +7811,7 @@ const purchaseData = [
     "amount": 8,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Lyft",
     "transaction_id": 977
   },
@@ -7819,7 +7819,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Online Transfer from SAV ...1371 transaction#: 5967620689",
     "transaction_id": 978
   },
@@ -7827,7 +7827,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Online Transfer from SAV ...1371 transaction#: 5969127354",
     "transaction_id": 979
   },
@@ -7835,7 +7835,7 @@ const purchaseData = [
     "amount": 200,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Online Transfer to CHK ...6254 transaction#: 5967620689 01/30",
     "transaction_id": 980
   },
@@ -7843,7 +7843,7 @@ const purchaseData = [
     "amount": 500,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Internal Account Transfer",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Online Transfer to CHK ...6254 transaction#: 5969127354 01/30",
     "transaction_id": 981
   },
@@ -7851,7 +7851,7 @@ const purchaseData = [
     "amount": 18.33,
     "categoryBroad": "Service",
     "categoryDetailed": "Food and Beverage",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "Seamless",
     "transaction_id": 982
   },
@@ -7859,7 +7859,7 @@ const purchaseData = [
     "amount": 6.09,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "UA KAUFMAN ASTORIA 14 ASTORIA NY 01/27",
     "transaction_id": 983
   },
@@ -7867,7 +7867,7 @@ const purchaseData = [
     "amount": 39.9,
     "categoryBroad": "Recreation",
     "categoryDetailed": "Arts and Entertainment",
-    "createdAt": "2017-01-30",
+    "date": "2017-01-30",
     "name": "UA KAUFMAN ASTORIA 14 ASTORIA NY 01/27",
     "transaction_id": 984
   },
@@ -7875,7 +7875,7 @@ const purchaseData = [
     "amount": 15.5,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-27",
+    "date": "2017-01-27",
     "name": "GRACE STREET NEW YORK NY 01/26",
     "transaction_id": 985
   },
@@ -7883,7 +7883,7 @@ const purchaseData = [
     "amount": 37.03,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-27",
+    "date": "2017-01-27",
     "name": "THIRD FLOOR CAFE NEW YORK NY 01/27",
     "transaction_id": 986
   },
@@ -7891,7 +7891,7 @@ const purchaseData = [
     "amount": 14.15,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-27",
+    "date": "2017-01-27",
     "name": "TREATSA PIZZA CORP NEW YORK NY 01/26",
     "transaction_id": 987
   },
@@ -7899,7 +7899,7 @@ const purchaseData = [
     "amount": 26.6,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-01-27",
+    "date": "2017-01-27",
     "name": "UBER *US JAN26 HX7U CA 01/27",
     "transaction_id": 988
   },
@@ -7907,7 +7907,7 @@ const purchaseData = [
     "amount": 70,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Third Party",
-    "createdAt": "2017-01-27",
+    "date": "2017-01-27",
     "name": "Venmo",
     "transaction_id": 989
   },
@@ -7915,7 +7915,7 @@ const purchaseData = [
     "amount": 800,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "ATM CASH DEPOSIT 01/26 1260 BROADWAY",
     "transaction_id": 990
   },
@@ -7923,7 +7923,7 @@ const purchaseData = [
     "amount": 700,
     "categoryBroad": "Transfer",
     "categoryDetailed": "Deposit",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "ATM CASH DEPOSIT 01/26 1260 BROADWAY",
     "transaction_id": 991
   },
@@ -7931,7 +7931,7 @@ const purchaseData = [
     "amount": 6.84,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "GRACE STREET NEW YORK NY 01/25",
     "transaction_id": 992
   },
@@ -7939,7 +7939,7 @@ const purchaseData = [
     "amount": 3.26,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 01/26",
     "transaction_id": 993
   },
@@ -7947,7 +7947,7 @@ const purchaseData = [
     "amount": 20.91,
     "categoryBroad": "Shops",
     "categoryDetailed": "Supermarkets and Groceries",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "H MART 38 W. 32ND ST. NEW YORK NY 01/26",
     "transaction_id": 994
   },
@@ -7955,7 +7955,7 @@ const purchaseData = [
     "amount": 7.08,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "PAIN D'AVIGNON AT T New York NY 01/25",
     "transaction_id": 995
   },
@@ -7963,7 +7963,7 @@ const purchaseData = [
     "amount": 8.2,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-26",
+    "date": "2017-01-26",
     "name": "TOUS LES JOURS NEW YORK NY 01/24",
     "transaction_id": 996
   },
@@ -7971,7 +7971,7 @@ const purchaseData = [
     "amount": 55,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-25",
+    "date": "2017-01-25",
     "name": "HER NAME IS HAN NEW YORK NY 01/23",
     "transaction_id": 997
   },
@@ -7979,7 +7979,7 @@ const purchaseData = [
     "amount": 7.2,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-01-25",
+    "date": "2017-01-25",
     "name": "UBER *US JAN25 YPQJ CA 01/25",
     "transaction_id": 998
   },
@@ -7987,7 +7987,7 @@ const purchaseData = [
     "amount": 16.88,
     "categoryBroad": "Travel",
     "categoryDetailed": "Car Service",
-    "createdAt": "2017-01-23",
+    "date": "2017-01-23",
     "name": "Lyft",
     "transaction_id": 999
   },
@@ -7995,7 +7995,7 @@ const purchaseData = [
     "amount": 25.41,
     "categoryBroad": "Food and Drink",
     "categoryDetailed": "Restaurants",
-    "createdAt": "2017-01-23",
+    "date": "2017-01-23",
     "name": "Papa John's",
     "transaction_id": 1000
   }
