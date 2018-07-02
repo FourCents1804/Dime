@@ -1,20 +1,20 @@
-import axios from 'axios';
-import uuidV1 from 'uuid/v1';
-import Firebase from '../../components/Firebase/Firebase';
+import axios from "axios";
+import uuidV1 from "uuid/v1";
+import Firebase from "../../components/Firebase/Firebase";
 
-export const ADD_PURCHASE = 'ADD_PURCHASE';
-const COMMITED_PURCHASE = 'COMMITED_PURCHASE';
+export const ADD_PURCHASE = "ADD_PURCHASE";
+const COMMITED_PURCHASE = "COMMITED_PURCHASE";
 
 export const defaultPurchase = {};
 
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
-const commitedPurchase = () => ({type: COMMITED_PURCHASE})
+const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
 
 export const addNewPurchase = img => async dispatch => {
   try {
-    console.log('hittting image');
+    console.log("This is an image");
     const newPurchase = await axios.post(
-      'http://172.16.22.102:3000/api/receiptRecognition',
+      "http://172.16.22.102:3000/api/receiptRecognition",
       { fileName: img }
     );
     dispatch(addPurchase(newPurchase));
@@ -25,11 +25,11 @@ export const addNewPurchase = img => async dispatch => {
 
 export const commitPurchase = (user, purchaseToCommit) => dispatch => {
   let upid = uuidV1();
-  console.log('Commiting Purchase', user, purchaseToCommit)
+  console.log("Commiting Purchase", user, purchaseToCommit);
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
     .set({ ...purchaseToCommit });
-    dispatch(commitedPurchase())
+  dispatch(commitedPurchase());
 };
 
 export default function(state = defaultPurchase, action) {
@@ -37,7 +37,7 @@ export default function(state = defaultPurchase, action) {
     case ADD_PURCHASE:
       return action.newPurchase;
     case COMMITED_PURCHASE:
-      return defaultPurchase
+      return defaultPurchase;
     default:
       return state;
   }
