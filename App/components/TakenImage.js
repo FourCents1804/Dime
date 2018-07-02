@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { CacheImage } from './index';
-import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
+// import { ScrollView, TouchableOpacity, Image, View } from "react-native";
+import { ScrollView } from 'react-native';
 import { addNewPurchase, commitPurchase } from '../store/Thunks/Purchase';
 
 import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
-    const {uri, base64} = this.props.navigation.state.params
-    const { purchase, user, addNewPurchase, commitPurchase } = this.props;
-    return Object.keys(purchase).length === 0 ? (
+    const { uri, base64, navigate } = this.props.navigation.state.params;
+    // const { purchase, user, addNewPurchase, commitPurchase } = this.props;
+    return (
+      // Object.keys(purchase).length === 0 ? (
       <ScrollView>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{
             alignSelf: 'flex-end',
             alignItems: 'center',
@@ -26,30 +28,30 @@ class TakenImage extends Component {
             style={{ top: 5, height: 80, width: 100 }}
             source={require('../../public/eye.png')}
           />
-        </TouchableOpacity>
-        <CacheImage uri={uri} />
+        </TouchableOpacity> */}
+
+        <CacheImage uri={uri} base64={base64} navigate={navigate} />
       </ScrollView>
-    ) : (
-      <View>
-        <TouchableOpacity
-          style={{
-            alignSelf: 'flex-end',
-            alignItems: 'center',
-            backgroundColor: 'lightblue',
-            width: '100%'
-          }}
-          onPress={() => {
-
-            commitPurchase(user.uid, purchase.data);
-          }}
-        >
-
-          <Image
-            style={{ top: 5, height: 80, width: 100 }}
-            source={require('../../public/eye.png')}
-          />
-        </TouchableOpacity>
-      </View>
+      // ) : (
+      //   <View>
+      //     <TouchableOpacity
+      //       style={{
+      //         alignSelf: "flex-end",
+      //         alignItems: "center",
+      //         backgroundColor: "lightblue",
+      //         width: "100%"
+      //       }}
+      //       onPress={() => {
+      //         console.log("In the Onpress", purchase.data, user.uid);
+      //         commitPurchase(user.uid, purchase.data);
+      //       }}
+      //     >
+      //       <Image
+      //         style={{ top: 5, height: 80, width: 100 }}
+      //         source={require("../../public/eye.png")}
+      //       />
+      //     </TouchableOpacity>
+      // </View>
     );
   }
 }
@@ -61,7 +63,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addNewPurchase: uri => dispatch(addNewPurchase(uri)),
-  commitPurchase: (uuid, purchaseData) => dispatch(commitPurchase( uuid, purchaseData))
+  commitPurchase: (uuid, purchaseData) =>
+    dispatch(commitPurchase(uuid, purchaseData))
 });
 
 export default connect(

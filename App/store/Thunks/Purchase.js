@@ -8,7 +8,7 @@ const COMMITED_PURCHASE = 'COMMITED_PURCHASE';
 export const defaultPurchase = {};
 
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
-const commitedPurchase = () => ({type: COMMITED_PURCHASE})
+const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
 
 export const addNewPurchase = img => async dispatch => {
   try {
@@ -26,11 +26,11 @@ export const addNewPurchase = img => async dispatch => {
 
 export const commitPurchase = (user, purchaseToCommit) => dispatch => {
   let upid = uuidV1();
-  console.log('Commiting Purchase', user, purchaseToCommit)
+  console.log('Commiting Purchase', user, purchaseToCommit);
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
     .set({ ...purchaseToCommit });
-    dispatch(commitedPurchase())
+  dispatch(commitedPurchase());
 };
 
 export default function(state = defaultPurchase, action) {
@@ -38,7 +38,7 @@ export default function(state = defaultPurchase, action) {
     case ADD_PURCHASE:
       return action.newPurchase;
     case COMMITED_PURCHASE:
-      return defaultPurchase
+      return defaultPurchase;
     default:
       return state;
   }
