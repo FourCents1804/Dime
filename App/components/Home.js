@@ -4,14 +4,21 @@ import Pie, { userPurchases } from '../D3/Doughnut';
 import { SpendTable } from './';
 import styles from '../../public';
 import React, { Component } from 'react';
+import {Permissions } from 'expo';
 
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 class Home extends Component {
   state = {
-    user: {}
+    user: {},
+
+
   };
+
+  componentWillMount() {
+      Permissions.askAsync(Permissions.LOCATION)
+  }
 
   render() {
     const chartWidth = 250;

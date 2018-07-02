@@ -6,3 +6,5 @@ export const config = {
   storageBucket: 'dime-d9d45.appspot.com',
   messagingSenderId: '332258031993'
 };
+
+export const mapsKeys = 'AIzaSyAwfoAgPF6Fn14NnFL1pQnZ6qocJghNvB8'

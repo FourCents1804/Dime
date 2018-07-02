@@ -14,7 +14,7 @@ export const addNewPurchase = img => async dispatch => {
   try {
     console.log('hittting image');
     const newPurchase = await axios.post(
-      'http://192.168.1.38:3000/api/receiptRecognition',
+      'http://172.16.22.102:3000/api/receiptRecognition',
       { fileName: img }
     );
     dispatch(addPurchase(newPurchase));
