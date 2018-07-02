@@ -7,8 +7,8 @@ export const REMOVE_USER = 'REMOVE_USER';
 export const defaultUser = {};
 
 export const getUser = user => {
-  console.log('here!!!!')
-  return({ type: GET_USER, user })
+
+  return ({ type: GET_USER, user })
 }
 export const removeUser = () => ({ type: REMOVE_USER });
 
@@ -68,10 +68,6 @@ export const logout = () => dispatch => {
     .catch(err => console.error(err));
 };
 
-
-export const addPicture = (uuid, uri) => dispatch => {
-  Firebase.database.ref(`users/${uuid}`).set({ uri: uri });
-};
 
 export default function(state = defaultUser, action) {
   switch (action.type) {

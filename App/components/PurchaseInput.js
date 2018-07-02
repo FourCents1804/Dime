@@ -98,12 +98,12 @@ class Purchase extends Component {
   };
 
   handleError = () => {
-    console.log('error handle');
+
     let formCheck = [];
     for (let keys in this.state.form) {
       formCheck.push(this.state.form[keys]);
     }
-    console.log(formCheck);
+
     if (formCheck.join('') !== '' && this.state.quick.amount !== '') {
       this.setState({ error: 'Please fill out only one form!' });
     } else {

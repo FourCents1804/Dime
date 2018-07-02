@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import MapView from 'react-native-maps';
 import { Location, Permissions } from 'expo';
 import styles from '../../public';
+import { connect } from 'react-redux';
 
 class PurchaseMap extends Component {
   state = {
@@ -25,11 +26,12 @@ class PurchaseMap extends Component {
       this.setState({
         location
       });
-      console.log(this.state.location);
+
     }
   };
   render() {
-    console.log(this.state);
+    const { purchases } = this.props.navigation.state.params;
+    console.log(purchases)
     const { location } = this.state;
     return (
       <View style={styles.container}>
@@ -41,10 +43,30 @@ class PurchaseMap extends Component {
             latitudeDelta: 0.1,
             longitudeDelta: 0.1
           }}
-        />
+        >
+          {purchases.map(purchase => {
+            console.log(purchase)
+            return (
+              <MapView.Marker
+                coordinate={{
+                  latitude: 70.404034,
+                  longitude: 41.0359036,
+                }}
+                title={purchase.name}
+              />
+            );
+          })}
+        </MapView>
       </View>
     );
   }
 }
 
-export default PurchaseMap;
+const mapStateToProps = state => ({
+  user: state.User
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(PurchaseMap);

@@ -39,10 +39,11 @@ class TakenImage extends Component {
             width: '100%'
           }}
           onPress={() => {
-            console.log('In the Onpress', purchase.data, user.uid)
+
             commitPurchase(user.uid, purchase.data);
           }}
         >
+
           <Image
             style={{ top: 5, height: 80, width: 100 }}
             source={require('../../public/eye.png')}

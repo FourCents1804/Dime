@@ -13,8 +13,9 @@ const commitedPurchase = () => ({type: COMMITED_PURCHASE})
 export const addNewPurchase = img => async dispatch => {
   try {
     console.log('hittting image');
+
     const newPurchase = await axios.post(
-      'http://172.16.22.102:3000/api/receiptRecognition',
+      'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
       { fileName: img }
     );
     dispatch(addPurchase(newPurchase));
