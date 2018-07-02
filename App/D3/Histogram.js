@@ -14,10 +14,8 @@ const Histogram = props => {
 
   const {data} = props
 
-  console.log('DATATA', data)
-
   return (
-    <View>
+    <View flexDirection="column">
       <View style={{ height: height - 2 * margin, width: width - 2 * margin }} flexDirection="row">
         <YAxis
           data={data}
@@ -26,8 +24,9 @@ const Histogram = props => {
             fill: "grey",
             fontSize: 10
           }}
-          numberOfTicks={10}
-          formatLabel={value => value > 999 ? `$${(value/1000).toFixed(1)}k` : `$${value}`}
+          style={{ width: 30 }}
+          numberOfTicks={8}
+          formatLabel={value => value > 999 ? `$${(value/1000).toFixed(0)}k` : `$${value}`}
           yAccessor={({ item }) => item.value}
         />
         <BarChart
@@ -41,16 +40,21 @@ const Histogram = props => {
           <Grid />
         </BarChart>
       </View>
+      <View>
       <XAxis
-      scale={scale.scaleBand}
       data={data}
-      xAccessor={({ item }) => item.key}
-      formatLabel={value => value}
-     svg={{
-     fill: 'grey',
-     fontSize: 10,
-   }}
+      formatLabel={(value, index) => data[index].key}
+      style={{marginLeft: 35, height: 80, marginRight: -15}}
+      contentInset={{ left: 40}}
+      svg={{
+      fill: 'grey',
+      fontSize: 10,
+      rotation: -90,
+      originY: 35,
+
+        }}
       />
+      </View>
     </View>
   );
 };
