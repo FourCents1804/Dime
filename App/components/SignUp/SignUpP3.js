@@ -50,7 +50,7 @@ class SignUpP3 extends React.Component {
                   minimumValue={0}
                   maximumValue={4000}
                   value={this.state[el]}
-                  onValueChange={value => this.setState({ [el]: value })}
+                  onValueChange={value => this.setState({ [el]: Math.floor(value) })}
                   thumbTintColor="#0080ff"
                   minimumTrackTintColor="#99CCFF"
                 />
