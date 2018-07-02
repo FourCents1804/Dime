@@ -1,5 +1,5 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React from "react";
+import { Provider } from "react-redux";
 import {
   Login,
   SignUpP1,
@@ -19,10 +19,10 @@ import {
   SpendHistory,
   FutureProjections,
   PurchaseMap
-} from './components/index';
-import Root from './Root';
-import store from './store';
-import { createStackNavigator } from 'react-navigation';
+} from "./components/index";
+import Root from "./Root";
+import store from "./store";
+import { createStackNavigator } from "react-navigation";
 
 const AppNavigator = createStackNavigator({
   Root: { screen: Root },
@@ -43,12 +43,10 @@ const AppNavigator = createStackNavigator({
   Search: { screen: Search },
   SpendHistory: { screen: SpendHistory },
   FutureProjections: { screen: FutureProjections },
-  PurchaseMap: { screen: PurchaseMap}
+  PurchaseMap: { screen: PurchaseMap }
 });
 
-export default class App extends React.Component
- {
-
+export default class App extends React.Component {
   closeMenu = () => {
     this._drawer.close();
   };
