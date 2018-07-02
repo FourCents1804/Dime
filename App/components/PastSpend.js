@@ -29,7 +29,7 @@ class PastSpend extends React.Component {
 
     const categoryDataByMonth = d3
     .nest()
-    .key(d => formatter(new Date(d.createdAt)))
+    .key(d => formatter(new Date(d.date)))
     .key(d => d.categoryBroad)
     .rollup(d => d3.sum(d, g => g.amount))
     .entries(this.props.purchases)
@@ -41,35 +41,33 @@ class PastSpend extends React.Component {
     .rollup(d => d3.sum(d, g => g.amount))
     .entries(this.props.purchases)
 
-    console.log('total', categoryDataTotal)
-    console.log('month', categoryDataByMonth)
-
     const allData = [...categoryDataTotal, ...categoryDataByMonth]
 
     const months = allData.map(month => ({value: month.key}))
 
-    const currentData = allData.find(month => month.key === this.state.month)
-
-    console.log(currentData)
+    let currentData = allData.find(month => month.key === this.state.month).values.sort((a, b) => b.value - a.value)
 
     return (
-      <ScrollView bounce={false}>
-        <Dropdown
-          label="Select Month"
-          value="Total"
-          data={months}
-          style={sanFranciscoWeights.medium}
-          onChangeText={value => this.setState({month: value})}
-        />
-        <View>
-          <Text style={styles.h1Text}>You spent {formatMoney(currentData.values.reduce((total, cat) => total + cat.value, 0))} in {currentData.key}</Text>
-        </View>
-        <View>
-          {/* <Line data={currentData} /> */}
-          <Histogram data={currentData} height={200} margin={10}/>
-          <SpendHistory  data={currentData} style={styles.spendHistory} />
-        </View>
-      </ScrollView>
+      <View style={styles.container}>
+        <ScrollView bounce={false}>
+          <Text style={styles.thinTitle}>Past Spend by Category</Text>
+          <Dropdown
+            label="Select Month"
+            value="Total"
+            data={months}
+            style={sanFranciscoWeights.medium}
+            onChangeText={value => this.setState({month: value})}
+          />
+          <View>
+            <Text style={styles.h1Text}>You spent {formatMoney(currentData.reduce((total, cat) => total + cat.value, 0))} in {this.state.month}</Text>
+          </View>
+          <View>
+            {/* <Line data={currentData} /> */}
+            <Histogram data={currentData} height={200} margin={10}/>
+            <SpendHistory  data={currentData} style={styles.spendHistory} />
+          </View>
+        </ScrollView>
+      </View>
     );
   }
 }

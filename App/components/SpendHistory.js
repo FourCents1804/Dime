@@ -7,14 +7,20 @@ import * as d3 from "d3";
 import styles from "../../public";
 const purchases = require("../../seed/purchaseData");
 
+const formatMoney = number => {
+  return number
+    .toLocaleString(
+      "en-US",
+      { style: "currency", currency: "USD" }
+    )
+};
 
 const SpendHistory = props => {
-  const categories = props.data.values || []
     return (
       <View>
-        {categories.length ? (
+        {props.data.length ? (
           <View style={{ flex: 1 }}>
-            {categories.map(category => {
+            {props.data.map(category => {
               return (
                 <View key={category.key}>
                   <Card title={category.key}>
@@ -24,7 +30,7 @@ const SpendHistory = props => {
                         styles.spendHistoryCat
                       ]}
                     >
-                      Amount: ${category.value.toFixed(2)}
+                      Amount: {formatMoney(category.value)}
                     </Text>
                   </Card>
                 </View>

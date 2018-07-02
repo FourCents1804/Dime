@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Home, Login, Navigation, Menu, Loading } from "./components";
+import { Home, Login, Navigation, Menu, Loading, PastSpend } from "./components";
 import { connect } from "react-redux";
 import Firebase from "./components/Firebase/Firebase";
 import styles from "../public";
