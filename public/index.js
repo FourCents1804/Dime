@@ -304,10 +304,9 @@ export default (styles = StyleSheet.create({
     textAlign: "center"
   },
   pastSpendContainer: {
+    padding: 20,
     flex: 1,
-    backgroundColor: "#fff7f2",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10
+    backgroundColor: '#fff7f2',
+    width: '100%'
   },
 }));

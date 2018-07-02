@@ -49,9 +49,9 @@ class PastSpend extends React.Component {
     let currentData = allData.find(month => month.key === this.state.month).values.sort((a, b) => b.value - a.value)
 
     return (
-      <View style={styles.container}>
-        <ScrollView bounce={false}>
-          <Text style={styles.thinTitle}>Past Spend by Category</Text>
+      <View style={styles.pastSpendContainer}>
+          <View>
+          <Text style={styles.smallTitle}>Past Spend by Category</Text>
           <Dropdown
             label="Select Month"
             value="Total"
@@ -62,9 +62,11 @@ class PastSpend extends React.Component {
           <View>
             <Text style={styles.h1Text}>You spent {formatMoney(currentData.reduce((total, cat) => total + cat.value, 0))} in {this.state.month}</Text>
           </View>
+          <Histogram data={currentData} height={200} margin={20}/>
+          </View>
+          <ScrollView bounce={false}>
           <View>
             {/* <Line data={currentData} /> */}
-            <Histogram data={currentData} height={200} margin={10}/>
             <SpendHistory  data={currentData} style={styles.spendHistory} />
           </View>
         </ScrollView>

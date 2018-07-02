@@ -37,10 +37,10 @@ const DaySpend = props => {
 const SpendTable = props => {
   const {userPurchases} = props
 
-  const last50Purchases = userPurchases.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 50)
+  const last50Purchases = userPurchases.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 50)
 
   const purchases = last50Purchases.reduce((purchaseObj, curr, index) => {
-    const parsedDate = parser(formatter(new Date(curr.createdAt)))
+    const parsedDate = parser(formatter(new Date(curr.date)))
     const purchase = {name: curr.name, amount: curr.amount}
 
     if (!purchaseObj[parsedDate]) {
