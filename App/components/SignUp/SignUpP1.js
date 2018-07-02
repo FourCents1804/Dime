@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Animated, ImageBackground } from 'react-native';
+import { View, ScrollView, Animated, ImageBackground, KeyboardAvoidingView } from 'react-native';
 import styles from '../../../public';
 import {
   Button,
@@ -72,7 +72,7 @@ export default class SignUpP1 extends React.Component {
             style={styles.backgroundImg}
             resizeMode="cover"
             >
-              <View style={styles.loginContainer}>
+              <KeyboardAvoidingView style={styles.loginContainer}>
                 <View>
                   <FormInput
                     errorMessage
@@ -148,7 +148,7 @@ export default class SignUpP1 extends React.Component {
                   />
                 </View>
                 <FormValidationMessage>{this.state.error}</FormValidationMessage>
-              </View>
+              </KeyboardAvoidingView>
 
             </ImageBackground>
           </Animated.View>

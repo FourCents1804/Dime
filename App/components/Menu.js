@@ -5,14 +5,14 @@ import { connect } from 'react-redux';
 import { logout } from '../store/Thunks/User';
 
 const Menu = props => {
-  const { navigate } = props;
+  const { purchases, navigate } = props
   return (
     <ScrollView style={styles.menu}>
       <View style={styles.menuLabel}>
         <Text style={styles.menuLabelText}>TRANSACTIONS</Text>
       </View>
       <TouchableHighlight
-        onPress={() => navigate('PurchaseMap')}
+        onPress={() => navigate('PurchaseMap', {purchases})}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>PurchaseMap</Text>

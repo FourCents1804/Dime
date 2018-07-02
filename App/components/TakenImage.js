@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { CacheImage } from "./index";
+import React, { Component } from 'react';
+import { CacheImage } from './index';
 // import { ScrollView, TouchableOpacity, Image, View } from "react-native";
-import { ScrollView } from "react-native";
-import { addNewPurchase, commitPurchase } from "../store/Thunks/Purchase";
+import { ScrollView } from 'react-native';
+import { addNewPurchase, commitPurchase } from '../store/Thunks/Purchase';
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
