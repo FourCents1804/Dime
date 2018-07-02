@@ -4,7 +4,6 @@ import { ART, View } from "react-native";
 const { Group, Shape, Text, Surface } = ART;
 import styles from "../../public";
 import DonutCarousel from './DonutCarousel'
-const purchaseData = require("../../seed/purchaseData");
 
 class Pie extends React.Component {
 
@@ -21,16 +20,17 @@ setSection = sectionId => {
 
 render () {
 
+  const {userPurchases} = this.props
+
   const width = 260;
   const height = 260;
   const margin = 30;
-
-  const categoryData = d3
+  const categoryData = userPurchases ? d3
     .nest()
     .key(d => d.categoryBroad)
     .rollup(d => d3.sum(d, g => g.amount))
-    .entries(purchaseData)
-    .sort((a, b) => b.value - a.value)
+    .entries(userPurchases)
+    .sort((a, b) => b.value - a.value) : []
 
   const pieData = d3.pie().value(d => d.value)(categoryData);
 
@@ -104,57 +104,5 @@ render () {
   );
 }
 }
-
-export const userPurchases = [
-  {
-    itemName: "Mountain Dew",
-    category: "Food and Drink",
-    price: 3,
-    transactionId: 1,
-    createdAt: "2017-07-02"
-  },
-  {
-    itemName: "Shoes",
-    category: "Shopping",
-    price: 50,
-    transactionId: 1,
-    createdAt: "2017-07-02"
-  },
-  {
-    itemName: "Kit Kat",
-    category: "Food and Drink",
-    price: 1,
-    transactionId: 1,
-    createdAt: "2017-07-02"
-  },
-  {
-    itemName: "Taxi",
-    category: "Transportation",
-    price: 24,
-    transactionId: 2,
-    createdAt: "2017-07-09"
-  },
-  {
-    itemName: "Watch",
-    category: "Shopping",
-    price: 100,
-    transactionId: 3,
-    createdAt: "2017-07-15"
-  },
-  {
-    itemName: "Headphones",
-    category: "Shopping",
-    price: 15,
-    transactionId: 4,
-    createdAt: "2017-07-20"
-  },
-  {
-    itemName: "Wine",
-    category: "Food and Drink",
-    price: 16,
-    transactionId: 5,
-    createdAt: "2017-07-25"
-  }
-];
 
 export default Pie;

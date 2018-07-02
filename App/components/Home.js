@@ -1,6 +1,6 @@
 import { ScrollView, View, Text } from "react-native";
 import { connect } from "react-redux";
-import Pie, { userPurchases } from "../D3/Doughnut";
+import Pie from "../D3/Doughnut";
 import { SpendTable } from "./";
 import styles from "../../public";
 import React, { Component } from "react";
@@ -22,8 +22,8 @@ class Home extends Component {
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
             <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-            <Pie userPurchases={userPurchases} />
-            <SpendTable />
+            <Pie userPurchases={this.props.purchases || []} />
+            <SpendTable userPurchases={this.props.purchases || []} />
           </ScrollView>
           <ActionButton
             buttonColor="rgba(231,76,60,1)"
@@ -53,7 +53,7 @@ class Home extends Component {
 const mapStateToProps = state => {
   return {
     user: state.User.userInfo,
-    purchases: state.User.purchases,
+    purchases: state.User.purchases || [],
     state: state
   }
 }
