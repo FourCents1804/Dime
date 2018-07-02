@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { CacheImage } from './index';
 import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
-import { addNewPurchase } from '../store/Thunks/Purchase';
+import { addNewPurchase, commitPurchase } from '../store/Thunks/Purchase';
+
 import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
     const {uri, base64} = this.props.navigation.state.params
-    const { purchase } = this.props;
+    const { purchase, user, addNewPurchase, commitPurchase } = this.props;
     return Object.keys(purchase).length === 0 ? (
       <ScrollView>
         <TouchableOpacity
@@ -18,7 +19,7 @@ class TakenImage extends Component {
             width: '100%'
           }}
           onPress={() => {
-            this.props.addNewPurchase(base64);
+            addNewPurchase(base64);
           }}
         >
           <Image
@@ -29,17 +30,37 @@ class TakenImage extends Component {
         <CacheImage uri={uri} />
       </ScrollView>
     ) : (
-      <View>{console.log(purchase)}</View>
+      <View>
+        <TouchableOpacity
+          style={{
+            alignSelf: 'flex-end',
+            alignItems: 'center',
+            backgroundColor: 'lightblue',
+            width: '100%'
+          }}
+          onPress={() => {
+            console.log('In the Onpress', purchase.data, user.uid)
+            commitPurchase(user.uid, purchase.data);
+          }}
+        >
+          <Image
+            style={{ top: 5, height: 80, width: 100 }}
+            source={require('../../public/eye.png')}
+          />
+        </TouchableOpacity>
+      </View>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  purchase: state.Purchase
+  purchase: state.Purchase,
+  user: state.User
 });
 
 const mapDispatchToProps = dispatch => ({
-  addNewPurchase: uri => dispatch(addNewPurchase(uri))
+  addNewPurchase: uri => dispatch(addNewPurchase(uri)),
+  commitPurchase: (uuid, purchaseData) => dispatch(commitPurchase( uuid, purchaseData))
 });
 
 export default connect(

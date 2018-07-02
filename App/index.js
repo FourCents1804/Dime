@@ -1,5 +1,5 @@
-import React from "react";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
 import {
   Login,
   SignUpP1,
@@ -18,11 +18,11 @@ import {
   Search,
   SpendHistory,
   FutureProjections,
-  ReceiptWallet
-} from "./components/index";
-import Root from "./Root";
-import store from "./store";
-import { createStackNavigator } from "react-navigation";
+  PurchaseMap
+} from './components/index';
+import Root from './Root';
+import store from './store';
+import { createStackNavigator } from 'react-navigation';
 
 const AppNavigator = createStackNavigator({
   Root: { screen: Root },
@@ -43,7 +43,7 @@ const AppNavigator = createStackNavigator({
   Search: { screen: Search },
   SpendHistory: { screen: SpendHistory },
   FutureProjections: { screen: FutureProjections },
-  ReceiptWallet: { screen: ReceiptWallet }
+  PurchaseMap: { screen: PurchaseMap}
 });
 
 export default class App extends React.Component
