@@ -61,13 +61,10 @@ class Login extends React.Component {
           resizeMode="cover"
         >
           <Animated.View style={{ opacity: fadeAnim }}>
-            <Image
-              source={{
-                uri:
-                  'https://facebook.github.io/react-native/docs/assets/favicon.png'
-              }}
-              style={styles.logo}
-            />
+          <Image
+          style={{ height: 35, width: 100 }}
+          source={require('../../public/DimeLogo.png')}
+        />
           </Animated.View>
           <Animated.View style={{ opacity: fadeAnim }}>
             <View style={styles.loginContainer}>

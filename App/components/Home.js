@@ -1,12 +1,14 @@
-import { ScrollView, View, Text } from "react-native";
-import { connect } from "react-redux";
-import Pie from "../D3/Doughnut";
-import { SpendTable } from "./";
-import styles from "../../public";
-import React, { Component } from "react";
 
-import ActionButton from "react-native-action-button";
-import Icon from "react-native-vector-icons/Ionicons";
+
+import { ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
+import Pie from '../D3/Doughnut';
+import { SpendTable } from './';
+import styles from '../../public';
+import React, { Component } from 'react';
+import {Permissions } from 'expo';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {getUser} from '../store/Thunks/User'
 import User from './Utility/exampleUser'
 
@@ -15,15 +17,20 @@ class Home extends Component {
     await this.props.getUser(User)
   }
 
+  componentWillMount() {
+      Permissions.askAsync(Permissions.LOCATION)
+  }
+
   render() {
-    const { user, navigate } = this.props;
+    const { user, navigate, purchases } = this.props;
+    console.log(purchases)
     const firstName = user ? `, ${user.firstName}` : ``
       return (
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
             <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
             <Pie userPurchases={this.props.purchases || []} />
-            <SpendTable userPurchases={this.props.purchases || []} />
+            <SpendTable userPurchases={purchases || []} />
           </ScrollView>
           <ActionButton
             buttonColor="rgba(231,76,60,1)"
@@ -32,14 +39,14 @@ class Home extends Component {
             <ActionButton.Item
               buttonColor="#3498db"
               title="Camera"
-              onPress={() => navigate("Webcam")}
+              onPress={() => navigate('Webcam')}
             >
               <Icon name="ios-camera" size={30} />
             </ActionButton.Item>
             <ActionButton.Item
               buttonColor="#3498db"
               title="Keyboard"
-              onPress={() => navigate("Purchase")}
+              onPress={() => navigate('Purchase')}
             >
               <Icon name="ios-keypad" size={30} />
             </ActionButton.Item>
@@ -54,6 +61,7 @@ const mapStateToProps = state => {
   return {
     user: state.User.userInfo,
     purchases: state.User.purchases || [],
+    state: state
   }
 }
 

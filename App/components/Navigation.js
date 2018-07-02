@@ -24,10 +24,13 @@ const Navigation = props => {
         />
       </TouchableOpacity>
     }
-    centerComponent={{
-      text: 'LOGO',
-      style: { fontSize: 25, color: '#fff' }
-    }}
+    centerComponent={
+      <Image
+          style={{ height: 35, width: 100 }}
+          source={require('../../public/DimeLogo.png')}
+        />
+
+    }
   />
     </View>
   )
