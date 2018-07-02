@@ -7,68 +7,30 @@ import * as d3 from "d3";
 import styles from "../../public";
 const purchases = require("../../seed/purchaseData");
 
-const formatter = d3.timeFormat("%b %y");
-const parser = d3.timeParse("%b %y");
+const formatMoney = number => {
+  return number
+    .toLocaleString(
+      "en-US",
+      { style: "currency", currency: "USD" }
+    )
+};
 
-const month = d3
-  .nest()
-  .key(mon => formatter(new Date(mon.createdAt)))
-  .entries(purchases);
-
-const monthArr = month.map(eachMon => {
-  let valueObj = {};
-  if (!valueObj["value"]) {
-    valueObj["value"] = eachMon.key;
-  }
-  return valueObj;
-});
-
-const categoryDataByMonth = d3
-  .nest()
-  .key(d => formatter(new Date(d.createdAt)))
-  .key(d => d.categoryBroad)
-  .rollup(d => d3.sum(d, g => g.amount))
-  .entries(purchases)
-  .sort((a, b) => parser(b.key) - parser(a.key));
-
-class SpendHistory extends Component {
-  state = {
-    dataArr: [],
-    height: 0
-  };
-
-  categoryForSelectedVal = val => {
-    categoryDataByMonth.forEach(mon => {
-      if (mon.key === val) {
-        this.setState({
-          dataArr: mon.values
-        });
-      }
-    });
-  };
-
-  render() {
+const SpendHistory = props => {
     return (
       <View>
-        <Dropdown
-          label="Select Month"
-          data={monthArr}
-          style={sanFranciscoWeights.medium}
-          onChangeText={value => this.categoryForSelectedVal(value)}
-        />
-        {this.state.dataArr.length ? (
+        {props.data.length ? (
           <View style={{ flex: 1 }}>
-            {this.state.dataArr.map(data => {
+            {props.data.map(category => {
               return (
-                <View key={data.key}>
-                  <Card title={data.key}>
+                <View key={category.key}>
+                  <Card title={category.key}>
                     <Text
                       style={[
                         sanFranciscoWeights.regular,
                         styles.spendHistoryCat
                       ]}
                     >
-                      Amount: ${data.value.toFixed(2)}
+                      Amount: {formatMoney(category.value)}
                     </Text>
                   </Card>
                 </View>
@@ -78,7 +40,6 @@ class SpendHistory extends Component {
         ) : null}
       </View>
     );
-  }
 }
 
 export default SpendHistory;
