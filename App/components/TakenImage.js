@@ -62,7 +62,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addNewPurchase: uri => dispatch(addNewPurchase(uri)),
+
   commitPurchase: (uuid, purchaseData) =>
     dispatch(commitPurchase(uuid, purchaseData))
 });
