@@ -14,8 +14,6 @@ const Histogram = props => {
 
   const {data} = props
 
-  console.log('DATATA', data)
-
   return (
     <View flexDirection="column">
       <View style={{ height: height - 2 * margin, width: width - 2 * margin }} flexDirection="row">
