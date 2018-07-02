@@ -6,7 +6,10 @@ export const REMOVE_USER = 'REMOVE_USER';
 
 export const defaultUser = {};
 
-export const getUser = user => ({ type: GET_USER, user });
+export const getUser = user => {
+  console.log('here!!!!')
+  return({ type: GET_USER, user })
+}
 export const removeUser = () => ({ type: REMOVE_USER });
 
 
