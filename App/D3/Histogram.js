@@ -4,6 +4,8 @@ const d3 = require("d3");
 import { View, Dimensions } from "react-native";
 import { YAxis, XAxis, BarChart, Grid } from "react-native-svg-charts";
 import styles from '../../public'
+import * as scale from 'd3-scale'
+
 
 const Histogram = props => {
 
@@ -12,9 +14,11 @@ const Histogram = props => {
 
   const {data} = props
 
+  console.log('DATATA', data)
+
   return (
-    <View style={styles.container}>
-      <View style={{ height: height - margin, width: width - margin }} flexDirection="row">
+    <View>
+      <View style={{ height: height - 2 * margin, width: width - 2 * margin }} flexDirection="row">
         <YAxis
           data={data}
           contentInset={{ top: 20, bottom: 20 }}
@@ -38,14 +42,14 @@ const Histogram = props => {
         </BarChart>
       </View>
       <XAxis
-        data={data}
-        numberOfTicks={3}
-        svg={{
-          fill: "grey",
-          fontSize: 8
-        }}
-        contentInset={{ left: 10, right: 10 }}
-        xAccessor={({ item }) => item.key}
+      scale={scale.scaleBand}
+      data={data}
+      xAccessor={({ item }) => item.key}
+      formatLabel={value => value}
+     svg={{
+     fill: 'grey',
+     fontSize: 10,
+   }}
       />
     </View>
   );
