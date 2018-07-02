@@ -1,30 +1,29 @@
 import { ScrollView, View, Text } from "react-native";
 import { connect } from "react-redux";
-import Pie, { userPurchases } from "../D3/Doughnut";
+import Pie from "../D3/Doughnut";
 import { SpendTable } from "./";
 import styles from "../../public";
 import React, { Component } from "react";
 
 import ActionButton from "react-native-action-button";
 import Icon from "react-native-vector-icons/Ionicons";
+import {getUser} from '../store/Thunks/User'
+import User from './Utility/exampleUser'
 
 class Home extends Component {
-  state = {
-    user: {}
-  };
+  async componentDidMount () {
+    await this.props.getUser(User)
+  }
 
   render() {
-    const chartWidth = 250;
-    const chartHeight = 250;
     const { user, navigate } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``
-    //In
       return (
         <View style={styles.homeContainer}>
           <ScrollView style={{ paddingTop: 10 }}>
             <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-            <Pie userPurchases={userPurchases} />
-            <SpendTable />
+            <Pie userPurchases={this.props.purchases || []} />
+            <SpendTable userPurchases={this.props.purchases || []} />
           </ScrollView>
           <ActionButton
             buttonColor="rgba(231,76,60,1)"
@@ -54,11 +53,16 @@ class Home extends Component {
 const mapStateToProps = state => {
   return {
     user: state.User.userInfo,
-    purchases: state.User.purchases,
+    purchases: state.User.purchases || [],
+    state: state
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  getUser: user => dispatch(getUser(user))
+})
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Home);

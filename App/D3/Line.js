@@ -9,6 +9,8 @@ import {
   LineChart
 } from "react-native-svg-charts";
 
+//Not using redux yet
+
 const Line = props => {
   const width = 250;
   const height = 200;

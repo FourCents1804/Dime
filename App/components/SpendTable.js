@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import styles from '../../public';
-const purchaseData = require('../../seed/purchaseData');
 import * as d3 from 'd3';
 
 const formatMoney = (number) => {
@@ -13,6 +12,7 @@ const parser = d3.timeParse('%B %d, %Y');
 const truncate = (str, length) => {
   return str.slice(0, length);
 };
+
 const DaySpend = props => {
   const { date, purchases } = props;
   return (
@@ -35,8 +35,9 @@ const DaySpend = props => {
 };
 
 const SpendTable = props => {
+  const {userPurchases} = props
 
-  const last50Purchases = purchaseData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 50)
+  const last50Purchases = userPurchases.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 50)
 
   const purchases = last50Purchases.reduce((purchaseObj, curr, index) => {
     const parsedDate = parser(formatter(new Date(curr.createdAt)))
