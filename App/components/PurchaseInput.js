@@ -109,7 +109,6 @@ class Purchase extends Component {
       this.setState({ error: 'Please fill out only one form!' });
     }
     if (formCheck.join('') !== '') this.setState({formType: 'ADVANCED'})
-    if ()
     else {
       this.setState({ error: '' });
     }

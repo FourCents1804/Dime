@@ -46,20 +46,12 @@ const AppNavigator = createStackNavigator({
   PurchaseMap: { screen: PurchaseMap }
 });
 
-export default class App extends React.Component {
-  closeMenu = () => {
-    this._drawer.close();
-  };
-
-  openMenu = () => {
-    this._drawer.open();
-  };
-
-  render() {
-    return (
-      <Provider store={store}>
-        <AppNavigator />
-      </Provider>
-    );
-  }
+const App = () => {
+  return (
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+  );
 }
+
+export default App

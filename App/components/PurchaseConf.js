@@ -1,19 +1,19 @@
 import React from 'react';
-import { FormInput, FormLabel, Button } from 'react-native-elements';
+import { FormInput, FormLabel, Button,FormValidationMessage } from 'react-native-elements';
 import styles from '../../public/index';
-import { View, Text } from 'react-native';
+import { View, Text, KeyboardAvoidingView } from 'react-native';
 
 export default class PurchaseConf extends React.Component {
-  state = {
-    category: '',
-    amount: '',
-    error: ' '
-  };
+    state = {
+      category: this.props.category || '',
+      amount: this.props.amount || 0,
+      error: ' '
+    };
 
   handleError = () => {
     const { amount, category } = this.state;
-    if (amount === '') {
-      this.setState({ error: `Amount is a required field` });
+    if (amount === 0 || typeof amount !== 'number') {
+      this.setState({ error: `Amount is invalid` });
     } else if (category === '') {
       this.setState({ error: `Category is a required field` });
     } else {
@@ -26,17 +26,17 @@ export default class PurchaseConf extends React.Component {
     const { navigate } = this.props.navigation;
     const form = (({ category, amount }) => ({ category, amount }))(this.state);
     if (this.state.error === ' ') {
-      console.log('ADD USER PUT THUNK HERE', form);
+      console.log('ADD PURCHASE SUBMIT THUNK HERE', form);
       navigate('Home');
     }
   };
 
   render() {
-    const { amount, category } = this.props.purchase;
+    const { amount, category } = this.props;
     return (
       <View style={styles.container}>
-        <View style={styles.loginContainer}>
-          <Text style={styles.thinTitle}>Edit Profile</Text>
+        <KeyboardAvoidingView style={styles.loginContainer}>
+          <Text style={styles.thinTitle}>Confirm Purchase</Text>
           <View>
             <FormLabel>Amount</FormLabel>
             <FormInput
@@ -45,7 +45,7 @@ export default class PurchaseConf extends React.Component {
               containerStyle={styles.inputLine}
               value={amount}
               onChangeText={value => {
-                this.setState({ amount: value });
+                this.setState({ amount: Number(value) });
               }}
             />
           </View>
@@ -74,7 +74,8 @@ export default class PurchaseConf extends React.Component {
               style={styles.signUpButton}
             />
           </View>
-        </View>
+          <FormValidationMessage>{this.state.error}</FormValidationMessage>
+        </KeyboardAvoidingView>
       </View>
     );
   }
