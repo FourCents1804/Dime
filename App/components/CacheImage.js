@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import shorthash from 'shorthash';
 import { FileSystem } from 'expo';
+import Firebase from '../components/Firebase/Firebase';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../../public';
@@ -24,7 +25,9 @@ class CacheImage extends Component {
           path: path
         }
       });
-      return;
+      // Firebase.storage.ref().put(image).then(snapshot => {
+      //     console.log(snapshot)
+      //   })
     }
     const newImage = await FileSystem.downloadAsync(uri, path);
     this.setState({
@@ -32,7 +35,10 @@ class CacheImage extends Component {
         uri: newImage.uri,
         path: path
       }
-    });
+    })
+    // Firebase.storage.ref().put(newImage).then(snapshot => {
+    //     console.log(snapshot)
+    //   })
   };
 
   render() {
@@ -52,7 +58,7 @@ class CacheImage extends Component {
             buttonColor="#11EC43"
             title="Analyze Receipt"
             onPress={() => {
-              this.props.addNewPurchase(uri, path);
+              this.props.addNewPurchase(base64);
             }}
           >
             <Icon name="ios-checkmark" size={50} />
@@ -75,7 +81,7 @@ class CacheImage extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addNewPurchase: (uri, path) => dispatch(addNewPurchase(uri, path))
+  addNewPurchase: base64 => dispatch(addNewPurchase(base64))
 });
 
 export default connect(null, mapDispatchToProps)(CacheImage)
