@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import { View, ScrollView, Text } from 'react-native';
-import { connect } from 'react-redux';
-import styles from '../../public';
-import { Location, Permissions } from 'expo';
-import { commitPurchase } from '../store/Thunks/Purchase';
+import React, { Component } from "react";
+import { View, ScrollView, Text } from "react-native";
+import { connect } from "react-redux";
+import styles from "../../public";
+import { Location, Permissions } from "expo";
+import { commitPurchase } from "../store/Thunks/Purchase";
 import {
   Button,
   FormInput,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 class Purchase extends Component {
   state = {
-    formType:'',
-    error: '',
-    location: '',
+    formType: "",
+    error: "",
+    location: "",
     date: Date.now(),
     form: {
-      name: '',
-      amount: '',
-      categoryBroad: '',
-      categoryDetailed: ''
+      name: "",
+      amount: "",
+      categoryBroad: "",
+      categoryDetailed: ""
     },
     quick: {
-      amount: ''
+      amount: ""
     }
   };
 
@@ -33,7 +33,7 @@ class Purchase extends Component {
 
   createQuickInput = () => {
     const categoryNames = {
-      amount: 'Amount'
+      amount: "Amount"
     };
     let quickInputArr = [];
     for (let keys in this.state.quick) {
@@ -58,10 +58,10 @@ class Purchase extends Component {
 
   createFormInput = () => {
     const categoryNames = {
-      name: 'Name',
-      amount: 'Amount',
-      categoryBroad: 'Category',
-      categoryDetailed: 'Subcategory'
+      name: "Name",
+      amount: "Amount",
+      categoryBroad: "Category",
+      categoryDetailed: "Subcategory"
     };
 
     let formInputArr = [];
@@ -71,8 +71,8 @@ class Purchase extends Component {
         <View key={stateFields}>
           <FormInput
             keyboardType={(() => {
-              if (keys === 'amount') return 'numeric';
-              else return 'default';
+              if (keys === "amount") return "numeric";
+              else return "default";
             })()}
             containerStyle={styles.inputLine}
             placeholder={categoryNames[stateFields]}
@@ -90,7 +90,7 @@ class Purchase extends Component {
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
-    if (status === 'granted') {
+    if (status === "granted") {
       let location = await Location.getCurrentPositionAsync({});
       this.setState({
         location
@@ -99,25 +99,24 @@ class Purchase extends Component {
   };
 
   handleError = () => {
-
     let formCheck = [];
     for (let keys in this.state.form) {
       formCheck.push(this.state.form[keys]);
     }
 
-    if (formCheck.join('') !== '' && this.state.quick.amount !== '') {
-      this.setState({ error: 'Please fill out only one form!' });
+    if (formCheck.join("") !== "" && this.state.quick.amount !== "") {
+      this.setState({ error: "Please fill out only one form!" });
     }
-    if (formCheck.join('') !== '') this.setState({formType: 'ADVANCED'})
+    if (formCheck.join("") !== "") this.setState({ formType: "ADVANCED" });
     else {
-      this.setState({ error: '' });
+      this.setState({ error: "" });
     }
   };
 
   handleSubmit = async event => {
     event.preventDefault();
     await this.handleError();
-    if (this.state.error === '') {
+    if (this.state.error === "") {
       this.props.commitPurchase(this.props.user.uid, {
         ...this.state.form,
         date: this.state.date,
