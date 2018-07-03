@@ -123,6 +123,7 @@ class Purchase extends Component {
         date: this.state.date,
         location: this.state.location
       });
+      alert("Expense successfully submitted!");
       navigation.popToTop();
     }
   };
