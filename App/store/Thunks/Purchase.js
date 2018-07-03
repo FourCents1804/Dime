@@ -1,7 +1,6 @@
 import axios from 'axios';
 import uuidV1 from 'uuid/v1';
 import Firebase from '../../components/Firebase/Firebase';
-import {FileSystem} from 'expo'
 
 export const ADD_PURCHASE = 'ADD_PURCHASE';
 const COMMITED_PURCHASE = 'COMMITED_PURCHASE';
@@ -11,17 +10,18 @@ export const defaultPurchase = {};
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
 
-export const addNewPurchase = (uri, path) => async dispatch => {
+export const addNewPurchase = (base64) => async dispatch => {
   try {
-    console.log(uri, path);
-    const newImage = await FileSystem.downloadAsync(uri, path);
-    console.log(newImage)
-    Firebase.storage.ref().put(path).then(snapshot => {
-      console.log(snapshot)
-    })
+    // console.log(uri, path);
+    // const newImage = await FileSystem.downloadAsync(base64);
+    console.log('htting image')
+    // Firebase.storage.ref().put(path).then(snapshot => {
+    //   console.log(snapshot)
+    // })
     const newPurchase = await axios.post(
-      'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
-      { fileName: newImage }
+      // 'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
+      'http://192.168.1.38:3000/api/receiptRecognition',
+      { fileName: base64 }
     );
     dispatch(addPurchase(newPurchase));
   } catch (err) {
