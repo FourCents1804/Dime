@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, View, ScrollView, ImageBackground } from "react-native";
+import {
+  Text,
+  View,
+  ScrollView,
+  ImageBackground,
+  KeyboardAvoidingView
+} from "react-native";
 import { auth } from "../../store";
 import { connect } from "react-redux";
 import styles from "../../../public";
