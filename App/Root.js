@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { View } from 'react-native';
-import { Home, Login, Navigation, Menu, Loading } from './components';
+import { Home, Login, Navigation, Menu, Loading, PurchaseConf } from './components';
 import { connect } from 'react-redux';
 import Firebase from './components/Firebase/Firebase';
 import styles from '../public';
@@ -43,24 +43,25 @@ class Root extends React.Component {
       );
     } else if (this.state.isLoggedIn) {
       return (
-        <Drawer
-          ref={ref => (this._drawer = ref)}
-          type="displace"
-          content={<Menu navigate={navigate} purchases={this.props.purchases} />}
-          tapToClose={true}
-          openDrawerOffset={0.3}
-          panCloseMask={0.2}
-          closedDrawerOffset={-3}
-          styles={drawerStyles}
-          tweenHandler={ratio => ({
-            main: { opacity: (2 - ratio) / 2 }
-          })}
-        >
-          <View style={{ flex: 1 }}>
-            <Navigation navigate={navigate} openMenu={this.openMenu} />
-            <Home navigate={navigate} purchases={this.props.purchases} />
-          </View>
-        </Drawer>
+        // <Drawer
+        //   ref={ref => (this._drawer = ref)}
+        //   type="displace"
+        //   content={<Menu navigate={navigate} purchases={this.props.purchases} />}
+        //   tapToClose={true}
+        //   openDrawerOffset={0.3}
+        //   panCloseMask={0.2}
+        //   closedDrawerOffset={-3}
+        //   styles={drawerStyles}
+        //   tweenHandler={ratio => ({
+        //     main: { opacity: (2 - ratio) / 2 }
+        //   })}
+        // >
+        //   <View style={{ flex: 1 }}>
+        //     <Navigation navigate={navigate} openMenu={this.openMenu} />
+        //     <Home navigate={navigate} purchases={this.props.purchases} />
+        //   </View>
+        // </Drawer>
+        <PurchaseConf navigation={this.props.navigation} amount="200" category="Food"/>
       );
     } else {
       return <Login navigate={navigate} />;
