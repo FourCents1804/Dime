@@ -14,7 +14,7 @@ import Firebase from "./Firebase/Firebase";
 class Home extends Component {
   async componentDidMount() {
     const user = await Firebase.auth.currentUser;
-    await this.props.me(user)
+    await this.props.me(user);
   }
 
   componentWillMount() {
@@ -24,12 +24,15 @@ class Home extends Component {
   render() {
     const { user, navigate, purchases } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``;
-    console.log(purchases);
     return (
       <View style={styles.homeContainer}>
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-          <Pie userPurchases={[this.props.recurringExpenses, ...this.props.purchases] || []} />
+          <Pie
+            userPurchases={
+              [this.props.recurringExpenses, ...this.props.purchases] || []
+            }
+          />
           <SpendTable userPurchases={purchases || []} />
         </ScrollView>
         <ActionButton
