@@ -115,13 +115,16 @@ class Purchase extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
+    const { navigation } = this.props;
     await this.handleError();
     if (this.state.error === "") {
-      this.props.commitPurchase(this.props.user.uid, {
+      const newPurchase = this.props.commitPurchase(this.props.user.uid, {
         ...this.state.form,
         date: this.state.date,
         location: this.state.location
       });
+      alert("Expense successfully submitted!");
+      navigation.popToTop();
     }
   };
 
