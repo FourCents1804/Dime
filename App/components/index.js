@@ -20,4 +20,6 @@ export { default as Search } from './Search';
 export { default as FutureProjections } from './FutureProjections';
 export { default as PurchaseMap } from './PurchaseMap';
 export { default as Loading } from './Loading';
+export { default as PurchaseConf } from './PurchaseConf';
 export {default as Histogram} from '../D3/Histogram'
+
