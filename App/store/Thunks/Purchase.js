@@ -14,13 +14,13 @@ export const addNewPurchase = (base64) => async dispatch => {
   try {
     // console.log(uri, path);
     // const newImage = await FileSystem.downloadAsync(base64);
-    // console.log(newImage)
+    console.log('htting image')
     // Firebase.storage.ref().put(path).then(snapshot => {
     //   console.log(snapshot)
     // })
     const newPurchase = await axios.post(
       // 'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
-      'http://172.16.22.102:3000/api/receiptRecognition',
+      'http://192.168.1.38:3000/api/receiptRecognition',
       { fileName: base64 }
     );
     dispatch(addPurchase(newPurchase));
