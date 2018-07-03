@@ -26,7 +26,7 @@ const DaySpend = props => {
         <View key={purchase + index} style={styles.spendTableRow}>
           <Text style={styles.spendTableText}>{truncate(purchase.name, 30)}</Text>
           <Text style={styles.spendTableAmount}>
-            {formatMoney(purchase.amount)}
+            {formatMoney(Number(purchase.amount))}
           </Text>
         </View>
       ))}
