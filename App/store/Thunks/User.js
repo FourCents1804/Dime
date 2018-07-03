@@ -27,7 +27,9 @@ export const me = user => async dispatch => {
     getUser({
       uid: user.uid,
       purchases: data.purchases,
-      userInfo: data.userData
+      userInfo: data.userData,
+      recurringExpenses: data.recurringExpenses
+
     })
   )
   } catch (err) {
@@ -63,7 +65,8 @@ export const auth = (userData, method) => async dispatch => {
       getUser({
         uid: user.user.uid,
         purchases: data.purchases,
-        userInfo: data.userData
+        userInfo: data.userData,
+        recurringExpenses: data.recurringExpenses
       })
     );
   }

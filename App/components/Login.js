@@ -103,15 +103,11 @@ class Login extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.User
-});
-
 const mapDispatchToProps = dispatch => ({
   auth: (userData, formName) => dispatch(auth(userData, formName))
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);
