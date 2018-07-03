@@ -7,12 +7,16 @@ import React, { Component } from "react";
 import { Permissions } from "expo";
 import ActionButton from "react-native-action-button";
 import Icon from "react-native-vector-icons/Ionicons";
-import { getUser } from "../store/Thunks/User";
+import { me } from "../store/Thunks/User";
 import User from "./Utility/exampleUser";
+import Firebase from "./Firebase/Firebase";
 
 class Home extends Component {
   async componentDidMount() {
-    await this.props.getUser(User);
+    const user = await Firebase.auth.currentUser;
+    console.log("userrrr", user);
+    await this.props.me(user);
+    console.log(this.props);
   }
 
   componentWillMount() {
@@ -62,7 +66,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  getUser: user => dispatch(getUser(user))
+  me: user => dispatch(me(user))
 });
 
 export default connect(
