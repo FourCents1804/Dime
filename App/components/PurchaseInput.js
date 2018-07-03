@@ -99,7 +99,6 @@ class Purchase extends Component {
   };
 
   handleError = () => {
-
     let formCheck = [];
     for (let keys in this.state.form) {
       formCheck.push(this.state.form[keys]);
