@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, ScrollView, Text } from "react-native";
+import { View, ScrollView, Text, KeyboardAvoidingView } from "react-native";
 import { connect } from "react-redux";
 import styles from "../../public";
 import { Location, Permissions } from "expo";
@@ -134,15 +134,22 @@ class Purchase extends Component {
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={styles.scrollContainer}
       >
-        <Text style={styles.thinTitle}>Add an Expense</Text>
-        <Text style={styles.thinTitle}>I'll Do it Later</Text>
+        <KeyboardAvoidingView
+          enabled
+          behavior="position"
+          style={{ paddingTop: 20 }}
+        >
+          <Text style={styles.thinTitle}>Add an Expense</Text>
+          <Text style={styles.thinTitle}>{`I'll Do it Later`}</Text>
 
-        <View style={styles.loginContainer}>{this.createQuickInput()}</View>
-        <Text style={styles.thinTitle}>Or</Text>
+          <View style={styles.loginContainer}>{this.createQuickInput()}</View>
 
-        <View style={styles.loginContainer}>
-          <Text style={styles.thinTitle}>Ill Do It Now</Text>
-          {this.createFormInput()}
+          <Text style={styles.thinTitle}>Or</Text>
+
+          <Text style={styles.thinTitle}>{`I'll Do It Now`}</Text>
+
+          <View style={styles.loginContainer}>{this.createFormInput()}</View>
+
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
           <Button
             onPress={this.handleSubmit}
@@ -151,7 +158,7 @@ class Purchase extends Component {
             backgroundColor="#0080ff"
             style={styles.signUpButton}
           />
-        </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     );
   }

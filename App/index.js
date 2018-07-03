@@ -24,27 +24,30 @@ import Root from "./Root";
 import store from "./store";
 import { createStackNavigator } from "react-navigation";
 
-const AppNavigator = createStackNavigator({
-  Root: { screen: Root },
-  Login: { screen: Login },
-  SignUpP1: { screen: SignUpP1 },
-  Home: { screen: Home },
-  SignUpP2: { screen: SignUpP2 },
-  SignUpP3: { screen: SignUpP3 },
-  Webcam: { screen: Webcam },
-  TakenImage: { screen: TakenImage },
-  User: { screen: User },
-  Purchase: { screen: Purchase },
-  Navigation: { screen: Navigation },
-  Menu: { screen: Menu },
-  PastSpend: { screen: PastSpend },
-  AboutUs: { screen: AboutUs },
-  FAQ: { screen: FAQ },
-  Search: { screen: Search },
-  SpendHistory: { screen: SpendHistory },
-  FutureProjections: { screen: FutureProjections },
-  PurchaseMap: { screen: PurchaseMap }
-});
+const AppNavigator = createStackNavigator(
+  {
+    Root: { screen: Root },
+    Login: { screen: Login },
+    SignUpP1: { screen: SignUpP1 },
+    Home: { screen: Home },
+    SignUpP2: { screen: SignUpP2 },
+    SignUpP3: { screen: SignUpP3 },
+    Webcam: { screen: Webcam },
+    TakenImage: { screen: TakenImage },
+    User: { screen: User },
+    Purchase: { screen: Purchase },
+    Navigation: { screen: Navigation },
+    Menu: { screen: Menu },
+    PastSpend: { screen: PastSpend },
+    AboutUs: { screen: AboutUs },
+    FAQ: { screen: FAQ },
+    Search: { screen: Search },
+    SpendHistory: { screen: SpendHistory },
+    FutureProjections: { screen: FutureProjections },
+    PurchaseMap: { screen: PurchaseMap }
+  },
+  { headerMode: "null" }
+);
 
 const App = () => {
   return (
@@ -52,6 +55,6 @@ const App = () => {
       <AppNavigator />
     </Provider>
   );
-}
+};
 
-export default App
+export default App;
