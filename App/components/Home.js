@@ -14,9 +14,7 @@ import Firebase from './Firebase/Firebase'
 class Home extends Component {
   async componentDidMount() {
     const user = await Firebase.auth.currentUser;
-    console.log('userrrr', user)
     await this.props.me(user)
-    console.log(this.props)
   }
 
   componentWillMount() {

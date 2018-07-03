@@ -13,7 +13,7 @@ class Root extends React.Component {
     isLoggedIn: false,
     loading: true
   };
-  async componentDidMount() {
+  componentDidMount() {
     Firebase.init();
     Firebase.auth.onAuthStateChanged(user => {
       user
