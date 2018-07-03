@@ -1,8 +1,8 @@
-import React from "react";
-import { Text, View, TouchableOpacity, Image } from "react-native";
-import { Camera, Permissions } from "expo";
-import { connect } from "react-redux";
-import { addNewPurchase } from "../store/Thunks/Purchase";
+import React from 'react';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Camera, Permissions } from 'expo';
+import { connect } from 'react-redux';
+import { addNewPurchase } from '../store/Thunks/Purchase';
 
 class Webcam extends React.Component {
   state = {
@@ -11,8 +11,9 @@ class Webcam extends React.Component {
   };
 
   async componentWillMount() {
+    await Permissions.askAsync(Permissions.CAMERA_ROLL)
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === "granted" });
+    this.setState({ hasCameraPermission: status === 'granted' });
   }
 
   async takePicture() {
@@ -21,7 +22,7 @@ class Webcam extends React.Component {
     if (this.camera) {
       let photo = await this.camera.takePictureAsync({ base64: true });
 
-      navigate("TakenImage", {
+      navigate('TakenImage', {
         uri: photo.uri,
         base64: photo.base64,
         navigate: navigate
@@ -46,15 +47,15 @@ class Webcam extends React.Component {
             <View
               style={{
                 flex: 1,
-                backgroundColor: "transparent",
-                justifyContent: "space-evenly",
-                flexDirection: "row"
+                backgroundColor: 'transparent',
+                justifyContent: 'space-evenly',
+                flexDirection: 'row'
               }}
             >
               <TouchableOpacity
                 style={{
-                  alignSelf: "flex-end",
-                  alignItems: "center"
+                  alignSelf: 'flex-end',
+                  alignItems: 'center'
                 }}
                 onPress={() => {
                   this.takePicture();
@@ -62,7 +63,7 @@ class Webcam extends React.Component {
               >
                 <Image
                   style={{ height: 70, width: 70, marginBottom: 25 }}
-                  source={require("../../public/capture.png")}
+                  source={require('../../public/capture.png')}
                 />
               </TouchableOpacity>
             </View>

@@ -12,7 +12,7 @@ import {
 
 class Purchase extends Component {
   state = {
-    formType:'',
+    formType: '',
     error: '',
     location: '',
     date: Date.now(),
@@ -108,8 +108,8 @@ class Purchase extends Component {
     if (formCheck.join('') !== '' && this.state.quick.amount !== '') {
       this.setState({ error: 'Please fill out only one form!' });
     }
-    if (formCheck.join('') !== '') this.setState({formType: 'ADVANCED'})
-    if ()
+    if (formCheck.join('') !== '') {this.setState({formType: 'ADVANCED'})}
+
     else {
       this.setState({ error: '' });
     }

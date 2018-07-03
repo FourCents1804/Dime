@@ -8,16 +8,22 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../../public';
 import { addNewPurchase, commitPurchase } from '../store/Thunks/Purchase';
 import {connect} from 'react-redux'
+import {ImagePicker} from 'expo'
 
 class CacheImage extends Component {
   state = {
     source: {}
+
   };
   componentDidMount = async () => {
     const { uri } = this.props;
     const name = shorthash.unique(uri);
     const path = `${FileSystem.cacheDirectory}${name}`;
+
     const image = await FileSystem.getInfoAsync(uri);
+    console.log(image.uri)
+    this.uploadImage(image.uri, 'send-to-google')
+
     if (image.exists) {
       this.setState({
         source: {
@@ -25,21 +31,27 @@ class CacheImage extends Component {
           path: path
         }
       });
-      // Firebase.storage.ref().put(image).then(snapshot => {
-      //     console.log(snapshot)
-      //   })
+      return
     }
+
     const newImage = await FileSystem.downloadAsync(uri, path);
+    console.log(newImage.uri)
+    this.uploadImage(newImage.uri, 'send-to-google')
     this.setState({
       source: {
         uri: newImage.uri,
         path: path
       }
     })
-    // Firebase.storage.ref().put(newImage).then(snapshot => {
-    //     console.log(snapshot)
-    //   })
   };
+
+  uploadImage = async (uri, imageName) => {
+    const responce = await fetch(uri)
+    const blob = await responce.blob()
+    const ref = Firebase.storage.ref().child('/images' + imageName)
+    return ref.put(blob)
+  }
+
 
   render() {
     const { uri, path } = this.state.source;
