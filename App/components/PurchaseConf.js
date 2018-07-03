@@ -26,14 +26,13 @@ export default class PurchaseConf extends React.Component {
     const { navigate } = this.props.navigation;
     const form = (({ category, amount }) => ({ category, amount }))(this.state);
     if (this.state.error === ' ') {
-      console.log('ADD USER PUT THUNK HERE', form);
+      console.log('ADD PURCHASE SUBMIT THUNK HERE', form);
       navigate('Home');
     }
   };
 
   render() {
     const { amount, category } = this.props;
-    console.log(this.state.amount)
     return (
       <View style={styles.container}>
         <KeyboardAvoidingView style={styles.loginContainer}>

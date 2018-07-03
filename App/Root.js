@@ -43,25 +43,24 @@ class Root extends React.Component {
       );
     } else if (this.state.isLoggedIn) {
       return (
-        // <Drawer
-        //   ref={ref => (this._drawer = ref)}
-        //   type="displace"
-        //   content={<Menu navigate={navigate} purchases={this.props.purchases} />}
-        //   tapToClose={true}
-        //   openDrawerOffset={0.3}
-        //   panCloseMask={0.2}
-        //   closedDrawerOffset={-3}
-        //   styles={drawerStyles}
-        //   tweenHandler={ratio => ({
-        //     main: { opacity: (2 - ratio) / 2 }
-        //   })}
-        // >
-        //   <View style={{ flex: 1 }}>
-        //     <Navigation navigate={navigate} openMenu={this.openMenu} />
-        //     <Home navigate={navigate} purchases={this.props.purchases} />
-        //   </View>
-        // </Drawer>
-        <PurchaseConf navigation={this.props.navigation} amount="200" category="Food"/>
+        <Drawer
+          ref={ref => (this._drawer = ref)}
+          type="displace"
+          content={<Menu navigate={navigate} purchases={this.props.purchases} />}
+          tapToClose={true}
+          openDrawerOffset={0.3}
+          panCloseMask={0.2}
+          closedDrawerOffset={-3}
+          styles={drawerStyles}
+          tweenHandler={ratio => ({
+            main: { opacity: (2 - ratio) / 2 }
+          })}
+        >
+          <View style={{ flex: 1 }}>
+            <Navigation navigate={navigate} openMenu={this.openMenu} />
+            <Home navigate={navigate} purchases={this.props.purchases} />
+          </View>
+        </Drawer>
       );
     } else {
       return <Login navigate={navigate} />;
