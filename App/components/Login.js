@@ -23,6 +23,7 @@ class Login extends React.Component {
     email: '',
     password: '',
     fadeAnim: new Animated.Value(0),
+    error: ' '
   };
 
   componentDidMount() {
@@ -35,19 +36,15 @@ class Login extends React.Component {
     ).start()
   }
 
-  errorValidation = () => {
-    const { user } = this.props;
-    if (user === 'Failed') {
-      return (
-        <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
-      );
-    }
-  }
-
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     const formName = 'login';
-    this.props.auth(this.state, formName);
+    const authError = await this.props.auth(this.state, formName)
+    if (authError) {
+      this.setState({error: authError})
+    } else {
+      this.setState({error: ' '})
+    }
   };
 
   render() {
@@ -61,14 +58,11 @@ class Login extends React.Component {
           resizeMode="cover"
         >
           <Animated.View style={{ opacity: fadeAnim }}>
-          <Image
-          style={{ height: 35, width: 100 }}
-          source={require('../../public/DimeLogo.png')}
-        />
-          </Animated.View>
-          <Animated.View style={{ opacity: fadeAnim }}>
             <View style={styles.loginContainer}>
-              <Divider style={styles.dividerVS} />
+            <Image
+              style={{ height: 35, width: 100, marginVertical: 25 }}
+              source={require('../../public/DimeLogo.png')}
+            />
               <FormInput
                 placeholder="Email"
                 containerStyle={styles.inputLine}
@@ -83,7 +77,9 @@ class Login extends React.Component {
                 secureTextEntry={true}
                 onChangeText={password => this.setState({ password })}
               />
-              {this.errorValidation()}
+              <FormValidationMessage>
+                {this.state.error}
+              </FormValidationMessage>
 
               <Button
                 onPress={this.handleSubmit}
@@ -107,16 +103,11 @@ class Login extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.User
-});
-
 const mapDispatchToProps = dispatch => ({
-  isLoggedIn: () => dispatch(me()),
   auth: (userData, formName) => dispatch(auth(userData, formName))
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);

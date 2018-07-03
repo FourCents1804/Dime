@@ -23,16 +23,18 @@ export const me = user => async dispatch => {
     return snapshot.val()
   })
 
-    dispatch(
-      getUser({
-        uid: user.uid,
-        purchases: data.purchases,
-        userInfo: data.userData
-      })
-    )
-    } catch (err) {
-      console.error(err)
-    }
+  dispatch(
+    getUser({
+      uid: user.uid,
+      purchases: data.purchases,
+      userInfo: data.userData,
+      recurringExpenses: data.recurringExpenses
+
+    })
+  )
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 export const auth = (userData, method) => async dispatch => {
@@ -63,12 +65,13 @@ export const auth = (userData, method) => async dispatch => {
       getUser({
         uid: user.user.uid,
         purchases: data.purchases,
-        userInfo: data.userData
+        userInfo: data.userData,
+        recurringExpenses: data.recurringExpenses
       })
     );
   }
   } catch (err) {
-    console.error(err)
+    return 'Invalid Username or Password'
   }
 };
 

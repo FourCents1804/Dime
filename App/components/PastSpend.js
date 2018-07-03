@@ -46,7 +46,6 @@ class PastSpend extends React.Component {
     let currentData = allData
       .find(month => month.key === this.state.month)
       .values.sort((a, b) => b.value - a.value);
-
     return (
       <View style={styles.pastSpendContainer}>
         <View>
