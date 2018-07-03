@@ -13,7 +13,7 @@ class Root extends React.Component {
     isLoggedIn: false,
     loading: true
   };
-  async componentDidMount() {
+  componentDidMount() {
     Firebase.init();
     Firebase.auth.onAuthStateChanged(user => {
       user
@@ -47,7 +47,10 @@ class Root extends React.Component {
         <Drawer
           ref={ref => (this._drawer = ref)}
           type="displace"
-          content={<Menu navigate={navigate} purchases={this.props.purchases} />}
+          content={<Menu navigate={navigate}
+          purchases={this.props.purchases}
+          recurringExpenses={this.props.recurringExpenses}
+          hi="hi" />}
           tapToClose={true}
           openDrawerOffset={0.3}
           panCloseMask={0.2}
@@ -59,7 +62,11 @@ class Root extends React.Component {
         >
           <View style={{ flex: 1 }}>
             <Navigation navigate={navigate} openMenu={this.openMenu} />
-            <Home navigate={navigate} purchases={this.props.purchases} />
+            <Home
+              navigate={navigate}
+              purchases={this.props.purchases}
+              user={this.props.user}
+              recurringExpenses={this.props.recurringExpenses} />
           </View>
         </Drawer>
       );
@@ -69,16 +76,24 @@ class Root extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.User,
-  purchases: (() => {
-    let purchaseArr = []
-    for (let keys in state.User.purchases) {
-      purchaseArr.push(state.User.purchases[keys])
-    }
-    return purchaseArr
-  })()
-});
+const mapStateToProps = state => {
+
+  const purchases = state.User.purchases ? Object.keys(state.User.purchases).map(purchase => state.User.purchases[purchase]) : []
+
+  const recurringExpenses = {
+    amount: state.User.recurringExpenses ? Object.keys(state.User.recurringExpenses).reduce((total, key) => total + state.User.recurringExpenses[key], 0) : 0,
+    categoryBroad: 'Utilities',
+    categoryDetailed: 'Utilities',
+    date: Date.now(),
+    name: 'Recurring Expenses'
+  }
+
+  return ({
+    user: state.User.userInfo,
+    purchases: purchases,
+    recurringExpenses: recurringExpenses,
+  })
+}
 
 export default connect(
   mapStateToProps,

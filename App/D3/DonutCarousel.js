@@ -20,8 +20,6 @@ const DonutCarousel = props => {
   return (
     <View style={styles.donutCarouselView}>
       <Swiper
-        loadMinimal
-        loadMinimalSize={1}
         style={styles.donutCarouselWrapper}
         loop={false}
         onIndexChanged={index => setSection(index - 1)}

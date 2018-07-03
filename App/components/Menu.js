@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 import { logout } from "../store/Thunks/User";
 
 const Menu = props => {
-  const { purchases, navigate } = props;
+  const { purchases, recurringExpenses, navigate } = props;
+  const purchasesWithExpenses = [recurringExpenses, ...purchases]
   return (
     <ScrollView style={styles.menu}>
       <View style={styles.menuLabel}>
@@ -28,7 +29,7 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>ANALYSIS AND INSIGHTS</Text>
       </View>
       <TouchableHighlight
-        onPress={() => navigate("PastSpend", { purchases })}
+        onPress={() => navigate("PastSpend", { purchases: purchasesWithExpenses })}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Past Expense Analysis</Text>
