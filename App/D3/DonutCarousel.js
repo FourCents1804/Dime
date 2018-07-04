@@ -15,7 +15,6 @@ const formatMoney = number => {
 
 const DonutCarousel = props => {
   const { categories, setSection } = props;
-  console.log(categories);
 
   return (
     <View style={styles.donutCarouselView}>
