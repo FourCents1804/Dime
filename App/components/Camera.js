@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import {  ImagePicker, Camera, Permissions } from 'expo';
 import { connect } from 'react-redux';
 import { addNewPurchase } from '../store/Thunks/Purchase';
 
@@ -20,7 +20,7 @@ class Webcam extends React.Component {
     const { navigate } = this.props.navigation;
     const { user } = this.props;
     if (this.camera) {
-      let photo = await this.camera.takePictureAsync({ base64: true });
+      let photo = await ImagePicker.launchCameraAsync({ allowsEditing: true });
 
       navigate('TakenImage', {
         uri: photo.uri,
@@ -38,37 +38,40 @@ class Webcam extends React.Component {
       return <Text>No access to camera</Text>;
     } else {
       return (
-        <View style={{ flex: 1 }}>
-          <Camera
-            ref={ref => (this.camera = ref)}
-            style={{ flex: 1 }}
-            type={this.state.type}
-          >
-            <View
-              style={{
-                flex: 1,
-                backgroundColor: 'transparent',
-                justifyContent: 'space-evenly',
-                flexDirection: 'row'
-              }}
-            >
-              <TouchableOpacity
-                style={{
-                  alignSelf: 'flex-end',
-                  alignItems: 'center'
-                }}
-                onPress={() => {
-                  this.takePicture();
-                }}
-              >
-                <Image
-                  style={{ height: 70, width: 70, marginBottom: 25 }}
-                  source={require('../../public/capture.png')}
-                />
-              </TouchableOpacity>
-            </View>
-          </Camera>
-        </View>
+
+          ImagePicker.launchCameraAsync({ allowsEditing: true })
+
+        // <View style={{ flex: 1 }}>
+        //   <Camera
+        //     ref={ref => (this.camera = ref)}
+        //     style={{ flex: 1 }}
+        //     type={this.state.type}
+        //   >
+        //     <View
+        //       style={{
+        //         flex: 1,
+        //         backgroundColor: 'transparent',
+        //         justifyContent: 'space-evenly',
+        //         flexDirection: 'row'
+        //       }}
+        //     >
+        //       <TouchableOpacity
+        //         style={{
+        //           alignSelf: 'flex-end',
+        //           alignItems: 'center'
+        //         }}
+        //         onPress={() => {
+        //           this.takePicture();
+        //         }}
+        //       >
+        //         <Image
+        //           style={{ height: 70, width: 70, marginBottom: 25 }}
+        //           source={require('../../public/capture.png')}
+        //         />
+        //       </TouchableOpacity>
+        //     </View>
+        //   </Camera>
+        // </View>
       );
     }
   }

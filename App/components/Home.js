@@ -4,7 +4,7 @@ import Pie from '../D3/Doughnut';
 import { SpendTable } from './';
 import styles from '../../public';
 import React, { Component } from 'react';
-import { Permissions } from 'expo';
+import { Permissions, ImagePicker } from 'expo';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { getUser } from '../store/Thunks/User';
@@ -36,7 +36,11 @@ class Home extends Component {
           <ActionButton.Item
             buttonColor="#3498db"
             title="Camera"
-            onPress={() => navigate('Webcam')}
+            onPress={async () => {
+              const image = await ImagePicker.launchCameraAsync({ allowsEditing: true });
+              console.log(image)
+              navigate('TakenImage', {uri: image.uri});
+            }}
           >
             <Icon name="ios-camera" size={30} />
           </ActionButton.Item>
@@ -56,9 +60,9 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.User.userInfo,
-  }
-}
+    user: state.User.userInfo
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   getUser: user => dispatch(getUser(user))

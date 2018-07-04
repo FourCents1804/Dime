@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, ImageBackground } from 'react-native';
+import { View, ScrollView, ImageBackground, KeyboardAvoidingView } from 'react-native';
 import styles from '../../../public';
 import {
   Button,
@@ -36,7 +36,7 @@ export default class SignUpP2 extends React.Component {
           style={styles.backgroundImg}
           resizeMode="cover"
           >
-            <View style={styles.loginContainer}>
+            <KeyboardAvoidingView style={styles.loginContainer}>
             <View>
             <Dropdown
               label="Occupation"
@@ -97,7 +97,7 @@ export default class SignUpP2 extends React.Component {
                 style={styles.signUpButton}
               />
               </View>
-            </View>
+            </KeyboardAvoidingView>
           </ImageBackground>
         </ScrollView>
       );

@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
 import { CacheImage, PurchaseConf } from './index';
-// import { ScrollView, TouchableOpacity, Image, View } from "react-native";
-import { ScrollView } from 'react-native';
+import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
+
 import { commitPurchase } from '../store/Thunks/Purchase';
 
 import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
-    const { uri, base64, navigate } = this.props.navigation.state.params;
+    const {  navigate } = this.props.navigation
+    const {uri } = this.props.navigation.state.params
     const { purchase, user, commitPurchase } = this.props;
     return Object.keys(purchase).length === 0 ? (
       <ScrollView>
-        {/* <TouchableOpacity
-          style={{
-            alignSelf: 'flex-end',
-            alignItems: 'center',
-            backgroundColor: 'lightblue',
-            width: '100%'
-          }}
-          onPress={() => {
-            addNewPurchase(base64);
-          }}
-        >
-          <Image
-            style={{ top: 5, height: 80, width: 100 }}
-            source={require('../../public/eye.png')}
-          />
-        </TouchableOpacity> */}
-
-        <CacheImage uri={uri} base64={base64} navigate={navigate} />
+        <CacheImage uri={uri}  navigate={navigate} />
       </ScrollView>
     ) : (
       <View>
