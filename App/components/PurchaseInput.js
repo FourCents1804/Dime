@@ -134,22 +134,13 @@ class Purchase extends Component {
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={styles.scrollContainer}
       >
-        <KeyboardAvoidingView
-          enabled
-          behavior="position"
-          style={{ paddingTop: 20 }}
-        >
+        <KeyboardAvoidingView enabled behavior="position">
           <Text style={styles.thinTitle}>Add an Expense</Text>
           <Text style={styles.thinTitle}>{`I'll Do it Later`}</Text>
-
           <View style={styles.loginContainer}>{this.createQuickInput()}</View>
-
           <Text style={styles.thinTitle}>Or</Text>
-
           <Text style={styles.thinTitle}>{`I'll Do It Now`}</Text>
-
           <View style={styles.loginContainer}>{this.createFormInput()}</View>
-
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
           <Button
             onPress={this.handleSubmit}
