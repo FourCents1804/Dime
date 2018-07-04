@@ -39,7 +39,7 @@ class Pie extends React.Component {
       value: categoryData.reduce((acc, curr) => acc + curr.value, 0)
     };
 
-    const top5 = [total, ...categoryData.slice()];
+    const top5 = [total, ...categoryData.slice(0, 5)];
 
     const piePath = d3
       .arc()
