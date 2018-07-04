@@ -18,9 +18,9 @@ const renderPurchase = (purchase) => {
     <View>
       <Text style={styles.regSmallTitle}>{name}</Text>
       <Text style={styles.regText}>Transaction Amount: {formatMoney(amount)}</Text>
-      <Text style={styles.regText}>Category: {categoryBroad}</Text>
-      <Text style={styles.regText}>Subcategory: {categoryDetailed}</Text>
-      <Text style={styles.regText}>Date: {date}</Text>
+      <Text style={styles.regText}>Category: {categoryBroad ? categoryBroad : 'N/A'}</Text>
+      <Text style={styles.regText}>Subcategory: {categoryDetailed ? categoryDetailed : 'N/A'}</Text>
+      <Text style={styles.regText}>Date: {`${new Date(date)}`}</Text>
     </View>
   );
 }
