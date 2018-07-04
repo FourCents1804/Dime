@@ -40,7 +40,7 @@ const gotPurchases = purchases => ({type: GET_PURCHASES, purchases})
 const gotExpenses = expenses => ({type: GET_EXPENSES, expenses})
 const removedUser = () => ({ type: REMOVE_USER })
 const addedPurchase = purchase => ({ type: ADD_PURCHASE, purchase})
-const commitedPurchase = () => ({ type: COMMIT_PURCHASE })
+const commitedPurchase = purchase => ({ type: COMMIT_PURCHASE, purchase })
 
 //Thunks for initial data fetch (all fields)
 export const me = user => async dispatch => {
@@ -128,11 +128,10 @@ export const addNewPurchase = (base64) => async dispatch => {
 
 export const commitPurchase = (user, purchase) => dispatch => {
   let upid = uuidV1();
-  console.log('Commiting Purchase', user, purchase);
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
     .set({ ...purchase });
-  dispatch(commitedPurchase());
+  dispatch(commitedPurchase(purchase));
 };
 
 export default function(state = defaultState, action) {

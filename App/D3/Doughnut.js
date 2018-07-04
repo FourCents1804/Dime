@@ -18,17 +18,17 @@ class Pie extends React.Component {
   };
 
   render() {
-    const { userPurchases } = this.props;
+    const { purchases } = this.props;
 
     const width = 260;
     const height = 260;
     const margin = 30;
-    const categoryData = userPurchases
+    const categoryData = purchases
       ? d3
           .nest()
           .key(d => d.categoryBroad)
           .rollup(d => d3.sum(d, g => g.amount))
-          .entries(userPurchases)
+          .entries(purchases)
           .sort((a, b) => b.value - a.value)
       : [];
 

@@ -19,7 +19,7 @@ const Menu = props => {
         <Text style={styles.menuLinkText}>Purchase Map</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => navigate("Search")}
+        onPress={() => navigate("Search", { purchases: purchases})}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Find Transactions</Text>

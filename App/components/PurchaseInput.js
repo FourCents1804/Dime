@@ -118,7 +118,7 @@ class Purchase extends Component {
     const { navigation } = this.props;
     await this.handleError();
     if (this.state.error === "") {
-      const newPurchase = this.props.commitPurchase(this.props.user.uid, {
+      const newPurchase = await this.props.commitPurchase(this.props.user.uid, {
         ...this.state.form,
         date: this.state.date,
         location: this.state.location
@@ -171,7 +171,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => ({
-  user: state.User
+  user: state.user
 });
 
 export default connect(
