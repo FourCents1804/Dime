@@ -15,12 +15,15 @@ class Root extends React.Component {
   };
   componentDidMount() {
     Firebase.init();
-    Firebase.auth.onAuthStateChanged(user => {
+    this.unsubscribe = Firebase.auth.onAuthStateChanged(user => {
       user
         ? this.setState({ isLoggedIn: true, loading: false })
         : this.setState({ isLoggedIn: false, loading: false });
     });
+  }
 
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   closeMenu = () => {

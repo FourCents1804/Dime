@@ -27,6 +27,7 @@ class Login extends React.Component {
   };
 
   componentDidMount() {
+    this.isMounted = true
     Animated.timing(
       this.state.fadeAnim,
       {
@@ -36,11 +37,15 @@ class Login extends React.Component {
     ).start()
   }
 
+  componentWillUnmount () {
+    this.isMounted = false
+  }
+
   handleSubmit = async event => {
     event.preventDefault();
     const formName = 'login';
     const authError = await this.props.auth(this.state, formName)
-    if (authError) {
+    if (authError && this.isMounted) {
       this.setState({error: authError})
     } else {
       this.setState({error: ' '})
