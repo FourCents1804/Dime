@@ -7,7 +7,7 @@ import {
   ImageBackground,
   Image
 } from 'react-native';
-import { auth } from '../store/Thunks/User';
+import { auth } from '../store';
 import styles from '../../public';
 import { connect } from 'react-redux';
 import { me } from '../store';

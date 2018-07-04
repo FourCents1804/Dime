@@ -5,7 +5,7 @@ import Firebase from '../../components/Firebase/Firebase'
 //Initial State
 const defaultPurchases = []
 const defaultUser = {}
-const defaultExpenses = []
+const defaultExpenses = {}
 const purchaseToCommit = {}
 
 const defaultState = {
@@ -23,6 +23,17 @@ const ADD_PURCHASE = 'ADD_PURCHASE'
 const COMMIT_PURCHASE = 'COMMIT_PURCHASE'
 const GET_EXPENSES = 'GET_EXPENSES'
 
+//Utility
+const formatPurchases = purchases => Object.keys(purchases).map(purchase => purchases[purchase])
+
+const formatExpenses = expenses => ({
+  amount: expenses ? Object.keys(expenses).reduce((total, key) => total + expenses[key], 0) : 0,
+  categoryBroad: 'Utilities',
+  categoryDetailed: 'Utilities',
+  date: Date.now(),
+  name: 'Recurring Expenses'
+})
+
 //Action Creators
 const gotUser = user => ({ type: GET_USER, user })
 const gotPurchases = purchases => ({type: GET_PURCHASES, purchases})
@@ -34,20 +45,20 @@ const commitedPurchase = () => ({ type: COMMIT_PURCHASE })
 //Thunks for initial data fetch (all fields)
 export const me = user => async dispatch => {
   try {
-  const data = await Firebase.database
-  .ref(`users/${user.uid}`)
-  .once('value').then((snapshot) => {
-    return snapshot.val()
-  })
-
-  dispatch(
-    gotUser({
-      uid: user.uid,
-      userInfo: data.userData,
+    const data = await Firebase.database
+    .ref(`users/${user.uid}`)
+    .once('value').then((snapshot) => {
+      return snapshot.val()
     })
-  )
-  dispatch(gotPurchases(data.purchases))
-  dispatch(gotExpenses(data.recurringExpenses))
+
+    dispatch(
+      gotUser({
+        uid: user.uid,
+        userInfo: data.userData,
+      })
+    )
+    dispatch(gotPurchases(formatPurchases(data.purchases)))
+    dispatch(gotExpenses(formatExpenses(data.recurringExpenses)))
   } catch (err) {
     console.error(err)
   }
@@ -83,8 +94,8 @@ export const auth = (userData, method) => async dispatch => {
         userInfo: data.userData,
       })
     )
-    dispatch(gotPurchases(data.purchases))
-    dispatch(gotExpenses(data.recurringExpenses))
+    dispatch(gotPurchases(formatPurchases(data.purchases)))
+    dispatch(gotExpenses(formatExpenses(data.recurringExpenses)))
   }
   } catch (err) {
     return 'Invalid Username or Password'
@@ -101,7 +112,6 @@ export const addNewPurchase = (base64) => async dispatch => {
   try {
     // console.log(uri, path);
     // const newImage = await FileSystem.downloadAsync(base64);
-    console.log('htting image')
     // Firebase.storage.ref().put(path).then(snapshot => {
     //   console.log(snapshot)
     // })

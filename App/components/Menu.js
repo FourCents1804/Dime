@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView, View, Text, TouchableHighlight } from "react-native";
 import styles from "../../public";
 import { connect } from "react-redux";
-import { logout } from "../store/Thunks/User";
+import { logout } from "../store";
 
 const Menu = props => {
   const { purchases, recurringExpenses, navigate } = props;

@@ -14,7 +14,7 @@ const formatMoney = number => {
   );
 };
 
-class PastSpend extends React.Component {
+export default class PastSpend extends React.Component {
   state = {
     month: "Total"
   };
@@ -79,11 +79,3 @@ class PastSpend extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    user: state.User.userInfo,
-    purchases: state.User.purchases || []
-  };
-};
-
-export default connect(mapStateToProps)(PastSpend);

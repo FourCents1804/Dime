@@ -2,6 +2,7 @@ import React from 'react';
 import { FormInput, FormLabel, Button,FormValidationMessage } from 'react-native-elements';
 import styles from '../../public/index';
 import { View, Text, KeyboardAvoidingView } from 'react-native';
+import { commitPurchase } from "../store";
 
 export default class PurchaseConf extends React.Component {
     state = {
