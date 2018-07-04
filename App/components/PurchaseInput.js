@@ -116,13 +116,16 @@ class Purchase extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
+    const { navigation } = this.props;
     await this.handleError();
     if (this.state.error === '') {
-      this.props.commitPurchase(this.props.user.uid, {
+      const newPurchase = this.props.commitPurchase(this.props.user.uid, {
         ...this.state.form,
         date: this.state.date,
         location: this.state.location
       });
+      alert('Expense successfully submitted!');
+      navigation.popToTop();
     }
   };
 
@@ -132,15 +135,22 @@ class Purchase extends Component {
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={styles.scrollContainer}
       >
-        <Text style={styles.thinTitle}>Add an Expense</Text>
-        <Text style={styles.thinTitle}>I'll Do it Later</Text>
+        <KeyboardAvoidingView
+          enabled
+          behavior="position"
+          style={{ paddingTop: 20 }}
+        >
+          <Text style={styles.thinTitle}>Add an Expense</Text>
+          <Text style={styles.thinTitle}>I'll Do it Later</Text>
 
-        <View style={styles.loginContainer}>{this.createQuickInput()}</View>
-        <Text style={styles.thinTitle}>Or</Text>
+          <View style={styles.loginContainer}>{this.createQuickInput()}</View>
 
-        <View style={styles.loginContainer}>
-          <Text style={styles.thinTitle}>Ill Do It Now</Text>
-          {this.createFormInput()}
+          <Text style={styles.thinTitle}>Or</Text>
+
+          <Text style={styles.thinTitle}>I'll Do It Now</Text>
+
+          <View style={styles.loginContainer}>{this.createFormInput()}</View>
+
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
           <Button
             onPress={this.handleSubmit}
@@ -149,7 +159,7 @@ class Purchase extends Component {
             backgroundColor="#0080ff"
             style={styles.signUpButton}
           />
-        </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     );
   }

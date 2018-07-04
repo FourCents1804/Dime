@@ -4,15 +4,17 @@ import Pie from '../D3/Doughnut';
 import { SpendTable } from './';
 import styles from '../../public';
 import React, { Component } from 'react';
-import { Permissions, ImagePicker } from 'expo';
+import { Permissions } from 'expo';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { getUser } from '../store/Thunks/User';
+import { me } from '../store/Thunks/User';
 import User from './Utility/exampleUser';
+import Firebase from './Firebase/Firebase';
 
 class Home extends Component {
   async componentDidMount() {
-    await this.props.getUser(User);
+    const user = await Firebase.auth.currentUser;
+    await this.props.me(user);
   }
 
   componentWillMount() {
@@ -26,7 +28,11 @@ class Home extends Component {
       <View style={styles.homeContainer}>
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-          <Pie userPurchases={this.props.purchases || []} />
+          <Pie
+            userPurchases={
+              [this.props.recurringExpenses, ...this.props.purchases] || []
+            }
+          />
           <SpendTable userPurchases={purchases || []} />
         </ScrollView>
         <ActionButton
@@ -58,17 +64,11 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    user: state.User.userInfo
-  };
-};
-
 const mapDispatchToProps = dispatch => ({
-  getUser: user => dispatch(getUser(user))
+  me: user => dispatch(me(user))
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Home);
