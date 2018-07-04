@@ -4,8 +4,9 @@ import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import User from './Thunks/User';
 import Purchase from './Thunks/Purchase';
+import reducer from './Thunks'
 
-const reducer = combineReducers({ User, Purchase });
+// const reducer = combineReducers({ User, Purchase });
 const middleware = composeWithDevTools(applyMiddleware(thunkMiddleware));
 const store = createStore(reducer, middleware);
 
