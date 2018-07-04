@@ -46,7 +46,10 @@ const AppNavigator = createStackNavigator(
     FutureProjections: { screen: FutureProjections },
     PurchaseMap: { screen: PurchaseMap }
   },
-  { headerMode: "null" }
+  {
+    initialRouteName: 'Root',
+    headerMode: 'none'
+  }
 );
 
 const App = () => {
