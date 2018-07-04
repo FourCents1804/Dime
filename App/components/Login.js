@@ -38,13 +38,14 @@ class Login extends React.Component {
   //   Animated.timing().stop();
   // }
 
-  handleSubmit = async event => {
+  handleSubmit = event => {
     event.preventDefault();
     const formName = "login";
-    const authError = await this.props.auth(this.state, formName);
-    if (authError) {
-      this.setState({ error: authError });
-    }
+    this.props.auth(this.state, formName).then(error => {
+      if (error) {
+        this.setState({ error });
+      }
+    });
     this.setState({ error: " " });
   };
 
