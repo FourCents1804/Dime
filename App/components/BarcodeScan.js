@@ -29,7 +29,7 @@ class BarcodeScanner extends Component {
     const { user } = this.props.navigation.state.params;
     console.log('this.state', this.state)
     const { data } = await axios.post(
-      'https://safe-bastion-55889.herokuapp.com/api/sentimentAnalysis',
+      'https://safe-bastion-55889.herokuapp.com/api/languageAnalysis',
       { product: this.state.name }
       // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
     );
@@ -119,6 +119,7 @@ class BarcodeScanner extends Component {
             <FormLabel>Product Name</FormLabel>
             <FormInput
               errorMessage
+              multiline={true}
               autoCapitalize="words"
               containerStyle={styles.inputLine}
               value={name}

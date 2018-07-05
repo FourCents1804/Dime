@@ -3,8 +3,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
 import {  ImagePicker, Camera, Permissions } from 'expo';
 import { connect } from 'react-redux';
-import { addNewPurchase } from '../store';
-
+import { addNewPurchase } from '../store/Thunks';
 
 class Webcam extends React.Component {
   state = {
@@ -19,7 +18,7 @@ class Webcam extends React.Component {
   }
 
   async takePicture() {
-    const { navigate } = this.props.navigation;
+    const { navigate }  = this.props.navigation;
     const { user } = this.props;
     if (this.camera) {
       let photo = await ImagePicker.launchCameraAsync({ allowsEditing: true });

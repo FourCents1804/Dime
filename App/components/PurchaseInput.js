@@ -6,6 +6,7 @@ import { Location, Permissions } from 'expo';
 import { commitPurchase } from '../store';
 import { Dropdown } from 'react-native-material-dropdown';
 import { categories } from './Utility/purchaseInput';
+
 import {
   Button,
   FormInput,
@@ -72,8 +73,10 @@ class Purchase extends Component {
           <Text style={styles.thinTitle}>Add an Expense</Text>
           <View style={styles.loginContainer}>
             <View>
+            {/* <NumberFormat value={2456981} displayType="text" thousandSeparator={true} prefix="$" /> */}
               <FormInput
                 containerStyle={styles.inputLine}
+                autoCapitalize="words"
                 placeholder="Name"
                 onChangeText={value => {
                   stateFields = { ...this.state.form };

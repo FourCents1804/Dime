@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 import {
   FormInput,
   FormLabel,
   Button,
   FormValidationMessage
-} from "react-native-elements";
-import styles from "../../public/index";
-import { View, Text, KeyboardAvoidingView } from "react-native";
-import { connect } from "react-redux";
-import { commitPurchase } from "../store/Thunks";
+} from 'react-native-elements';
+import styles from '../../public/index';
+import { View, Text, KeyboardAvoidingView } from 'react-native';
+import { connect } from 'react-redux';
+import { commitPurchase } from '../store/Thunks';
 
 class PurchaseConf extends React.Component {
   state = {
-    name: "",
-    category: "",
-    amount: "",
-    error: " ",
+    name: '',
+    category: '',
+    amount: '',
+    error: ' ',
     date: Date.now()
   };
   componentDidMount() {
@@ -37,12 +37,14 @@ class PurchaseConf extends React.Component {
 
   handleSubmit = async () => {
     // await this.handleError();
-    const { navigate } = this.props.navigation;
-    const { commitPurchase, user } = this.props;
-    const form = (({ category, amount }) => ({ category, amount }))(this.state);
+    // const { navigate } = this.props.navigation;
+    const { user } = this.props;
+    // const form = (({ category, amount }) => ({ category, amount }))(this.state);
     console.log(this.state);
-    await this.setState({ amount: amount.slice(1) });
-    await commitPurchase(user.uid, this.state);
+    await this.setState({ amount: this.state.amount.slice(1) });
+    await this.props.commitPurchase(user.uid, this.state);
+    this.props.popToTop()
+
   };
 
   render() {
@@ -88,9 +90,9 @@ class PurchaseConf extends React.Component {
 
         <View>
           <Button
-            onPress={() => {
-              this.handleSubmit();
-            }}
+            onPress={
+              this.handleSubmit
+            }
             title="Submit"
             raised={true}
             backgroundColor="#0080ff"

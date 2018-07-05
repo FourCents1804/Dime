@@ -35,8 +35,10 @@ class EditPurchase extends Component {
       categoryBroad: product.categoryBroad
     });
   }
-  handleSubmit = () => {
-    const purchase = { ...this.state };
+
+  handleSubmit =  () => {
+    const purchase = { ...this.state}
+    console.log(purchase)
     this.props.editPurchase(purchase.purchasedBy, this.state);
     alert("Puchase Has Been Updated!");
     this.props.navigation.popToTop();
@@ -72,6 +74,7 @@ class EditPurchase extends Component {
             <FormLabel>Amount</FormLabel>
             <FormInput
               errorMessage
+              textContentType=""
               autoCapitalize="words"
               keyboardType="numeric"
               containerStyle={styles.inputLine}

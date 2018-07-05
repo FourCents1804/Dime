@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { CacheImage, PurchaseConf } from "./index";
-import { ScrollView, TouchableOpacity, Image, View } from "react-native";
-import style from "../../public";
-import { commitPurchase } from "../store/Thunks";
+import React, { Component } from 'react';
+import { CacheImage, PurchaseConf } from './index';
+import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
+import style from '../../public';
+import { commitPurchase } from '../store/Thunks';
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
 class TakenImage extends Component {
   render() {
@@ -34,7 +34,7 @@ class TakenImage extends Component {
             source={require("../../public/eye.png")}
           />
         </TouchableOpacity> */}
-        <PurchaseConf purchase={purchase} />
+        <PurchaseConf purchase={purchase} popToTop={this.props.navigation.popToTop} />
       </View>
     );
   }
