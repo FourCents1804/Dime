@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
-import { Location, Permissions } from 'expo';
-import styles from '../../public';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { View } from "react-native";
+import MapView, { Marker } from "react-native-maps";
+import { Location, Permissions } from "expo";
+import styles from "../../public";
+import { connect } from "react-redux";
 
 class PurchaseMap extends Component {
   state = {
@@ -21,7 +21,7 @@ class PurchaseMap extends Component {
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
-    if (status === 'granted') {
+    if (status === "granted") {
       let location = await Location.getCurrentPositionAsync({});
       this.setState({
         location
@@ -46,14 +46,17 @@ class PurchaseMap extends Component {
           {purchases.map(purchase => {
             return (
               <Marker
-                key={purchase.purchaseUid}
+                key={purchase.amount}
                 title={purchase.name}
                 coordinate={{
                   latitude: purchase.location.coords.latitude,
                   longitude: purchase.location.coords.longitude
                 }}
-                onCalloutPress={() => this.props.navigation.navigate('Search', {purchases: [purchase]})}
-
+                onCalloutPress={() =>
+                  this.props.navigation.navigate("Search", {
+                    purchases: [purchase]
+                  })
+                }
               />
             );
           })}

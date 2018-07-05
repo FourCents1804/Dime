@@ -1,43 +1,50 @@
-import React, { Component } from 'react';
-import styles from '../../public';
-import { View, ScrollView, Text } from 'react-native';
-import { FormInput, FormLabel, Button, FormValidationMessage} from 'react-native-elements';
-import { connect } from 'react-redux';
-import {editPurchase} from '../store/Thunks'
+import React, { Component } from "react";
+import styles from "../../public";
+import { View, ScrollView, Text } from "react-native";
+import {
+  FormInput,
+  FormLabel,
+  Button,
+  FormValidationMessage
+} from "react-native-elements";
+import { connect } from "react-redux";
+import { editPurchase } from "../store/Thunks";
 
 class EditPurchase extends Component {
   state = {
-      upc: '',
-      date: null,
+    upc: "",
+    date: null,
     location: {},
-    purchasedBy: '',
-    purchaseUid: '',
-    name: '',
-    amount: '',
-    categoryBroad: ''
+    purchasedBy: "",
+    purchaseUid: "",
+    name: "",
+    amount: "",
+    categoryBroad: ""
   };
 
   componentDidMount() {
-    const {product} = this.props.navigation.state.params
+    const { product } = this.props.navigation.state.params;
     this.setState({
-        upc: product.upc,
-        date: product.date,
-        location: product.location,
-        purchaseUid: product.purchaseUid,
-        purchasedBy: this.props.user.uid,
-        name: product.name,
-        amount: product.amount,
-        categoryBroad: product.categoryBroad
-    })
+      upc: product.upc,
+      date: product.date,
+      location: product.location,
+      purchaseUid: product.purchaseUid,
+      purchasedBy: this.props.user.uid,
+      name: product.name,
+      amount: product.amount,
+      categoryBroad: product.categoryBroad
+    });
   }
-  handleSubmit =  () => {
-    const purchase = { ...this.state}
-    console.log(purchase)
+  handleSubmit = () => {
+    const purchase = { ...this.state };
     this.props.editPurchase(purchase.purchasedBy, this.state);
-    alert('Puchase Has Been Updated!')
-    this.props.navigation.popToTop()
+    alert("Puchase Has Been Updated!");
+    this.props.navigation.popToTop();
   };
 
+  cancel = () => {
+    this.props.navigation.popToTop();
+  };
   render() {
     const { amount, name, categoryBroad } = this.state;
     return (
@@ -86,12 +93,19 @@ class EditPurchase extends Component {
 
           <View>
             <Button
-              onPress={
-                this.handleSubmit
-            }
+              onPress={this.handleSubmit}
               title="Save"
               raised={true}
               backgroundColor="#0080ff"
+              style={styles.signUpButton}
+            />
+          </View>
+          <View>
+            <Button
+              onPress={this.cancel}
+              title="Cancel"
+              raised={true}
+              backgroundColor="#B20303"
               style={styles.signUpButton}
             />
           </View>
@@ -103,12 +117,12 @@ class EditPurchase extends Component {
 }
 
 const mapStateToProps = state => ({
-    user: state.user
-})
+  user: state.user
+});
 
 const mapDispatchToProps = dispatch => ({
   editPurchase: (user, purchase) => dispatch(editPurchase(user, purchase))
-})
+});
 
 export default connect(
   mapStateToProps,
