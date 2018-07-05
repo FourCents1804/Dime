@@ -51,8 +51,8 @@ const AppNavigator = createStackNavigator(
     EditPurchase: {screen: EditPurchase}
   },
   {
-    initialRouteName: 'Root',
-    headerMode: 'none'
+    initialRouteName: "Root",
+    headerMode: "none"
   }
 );
 

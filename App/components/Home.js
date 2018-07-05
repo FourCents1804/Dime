@@ -22,7 +22,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log('home props', this.props.purchases)
     const { user, navigate, purchases } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
@@ -71,7 +70,6 @@ class Home extends Component {
         </ActionButton>
       </View>
     );
-    // }
   }
 }
 
