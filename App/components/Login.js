@@ -1,102 +1,108 @@
-import React from 'react';
+import React from "react";
 import {
   Text,
   View,
   Animated,
   Button as ButtonAlt,
   ImageBackground,
-  Image
-} from 'react-native';
-import { auth } from '../store/Thunks/User';
-import styles from '../../public';
-import { connect } from 'react-redux';
-import { me } from '../store';
+  Image,
+  KeyboardAvoidingView
+} from "react-native";
+import { auth } from "../store/Thunks/User";
+import styles from "../../public";
+import { connect } from "react-redux";
+import { me } from "../store";
 import {
   Button,
   Divider,
   FormInput,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     fadeAnim: new Animated.Value(0),
-    error: ' '
+    error: " "
   };
 
   componentDidMount() {
-    Animated.timing(
-      this.state.fadeAnim,
-      {
-        toValue: 1,
-        duration: 1000
-      }
-    ).start()
+    Animated.timing(this.state.fadeAnim, {
+      toValue: 1,
+      duration: 1000
+    }).start();
   }
 
-  handleSubmit = async event => {
+  // componentWillUnmount() {
+  //   Animated.timing().stop();
+  // }
+
+  handleSubmit = event => {
     event.preventDefault();
-    const formName = 'login';
-    const authError = await this.props.auth(this.state, formName)
-    if (authError) {
-      this.setState({error: authError})
-    } else {
-      this.setState({error: ' '})
-    }
+    const formName = "login";
+    this.props.auth(this.state, formName).then(error => {
+      if (error) {
+        this.setState({ error });
+      }
+    });
+    this.setState({ error: " " });
   };
 
   render() {
-    let { fadeAnim } = this.state;
+    const { fadeAnim } = this.state;
     const { navigate } = this.props;
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require('../../public/city.jpg')}
+          source={require("../../public/city.jpg")}
           style={styles.backgroundImg}
           resizeMode="cover"
         >
-          <Animated.View style={{ opacity: fadeAnim }}>
-            <View style={styles.loginContainer}>
-            <Image
-              style={{ height: 35, width: 100, marginVertical: 25 }}
-              source={require('../../public/DimeLogo.png')}
-            />
-              <FormInput
-                placeholder="Email"
-                containerStyle={styles.inputLine}
-                autoCapitalize="none"
-                onChangeText={email => this.setState({ email })}
-              />
-              <Divider style={styles.dividerVS} />
-              <FormInput
-                containerStyle={styles.inputLine}
-                autoCapitalize="none"
-                placeholder="Password"
-                secureTextEntry={true}
-                onChangeText={password => this.setState({ password })}
-              />
-              <FormValidationMessage>
-                {this.state.error}
-              </FormValidationMessage>
+          <KeyboardAvoidingView enabled behavior="position">
+            <Animated.View style={{ opacity: fadeAnim }}>
+              <View style={styles.loginContainer}>
+                <Image
+                  style={{ height: 35, width: 100, marginVertical: 25 }}
+                  source={require("../../public/DimeLogo.png")}
+                />
+                <FormInput
+                  placeholder="Email"
+                  containerStyle={styles.inputLine}
+                  autoCapitalize="none"
+                  onChangeText={email => this.setState({ email })}
+                />
+                <Divider style={styles.dividerVS} />
+                <FormInput
+                  containerStyle={styles.inputLine}
+                  autoCapitalize="none"
+                  placeholder="Password"
+                  secureTextEntry={true}
+                  onChangeText={password => this.setState({ password })}
+                />
+                <FormValidationMessage>
+                  {this.state.error}
+                </FormValidationMessage>
 
-              <Button
-                onPress={this.handleSubmit}
-                title="Login"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.wideButton}
-              />
-              <ButtonAlt
-                buttonStyle={styles.linkButton}
-                onPress={() => navigate('SignUpP1')}
-                title="Sign Up"
-              >
-                <Text style={styles.signUpFont}>Sign Up</Text>
-              </ButtonAlt>
-            </View>
-          </Animated.View>
+                <Button
+                  onPress={this.handleSubmit}
+                  title="Login"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.wideButton}
+                />
+                <Button
+                  style={styles.wideButton}
+                  onPress={() => navigate("SignUpP1")}
+                  title="Sign Up"
+                  raised={true}
+                  backgroundColor="#E90909"
+                >
+                  <Text style={styles.signUpFont}>Sign Up</Text>
+                </Button>
+              </View>
+            </Animated.View>
+          </KeyboardAvoidingView>
         </ImageBackground>
       </View>
     );

@@ -144,13 +144,9 @@ class Purchase extends Component {
           <Text style={styles.thinTitle}>I'll Do it Later</Text>
 
           <View style={styles.loginContainer}>{this.createQuickInput()}</View>
-
           <Text style={styles.thinTitle}>Or</Text>
-
           <Text style={styles.thinTitle}>I'll Do It Now</Text>
-
           <View style={styles.loginContainer}>{this.createFormInput()}</View>
-
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
           <Button
             onPress={this.handleSubmit}

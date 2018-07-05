@@ -29,7 +29,6 @@ export const addNewPurchase = () => async dispatch => {
 
 export const commitPurchase = (user, purchaseToCommit) => dispatch => {
   let upid = uuidV1();
-  console.log('Commiting Purchase', user, purchaseToCommit);
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
     .set({...purchaseToCommit });
