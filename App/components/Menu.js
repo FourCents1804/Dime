@@ -1,11 +1,14 @@
-import React from 'react';
-import { ScrollView, View, Text, TouchableHighlight } from 'react-native';
-import styles from '../../public';
-import { connect } from 'react-redux';
-import { logout } from '../store/Thunks/User';
+
+import React from "react";
+import { ScrollView, View, Text, TouchableHighlight } from "react-native";
+import styles from "../../public";
+import { connect } from "react-redux";
+import { logout } from "../store";
+
 
 const Menu = props => {
-  const { purchases, navigate } = props;
+  const { purchases, recurringExpenses, navigate } = props;
+  const purchasesWithExpenses = [recurringExpenses, ...purchases]
   return (
     <ScrollView style={styles.menu}>
       <View style={styles.menuLabel}>
@@ -18,7 +21,9 @@ const Menu = props => {
         <Text style={styles.menuLinkText}>Purchase Map</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => navigate('Search')}
+
+        onPress={() => navigate("Search", { purchases: purchases})}
+
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Find Transactions</Text>
@@ -28,7 +33,8 @@ const Menu = props => {
         <Text style={styles.menuLabelText}>ANALYSIS AND INSIGHTS</Text>
       </View>
       <TouchableHighlight
-        onPress={() => navigate('PastSpend')}
+
+        onPress={() => navigate("PastSpend", { purchases: purchasesWithExpenses })}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Past Expense Analysis</Text>

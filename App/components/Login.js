@@ -3,14 +3,14 @@ import {
   Text,
   View,
   Animated,
-  Button as ButtonAlt,
   ImageBackground,
-  Image
-} from 'react-native';
-import { auth } from '../store/Thunks/User';
-import styles from '../../public';
-import { connect } from 'react-redux';
-import { me } from '../store';
+  Image,
+  KeyboardAvoidingView
+} from "react-native";
+import { auth } from "../store/Thunks";
+import styles from "../../public";
+import { connect } from "react-redux";
+
 import {
   Button,
   Divider,
@@ -23,35 +23,27 @@ class Login extends React.Component {
     email: '',
     password: '',
     fadeAnim: new Animated.Value(0),
+    error: ' '
   };
 
   componentDidMount() {
-    Animated.timing(
-      this.state.fadeAnim,
-      {
-        toValue: 1,
-        duration: 1000
-      }
-    ).start()
+    Animated.timing(this.state.fadeAnim, {
+      toValue: 1,
+      duration: 1000
+    }).start();
   }
 
-  errorValidation = () => {
-    const { user } = this.props;
-    if (user === 'Failed') {
-      return (
-        <FormValidationMessage>Wrong Email or Password</FormValidationMessage>
-      );
-    }
-  }
-
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
-    const formName = 'login';
-    this.props.auth(this.state, formName);
+    const formName = "login";
+    const error = await this.props.auth(this.state, formName);
+    if (error) {
+      this.setState({ error });
+    }
   };
 
   render() {
-    let { fadeAnim } = this.state;
+    const { fadeAnim } = this.state;
     const { navigate } = this.props;
     return (
       <View style={styles.container}>
@@ -60,63 +52,61 @@ class Login extends React.Component {
           style={styles.backgroundImg}
           resizeMode="cover"
         >
-          <Animated.View style={{ opacity: fadeAnim }}>
-          <Image
-          style={{ height: 35, width: 100 }}
-          source={require('../../public/DimeLogo.png')}
-        />
-          </Animated.View>
-          <Animated.View style={{ opacity: fadeAnim }}>
-            <View style={styles.loginContainer}>
-              <Divider style={styles.dividerVS} />
-              <FormInput
-                placeholder="Email"
-                containerStyle={styles.inputLine}
-                autoCapitalize="none"
-                onChangeText={email => this.setState({ email })}
-              />
-              <Divider style={styles.dividerVS} />
-              <FormInput
-                containerStyle={styles.inputLine}
-                autoCapitalize="none"
-                placeholder="Password"
-                secureTextEntry={true}
-                onChangeText={password => this.setState({ password })}
-              />
-              {this.errorValidation()}
+          <KeyboardAvoidingView enabled behavior="position">
+            <Animated.View style={{ opacity: fadeAnim }}>
+              <View style={styles.loginContainer}>
+                <Image
+                  style={{ paddingTop: 100, height: 40, width: 250  }}
+                  source={require('../../public/DimeLogo.png')}
+                />
+                <FormInput
+                  placeholder="Email"
+                  containerStyle={styles.inputLine}
+                  autoCapitalize="none"
+                  onChangeText={email => this.setState({ email })}
+                />
+                <Divider style={styles.dividerVS} />
+                <FormInput
+                  containerStyle={styles.inputLine}
+                  autoCapitalize="none"
+                  placeholder="Password"
+                  secureTextEntry={true}
+                  onChangeText={password => this.setState({ password })}
+                />
+                <FormValidationMessage>
+                  {this.state.error}
+                </FormValidationMessage>
 
-              <Button
-                onPress={this.handleSubmit}
-                title="Login"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.wideButton}
-              />
-              <ButtonAlt
-                buttonStyle={styles.linkButton}
-                onPress={() => navigate('SignUpP1')}
-                title="Sign Up"
-              >
-                <Text style={styles.signUpFont}>Sign Up</Text>
-              </ButtonAlt>
-            </View>
-          </Animated.View>
+                <Button
+                  onPress={this.handleSubmit}
+                  title="Login"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.wideButton}
+                />
+                <Button
+                  style={styles.wideButton}
+                  onPress={() => navigate('SignUpP1')}
+                  title="Sign Up"
+                  raised={true}
+                  backgroundColor="#B20303"
+                >
+                  <Text style={styles.signUpFont}>Sign Up</Text>
+                </Button>
+              </View>
+            </Animated.View>
+          </KeyboardAvoidingView>
         </ImageBackground>
       </View>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.User
-});
-
 const mapDispatchToProps = dispatch => ({
-  isLoggedIn: () => dispatch(me()),
   auth: (userData, formName) => dispatch(auth(userData, formName))
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Login);

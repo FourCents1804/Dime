@@ -3,6 +3,7 @@ import { material } from 'react-native-typography';
 import { systemWeights } from 'react-native-typography';
 
 export default (styles = StyleSheet.create({
+  absoluteFill: StyleSheet.absoluteFill,
   container: {
     flex: 1,
     backgroundColor: '#fff7f2',
@@ -301,12 +302,12 @@ export default (styles = StyleSheet.create({
     width: 250
   },
   spendHistoryCat: {
-    textAlign: "center"
+    textAlign: 'center'
   },
   pastSpendContainer: {
     padding: 20,
     flex: 1,
     backgroundColor: '#fff7f2',
     width: '100%'
-  },
+  }
 }));
