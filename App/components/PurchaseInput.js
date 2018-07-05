@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text, KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../../public';
 import { Location, Permissions } from 'expo';
@@ -137,8 +137,8 @@ class Purchase extends Component {
       >
         <KeyboardAvoidingView
           enabled
-          behavior="position"
-          style={{ paddingTop: 20 }}
+          behavior="padding"
+
         >
           <Text style={styles.thinTitle}>Add an Expense</Text>
           <Text style={styles.thinTitle}>I'll Do it Later</Text>

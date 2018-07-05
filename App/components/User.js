@@ -51,7 +51,6 @@ class User extends Component {
 
   render() {
     const { firstName, lastName, email} = this.props.user ? this.props.user : { firstName: '', lastName: '', email: ''}
-    console.log('props', this.props)
     return (
       <View style={styles.container}>
         <View style={styles.loginContainer}>

@@ -42,7 +42,7 @@ class Webcam extends React.Component {
           ImagePicker.launchCameraAsync({ allowsEditing: true })
 
         // <View style={{ flex: 1 }}>
-        //   <Camera
+          // <Camera
         //     ref={ref => (this.camera = ref)}
         //     style={{ flex: 1 }}
         //     type={this.state.type}

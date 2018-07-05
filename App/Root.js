@@ -47,7 +47,8 @@ class Root extends React.Component {
         <Drawer
           ref={ref => (this._drawer = ref)}
           type="displace"
-          content={<Menu navigate={navigate}
+          content={<Menu
+navigate={navigate}
           purchases={this.props.purchases}
           recurringExpenses={this.props.recurringExpenses}
           hi="hi" />}
@@ -77,6 +78,7 @@ class Root extends React.Component {
 }
 
 const mapStateToProps = state => {
+
 
   const purchases = state.User.purchases ? Object.keys(state.User.purchases).map(purchase => state.User.purchases[purchase]) : []
 

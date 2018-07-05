@@ -7,4 +7,6 @@ export const config = {
   messagingSenderId: '332258031993'
 };
 
-export const mapsKeys = 'AIzaSyAwfoAgPF6Fn14NnFL1pQnZ6qocJghNvB8'
+export const mapsKeys = 'AIzaSyB3EsnHWkbnvolpzMPxZx-4-PPqTgWQQC0'
+
+export const barcodeKey = 'E9845233A0C81890D54C8EE130874D8F'

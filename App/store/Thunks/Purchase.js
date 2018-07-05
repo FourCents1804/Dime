@@ -10,16 +10,16 @@ export const defaultPurchase = {};
 const addPurchase = newPurchase => ({ type: ADD_PURCHASE, newPurchase });
 const commitedPurchase = () => ({ type: COMMITED_PURCHASE });
 
-export const addNewPurchase = (base64) => async dispatch => {
+export const addNewPurchase = () => async dispatch => {
   try {
     // console.log(uri, path);
     // const newImage = await FileSystem.downloadAsync(base64);
     console.log('htting image')
 
-    const newPurchase = await axios.post(
+    const newPurchase = await axios.get(
       // 'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
-      'http://172.16.22.102:3000/api/receiptRecognition',
-      { fileName: base64 }
+      'http://192.168.1.38:3000/api/receiptRecognition',
+
     );
     dispatch(addPurchase(newPurchase));
   } catch (err) {
@@ -32,7 +32,7 @@ export const commitPurchase = (user, purchaseToCommit) => dispatch => {
   console.log('Commiting Purchase', user, purchaseToCommit);
   Firebase.database
     .ref(`users/${user}/purchases/${upid}`)
-    .set({ ...purchaseToCommit });
+    .set({...purchaseToCommit });
   dispatch(commitedPurchase());
 };
 
