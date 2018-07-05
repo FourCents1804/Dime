@@ -84,14 +84,15 @@ class Purchase extends Component {
             </View>
             <View>
               <FormInput
-                keyboardType="numeric"
-                containerStyle={styles.inputLine}
-                placeholder="Amount"
-                onChangeText={value => {
+                // keyboardType="numeric"
+                // containerStyle={styles.inputLine}
+                name="Amount"
+                onChange={value => {
                   stateFields = { ...this.state.form };
                   stateFields.amount = value;
-                  this.setState({ form: stateFields });
+                  this.setState({ form: stateFields })
                 }}
+                required
               />
             </View>
             <View>

@@ -35,7 +35,7 @@ const Menu = props => {
         <Text style={styles.menuLinkText}>Past Expense Analysis</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        onPress={() => navigate("FutureProjections")}
+        onPress={() => navigate("FutureProjections", {purchases})}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Future Projections</Text>

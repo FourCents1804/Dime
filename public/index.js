@@ -309,5 +309,5 @@ export default (styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff7f2',
     width: '100%'
-  }
+  },
 }));

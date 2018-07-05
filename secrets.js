@@ -10,3 +10,4 @@ export const config = {
 export const mapsKeys = 'AIzaSyB3EsnHWkbnvolpzMPxZx-4-PPqTgWQQC0'
 
 export const barcodeKey = 'E9845233A0C81890D54C8EE130874D8F'
+
