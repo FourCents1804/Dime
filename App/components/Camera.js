@@ -1,8 +1,10 @@
-import React from "react";
-import { Text, View, TouchableOpacity, Image } from "react-native";
-import { ImagePicker, Camera, Permissions } from "expo";
-import { connect } from "react-redux";
-import { addNewPurchase } from "../store/Thunks/index";
+
+import React from 'react';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import {  ImagePicker, Camera, Permissions } from 'expo';
+import { connect } from 'react-redux';
+import { addNewPurchase } from '../store';
+
 
 class Webcam extends React.Component {
   state = {
