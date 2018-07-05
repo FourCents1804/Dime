@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Text,
   View,
@@ -7,24 +7,24 @@ import {
   ImageBackground,
   Image,
   KeyboardAvoidingView
-} from "react-native";
-import { auth } from "../store/Thunks/User";
-import styles from "../../public";
-import { connect } from "react-redux";
-import { me } from "../store";
+} from 'react-native';
+import { auth } from '../store/Thunks';
+import styles from '../../public';
+import { connect } from 'react-redux';
+import { me } from '../store/Thunks';
 import {
   Button,
   Divider,
   FormInput,
   FormValidationMessage
-} from "react-native-elements";
+} from 'react-native-elements';
 
 class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     fadeAnim: new Animated.Value(0),
-    error: " "
+    error: ' '
   };
 
   componentDidMount() {
@@ -59,7 +59,7 @@ class Login extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require("../../public/city.jpg")}
+          source={require('../../public/city.jpg')}
           style={styles.backgroundImg}
           resizeMode="cover"
         >
@@ -67,8 +67,8 @@ class Login extends React.Component {
             <Animated.View style={{ opacity: fadeAnim }}>
               <View style={styles.loginContainer}>
                 <Image
-                  style={{ height: 35, width: 100, marginVertical: 25 }}
-                  source={require("../../public/DimeLogo.png")}
+                  style={{ paddingTop: 100, height: 40, width: 250  }}
+                  source={require('../../public/DimeLogo.png')}
                 />
                 <FormInput
                   placeholder="Email"
@@ -97,7 +97,7 @@ class Login extends React.Component {
                 />
                 <Button
                   style={styles.wideButton}
-                  onPress={() => navigate("SignUpP1")}
+                  onPress={() => navigate('SignUpP1')}
                   title="Sign Up"
                   raised={true}
                   backgroundColor="#E90909"

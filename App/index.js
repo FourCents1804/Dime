@@ -16,6 +16,7 @@ import {
   PastSpend,
   AboutUs,
   FAQ,
+  EditPurchase,
   Search,
   SpendHistory,
   FutureProjections,
@@ -46,7 +47,8 @@ const AppNavigator = createStackNavigator(
     SpendHistory: { screen: SpendHistory },
     FutureProjections: { screen: FutureProjections },
     PurchaseMap: { screen: PurchaseMap },
-    BarcodeScanner: {screen: BarcodeScanner}
+    BarcodeScanner: {screen: BarcodeScanner},
+    EditPurchase: {screen: EditPurchase}
   },
   {
     initialRouteName: 'Root',

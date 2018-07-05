@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { CacheImage, PurchaseConf } from './index';
 import { ScrollView, TouchableOpacity, Image, View } from 'react-native';
-
-import { commitPurchase } from '../store/Thunks/Purchase';
+import style from '../../public'
+import { commitPurchase } from '../store/Thunks';
 
 import { connect } from 'react-redux';
 
@@ -16,8 +16,7 @@ class TakenImage extends Component {
         <CacheImage uri={uri}  navigate={navigate} />
       </ScrollView>
     ) : (
-      <View>
-        <PurchaseConf purchase={purchase} />
+      <View syle={style.container}>
         <TouchableOpacity
           style={{
             alignSelf: 'flex-end',
@@ -35,14 +34,15 @@ class TakenImage extends Component {
             source={require('../../public/eye.png')}
           />
         </TouchableOpacity>
+        <PurchaseConf purchase={purchase} />
       </View>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  purchase: state.Purchase,
-  user: state.User
+  purchase: state.purchaseToCommit,
+  user: state.user.userInfo
 });
 
 const mapDispatchToProps = dispatch => ({

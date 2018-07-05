@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { BarCodeScanner, Permissions, Location } from 'expo';
 import styles from '../../public';
-import {commitPurchase} from '../store/Thunks/Purchase'
-import {connect} from 'react-redux'
+import { commitPurchase } from '../store/Thunks';
+import { connect } from 'react-redux';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import Firebase from './Firebase/Firebase';
 import {
   Button,
   FormInput,
@@ -15,25 +16,28 @@ import { barcodeKey } from '../../secrets';
 
 class BarcodeScanner extends Component {
   state = {
+    upc: undefined,
     date: Date.now(),
     amount: '',
     name: '',
-    location: null
+    location: null,
+    categoryBroad: ''
   };
 
-
   handleSubmit = async () => {
+    this._getLocationAsync();
+    const { user } = this.props.navigation.state.params;
 
-      this.setState({location: this._getLocationAsync()})
-      const {user} = this.props.navigation.state.params
-      console.log(user.uid)
-      const {data} = await axios.post(
-         'https://safe-bastion-55889.herokuapp.com/api/sentimentAnalysis', {product: this.state.name}
-          // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
-        )
-        let purchaseToCommit = {...this.state, category: data}
-        this.props.commitPurchase(user.uid, purchaseToCommit)
-  }
+    const { data } = await axios.post(
+      'https://safe-bastion-55889.herokuapp.com/api/sentimentAnalysis',
+      { product: this.state.name }
+      // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
+    );
+    let purchaseToCommit = { ...this.state, category: data };
+    this.props.commitPurchase(user.uid, purchaseToCommit);
+    alert(`${this.state.name} added to purchases`)
+    this.props.navigation.popToTop()
+  };
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
@@ -45,21 +49,48 @@ class BarcodeScanner extends Component {
     }
   };
   _handleBarCodeRead = async ({ type, data }) => {
-    try {
-      const returnData = await axios.get(
-        `https://api.upcdatabase.org/product/${data}/${barcodeKey}`
-      );
+    const { user } = this.props.navigation.state.params;
 
-      alert(
-        `Bar code with type ${data} returned ${
-          returnData.data.description
-        } after scan!`
-      );
-      if (returnData.data.description) {
-        this.setState({ name: returnData.data.description });
+    try {
+      await Firebase.database
+        .ref(`products/${data}`)
+        .once('value')
+        .then(dbProduct => {
+          if (dbProduct.child('name').val()) {
+            alert(`
+          Bar code was found in Dime's Database
+          ${data}
+          `);
+          console.log(dbProduct)
+          const name = dbProduct.child('name').val()
+          const amount =  dbProduct.child('amount').val()
+          console.log(name, amount)
+          this.setState({ upc: data, name, amount});
+            console.log(this.state);
+          }
+        });
+
+      if (this.state.name === '') {
+        const returnData = await axios.get(
+          `https://api.upcdatabase.org/product/${data}/${barcodeKey}`
+        );
+
+        alert(
+          `Bar code with type ${data} returned ${
+            returnData.data.description
+          } after scan!`
+        );
+        if (returnData.data.description) {
+          this.setState({ upc: data, name: returnData.data.description });
+        }
       }
     } catch (err) {
       alert('Product Not Found!');
+      await this._getLocationAsync();
+      this.setState({ upc: data });
+      this.props.navigation.navigate('EditPurchase', {
+        product: { ...this.state, purchasedBy: user.uid }
+      });
     }
   };
   render() {
@@ -101,7 +132,7 @@ class BarcodeScanner extends Component {
             <FormLabel>Amount</FormLabel>
             <FormInput
               errorMessage
-              autoCapitalize="words"
+              keyboardType="numeric"
               containerStyle={styles.inputLine}
               value={amount}
               onChangeText={value => {
@@ -123,8 +154,11 @@ class BarcodeScanner extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    commitPurchase: (uid, purchaseToCommit) => dispatch(commitPurchase(uid, purchaseToCommit))
-})
+  commitPurchase: (uid, purchaseToCommit) =>
+    dispatch(commitPurchase(uid, purchaseToCommit))
+});
 
-
-export default connect(null, mapDispatchToProps)(BarcodeScanner)
+export default connect(
+  null,
+  mapDispatchToProps
+)(BarcodeScanner);

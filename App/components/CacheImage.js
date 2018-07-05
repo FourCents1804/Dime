@@ -6,9 +6,8 @@ import Firebase from '../components/Firebase/Firebase';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../../public';
-import { addNewPurchase, commitPurchase } from '../store/Thunks/Purchase';
+import { addNewPurchase } from '../store/Thunks';
 import {connect} from 'react-redux'
-import {ImagePicker} from 'expo'
 
 class CacheImage extends Component {
   state = {
@@ -54,7 +53,7 @@ class CacheImage extends Component {
 
 
   render() {
-    const { uri, path } = this.state.source;
+    const { uri } = this.state.source;
     const { base64, navigate } = this.props;
     return uri ? (
       <View>
@@ -70,7 +69,7 @@ class CacheImage extends Component {
             buttonColor="#11EC43"
             title="Analyze Receipt"
             onPress={() => {
-              this.props.addNewPurchase(base64);
+              this.props.addNewPurchase();
             }}
           >
             <Icon name="ios-checkmark" size={50} />
@@ -93,7 +92,7 @@ class CacheImage extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addNewPurchase: base64 => dispatch(addNewPurchase(base64))
+  addNewPurchase: () => dispatch(addNewPurchase())
 });
 
 export default connect(null, mapDispatchToProps)(CacheImage)

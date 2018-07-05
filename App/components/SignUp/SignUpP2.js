@@ -61,6 +61,7 @@ export default class SignUpP2 extends React.Component {
             <View>
               <FormInput
                 errorMessage
+                keyboardType="numeric"
                 autoCapitalize="none"
                 containerStyle={styles.inputLine}
                 placeholder="Monthly Income"
@@ -72,6 +73,7 @@ export default class SignUpP2 extends React.Component {
             <View>
               <FormInput
                 errorMessage
+                keyboardType="numeric"
                 autoCapitalize="none"
                 containerStyle={styles.inputLine}
                 placeholder="Age"
@@ -83,6 +85,7 @@ export default class SignUpP2 extends React.Component {
             <View>
               <FormInput
                 errorMessage
+                keyboardType="numeric"
                 autoCapitalize="none"
                 containerStyle={styles.inputLine}
                 placeholder="Savings Goal"

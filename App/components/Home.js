@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import { Permissions, ImagePicker } from 'expo';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { me } from '../store/Thunks/User';
+import { me } from '../store/Thunks';
 import Firebase from './Firebase/Firebase';
 
 

@@ -23,3 +23,4 @@ export { default as Loading } from './Loading';
 export { default as PurchaseConf } from './PurchaseConf';
 export { default as Histogram } from '../D3/Histogram';
 export { default as BarcodeScanner } from './BarcodeScan';
+export {default as EditPurchase} from './EditPurchase'

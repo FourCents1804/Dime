@@ -81,7 +81,7 @@ class User extends Component {
               containerStyle={styles.inputLine}
               value={lastName}
               onChangeText={value => {
-                this.setState({ firstName: value });
+                this.setState({ lastName: value });
               }}
             />
           </View>

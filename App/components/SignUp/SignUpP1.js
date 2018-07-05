@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 import {
   View,
   ScrollView,
   Animated,
   ImageBackground,
   KeyboardAvoidingView
-} from "react-native";
-import styles from "../../../public";
+} from 'react-native';
+import styles from '../../../public';
 import {
   Button,
   FormInput,
   FormValidationMessage
-} from "react-native-elements";
+} from 'react-native-elements';
 
 let newUserData = [];
 
 export default class SignUpP1 extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    rePassword: "",
-    error: " ",
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    rePassword: '',
+    error: ' ',
     fadeAnim: new Animated.Value(0)
   };
 
@@ -43,9 +43,9 @@ export default class SignUpP1 extends React.Component {
       password,
       rePassword
     }))(this.state);
-    if (this.state.error === " ") {
+    if (this.state.error === ' ') {
       newUserData.push(form);
-      navigate("SignUpP2", { newUserData });
+      navigate('SignUpP2', { newUserData });
     }
   };
 
@@ -56,18 +56,18 @@ export default class SignUpP1 extends React.Component {
 
   handleError = () => {
     const { firstName, lastName, email, password, rePassword } = this.state;
-    if (firstName === "") {
+    if (firstName === '') {
       this.setState({ error: `First name is a required field` });
-    } else if (lastName === "") {
+    } else if (lastName === '') {
       this.setState({ error: `Last name is a required field` });
     } else if (!this.validateEmail(email)) {
       this.setState({ error: `Please enter a valid email` });
     } else if (password !== rePassword) {
-      this.setState({ error: "Passwords Do not Match" });
+      this.setState({ error: 'Passwords Do not Match' });
     } else if (password.length < 8) {
-      this.setState({ error: "Password must be longer than 8 characters" });
+      this.setState({ error: 'Password must be longer than 8 characters' });
     } else {
-      this.setState({ error: " " });
+      this.setState({ error: ' ' });
     }
   };
 
@@ -77,7 +77,7 @@ export default class SignUpP1 extends React.Component {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Animated.View style={{ opacity: fadeAnim }}>
           <ImageBackground
-            source={require("../../../public/park1.jpg")}
+            source={require('../../../public/park1.jpg')}
             style={styles.backgroundImg}
             resizeMode="cover"
           >
@@ -90,7 +90,7 @@ export default class SignUpP1 extends React.Component {
                 <View>
                   <FormInput
                     errorMessage
-                    autoCapitalize="none"
+
                     containerStyle={styles.inputLine}
                     placeholder="First Name (required)"
                     onChangeText={value => {
@@ -102,7 +102,6 @@ export default class SignUpP1 extends React.Component {
                 <View>
                   <FormInput
                     errorMessage
-                    autoCapitalize="none"
                     containerStyle={styles.inputLine}
                     placeholder="Last Name (required)"
                     onChangeText={value => {

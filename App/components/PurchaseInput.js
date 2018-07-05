@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import styles from '../../public';
 import { Location, Permissions } from 'expo';
 import { commitPurchase } from '../store';
+import { Dropdown } from 'react-native-material-dropdown';
+import { categories } from './Utility/purchaseInput';
 import {
   Button,
   FormInput,
@@ -12,18 +14,13 @@ import {
 
 class Purchase extends Component {
   state = {
-    formType: '',
     error: '',
     location: '',
     date: Date.now(),
     form: {
       name: '',
       amount: '',
-      categoryBroad: '',
-      categoryDetailed: ''
-    },
-    quick: {
-      amount: ''
+      categoryBroad: ''
     }
   };
 
@@ -31,62 +28,6 @@ class Purchase extends Component {
     this._getLocationAsync();
   };
 
-  createQuickInput = () => {
-    const categoryNames = {
-      amount: 'Amount'
-    };
-    let quickInputArr = [];
-    for (let keys in this.state.quick) {
-      let stateFields = keys;
-      quickInputArr.push(
-        <View key={stateFields}>
-          <FormInput
-            keyboardType="numeric"
-            containerStyle={styles.inputLine}
-            placeholder={categoryNames[stateFields]}
-            onChangeText={value => {
-              stateFields = { ...this.state.quick };
-              stateFields[keys] = value;
-              this.setState({ quick: stateFields });
-            }}
-          />
-        </View>
-      );
-    }
-    return quickInputArr;
-  };
-
-  createFormInput = () => {
-    const categoryNames = {
-      name: 'Name',
-      amount: 'Amount',
-      categoryBroad: 'Category',
-      categoryDetailed: 'Subcategory'
-    };
-
-    let formInputArr = [];
-    for (let keys in this.state.form) {
-      let stateFields = keys;
-      formInputArr.push(
-        <View key={stateFields}>
-          <FormInput
-            keyboardType={(() => {
-              if (keys === 'amount') return 'numeric';
-              else return 'default';
-            })()}
-            containerStyle={styles.inputLine}
-            placeholder={categoryNames[stateFields]}
-            onChangeText={value => {
-              stateFields = { ...this.state.form };
-              stateFields[keys] = value;
-              this.setState({ form: stateFields });
-            }}
-          />
-        </View>
-      );
-    }
-    return formInputArr;
-  };
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
@@ -99,17 +40,9 @@ class Purchase extends Component {
   };
 
   handleError = () => {
-    let formCheck = [];
-    for (let keys in this.state.form) {
-      formCheck.push(this.state.form[keys]);
-    }
-
-    if (formCheck.join('') !== '' && this.state.quick.amount !== '') {
-      this.setState({ error: 'Please fill out only one form!' });
-    }
-    if (formCheck.join('') !== '') {this.setState({formType: 'ADVANCED'})}
-
-    else {
+    if (this.state.form.amount === '') {
+      this.setState({ error: 'Amount is A required Field' });
+    } else {
       this.setState({ error: '' });
     }
   };
@@ -135,18 +68,44 @@ class Purchase extends Component {
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={styles.scrollContainer}
       >
-        <KeyboardAvoidingView
-          enabled
-          behavior="padding"
-
-        >
+        <KeyboardAvoidingView enabled behavior="padding">
           <Text style={styles.thinTitle}>Add an Expense</Text>
-          <Text style={styles.thinTitle}>I'll Do it Later</Text>
-
-          <View style={styles.loginContainer}>{this.createQuickInput()}</View>
-          <Text style={styles.thinTitle}>Or</Text>
-          <Text style={styles.thinTitle}>I'll Do It Now</Text>
-          <View style={styles.loginContainer}>{this.createFormInput()}</View>
+          <View style={styles.loginContainer}>
+            <View>
+              <FormInput
+                containerStyle={styles.inputLine}
+                placeholder="Name"
+                onChangeText={value => {
+                  stateFields = { ...this.state.form };
+                  stateFields.name = value;
+                  this.setState({ form: stateFields });
+                }}
+              />
+            </View>
+            <View>
+              <FormInput
+                keyboardType="numeric"
+                containerStyle={styles.inputLine}
+                placeholder="Amount"
+                onChangeText={value => {
+                  stateFields = { ...this.state.form };
+                  stateFields.amount = value;
+                  this.setState({ form: stateFields });
+                }}
+              />
+            </View>
+            <View>
+              <Dropdown
+                label="Category"
+                data={categories}
+                containerStyle={styles.signUpDropdown}
+                onChangeText={value => {
+                  stateFields = { ...this.state.form };
+                  stateFields.categoryBroad = value;
+                  this.setState({ form: stateFields })}}
+              />
+            </View>
+          </View>
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
           <Button
             onPress={this.handleSubmit}
