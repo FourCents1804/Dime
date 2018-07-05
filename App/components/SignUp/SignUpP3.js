@@ -6,7 +6,7 @@ import {
   ImageBackground,
   KeyboardAvoidingView
 } from "react-native";
-import { auth } from "../../store";
+import { auth } from "../../store/Thunks/index";
 import { connect } from "react-redux";
 import styles from "../../../public";
 import { Slider, CheckBox, Divider, Button } from "react-native-elements";
@@ -26,6 +26,7 @@ class SignUpP3 extends React.Component {
     let newUserData = this.props.navigation.state.params.newUserData;
     newUserData.push(this.state);
     this.props.sendInfo(newUserData, "signup");
+    alert("Account created successfully!");
     popToTop();
   };
 
@@ -34,7 +35,7 @@ class SignUpP3 extends React.Component {
     for (keys in this.state) {
       let el = keys;
       checkBArr.push(
-        <View>
+        <View key={el}>
           <CheckBox
             title={keys}
             checked={this.state[keys] > 0}

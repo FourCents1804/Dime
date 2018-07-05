@@ -88,14 +88,6 @@ class Pie extends React.Component {
                     fill={colors[section.index]}
                     strokeWidth={1}
                   />
-                  {/* <Text
-              font="10px Arial"
-              fill="#000"
-              x={label.centroid(section)[0]}
-              y={label.centroid(section)[1]}
-            >
-              {`${section.data.category}`}
-            </Text> */}
                 </Group>
               );
             })}
