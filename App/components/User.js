@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { View, Text } from 'react-native';
-import styles from '../../public/index';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { View, Text } from "react-native";
+import styles from "../../public/index";
 import {
   Button,
   FormInput,
   FormLabel,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 class User extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      error: ' '
+      firstName: "",
+      lastName: "",
+      email: "",
+      error: " "
     };
   }
 
@@ -27,14 +27,14 @@ class User extends Component {
 
   handleError = () => {
     const { firstName, lastName, email } = this.state;
-    if (firstName === '') {
+    if (firstName === "") {
       this.setState({ error: `First name is a required field` });
-    } else if (lastName === '') {
+    } else if (lastName === "") {
       this.setState({ error: `Last name is a required field` });
     } else if (!this.validateEmail(email)) {
       this.setState({ error: `Please enter a valid email` });
     } else {
-      this.setState({ error: ' ' });
+      this.setState({ error: " " });
     }
   };
 
@@ -46,16 +46,20 @@ class User extends Component {
       lastName,
       email
     }))(this.state);
-    if (this.state.error === ' ') {
-      console.log('ADD USER PUT THUNK HERE', form);
-      navigate('Home');
+    if (this.state.error === " ") {
+      console.log("ADD USER PUT THUNK HERE", form);
+      navigate("Home");
     }
   };
 
+  cancel = () => {
+    this.props.navigation.popToTop();
+  };
+
   render() {
-    const { firstName, lastName, email } = this.props.user
-      ? this.props.user
-      : { firstName: '', lastName: '', email: '' };
+    const { firstName, lastName, email } = this.props.user.userInfo
+      ? this.props.user.userInfo
+      : { firstName: "", lastName: "", email: "" };
     return (
       <View style={styles.container}>
         <View style={styles.loginContainer}>
@@ -109,6 +113,15 @@ class User extends Component {
               style={styles.signUpButton}
             />
           </View>
+          <View>
+            <Button
+              onPress={this.cancel}
+              title="Cancel"
+              raised={true}
+              backgroundColor="#B20303"
+              style={styles.signUpButton}
+            />
+          </View>
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
         </View>
       </View>
@@ -117,7 +130,7 @@ class User extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.User.userInfo
+  user: state.user
 });
 
 export default connect(
