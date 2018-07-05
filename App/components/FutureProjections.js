@@ -5,12 +5,12 @@ import {
   GaugeProgress
 } from 'react-native-simple-gauge';
 import styles from '../../public';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 const predict = async data => {
   const model = new Model({
     filepath:
-      '/home/yacinus/Desktop/Capstone/App/components/KerasModelDir/savedModel.bin',
+      './KerasModelDir/savedModel.bin',
     filesystem: true,
     gpu: false
   });
@@ -33,7 +33,15 @@ const predict = async data => {
 class FutureProjections extends React.Component {
   render(props) {
     const { purchases } = this.props.navigation.state.params;
-    const prediction = predict(purchases);
+    console.log('purchases',purchases)
+    // const prediction = predict(purchases);
+    const size = 200;
+    const width = 15;
+    const cropDegree = 90;
+    const textOffset = width;
+    const textWidth = size - (textOffset * 2);
+    const textHeight = size * (1 - cropDegree / 360) - (textOffset * 2);
+
     return (
       <View style={styles.container}>
         <AnimatedGaugeProgress
@@ -44,11 +52,20 @@ class FutureProjections extends React.Component {
           cropDegree={90}
           tintColor="#4682b4"
           backgroundColor="#b0c4de"
-          stroke={[2, 2]} //For a equaly dashed line
-          strokeCap="circle"
-        />
+          stroke={[2, 2]}
+          strokeCap="circle">
+          <View style={{position: 'absolute',
+            top: textOffset,
+            left: textOffset,
+            width: textWidth,
+            height: textHeight,
+            alignItems: 'center',
+            justifyContent: 'center'}}>
+            <Text style={{fontSize: 20}}>hello</Text>
+          </View>
+        </AnimatedGaugeProgress>
       </View>
-    );
+    )
   }
 }
-export default FutureProjections;
+export default FutureProjections
