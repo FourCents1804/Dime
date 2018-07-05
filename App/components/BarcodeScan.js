@@ -28,7 +28,8 @@ class BarcodeScanner extends Component {
       const {user} = this.props.navigation.state.params
       console.log(user.uid)
       const {data} = await axios.post(
-          'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
+         'https://safe-bastion-55889.herokuapp.com/api/sentimentAnalysis', {product: this.state.name}
+          // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
         )
         let purchaseToCommit = {...this.state, category: data}
         this.props.commitPurchase(user.uid, purchaseToCommit)

@@ -17,8 +17,8 @@ export const addNewPurchase = () => async dispatch => {
     console.log('htting image')
 
     const newPurchase = await axios.get(
-      // 'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
-      'http://192.168.1.38:3000/api/receiptRecognition',
+      'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition',
+      // 'http://192.168.1.38:3000/api/receiptRecognition',
 
     );
     dispatch(addPurchase(newPurchase));
