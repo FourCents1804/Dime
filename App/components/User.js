@@ -117,7 +117,7 @@ class User extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.User.userInfo
+  user: state.user.userInfo
 });
 
 export default connect(

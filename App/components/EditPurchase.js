@@ -30,6 +30,7 @@ class EditPurchase extends Component {
         categoryBroad: product.categoryBroad
     })
   }
+
   handleSubmit =  () => {
     const purchase = { ...this.state}
     console.log(purchase)
@@ -61,6 +62,7 @@ class EditPurchase extends Component {
             <FormLabel>Amount</FormLabel>
             <FormInput
               errorMessage
+              textContentType=""
               autoCapitalize="words"
               keyboardType="numeric"
               containerStyle={styles.inputLine}

@@ -168,6 +168,7 @@ export const editPurchase = (user, purchase) => dispatch => {
         categoryBroad: purchase.categoryBroad,
       });
   }
+  console.log(purchase)
   Firebase.database
     .ref(`users/${user}/purchases/${purchase.purchaseUid}`)
     .update({ ...purchase });
@@ -186,11 +187,12 @@ export default function(state = defaultState, action) {
     case ADD_PURCHASE:
       return { ...state, purchaseToCommit: action.purchase };
     case COMMIT_PURCHASE:
-      return { ...state, purchases: [...state.purchases, action.purchase] };
+      return { ...state, purchases: [...state.purchases, action.purchase]  };
+
     case GET_EXPENSES:
       return { ...state, expenses: action.expenses };
     case EDIT_PURCHASES:
-      return { ...state, purchase: [...state.purchases, action.purchase] };
+      return { ...state, purchases:  state.purchases.filter(purchase => purchase.purchaseUid !== action.purchase.purchaseUid).concat(action.purchase)};
     default:
       return state;
   }

@@ -52,6 +52,7 @@ class Home extends Component {
             buttonColor="#3498db"
             title="Camera"
             onPress={async () => {
+
               const image = await ImagePicker.launchCameraAsync({
                 allowsEditing: true
               });
