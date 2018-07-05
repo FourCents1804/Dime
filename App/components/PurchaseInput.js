@@ -3,7 +3,7 @@ import { View, ScrollView, Text, KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../../public';
 import { Location, Permissions } from 'expo';
-import { commitPurchase } from '../store/Thunks/Purchase';
+import { commitPurchase } from '../store';
 import {
   Button,
   FormInput,
@@ -168,7 +168,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => ({
-  user: state.User
+  user: state.user
 });
 
 export default connect(

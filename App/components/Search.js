@@ -6,22 +6,21 @@ import {
   View
 } from 'react-native';
 import styles from '../../public';
-const purchaseData = require('../../seed/purchaseData')
 
 const formatMoney = (number) => {
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 }
 
 const renderPurchase = (purchase) => {
-  const { name, amount, categoryBroad, categoryDetailed, createdAt } = purchase;
+  const { name, amount, categoryBroad, categoryDetailed, date } = purchase;
 
   return (
     <View>
       <Text style={styles.regSmallTitle}>{name}</Text>
       <Text style={styles.regText}>Transaction Amount: {formatMoney(amount)}</Text>
-      <Text style={styles.regText}>Category: {categoryBroad}</Text>
-      <Text style={styles.regText}>Subcategory: {categoryDetailed}</Text>
-      <Text style={styles.regText}>Date: {createdAt}</Text>
+      <Text style={styles.regText}>Category: {categoryBroad ? categoryBroad : 'N/A'}</Text>
+      <Text style={styles.regText}>Subcategory: {categoryDetailed ? categoryDetailed : 'N/A'}</Text>
+      <Text style={styles.regText}>Date: {`${new Date(date)}`}</Text>
     </View>
   );
 }
@@ -36,8 +35,9 @@ class Search extends Component {
     };
   }
 
+
   componentDidMount() {
-    this.setState({ purchases: purchaseData });
+    this.setState({ purchases: this.props.navigation.state.params.purchases });
   }
 
   findPurchase(query) {

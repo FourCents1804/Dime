@@ -10,6 +10,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { me } from '../store/Thunks/User';
 import Firebase from './Firebase/Firebase';
 
+
 class Home extends Component {
   async componentDidMount() {
     const user = await Firebase.auth.currentUser;
@@ -21,6 +22,7 @@ class Home extends Component {
   }
 
   render() {
+    console.log('home props', this.props.purchases)
     const { user, navigate, purchases } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
@@ -28,7 +30,7 @@ class Home extends Component {
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
           <Pie
-            userPurchases={
+            purchases={
               [this.props.recurringExpenses, ...this.props.purchases] || []
             }
           />

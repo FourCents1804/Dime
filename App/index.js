@@ -48,7 +48,10 @@ const AppNavigator = createStackNavigator(
     PurchaseMap: { screen: PurchaseMap },
     BarcodeScanner: {screen: BarcodeScanner}
   },
-  { headerMode: 'null' }
+  {
+    initialRouteName: 'Root',
+    headerMode: 'none'
+  }
 );
 
 const App = () => {
