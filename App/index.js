@@ -1,7 +1,8 @@
-import React from "react";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
 import {
   Login,
+  BarcodeScanner,
   SignUpP1,
   SignUpP2,
   SignUpP3,
@@ -15,14 +16,15 @@ import {
   PastSpend,
   AboutUs,
   FAQ,
+  EditPurchase,
   Search,
   SpendHistory,
   FutureProjections,
   PurchaseMap
-} from "./components/index";
-import Root from "./Root";
-import store from "./store";
-import { createStackNavigator } from "react-navigation";
+} from './components/index';
+import Root from './Root';
+import store from './store';
+import { createStackNavigator } from 'react-navigation';
 
 const AppNavigator = createStackNavigator(
   {
@@ -44,7 +46,9 @@ const AppNavigator = createStackNavigator(
     Search: { screen: Search },
     SpendHistory: { screen: SpendHistory },
     FutureProjections: { screen: FutureProjections },
-    PurchaseMap: { screen: PurchaseMap }
+    PurchaseMap: { screen: PurchaseMap },
+    BarcodeScanner: {screen: BarcodeScanner},
+    EditPurchase: {screen: EditPurchase}
   },
   {
     initialRouteName: 'Root',
