@@ -1,9 +1,11 @@
 import React from 'react'
-import {ScrollView} from 'react-native'
+import {View} from 'react-native'
 
 const FutureProjections = props => {
   return (
-    <ScrollView/>
+    <View>
+      f
+    </View>
   )
 }
 
