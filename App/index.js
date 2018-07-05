@@ -47,8 +47,8 @@ const AppNavigator = createStackNavigator(
     PurchaseMap: { screen: PurchaseMap }
   },
   {
-    initialRouteName: 'Root',
-    headerMode: 'none'
+    initialRouteName: "Root",
+    headerMode: "none"
   }
 );
 

@@ -3,15 +3,13 @@ import {
   Text,
   View,
   Animated,
-  Button as ButtonAlt,
   ImageBackground,
   Image,
   KeyboardAvoidingView
 } from "react-native";
-import { auth } from "../store/Thunks/User";
+import { auth } from "../store/Thunks";
 import styles from "../../public";
 import { connect } from "react-redux";
-import { me } from "../store";
 import {
   Button,
   Divider,
@@ -28,28 +26,18 @@ class Login extends React.Component {
   };
 
   componentDidMount() {
-    this.isMounted = true
-    Animated.timing(
-      this.state.fadeAnim,
-      {
-        toValue: 1,
-        duration: 1000
-      }
-    ).start()
-  }
-
-  componentWillUnmount () {
-    this.isMounted = false
+    Animated.timing(this.state.fadeAnim, {
+      toValue: 1,
+      duration: 1000
+    }).start();
   }
 
   handleSubmit = async event => {
     event.preventDefault();
-    const formName = 'login';
-    const authError = await this.props.auth(this.state, formName)
-    if (authError && this.isMounted) {
-      this.setState({error: authError})
-    } else {
-      this.setState({error: ' '})
+    const formName = "login";
+    const error = await this.props.auth(this.state, formName);
+    if (error) {
+      this.setState({ error });
     }
   };
 
@@ -100,7 +88,7 @@ class Login extends React.Component {
                   onPress={() => navigate("SignUpP1")}
                   title="Sign Up"
                   raised={true}
-                  backgroundColor="#E90909"
+                  backgroundColor="#B20303"
                 >
                   <Text style={styles.signUpFont}>Sign Up</Text>
                 </Button>
