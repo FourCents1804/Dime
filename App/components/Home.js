@@ -7,7 +7,7 @@ import React, { Component } from "react";
 import { Permissions } from "expo";
 import ActionButton from "react-native-action-button";
 import Icon from "react-native-vector-icons/Ionicons";
-import { me } from "../store/Thunks/User";
+import { me } from "../store";
 import User from "./Utility/exampleUser";
 import Firebase from "./Firebase/Firebase";
 
@@ -22,6 +22,7 @@ class Home extends Component {
   }
 
   render() {
+    console.log('home props', this.props.purchases)
     const { user, navigate, purchases } = this.props;
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
@@ -29,7 +30,7 @@ class Home extends Component {
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
           <Pie
-            userPurchases={
+            purchases={
               [this.props.recurringExpenses, ...this.props.purchases] || []
             }
           />

@@ -15,12 +15,15 @@ class Root extends React.Component {
   };
   componentDidMount() {
     Firebase.init();
-    Firebase.auth.onAuthStateChanged(user => {
+    this.unsubscribe = Firebase.auth.onAuthStateChanged(user => {
       user
         ? this.setState({ isLoggedIn: true, loading: false })
         : this.setState({ isLoggedIn: false, loading: false });
     });
+  }
 
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   closeMenu = () => {
@@ -32,6 +35,7 @@ class Root extends React.Component {
   };
 
   render() {
+    console.log('home', this.props)
     const drawerStyles = {
       drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3 },
       main: { paddingLeft: 3 }
@@ -78,20 +82,20 @@ class Root extends React.Component {
 
 const mapStateToProps = state => {
 
-  const purchases = state.User.purchases ? Object.keys(state.User.purchases).map(purchase => state.User.purchases[purchase]) : []
+  // const purchases = state.User.purchases ? Object.keys(state.User.purchases).map(purchase => state.User.purchases[purchase]) : []
 
-  const recurringExpenses = {
-    amount: state.User.recurringExpenses ? Object.keys(state.User.recurringExpenses).reduce((total, key) => total + state.User.recurringExpenses[key], 0) : 0,
-    categoryBroad: 'Utilities',
-    categoryDetailed: 'Utilities',
-    date: Date.now(),
-    name: 'Recurring Expenses'
-  }
+  // const recurringExpenses = {
+  //   amount: state.User.recurringExpenses ? Object.keys(state.User.recurringExpenses).reduce((total, key) => total + state.User.recurringExpenses[key], 0) : 0,
+  //   categoryBroad: 'Utilities',
+  //   categoryDetailed: 'Utilities',
+  //   date: Date.now(),
+  //   name: 'Recurring Expenses'
+  // }
 
   return ({
-    user: state.User.userInfo,
-    purchases: purchases,
-    recurringExpenses: recurringExpenses,
+    user: state.user.userInfo,
+    purchases: state.purchases,
+    recurringExpenses: state.expenses,
   })
 }
 

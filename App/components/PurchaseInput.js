@@ -3,7 +3,7 @@ import { View, ScrollView, Text, KeyboardAvoidingView } from "react-native";
 import { connect } from "react-redux";
 import styles from "../../public";
 import { Location, Permissions } from "expo";
-import { commitPurchase } from "../store/Thunks/Purchase";
+import { commitPurchase } from "../store";
 import {
   Button,
   FormInput,
@@ -118,7 +118,7 @@ class Purchase extends Component {
     const { navigation } = this.props;
     await this.handleError();
     if (this.state.error === "") {
-      const newPurchase = this.props.commitPurchase(this.props.user.uid, {
+      const newPurchase = await this.props.commitPurchase(this.props.user.uid, {
         ...this.state.form,
         date: this.state.date,
         location: this.state.location
@@ -162,7 +162,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => ({
-  user: state.User
+  user: state.user
 });
 
 export default connect(

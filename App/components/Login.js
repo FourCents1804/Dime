@@ -28,25 +28,29 @@ class Login extends React.Component {
   };
 
   componentDidMount() {
-    Animated.timing(this.state.fadeAnim, {
-      toValue: 1,
-      duration: 1000
-    }).start();
+    this.isMounted = true
+    Animated.timing(
+      this.state.fadeAnim,
+      {
+        toValue: 1,
+        duration: 1000
+      }
+    ).start()
   }
 
-  // componentWillUnmount() {
-  //   Animated.timing().stop();
-  // }
+  componentWillUnmount () {
+    this.isMounted = false
+  }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
-    const formName = "login";
-    this.props.auth(this.state, formName).then(error => {
-      if (error) {
-        this.setState({ error });
-      }
-    });
-    this.setState({ error: " " });
+    const formName = 'login';
+    const authError = await this.props.auth(this.state, formName)
+    if (authError && this.isMounted) {
+      this.setState({error: authError})
+    } else {
+      this.setState({error: ' '})
+    }
   };
 
   render() {
