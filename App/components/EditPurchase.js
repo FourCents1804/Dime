@@ -24,7 +24,7 @@ class EditPurchase extends Component {
         date: product.date,
         location: product.location,
         purchaseUid: product.purchaseUid,
-        purchasedBy: product.purchasedBy,
+        purchasedBy: this.props.user.uid,
         name: product.name,
         amount: product.amount,
         categoryBroad: product.categoryBroad
@@ -102,11 +102,15 @@ class EditPurchase extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+    user: state.user
+})
+
 const mapDispatchToProps = dispatch => ({
   editPurchase: (user, purchase) => dispatch(editPurchase(user, purchase))
 })
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(EditPurchase);

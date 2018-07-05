@@ -46,7 +46,7 @@ class PurchaseMap extends Component {
           {purchases.map(purchase => {
             return (
               <Marker
-                key={purchase.name}
+                key={purchase.purchaseUid}
                 title={purchase.name}
                 coordinate={{
                   latitude: purchase.location.coords.latitude,

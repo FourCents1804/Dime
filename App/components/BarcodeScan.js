@@ -27,13 +27,14 @@ class BarcodeScanner extends Component {
   handleSubmit = async () => {
     this._getLocationAsync();
     const { user } = this.props.navigation.state.params;
-
+    console.log('this.state', this.state)
     const { data } = await axios.post(
       'https://safe-bastion-55889.herokuapp.com/api/sentimentAnalysis',
       { product: this.state.name }
       // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
     );
     let purchaseToCommit = { ...this.state, category: data };
+    console.log(purchaseToCommit, user.uid)
     this.props.commitPurchase(user.uid, purchaseToCommit);
     alert(`${this.state.name} added to purchases`)
     this.props.navigation.popToTop()
@@ -61,12 +62,10 @@ class BarcodeScanner extends Component {
           Bar code was found in Dime's Database
           ${data}
           `);
-          console.log(dbProduct)
           const name = dbProduct.child('name').val()
           const amount =  dbProduct.child('amount').val()
-          console.log(name, amount)
           this.setState({ upc: data, name, amount});
-            console.log(this.state);
+
           }
         });
 

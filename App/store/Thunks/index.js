@@ -160,7 +160,6 @@ export const editPurchase = (user, purchase) => dispatch => {
   if (!purchase.purchaseUid)  purchase.purchaseUid = uuidV1()
   if (purchase.upc !== '') {
     console.log(purchase);
-
     Firebase.database
       .ref(`products/${purchase.upc}`)
       .set({
@@ -169,7 +168,6 @@ export const editPurchase = (user, purchase) => dispatch => {
         categoryBroad: purchase.categoryBroad,
       });
   }
-
   Firebase.database
     .ref(`users/${user}/purchases/${purchase.purchaseUid}`)
     .update({ ...purchase });
