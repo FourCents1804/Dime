@@ -1,55 +1,43 @@
-import React from 'react';
+import React from "react";
 import {
   Text,
   View,
   Animated,
-  Button as ButtonAlt,
   ImageBackground,
   Image,
   KeyboardAvoidingView
-} from 'react-native';
-import { auth } from '../store/Thunks';
-import styles from '../../public';
-import { connect } from 'react-redux';
-import { me } from '../store/Thunks';
+} from "react-native";
+import { auth } from "../store/Thunks";
+import styles from "../../public";
+import { connect } from "react-redux";
 import {
   Button,
   Divider,
   FormInput,
   FormValidationMessage
-} from 'react-native-elements';
+} from "react-native-elements";
 
 class Login extends React.Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     fadeAnim: new Animated.Value(0),
-    error: ' '
+    error: " "
   };
 
   componentDidMount() {
-    this.isMounted = true
-    Animated.timing(
-      this.state.fadeAnim,
-      {
-        toValue: 1,
-        duration: 1000
-      }
-    ).start()
-  }
-
-  componentWillUnmount () {
-    this.isMounted = false
+    Animated.timing(this.state.fadeAnim, {
+      toValue: 1,
+      duration: 1000
+    }).start();
   }
 
   handleSubmit = async event => {
     event.preventDefault();
-    const formName = 'login';
-    const authError = await this.props.auth(this.state, formName)
-    if (authError && this.isMounted) {
-      this.setState({error: authError})
-    } else {
-      this.setState({error: ' '})
+    const formName = "login";
+    const error = await this.props.auth(this.state, formName);
+    if (error) {
+      this.setState({ error });
     }
   };
 
@@ -59,7 +47,7 @@ class Login extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          source={require('../../public/city.jpg')}
+          source={require("../../public/city.jpg")}
           style={styles.backgroundImg}
           resizeMode="cover"
         >
@@ -67,8 +55,8 @@ class Login extends React.Component {
             <Animated.View style={{ opacity: fadeAnim }}>
               <View style={styles.loginContainer}>
                 <Image
-                  style={{ paddingTop: 100, height: 40, width: 250  }}
-                  source={require('../../public/DimeLogo.png')}
+                  style={{ paddingTop: 100, height: 40, width: 250 }}
+                  source={require("../../public/DimeLogo.png")}
                 />
                 <FormInput
                   placeholder="Email"
@@ -97,10 +85,10 @@ class Login extends React.Component {
                 />
                 <Button
                   style={styles.wideButton}
-                  onPress={() => navigate('SignUpP1')}
+                  onPress={() => navigate("SignUpP1")}
                   title="Sign Up"
                   raised={true}
-                  backgroundColor="#E90909"
+                  backgroundColor="#0080ff"
                 >
                   <Text style={styles.signUpFont}>Sign Up</Text>
                 </Button>
