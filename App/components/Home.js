@@ -22,6 +22,7 @@ class Home extends Component {
 
   render() {
     const { user, navigate, purchases } = this.props;
+
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
       <View style={styles.homeContainer}>

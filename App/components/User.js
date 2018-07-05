@@ -57,7 +57,6 @@ class User extends Component {
   };
 
   render() {
-    console.log(this.props.user);
     const { firstName, lastName, email } = this.props.user.userInfo
       ? this.props.user.userInfo
       : { firstName: "", lastName: "", email: "" };

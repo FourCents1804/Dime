@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "../../public";
-import { View, ScrollView, Text } from "react-native";
+import { View, ScrollView, Text, KeyboardAvoidingView } from "react-native";
 import {
   FormInput,
   FormLabel,
@@ -49,7 +49,11 @@ class EditPurchase extends Component {
     const { amount, name, categoryBroad } = this.state;
     return (
       <View style={styles.container}>
-        <View style={styles.loginContainer}>
+        <KeyboardAvoidingView
+          enabled
+          behavior="padding"
+          style={styles.loginContainer}
+        >
           <Text style={styles.thinTitle}>Edit Purchase</Text>
           <View>
             <FormLabel>Name</FormLabel>
@@ -110,7 +114,7 @@ class EditPurchase extends Component {
             />
           </View>
           <FormValidationMessage>{this.state.error}</FormValidationMessage>
-        </View>
+        </KeyboardAvoidingView>
       </View>
     );
   }

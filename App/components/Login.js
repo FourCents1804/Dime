@@ -88,7 +88,7 @@ class Login extends React.Component {
                   onPress={() => navigate("SignUpP1")}
                   title="Sign Up"
                   raised={true}
-                  backgroundColor="#B20303"
+                  backgroundColor="#0080ff"
                 >
                   <Text style={styles.signUpFont}>Sign Up</Text>
                 </Button>

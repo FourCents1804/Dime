@@ -32,7 +32,6 @@ class CacheImage extends Component {
     }
 
     const newImage = await FileSystem.downloadAsync(uri, path);
-    console.log(newImage.uri);
     this.uploadImage(newImage.uri, "send-to-google");
     this.setState({
       source: {

@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   ScrollView,
   ImageBackground,
   KeyboardAvoidingView
-} from 'react-native';
-import styles from '../../../public';
-import { Button, FormInput } from 'react-native-elements';
-import { Dropdown } from 'react-native-material-dropdown';
-import { occupations, genders } from '../Utility/signUpData';
+} from "react-native";
+import styles from "../../../public";
+import { Button, FormInput } from "react-native-elements";
+import { Dropdown } from "react-native-material-dropdown";
+import { occupations, genders } from "../Utility/signUpData";
 
 export default class SignUpP2 extends React.Component {
   state = {
-    occupation: '',
-    gender: '',
+    occupation: "",
+    gender: "",
     monthlyIncome: 0,
     age: 0,
     savingsGoal: 0
@@ -23,7 +23,7 @@ export default class SignUpP2 extends React.Component {
     let newUserData = this.props.navigation.state.params.newUserData;
     const { navigate } = this.props.navigation;
     newUserData.push(this.state);
-    navigate('SignUpP3', { newUserData });
+    navigate("SignUpP3", { newUserData });
   };
 
   render() {
@@ -33,16 +33,16 @@ export default class SignUpP2 extends React.Component {
         contentContainerStyle={styles.scrollContainer}
       >
         <ImageBackground
-          source={require('../../../public/park2.jpg')}
+          source={require("../../../public/park2.jpg")}
           style={styles.backgroundImg}
           resizeMode="cover"
         >
           <KeyboardAvoidingView
             enabled
-            behavior="position"
-            style={{ paddingTop: 20 }}
+            behavior="padding"
+            style={styles.loginContainer}
           >
-            <View style={styles.loginContainer}>
+            <View style={{ alignSelf: "center" }}>
               <Dropdown
                 label="Occupation"
                 data={occupations}
@@ -50,7 +50,7 @@ export default class SignUpP2 extends React.Component {
                 onChangeText={value => this.setState({ occupation: value })}
               />
             </View>
-            <View>
+            <View style={{ alignSelf: "center" }}>
               <Dropdown
                 label="Gender"
                 data={genders}
