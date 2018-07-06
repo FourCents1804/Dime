@@ -112,7 +112,7 @@ class EditPurchase extends Component {
               onPress={this.cancel}
               title="Cancel"
               raised={true}
-              backgroundColor="#B20303"
+              backgroundColor="#0080ff"
               style={styles.signUpButton}
             />
           </View>
