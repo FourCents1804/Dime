@@ -55,7 +55,8 @@ class Login extends React.Component {
             <Animated.View style={{ opacity: fadeAnim }}>
               <View style={styles.loginContainer}>
                 <Image
-                  style={{ paddingTop: 100, height: 40, width: 250 }}
+                  style={{ height: 50, width: 200 }}
+                  resizeMode="contain"
                   source={require("../../public/DimeLogo.png")}
                 />
                 <FormInput
