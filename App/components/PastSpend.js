@@ -26,15 +26,15 @@ export default class PastSpend extends React.Component {
     const categoryDataByMonth = d3
       .nest()
       .key(d => formatter(new Date(d.date)))
-      .key(d => d.categoryBroad)
+      .key(d => d.category)
       .rollup(d => d3.sum(d, g => g.amount))
       .entries(purchases)
       .sort((a, b) => parser(b.key) - parser(a.key));
 
     const categoryDataTotal = d3
       .nest()
-      .key(d => 'Total')
-      .key(d => d.categoryBroad)
+      .key(d => "Total")
+      .key(d => d.category)
       .rollup(d => d3.sum(d, g => g.amount))
       .entries(purchases);
 

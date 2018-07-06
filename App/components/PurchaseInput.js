@@ -18,9 +18,9 @@ class Purchase extends Component {
   state = {
     error: '',
     form: {
-      name: '',
-      amount: '',
-      categoryBroad: '',
+      name: "",
+      amount: "",
+      category: "",
       date: Date.now()
     }
   };
@@ -93,7 +93,7 @@ class Purchase extends Component {
                 containerStyle={styles.signUpDropdown}
                 onChangeText={value => {
                   stateFields = { ...this.state.form };
-                  stateFields.categoryBroad = value;
+                  stateFields.category = value;
                   this.setState({ form: stateFields });
                 }}
               />

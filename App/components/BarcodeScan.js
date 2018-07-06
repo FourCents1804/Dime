@@ -18,9 +18,9 @@ class BarcodeScanner extends Component {
   state = {
     upc: undefined,
     date: Date.now(),
-    amount: '',
-    name: '',
-    categoryBroad: ''
+    amount: "",
+    name: "",
+    category: ""
   };
 
   handleSubmit = async () => {

@@ -10,7 +10,7 @@ const Purchase = db.define('purchase', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  categoryBroad: {
+  category: {
     type: Sequelize.STRING,
     allowNull: false
   },

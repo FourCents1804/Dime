@@ -15,7 +15,7 @@
 //       Purchase.create({
 //         name: "Halal Guys",
 //         amount: 152.82,
-//         categoryBroad: "Food and Drink",
+//         category: "Food and Drink",
 //         categoryDetailed: "Restaurant"
 //       }).then(newPurchase => (purchase = newPurchase))
 //     );
@@ -35,7 +35,7 @@
 //         await Purchase.findOrCreate({
 //           where: {
 //             amount: 90.46,
-//             categoryBroad: "Shops",
+//             category: "Shops",
 //             categoryDetailed: "Clothing and Accessories",
 //             name: "260 SAMPLE SALE CHELSE"
 //           }
@@ -48,7 +48,7 @@
 //         await Purchase.findOrCreate({
 //           where: {
 //             amount: 9.8,
-//             categoryBroad: "Food and Drink",
+//             category: "Food and Drink",
 //             categoryDetailed: null,
 //             name: "KING OF FALAFEL"
 //           }

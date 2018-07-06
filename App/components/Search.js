@@ -12,7 +12,7 @@ const formatMoney = number => {
 };
 
 const renderPurchase = purchase => {
-  const { name, amount, categoryBroad, categoryDetailed, date } = purchase;
+  const { name, amount, category, categoryDetailed, date } = purchase;
 
   return (
     <View>
@@ -21,7 +21,7 @@ const renderPurchase = purchase => {
         Transaction Amount: {formatMoney(amount)}
       </Text>
       <Text style={styles.regText}>
-        Category: {categoryBroad ? categoryBroad : "N/A"}
+        Category: {category ? category : "N/A"}
       </Text>
       <Text style={styles.regText}>
         Subcategory: {categoryDetailed ? categoryDetailed : "N/A"}

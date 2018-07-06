@@ -19,7 +19,7 @@ class EditPurchase extends Component {
     purchaseUid: "",
     name: "",
     amount: "",
-    categoryBroad: ""
+    category: ""
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ class EditPurchase extends Component {
       purchasedBy: this.props.user.uid,
       name: product.name,
       amount: product.amount,
-      categoryBroad: product.categoryBroad
+      category: product.category
     });
   }
 
@@ -48,7 +48,7 @@ class EditPurchase extends Component {
     this.props.navigation.pop(2);
   };
   render() {
-    const { amount, name, categoryBroad } = this.state;
+    const { amount, name, category } = this.state;
     return (
       <View style={styles.container}>
         <KeyboardAvoidingView
@@ -91,9 +91,9 @@ class EditPurchase extends Component {
               errorMessage
               autoCapitalize="words"
               containerStyle={styles.inputLine}
-              value={categoryBroad}
+              value={category}
               onChangeText={value => {
-                this.setState({ categoryBroad: value });
+                this.setState({ category: value });
               }}
             />
           </View>
