@@ -65,7 +65,7 @@ class FutureProjections extends Component {
           </View>
         </AnimatedGaugeProgress>
         <Text style={styles.futureProjectionsText}>
-          Based on your spending habits, you are projected to spend between {this.formatMoney(low)} and {this.formatMoney(high)} per day.
+          Based on your spending habits, you are projected to spend between {this.formatMoney(low)} and {this.formatMoney(high)} today.
         </Text>
       </View>
     )
