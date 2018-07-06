@@ -1,14 +1,14 @@
-import { ScrollView, View, Text } from "react-native";
-import { connect } from "react-redux";
-import Pie from "../D3/Doughnut";
-import { SpendTable } from "./";
-import styles from "../../public";
-import React, { Component } from "react";
-import { Permissions, ImagePicker } from "expo";
-import ActionButton from "react-native-action-button";
-import Icon from "react-native-vector-icons/Ionicons";
-import { me } from "../store/Thunks";
-import Firebase from "./Firebase/Firebase";
+import { ScrollView, View, Text } from 'react-native';
+import { connect } from 'react-redux';
+import Pie from '../D3/Doughnut';
+import { SpendTable, Loading } from './';
+import styles from '../../public';
+import React, { Component } from 'react';
+import { Permissions, ImagePicker } from 'expo';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { me } from '../store/Thunks';
+import Firebase from './Firebase/Firebase';
 
 class Home extends Component {
   async componentDidMount() {
@@ -22,17 +22,21 @@ class Home extends Component {
 
   render() {
     const { user, navigate, purchases } = this.props;
-
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
       <View style={styles.homeContainer}>
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-          <Pie
-            purchases={
-              [this.props.recurringExpenses, ...this.props.purchases] || []
-            }
-          />
+
+          {purchases.length === 0 ? (
+            <Loading />
+          ) : (
+            <Pie
+              purchases={
+                [this.props.recurringExpenses, ...this.props.purchases] || []
+              }
+            />
+          )}
           <SpendTable userPurchases={purchases || []} />
         </ScrollView>
         <ActionButton
@@ -42,7 +46,7 @@ class Home extends Component {
           <ActionButton.Item
             buttonColor="#3498db"
             title="Barcode"
-            onPress={() => navigate("BarcodeScanner", { user })}
+            onPress={() => navigate('BarcodeScanner', { user })}
           >
             <Icon name="ios-barcode" size={30} />
           </ActionButton.Item>
@@ -57,7 +61,7 @@ class Home extends Component {
                 allowsEditing: true
               });
 
-              if (!image.cancelled) navigate("TakenImage", { uri: image.uri });
+              if (!image.cancelled) navigate('TakenImage', { uri: image.uri });
             }}
           >
             <Icon name="ios-camera" size={30} />
@@ -65,7 +69,7 @@ class Home extends Component {
           <ActionButton.Item
             buttonColor="#3498db"
             title="Keyboard"
-            onPress={() => navigate("Purchase")}
+            onPress={() => navigate('Purchase')}
           >
             <Icon name="ios-keypad" size={30} />
           </ActionButton.Item>
