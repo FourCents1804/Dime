@@ -1,7 +1,7 @@
 import { ScrollView, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import Pie from '../D3/Doughnut';
-import { SpendTable } from './';
+import { SpendTable, Loading } from './';
 import styles from '../../public';
 import React, { Component } from 'react';
 import { Permissions, ImagePicker } from 'expo';
@@ -22,18 +22,22 @@ class Home extends Component {
 
   render() {
     const { user, navigate, purchases } = this.props;
-
     const firstName = user ? `, ${user.firstName}` : ``;
     return (
       <View style={styles.homeContainer}>
         <ScrollView style={{ paddingTop: 10 }}>
           <Text style={styles.thinTitle}>Welcome{firstName}!</Text>
-          <Pie
-            purchases={
-              [this.props.recurringExpenses, ...this.props.purchases] || []
-            }
-          />
-          <SpendTable userPurchases={this.props.purchases || []} />
+
+          {purchases.length === 0 ? (
+            <Loading />
+          ) : (
+            <Pie
+              purchases={
+                [this.props.recurringExpenses, ...this.props.purchases] || []
+              }
+            />
+          )}
+          <SpendTable userPurchases={purchases || []} />
         </ScrollView>
         <ActionButton
           buttonColor="rgba(231,76,60,1)"

@@ -32,6 +32,7 @@ class PurchaseMap extends Component {
   render() {
     const { purchases } = this.props.navigation.state.params;
     const { location } = this.state;
+    console.log(purchases);
     return (
       <View style={styles.container}>
         <MapView
@@ -46,7 +47,7 @@ class PurchaseMap extends Component {
           {purchases.map(purchase => {
             return (
               <Marker
-                key={purchase.purchaseUid}
+                key={purchases.indexOf(purchase)}
                 title={purchase.name}
                 coordinate={{
                   latitude: purchase.location.coords.latitude,

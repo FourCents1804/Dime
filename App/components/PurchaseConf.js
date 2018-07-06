@@ -20,7 +20,6 @@ class PurchaseConf extends React.Component {
   };
   componentDidMount() {
     const { data } = this.props.purchase;
-    console.log(data);
     this.setState({ amount: data.amount, category: data.category });
   }
 
