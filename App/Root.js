@@ -1,5 +1,5 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 import {
   Home,
   Login,
@@ -7,18 +7,18 @@ import {
   Menu,
   Loading,
   PurchaseConf
-} from "./components";
-import { connect } from "react-redux";
-import Firebase from "./components/Firebase/Firebase";
-import styles from "../public";
-import Drawer from "react-native-drawer";
+} from './components';
+import { connect } from 'react-redux';
+import Firebase from './components/Firebase/Firebase';
+import styles from '../public';
+import Drawer from 'react-native-drawer';
 
 class Root extends React.Component {
   state = {
     isLoggedIn: false,
     loading: true
   };
-  componentDidMount() {
+  componentWillMount() {
     Firebase.init();
     this.unsubscribe = Firebase.auth.onAuthStateChanged(user => {
       user
@@ -41,7 +41,7 @@ class Root extends React.Component {
 
   render() {
     const drawerStyles = {
-      drawer: { shadowColor: "#000000", shadowOpacity: 0.8, shadowRadius: 3 },
+      drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3 },
       main: { paddingLeft: 3 }
     };
     const { navigate } = this.props.navigation;
