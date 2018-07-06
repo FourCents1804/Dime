@@ -63,7 +63,7 @@ class Search extends Component {
 
   render() {
     const { query } = this.state;
-    const { navigate, popToTop } = this.props.navigation;
+    const { navigate, pop } = this.props.navigation;
     const purchases = this.findPurchase(query);
     const comp = (a, b) => a.toLowerCase().trim() === b.toLowerCase().trim();
 
@@ -107,7 +107,7 @@ class Search extends Component {
               <View style={{ alignSelf: "center" }}>
                 <Button
                   onPress={() => {
-                    popToTop();
+                    pop(1);
                   }}
                   title="Cancel"
                   raised={true}

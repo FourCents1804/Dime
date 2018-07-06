@@ -85,23 +85,17 @@ class SignUpP3 extends React.Component {
           style={styles.backgroundImg}
           resizeMode="cover"
         >
-          <KeyboardAvoidingView
-            enabled
-            behavior="position"
-            style={{ paddingTop: 20 }}
-          >
-            <View style={styles.loginContainer}>
-              <Text style={styles.thinTitle}>Monthly Expenses</Text>
-              {this.createCheckBox()}
-              <Button
-                onPress={this.handleSubmit}
-                title="Create Your Account"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.signUpButton}
-              />
-            </View>
-          </KeyboardAvoidingView>
+          <View style={styles.loginContainer}>
+            <Text style={styles.thinTitle}>Monthly Expenses</Text>
+            {this.createCheckBox()}
+            <Button
+              onPress={this.handleSubmit}
+              title="Create Your Account"
+              raised={true}
+              backgroundColor="#0080ff"
+              style={styles.signUpButton}
+            />
+          </View>
         </ImageBackground>
       </ScrollView>
     );
