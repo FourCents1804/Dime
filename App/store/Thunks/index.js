@@ -32,7 +32,7 @@ const formatExpenses = expenses => ({
   amount: expenses
     ? Object.keys(expenses).reduce((total, key) => total + expenses[key], 0)
     : 0,
-  categoryBroad: "Utilities",
+  category: "Utilities",
   categoryDetailed: "Utilities",
   date: Date.now(),
   name: "Recurring Expenses"
@@ -142,7 +142,7 @@ export const commitPurchase = (user, purchase) => dispatch => {
     Firebase.database.ref(`products/${purchase.upc}`).set({
       name: purchase.name,
       amount: purchase.amount,
-      categoryBroad: purchase.categoryBroad
+      category: purchase.category
     });
   }
 
@@ -158,7 +158,7 @@ export const editPurchase = (user, purchase) => dispatch => {
     Firebase.database.ref(`products/${purchase.upc}`).set({
       name: purchase.name,
       amount: purchase.amount,
-      categoryBroad: purchase.categoryBroad
+      category: purchase.category
     });
   }
   Firebase.database

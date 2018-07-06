@@ -28,7 +28,7 @@ const purchases = purchaseData
 // const purchases = [
 //   {
 //     "amount": 13.07,
-//     "categoryBroad": "Shops",
+//     "category": "Shops",
 //     "categoryDetailed": "Food and Beverage Store",
 //     "date": "2018-05-16",
 //     "name": "LEONIDAS CHOCOLATES",
@@ -36,7 +36,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 26.25,
-//     "categoryBroad": "Travel",
+//     "category": "Travel",
 //     "categoryDetailed": "Public Transportation Services",
 //     "date": "2018-05-16",
 //     "name": "MTA MVM VENDING MACHINES",
@@ -44,7 +44,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 90.46,
-//     "categoryBroad": "Shops",
+//     "category": "Shops",
 //     "categoryDetailed": "Clothing and Accessories",
 //     "date": "2018-05-15",
 //     "name": "260 SAMPLE SALE CHELSE",
@@ -52,7 +52,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 9.8,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-15",
 //     "name": "KING OF FALAFEL &",
@@ -60,7 +60,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 18,
-//     "categoryBroad": "Service",
+//     "category": "Service",
 //     "categoryDetailed": "Personal Care",
 //     "date": "2018-05-15",
 //     "name": "PAYGATE_KIWDISK 4552788",
@@ -68,7 +68,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 25,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-15",
 //     "name": "Starbucks",
@@ -76,7 +76,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 8.5,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-15",
 //     "name": "TACOS MORELOS",
@@ -84,7 +84,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 1.1,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "",
 //     "date": "2018-05-15",
 //     "name": "USA*IDEAL VENDING",
@@ -92,7 +92,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 8.01,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-14",
 //     "name": "KILLARNEY ROSE",
@@ -100,7 +100,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 3.27,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-14",
 //     "name": "OPEN KITCHEN 15 IN",
@@ -108,7 +108,7 @@ const purchases = purchaseData
 //   },
 //   {
 //     "amount": 4.9,
-//     "categoryBroad": "Food and Drink",
+//     "category": "Food and Drink",
 //     "categoryDetailed": "Restaurants",
 //     "date": "2018-05-14",
 //     "name": "OPEN KITCHEN 15 IN",

@@ -21,7 +21,7 @@ class BarcodeScanner extends Component {
     amount: "",
     name: "",
     location: null,
-    categoryBroad: ""
+    category: ""
   };
 
   handleSubmit = async () => {

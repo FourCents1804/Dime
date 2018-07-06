@@ -26,7 +26,7 @@ class Pie extends React.Component {
     const categoryData = purchases
       ? d3
           .nest()
-          .key(d => d.categoryBroad)
+          .key(d => d.category)
           .rollup(d => d3.sum(d, g => g.amount))
           .entries(purchases)
           .sort((a, b) => b.value - a.value)

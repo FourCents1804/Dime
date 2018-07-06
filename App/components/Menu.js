@@ -34,7 +34,7 @@ const Menu = props => {
       </View>
       <TouchableHighlight
 
-        onPress={() => navigate("PastSpend", { purchases: purchasesWithExpenses })}
+        onPress={() => navigate("PastSpend", { purchases })}
         style={styles.menuLinks}
       >
         <Text style={styles.menuLinkText}>Past Expense Analysis</Text>

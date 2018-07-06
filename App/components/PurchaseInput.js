@@ -21,7 +21,7 @@ class Purchase extends Component {
     form: {
       name: "",
       amount: "",
-      categoryBroad: ""
+      category: ""
     }
   };
 
@@ -107,7 +107,7 @@ class Purchase extends Component {
                 containerStyle={styles.signUpDropdown}
                 onChangeText={value => {
                   stateFields = { ...this.state.form };
-                  stateFields.categoryBroad = value;
+                  stateFields.category = value;
                   this.setState({ form: stateFields });
                 }}
               />
