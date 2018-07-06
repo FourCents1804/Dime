@@ -28,7 +28,7 @@ const Histogram = props => {
           style={{ width: 30 }}
           numberOfTicks={8}
           formatLabel={value =>
-            // value > 999 ? `$${(value / 1000).toFixed(0)}k` :
+            value > 999 ? `$${(value / 1000).toFixed(0)}k` :
             `$${value}`
           }
           yAccessor={({ item }) => item.value}
