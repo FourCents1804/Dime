@@ -36,16 +36,16 @@ class EditPurchase extends Component {
     });
   }
 
-  handleSubmit =  () => {
-    const purchase = { ...this.state}
-    console.log(purchase)
+  handleSubmit = () => {
+    const purchase = { ...this.state };
+    console.log(purchase);
     this.props.editPurchase(purchase.purchasedBy, this.state);
     alert("Puchase Has Been Updated!");
     this.props.navigation.popToTop();
   };
 
   cancel = () => {
-    this.props.navigation.popToTop();
+    this.props.navigation.pop(2);
   };
   render() {
     const { amount, name, categoryBroad } = this.state;
@@ -112,7 +112,7 @@ class EditPurchase extends Component {
               onPress={this.cancel}
               title="Cancel"
               raised={true}
-              backgroundColor="#B20303"
+              backgroundColor="#0080ff"
               style={styles.signUpButton}
             />
           </View>
