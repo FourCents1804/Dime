@@ -1,63 +1,48 @@
-import React, { Component } from "react";
-import { View, ScrollView, Text, KeyboardAvoidingView } from "react-native";
-import { connect } from "react-redux";
-import styles from "../../public";
-import { Location, Permissions } from "expo";
-import { commitPurchase } from "../store";
-import { Dropdown } from "react-native-material-dropdown";
-import { categories } from "./Utility/purchaseInput";
+import React, { Component } from 'react';
+import { View, ScrollView, Text, KeyboardAvoidingView } from 'react-native';
+import { connect } from 'react-redux';
+import styles from '../../public';
+
+import { commitPurchase } from '../store';
+import { Dropdown } from 'react-native-material-dropdown';
+import { categories } from './Utility/purchaseInput';
+
 
 import {
   Button,
   FormInput,
   FormValidationMessage
-} from "react-native-elements";
+} from 'react-native-elements';
 
 class Purchase extends Component {
   state = {
-    error: "",
-    location: "",
-    date: Date.now(),
+    error: '',
     form: {
-      name: "",
-      amount: "",
-      categoryBroad: ""
+      name: '',
+      amount: '',
+      categoryBroad: ''
     }
   };
 
-  componentWillMount = () => {
-    this._getLocationAsync();
-  };
-
-  _getLocationAsync = async () => {
-    let { status } = await Permissions.askAsync(Permissions.LOCATION);
-    if (status === "granted") {
-      let location = await Location.getCurrentPositionAsync({});
-      this.setState({
-        location
-      });
-    }
-  };
 
   handleError = () => {
-    if (this.state.form.amount === "") {
-      this.setState({ error: "Amount is A required Field" });
+    if (this.state.form.amount === '') {
+      this.setState({ error: 'Amount is A required Field' });
     } else {
-      this.setState({ error: "" });
+      this.setState({ error: '' });
     }
   };
 
   handleSubmit = async event => {
     event.preventDefault();
-    const { navigation } = this.props;
+    const { navigation, commitPurchase } = this.props;
+    const { form} = this.state
     await this.handleError();
-    if (this.state.error === "") {
-      const newPurchase = this.props.commitPurchase(this.props.user.uid, {
-        ...this.state.form,
-        date: this.state.date,
-        location: this.state.location
+    if (this.state.error === '') {
+      commitPurchase(this.props.user.uid, {
+        ...form
       });
-      alert("Expense successfully submitted!");
+      alert(`${form.name} Successfully Added to Purchases!`);
       navigation.popToTop();
     }
   };
@@ -76,7 +61,7 @@ class Purchase extends Component {
           <Text style={styles.thinTitle}>Add an Expense</Text>
           <View style={styles.loginContainer}>
             <View>
-              {/* <NumberFormat value={2456981} displayType="text" thousandSeparator={true} prefix="$" /> */}
+
               <FormInput
                 containerStyle={styles.inputLine}
                 autoCapitalize="words"
@@ -92,7 +77,7 @@ class Purchase extends Component {
               <FormInput
                 keyboardType="numeric"
                 containerStyle={styles.inputLine}
-                placeholder="Amount"
+                placeholder="Amount (Required)"
                 onChangeText={value => {
                   stateFields = { ...this.state.form };
                   stateFields.amount = value;
@@ -125,7 +110,7 @@ class Purchase extends Component {
             onPress={this.cancel}
             title="Cancel"
             raised={true}
-            backgroundColor="#0080ff"
+            backgroundColor="red"
             style={styles.signUpButton}
           />
         </KeyboardAvoidingView>
@@ -136,7 +121,7 @@ class Purchase extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    commitPurchase: (uid, purchase) => dispatch(commitPurchase(uid, purchase))
+    commitPurchase: (userUid, purchase) => dispatch(commitPurchase(userUid, purchase))
   };
 };
 

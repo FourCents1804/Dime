@@ -1,6 +1,7 @@
-import axios from "axios";
-import uuidV1 from "uuid/v1";
-import Firebase from "../../components/Firebase/Firebase";
+import axios from 'axios';
+import uuidV1 from 'uuid/v1';
+import Firebase from '../../components/Firebase/Firebase';
+import { getLocationAsync } from '../../components/Utility/util-functions';
 
 //Initial State
 const defaultPurchases = [];
@@ -16,26 +17,26 @@ const defaultState = {
 };
 
 //Constants
-const GET_USER = "GET_USER";
-const REMOVE_USER = "REMOVE_USER";
-const GET_PURCHASES = "GET_PURCHASES";
-const ADD_PURCHASE = "ADD_PURCHASE";
-const COMMIT_PURCHASE = "COMMIT_PURCHASE";
-const GET_EXPENSES = "GET_EXPENSES";
-const EDIT_PURCHASES = "EDIT_PURCHASES";
+const GET_USER = 'GET_USER';
+const REMOVE_USER = 'REMOVE_USER';
+const GET_PURCHASES = 'GET_PURCHASES';
+const ADD_PURCHASE = 'ADD_PURCHASE';
+const COMMIT_PURCHASE = 'COMMIT_PURCHASE';
+const GET_EXPENSES = 'GET_EXPENSES';
+const EDIT_PURCHASES = 'EDIT_PURCHASES';
 
 //Utility
 const formatPurchases = purchases =>
-  purchases ? Object.keys(purchases).map(purchase => purchases[purchase]) : [];
+  (purchases ? Object.keys(purchases).map(purchase => purchases[purchase]) : []);
 
 const formatExpenses = expenses => ({
   amount: expenses
     ? Object.keys(expenses).reduce((total, key) => total + expenses[key], 0)
     : 0,
-  categoryBroad: "Utilities",
-  categoryDetailed: "Utilities",
+  categoryBroad: 'Utilities',
+  categoryDetailed: 'Utilities',
   date: Date.now(),
-  name: "Recurring Expenses"
+  name: 'Recurring Expenses'
 });
 
 //Action Creators
@@ -52,7 +53,7 @@ export const me = user => async dispatch => {
   try {
     const data = await Firebase.database
       .ref(`users/${user.uid}`)
-      .once("value")
+      .once('value')
       .then(snapshot => {
         return snapshot.val();
       });
@@ -72,7 +73,7 @@ export const me = user => async dispatch => {
 
 export const auth = (userData, method) => async dispatch => {
   try {
-    if (method === "signup") {
+    if (method === 'signup') {
       const user = await Firebase.auth.createUserWithEmailAndPassword(
         userData[0].email,
         userData[0].password
@@ -97,7 +98,7 @@ export const auth = (userData, method) => async dispatch => {
       );
       const data = await Firebase.database
         .ref(`users/${user.user.uid}`)
-        .once("value")
+        .once('value')
         .then(snapshot => {
           return snapshot.val();
         });
@@ -112,7 +113,7 @@ export const auth = (userData, method) => async dispatch => {
       dispatch(gotExpenses(formatExpenses(data.recurringExpenses)));
     }
   } catch (err) {
-    return "Invalid Username or Password";
+    return 'Invalid Username or Password';
   }
 };
 export const logout = () => dispatch => {
@@ -125,7 +126,7 @@ export const logout = () => dispatch => {
 export const addNewPurchase = uri => async dispatch => {
   try {
     const newPurchase = await axios.get(
-      "https://safe-bastion-55889.herokuapp.com/api/receiptRecognition"
+      'https://safe-bastion-55889.herokuapp.com/api/receiptRecognition'
       // 'http://192.168.1.38:3000/api/receiptRecognition',
     );
     dispatch(addedPurchase(newPurchase));
@@ -134,9 +135,11 @@ export const addNewPurchase = uri => async dispatch => {
   }
 };
 
-export const commitPurchase = (user, purchase) => dispatch => {
-  let upid = uuidV1();
-  let ifUpc = "";
+export const commitPurchase = (user, purchase) => async dispatch => {
+  const upid = uuidV1();
+  const location = await getLocationAsync();
+  const date = Date.now();
+  let ifUpc = '';
   if (purchase.upc) {
     ifUpc = purchase.upc;
     Firebase.database.ref(`products/${purchase.upc}`).set({
@@ -146,15 +149,20 @@ export const commitPurchase = (user, purchase) => dispatch => {
     });
   }
 
-  Firebase.database
-    .ref(`users/${user}/purchases/${upid}`)
-    .set({ upc: ifUpc, purchasedBy: user, purchaseUid: upid, ...purchase });
+  Firebase.database.ref(`users/${user}/purchases/${upid}`).set({
+    upc: ifUpc,
+    purchasedBy: user,
+    purchaseUid: upid,
+    ...purchase,
+    location,
+    date
+  });
   dispatch(commitedPurchase(purchase));
 };
 
 export const editPurchase = (user, purchase) => dispatch => {
   if (!purchase.purchaseUid) purchase.purchaseUid = uuidV1();
-  if (purchase.upc !== "") {
+  if (purchase.upc !== '') {
     Firebase.database.ref(`products/${purchase.upc}`).set({
       name: purchase.name,
       amount: purchase.amount,
