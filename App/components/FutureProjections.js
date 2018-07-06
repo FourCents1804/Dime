@@ -24,8 +24,8 @@ class FutureProjections extends Component {
 
   formatMoney = number => {
     return number.toLocaleString(
-      "en-US",
-      { style: "currency", currency: "USD" }
+      'en-US',
+      { style: 'currency', currency: 'USD' }
     );
   };
 
