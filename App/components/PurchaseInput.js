@@ -20,7 +20,8 @@ class Purchase extends Component {
     form: {
       name: '',
       amount: '',
-      categoryBroad: ''
+      categoryBroad: '',
+      date: Date.now()
     }
   };
 

@@ -1,28 +1,27 @@
-import React from "react";
-import { Line, SpendHistory, Histogram } from "./";
-import { View, Text, ScrollView } from "react-native";
-import styles from "../../public";
-import { connect } from "react-redux";
-import { Dropdown } from "react-native-material-dropdown";
-import * as d3 from "d3";
-import { sanFranciscoWeights } from "react-native-typography";
+import React from 'react';
+import { Line, SpendHistory, Histogram } from './';
+import { View, Text, ScrollView } from 'react-native';
+import styles from '../../public';
+import { Dropdown } from 'react-native-material-dropdown';
+import * as d3 from 'd3';
+import { sanFranciscoWeights } from 'react-native-typography';
 
 const formatMoney = number => {
   return number.toLocaleString(
-    "en-US",
-    { style: "currency", currency: "USD" }
+    'en-US',
+    { style: 'currency', currency: 'USD' }
   );
 };
 
 export default class PastSpend extends React.Component {
   state = {
-    month: "Total"
+    month: 'Total'
   };
 
   render() {
     const { purchases } = this.props.navigation.state.params;
-    const formatter = d3.timeFormat("%b %y");
-    const parser = d3.timeParse("%b %y");
+    const formatter = d3.timeFormat('%b %y');
+    const parser = d3.timeParse('%b %y');
 
     const categoryDataByMonth = d3
       .nest()
@@ -34,7 +33,7 @@ export default class PastSpend extends React.Component {
 
     const categoryDataTotal = d3
       .nest()
-      .key(d => "Total")
+      .key(d => 'Total')
       .key(d => d.categoryBroad)
       .rollup(d => d3.sum(d, g => g.amount))
       .entries(purchases);
@@ -59,10 +58,10 @@ export default class PastSpend extends React.Component {
           />
           <View>
             <Text style={styles.h1Text}>
-              You spent{" "}
+              You spent{' '}
               {formatMoney(
                 currentData.reduce((total, cat) => total + cat.value, 0)
-              )}{" "}
+              )}{' '}
               in {this.state.month}
             </Text>
           </View>

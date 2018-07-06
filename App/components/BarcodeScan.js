@@ -17,6 +17,7 @@ import { barcodeKey } from '../../secrets';
 class BarcodeScanner extends Component {
   state = {
     upc: undefined,
+    date: Date.now(),
     amount: '',
     name: '',
     categoryBroad: ''

@@ -138,7 +138,7 @@ export const addNewPurchase = uri => async dispatch => {
 export const commitPurchase = (user, purchase) => async dispatch => {
   const upid = uuidV1();
   const location = await getLocationAsync();
-  const date = Date.now();
+
   let ifUpc = '';
   if (purchase.upc) {
     ifUpc = purchase.upc;
@@ -155,7 +155,7 @@ export const commitPurchase = (user, purchase) => async dispatch => {
     purchaseUid: upid,
     ...purchase,
     location,
-    date
+
   });
   dispatch(commitedPurchase(purchase));
 };
