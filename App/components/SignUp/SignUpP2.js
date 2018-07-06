@@ -37,73 +37,71 @@ export default class SignUpP2 extends React.Component {
           style={styles.backgroundImg}
           resizeMode="cover"
         >
-          <KeyboardAvoidingView
-            enabled
-            behavior="padding"
-            style={styles.loginContainer}
-          >
-            <View style={{ alignSelf: "center" }}>
-              <Dropdown
-                label="Occupation"
-                data={occupations}
-                containerStyle={styles.signUpDropdown}
-                onChangeText={value => this.setState({ occupation: value })}
-              />
-            </View>
-            <View style={{ alignSelf: "center" }}>
-              <Dropdown
-                label="Gender"
-                data={genders}
-                containerStyle={styles.signUpDropdown}
-                onChangeText={value => this.setState({ gender: value })}
-              />
-            </View>
-            <View>
-              <FormInput
-                errorMessage
-                keyboardType="numeric"
-                autoCapitalize="none"
-                containerStyle={styles.inputLine}
-                placeholder="Monthly Income"
-                onChangeText={value => {
-                  this.setState({ monthlyIncome: value });
-                }}
-              />
-            </View>
-            <View>
-              <FormInput
-                errorMessage
-                keyboardType="numeric"
-                autoCapitalize="none"
-                containerStyle={styles.inputLine}
-                placeholder="Age"
-                onChangeText={value => {
-                  this.setState({ age: value });
-                }}
-              />
-            </View>
-            <View>
-              <FormInput
-                errorMessage
-                keyboardType="numeric"
-                autoCapitalize="none"
-                containerStyle={styles.inputLine}
-                placeholder="Savings Goal"
-                onChangeText={value => {
-                  this.setState({ savingsGoal: value });
-                }}
-              />
-            </View>
-            <View>
-              <Button
-                onPress={() => {
-                  this.handleNextButton();
-                }}
-                title="Next 2 of 3"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.signUpButton}
-              />
+          <KeyboardAvoidingView enabled behavior="position">
+            <View style={styles.loginContainer}>
+              <View style={{ alignSelf: "center" }}>
+                <Dropdown
+                  label="Occupation"
+                  data={occupations}
+                  containerStyle={styles.signUpDropdown}
+                  onChangeText={value => this.setState({ occupation: value })}
+                />
+              </View>
+              <View style={{ alignSelf: "center" }}>
+                <Dropdown
+                  label="Gender"
+                  data={genders}
+                  containerStyle={styles.signUpDropdown}
+                  onChangeText={value => this.setState({ gender: value })}
+                />
+              </View>
+              <View>
+                <FormInput
+                  errorMessage
+                  keyboardType="numeric"
+                  autoCapitalize="none"
+                  containerStyle={styles.inputLine}
+                  placeholder="Monthly Income"
+                  onChangeText={value => {
+                    this.setState({ monthlyIncome: value });
+                  }}
+                />
+              </View>
+              <View>
+                <FormInput
+                  errorMessage
+                  keyboardType="numeric"
+                  autoCapitalize="none"
+                  containerStyle={styles.inputLine}
+                  placeholder="Age"
+                  onChangeText={value => {
+                    this.setState({ age: value });
+                  }}
+                />
+              </View>
+              <View>
+                <FormInput
+                  errorMessage
+                  keyboardType="numeric"
+                  autoCapitalize="none"
+                  containerStyle={styles.inputLine}
+                  placeholder="Savings Goal"
+                  onChangeText={value => {
+                    this.setState({ savingsGoal: value });
+                  }}
+                />
+              </View>
+              <View>
+                <Button
+                  onPress={() => {
+                    this.handleNextButton();
+                  }}
+                  title="Next 2 of 3"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.signUpButton}
+                />
+              </View>
             </View>
           </KeyboardAvoidingView>
         </ImageBackground>

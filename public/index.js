@@ -10,6 +10,13 @@ export default (styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
+  editUserContainer: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center"
+  },
   homeContainer: {
     marginTop: 70,
     flex: 1,
@@ -44,7 +51,8 @@ export default (styles = StyleSheet.create({
   signUpButton: {
     marginTop: 30,
     marginBottom: 5,
-    width: 250
+    width: 250,
+    alignSelf: "center"
   },
   linkButton: {
     textAlign: "center",
@@ -110,7 +118,8 @@ export default (styles = StyleSheet.create({
   inputLine: {
     alignSelf: "center",
     width: 250,
-    margin: 10
+    margin: 10,
+    paddingTop: 30
   },
   signUpInput: {
     margin: 10
@@ -274,7 +283,7 @@ export default (styles = StyleSheet.create({
     ...material.subheadingObject,
     ...systemWeights.thin,
     color: "black",
-    textAlign: 'center'
+    textAlign: "center"
   },
   donutCarouselWrapper: {
     height: 140
@@ -333,7 +342,7 @@ export default (styles = StyleSheet.create({
     ...material.subheadingObject,
     ...systemWeights.thin,
     color: "black",
-    textAlign: 'center',
+    textAlign: "center",
     marginTop: 10
-  },
+  }
 }));

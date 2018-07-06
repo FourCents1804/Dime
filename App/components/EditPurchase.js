@@ -36,16 +36,16 @@ class EditPurchase extends Component {
     });
   }
 
-  handleSubmit =  () => {
-    const purchase = { ...this.state}
-    console.log(purchase)
+  handleSubmit = () => {
+    const purchase = { ...this.state };
+    console.log(purchase);
     this.props.editPurchase(purchase.purchasedBy, this.state);
     alert("Puchase Has Been Updated!");
     this.props.navigation.popToTop();
   };
 
   cancel = () => {
-    this.props.navigation.popToTop();
+    this.props.navigation.pop(2);
   };
   render() {
     const { amount, name, category } = this.state;
