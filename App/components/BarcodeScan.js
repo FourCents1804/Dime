@@ -1,48 +1,48 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import { BarCodeScanner, Permissions, Location } from 'expo';
-import styles from '../../public';
-import { commitPurchase } from '../store/Thunks';
-import { connect } from 'react-redux';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import Firebase from './Firebase/Firebase';
+import React, { Component } from "react";
+import axios from "axios";
+import { BarCodeScanner, Permissions, Location } from "expo";
+import styles from "../../public";
+import { commitPurchase } from "../store/Thunks";
+import { connect } from "react-redux";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import Firebase from "./Firebase/Firebase";
 import {
   Button,
   FormInput,
   FormLabel,
   FormValidationMessage
-} from 'react-native-elements';
-import { barcodeKey } from '../../secrets';
+} from "react-native-elements";
+import { barcodeKey } from "../../secrets";
 
 class BarcodeScanner extends Component {
   state = {
     upc: undefined,
     date: Date.now(),
-    amount: '',
-    name: '',
+    amount: "",
+    name: "",
     location: null,
-    categoryBroad: ''
+    categoryBroad: ""
   };
 
   handleSubmit = async () => {
     this._getLocationAsync();
     const { user } = this.props.navigation.state.params;
-    console.log('this.state', this.state)
     const { data } = await axios.post(
-      'https://safe-bastion-55889.herokuapp.com/api/languageAnalysis',
+      "https://safe-bastion-55889.herokuapp.com/api/languageAnalysis",
       { product: this.state.name }
+      // Below line is for local testing.
       // 'http://192.168.1.38:3000/api/sentimentAnalysis', {product: this.state.name}
     );
     let purchaseToCommit = { ...this.state, category: data };
-    console.log(purchaseToCommit, user.uid)
+
     this.props.commitPurchase(user.uid, purchaseToCommit);
-    alert(`${this.state.name} added to purchases`)
-    this.props.navigation.popToTop()
+    alert(`${this.state.name} added to purchases`);
+    this.props.navigation.popToTop();
   };
 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
-    if (status === 'granted') {
+    if (status === "granted") {
       let location = await Location.getCurrentPositionAsync({});
       this.setState({
         location
@@ -55,21 +55,20 @@ class BarcodeScanner extends Component {
     try {
       await Firebase.database
         .ref(`products/${data}`)
-        .once('value')
+        .once("value")
         .then(dbProduct => {
-          if (dbProduct.child('name').val()) {
+          if (dbProduct.child("name").val()) {
             alert(`
           Bar code was found in Dime's Database
           ${data}
           `);
-          const name = dbProduct.child('name').val()
-          const amount =  dbProduct.child('amount').val()
-          this.setState({ upc: data, name, amount});
-
+            const name = dbProduct.child("name").val();
+            const amount = dbProduct.child("amount").val();
+            this.setState({ upc: data, name, amount });
           }
         });
 
-      if (this.state.name === '') {
+      if (this.state.name === "") {
         const returnData = await axios.get(
           `https://api.upcdatabase.org/product/${data}/${barcodeKey}`
         );
@@ -84,17 +83,17 @@ class BarcodeScanner extends Component {
         }
       }
     } catch (err) {
-      alert('Product Not Found!');
+      alert("Product Not Found!");
       await this._getLocationAsync();
       this.setState({ upc: data });
-      this.props.navigation.navigate('EditPurchase', {
+      this.props.navigation.navigate("EditPurchase", {
         product: { ...this.state, purchasedBy: user.uid }
       });
     }
   };
   render() {
     const { name, amount } = this.state;
-    return this.state.name === '' ? (
+    return this.state.name === "" ? (
       <View style={{ flex: 1 }}>
         <BarCodeScanner
           // autoFocus={true}
@@ -104,9 +103,9 @@ class BarcodeScanner extends Component {
           <View
             style={{
               flex: 1,
-              backgroundColor: 'transparent',
-              justifyContent: 'space-evenly',
-              flexDirection: 'row'
+              backgroundColor: "transparent",
+              justifyContent: "space-evenly",
+              flexDirection: "row"
             }}
           />
         </BarCodeScanner>

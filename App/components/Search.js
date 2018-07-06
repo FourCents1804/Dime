@@ -1,10 +1,14 @@
-import Autocomplete from 'react-native-autocomplete-input';
-import React, { Component } from 'react';
-import { Text, TouchableOpacity, View, Button } from 'react-native';
-import styles from '../../public';
+import Autocomplete from "react-native-autocomplete-input";
+import React, { Component } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import { Button } from "react-native-elements";
+import styles from "../../public";
 
 const formatMoney = number => {
-  return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  return number.toLocaleString(
+    "en-US",
+    { style: "currency", currency: "USD" }
+  );
 };
 
 const renderPurchase = purchase => {
@@ -17,10 +21,10 @@ const renderPurchase = purchase => {
         Transaction Amount: {formatMoney(amount)}
       </Text>
       <Text style={styles.regText}>
-        Category: {categoryBroad ? categoryBroad : 'N/A'}
+        Category: {categoryBroad ? categoryBroad : "N/A"}
       </Text>
       <Text style={styles.regText}>
-        Subcategory: {categoryDetailed ? categoryDetailed : 'N/A'}
+        Subcategory: {categoryDetailed ? categoryDetailed : "N/A"}
       </Text>
       <Text style={styles.regText}>Date: {`${new Date(date)}`}</Text>
     </View>
@@ -32,30 +36,34 @@ class Search extends Component {
     super(props);
     this.state = {
       purchases: [],
-      query: ''
+      query: ""
     };
   }
 
   async componentDidMount() {
-    await this.setState({ purchases: this.props.navigation.state.params.purchases });
+    await this.setState({
+      purchases: this.props.navigation.state.params.purchases
+    });
 
-    if (this.state.purchases.length === 1) {this.setState({ query: this.state.purchases[0].name });}
-    console.log(this.state)
+    if (this.state.purchases.length === 1) {
+      this.setState({ query: this.state.purchases[0].name });
+    }
+    console.log(this.state);
   }
 
   findPurchase(query) {
-    if (query === '') {
+    if (query === "") {
       return [];
     }
 
     const { purchases } = this.state;
-    const regex = new RegExp(`${query.trim()}`, 'i');
+    const regex = new RegExp(`${query.trim()}`, "i");
     return purchases.filter(purchase => purchase.name.search(regex) >= 0);
   }
 
   render() {
     const { query } = this.state;
-    const { navigate } = this.props.navigation;
+    const { navigate, popToTop } = this.props.navigation;
     const purchases = this.findPurchase(query);
     const comp = (a, b) => a.toLowerCase().trim() === b.toLowerCase().trim();
 
@@ -85,15 +93,28 @@ class Search extends Component {
           {purchases.length > 0 ? (
             <View>
               {renderPurchase(purchases[0])}
-              <Button
-                onPress={() => {
-                  navigate('EditPurchase', { product: purchases[0] });
-                }}
-                title="Edit Purchase"
-                raised={true}
-                backgroundColor="#0080ff"
-                style={styles.signUpButton}
-              />
+              <View style={{ alignSelf: "center" }}>
+                <Button
+                  onPress={() => {
+                    navigate("EditPurchase", { product: purchases[0] });
+                  }}
+                  title="Edit Purchase"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.signUpButton}
+                />
+              </View>
+              <View style={{ alignSelf: "center" }}>
+                <Button
+                  onPress={() => {
+                    popToTop();
+                  }}
+                  title="Cancel"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.signUpButton}
+                />
+              </View>
             </View>
           ) : (
             <Text style={styles.smallTitle}>Enter Store Name</Text>
