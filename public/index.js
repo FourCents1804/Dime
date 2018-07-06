@@ -6,18 +6,18 @@ export default (styles = StyleSheet.create({
   absoluteFill: StyleSheet.absoluteFill,
   container: {
     flex: 1,
-    backgroundColor: "#fff7f2",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
   },
   homeContainer: {
     marginTop: 70,
     flex: 1,
-    backgroundColor: "#fff7f2",
+    backgroundColor: "#fff",
     width: "100%"
   },
   scrollContainer: {
-    backgroundColor: "#fff7f2",
+    backgroundColor: "#fff",
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
@@ -184,7 +184,7 @@ export default (styles = StyleSheet.create({
     ...material.captionObject
   },
   spendTableRow: {
-    backgroundColor: "#fff7f2",
+    backgroundColor: "#fff",
     display: "flex",
     flexDirection: "row",
     paddingHorizontal: 20,
@@ -273,7 +273,8 @@ export default (styles = StyleSheet.create({
     alignSelf: "center",
     ...material.subheadingObject,
     ...systemWeights.thin,
-    color: "black"
+    color: "black",
+    textAlign: 'center'
   },
   donutCarouselWrapper: {
     height: 140
@@ -309,7 +310,30 @@ export default (styles = StyleSheet.create({
   pastSpendContainer: {
     padding: 20,
     flex: 1,
-    backgroundColor: "#fff7f2",
+    backgroundColor: "#fff",
     width: "100%"
-  }
+  },
+  futureProjectionsContainer: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 30
+  },
+  futureProjectionsTitle: {
+    alignSelf: "center",
+    ...material.display1Object,
+    ...systemWeights.thin,
+    color: "black",
+    marginTop: 5,
+    marginBottom: 15
+  },
+  futureProjectionsText: {
+    alignSelf: "center",
+    ...material.subheadingObject,
+    ...systemWeights.thin,
+    color: "black",
+    textAlign: 'center',
+    marginTop: 10
+  },
 }));
