@@ -12,7 +12,7 @@ const parser = d3.timeParse('%B %d, %Y');
 class FutureProjections extends Component {
   handlePrediction = async data => {
     const result = await axios.get(
-      `https://safe-bastion-55889.herokuapp.com/api/loadKeras?lastThreeDays=${data}`
+      `https://safe-bastion-55889.herokuapp.com/api/loadKeras?d1=${data[0] || 0}&d2=${data[1] || 0}&d3=${data[2] || 0}`
     );
     return result
   };
