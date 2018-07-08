@@ -4,15 +4,21 @@ import Firebase from './Firebase/Firebase';
 import axios from 'axios';
 import styles from '../../public';
 import { AnimatedGaugeProgress } from 'react-native-simple-gauge';
+import * as d3 from 'd3';
+
+const formatter = d3.timeFormat('%B %d, %Y')
+const parser = d3.timeParse('%B %d, %Y');
 
 class FutureProjections extends Component {
   handlePrediction = async () => {
-    await Firebase.ref('/dummyData').once(async snapshot => {
+    const prediction = await Firebase.ref('/dummyData').once('value').then(async snapshot => {
       const result = await axios.get(
         `https://safe-bastion-55889.herokuapp.com/api/loadKeras?lastThreeDays=${snapshot}`
       );
-      console.log(result);
+      console.log('result', result);
+      return snapshot.val()
     });
+    return prediction
   };
 
   formatMoney = number => {
@@ -23,6 +29,21 @@ class FutureProjections extends Component {
   };
 
   render() {
+    const {purchases} = this.props.navigation.state.params;
+    const purchasesReduced = purchases.reduce((purchaseObj, curr) => {
+      const parsedDate = parser(formatter(new Date(curr.date)))
+      const purchase = {name: curr.name, amount: curr.amount}
+      if (!purchaseObj[parsedDate]) {
+        purchaseObj[parsedDate] = Number(purchase.amount);
+      } else {
+        purchaseObj[parsedDate] += Number(purchase.amount);
+      }
+      return purchaseObj;
+    }, {});
+    const pastThreeDays = Object.keys(purchasesReduced).sort((a, b) => b - a).slice(0, 3).map(date => purchasesReduced[date])
+
+    console.log('lastThreeDays', purchasesReduced, pastThreeDays)
+
     const size = 200;
     const width = 15;
     const cropDegree = 90;
@@ -33,7 +54,7 @@ class FutureProjections extends Component {
     const low = this.result - ErrorStd;
     const high = this.result + ErrorStd;
     const average = this.result;
-
+    console.log('average', average)
     return (
       <View style={styles.futureProjectionsContainer}>
         <Text style={styles.futureProjectionsTitle}>Future Projections</Text>
