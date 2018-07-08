@@ -10,15 +10,11 @@ const formatter = d3.timeFormat('%B %d, %Y')
 const parser = d3.timeParse('%B %d, %Y');
 
 class FutureProjections extends Component {
-  handlePrediction = async () => {
-    const prediction = await Firebase.ref('/dummyData').once('value').then(async snapshot => {
-      const result = await axios.get(
-        `https://safe-bastion-55889.herokuapp.com/api/loadKeras?lastThreeDays=${snapshot}`
-      );
-      console.log('result', result);
-      return snapshot.val()
-    });
-    return prediction
+  handlePrediction = async data => {
+    const result = await axios.get(
+      `https://safe-bastion-55889.herokuapp.com/api/loadKeras?lastThreeDays=${data}`
+    );
+    return result
   };
 
   formatMoney = number => {
@@ -44,6 +40,8 @@ class FutureProjections extends Component {
 
     console.log('lastThreeDays', purchasesReduced, pastThreeDays)
 
+    const result = this.handlePrediction(pastThreeDays)
+    console.log(result)
     const size = 200;
     const width = 15;
     const cropDegree = 90;
@@ -51,9 +49,9 @@ class FutureProjections extends Component {
     const textWidth = size - textOffset * 2;
     const textHeight = size * (1 - cropDegree / 360) - textOffset * 2;
     const ErrorStd = 3.12;
-    const low = this.result - ErrorStd;
-    const high = this.result + ErrorStd;
-    const average = this.result;
+    const low = result - ErrorStd;
+    const high = result + ErrorStd;
+    const average = result;
     console.log('average', average)
     return (
       <View style={styles.futureProjectionsContainer}>
