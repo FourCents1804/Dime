@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
+
 import Firebase from './Firebase/Firebase';
 import axios from 'axios';
 import styles from '../../public';
@@ -13,7 +14,9 @@ class FutureProjections extends Component {
   handlePrediction = async data => {
     const result = await axios.get(
       `https://safe-bastion-55889.herokuapp.com/api/loadKeras?d1=${data[0] || 0}&d2=${data[1] || 0}&d3=${data[2] || 0}`
+      // `http://192.168.1.38:3000/api/loadKeras?d1=${data[0] || 0}&d2=${data[1] || 0}&d3=${data[2] || 0}`
     );
+    console.log('hi', result)
     return result
   };
 
@@ -36,7 +39,8 @@ class FutureProjections extends Component {
       }
       return purchaseObj;
     }, {});
-    const pastThreeDays = Object.keys(purchasesReduced).sort((a, b) => b - a).slice(0, 3).map(date => purchasesReduced[date])
+    const pastThreeDays = Object.keys(purchasesReduced).sort((a, b) => b - a).slice(0, 3)
+.map(date => purchasesReduced[date])
 
     console.log('lastThreeDays', purchasesReduced, pastThreeDays)
 
@@ -55,6 +59,13 @@ class FutureProjections extends Component {
     console.log('average', average)
     return (
       <View style={styles.futureProjectionsContainer}>
+<Button
+                  onPress={() => this.handlePrediction(pastThreeDays)}
+                  title="Login"
+                  raised={true}
+                  backgroundColor="#0080ff"
+                  style={styles.wideButton}
+                />
         <Text style={styles.futureProjectionsTitle}>Future Projections</Text>
         <AnimatedGaugeProgress
           size={200}
