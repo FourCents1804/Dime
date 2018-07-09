@@ -11,13 +11,16 @@ const formatter = d3.timeFormat('%B %d, %Y')
 const parser = d3.timeParse('%B %d, %Y');
 
 class FutureProjections extends Component {
+  state = {
+    result: 0
+  }
   handlePrediction = async data => {
     const result = await axios.get(
       `https://safe-bastion-55889.herokuapp.com/api/loadKeras?d1=${data[0] || 0}&d2=${data[1] || 0}&d3=${data[2] || 0}`
       // `http://192.168.1.38:3000/api/loadKeras?d1=${data[0] || 0}&d2=${data[1] || 0}&d3=${data[2] || 0}`
-    );
-    console.log('hi', result)
-    return result
+    ).then(response => {
+       this.setState({result: response.data})})
+
   };
 
   formatMoney = number => {
@@ -44,7 +47,8 @@ class FutureProjections extends Component {
 
     console.log('lastThreeDays', purchasesReduced, pastThreeDays)
 
-    const result = this.handlePrediction(pastThreeDays)
+    this.handlePrediction(pastThreeDays)
+    const {result} = this.state
     console.log(result)
     const size = 200;
     const width = 15;
@@ -59,13 +63,6 @@ class FutureProjections extends Component {
     console.log('average', average)
     return (
       <View style={styles.futureProjectionsContainer}>
-<Button
-                  onPress={() => this.handlePrediction(pastThreeDays)}
-                  title="Login"
-                  raised={true}
-                  backgroundColor="#0080ff"
-                  style={styles.wideButton}
-                />
         <Text style={styles.futureProjectionsTitle}>Future Projections</Text>
         <AnimatedGaugeProgress
           size={200}
