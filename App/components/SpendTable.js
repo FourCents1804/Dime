@@ -36,7 +36,6 @@ const DaySpend = props => {
 
 const SpendTable = props => {
   const {userPurchases} = props
-
   const last50Purchases = userPurchases.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 50)
 
   const purchases = last50Purchases.reduce((purchaseObj, curr, index) => {
